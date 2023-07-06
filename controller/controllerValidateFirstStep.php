@@ -10,7 +10,7 @@ $sub_domain = $sub_domaincon->dom();
 
 
 
-$headerslink = implode(' ', $headers);
+
 $url = '' . $sub_domain . '/crystalGateway/apiCore/v1/validateLogIn/'.$_SESSION['key'];
 
 // Definir los datos a enviar en la solicitud POST
