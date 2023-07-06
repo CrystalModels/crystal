@@ -33,7 +33,13 @@ $sub_domain=$sub_domaincon->dom();
  // Función para obtener los datos del API
  async function getUsersSuperAdmin() {
 	
-	fetch(subdominio)
+	fetch(subdominio,{
+        headers: {
+         
+          "Api-Key": "'.$_SESSION['ranCode'].'",
+          "x-api-Key": "'.$_SESSION['key'].'"
+        }
+      })
     
   .then(response => response.json())
   .then(data => {
