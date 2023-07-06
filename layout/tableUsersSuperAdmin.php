@@ -24,22 +24,18 @@
 require_once 'env/domain.php';
 $sub_domaincon=new model_dom;
 $sub_domain=$sub_domaincon->dom();
+$headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	echo '
 	<script>
 		
   //const my_profyle = sessionStorage.getItem("profile");
-  const subdominio = `'.$sub_domain.'/crystalGateway/apiCore/v1/getAllUsersBySuperAdmin`;
+ 
+  const subdominio = `'.$sub_domain.'/crystalGateway/apiCore/v1/getAllUsersBySuperAdmin/'.$headerslink.'`;
 
  // Función para obtener los datos del API
  async function getUsersSuperAdmin() {
 	
-	fetch(subdominio,{
-        headers: {
-         
-          "Api-Key": "'.$_SESSION['ranCode'].'",
-          "x-api-Key": "'.$_SESSION['key'].'"
-        }
-      })
+	fetch(subdominio)
     
   .then(response => response.json())
   .then(data => {
