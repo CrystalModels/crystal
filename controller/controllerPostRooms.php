@@ -51,6 +51,6 @@ if (strtolower($response1) != "false") { // Convertir la respuesta a minúsculas
     $_SESSION["error"] = $response1;
     echo $response1;
     
-    header ('Location: ../session.php');
+    //header ('Location: ../session.php');
 }
 ?>
