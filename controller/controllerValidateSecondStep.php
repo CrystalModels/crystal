@@ -47,8 +47,8 @@ $data = json_decode($_SESSION['userInfo']);
     
   }
 
-echo $data;
-echo json_encode($response);
+//echo $data;
+echo json_encode($_SESSION['userInfo']);
 //header ('Location: ../session.php');
 
 ?>
