@@ -19,21 +19,16 @@
 require_once 'env/domain.php';
 $sub_domaincon=new model_dom;
 $sub_domain=$sub_domaincon->dom();
+$headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	echo '
 	<script>
   //const my_profyle = sessionStorage.getItem("profile");
-  const subdominiophotographs = `'.$sub_domain.'/crystalGateway/apiCore/v1/getAllPhotographs`;
+  const subdominiophotographs = `'.$sub_domain.'/crystalGateway/apiCore/v1/getAllPhotographs/'.$headerslink.'`;
 
  // Función para obtener los datos del API
  async function getPhotographs() {
 	
-	fetch(subdominiophotographs,{
-        headers: {
-          "Content-Type": "application/json",
-          "Api-Key": "'.$_SESSION['ranCode'].'",
-          "x-api-Key": "'.$_SESSION['key'].'"
-        }
-      })
+	fetch(subdominiophotographs)
     
   .then(response => response.json())
   .then(data => {
