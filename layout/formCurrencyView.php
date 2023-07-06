@@ -18,7 +18,7 @@
  
     <?php
     //session_start();
-
+    $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     if($_SESSION['rol']=="SUPERADMIN" || $_SESSION['rol']=="ADMIN"){
 echo '
 <form method="post" action="controller/controllerPutCurrencyBySuperAdmin.php?currencyId='.$_GET['currencyId'].'">
@@ -81,18 +81,12 @@ echo '
         <script>
         //const rancode = sessionStorage.getItem("ranCode");
         //const key = sessionStorage.getItem("key");
-            const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getOneCurrency/'.$_GET['currencyId'].'";
+            const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getOneCurrency/'.$headerslink.'/'.$_GET['currencyId'].'";
         </script>';
         echo '<script>
             // Función para obtener los datos del API
             async function getRooms() {
-                fetch(urlMyProfile, {
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Api-Key": "'.$_SESSION['ranCode'].'",
-                            "x-api-Key": "'.$_SESSION['key'].'"
-                        }
-                    })
+                fetch(urlMyProfile)
                     .then(response => response.json())
                     .then(data => {
                         const userData = data.currency[0];
@@ -167,18 +161,12 @@ echo '
         <script>
         //const rancode = sessionStorage.getItem("ranCode");
         //const key = sessionStorage.getItem("key");
-        const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getOneCurrency/'.$_GET['currencyId'].'";
+        const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getOneCurrency/'.$headerslink.'/'.$_GET['currencyId'].'";
         </script>';
         echo '<script>
             // Función para obtener los datos del API
             async function getRooms() {
-                fetch(urlMyProfile, {
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Api-Key": "'.$_SESSION['ranCode'].'",
-                            "x-api-Key": "'.$_SESSION['key'].'"
-                        }
-                    })
+                fetch(urlMyProfile)
                     .then(response => response.json())
                     .then(data => {
                         const userData = data.currency[0];
