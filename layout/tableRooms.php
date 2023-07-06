@@ -29,8 +29,11 @@ $sub_domain=$sub_domaincon->dom();
   const subdominiorooms = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllRooms`;
 
  // Función para obtener los datos del API
- async function getRooms() {
-	
+ async function getRooms() {';?>
+ 
+	<?php
+  echo 'hoa';
+  echo '
 	fetch(subdominiorooms,{
         headers: {
           "Content-Type": "application/json",

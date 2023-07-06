@@ -16,7 +16,7 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
     'Content-Type: application/json', // Tipo de contenido JSON
-   
+    'Api-Key: 1234567890',
     'x-api-Key: '.$_SESSION['key']
   ),
 ));
@@ -47,9 +47,8 @@ $data = json_decode($_SESSION['userInfo']);
     
   }
 
-
-//echo json_encode($_SESSION['userInfo'])
-//header ('Location: ../session.php');
+//echo $data;
+//echo json_encode($_SESSION['userInfo']);
 
 ?>
 
