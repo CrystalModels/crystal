@@ -47,17 +47,14 @@ echo $_SESSION['key'];
 echo $user;
 //echo $_SESSION['key'];
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
-    $_SESSION["respuesta"] = "true";
-    $_SESSION["mensaje"] = "Bienvenid@";
-    $_SESSION["error"] = $response1;
-    $_SESSION['userName'] = $user;
+   
  
     header('Location: controllerValidateSecondStep.php');
 }
 
 if (strtolower($response1) === "false") { // Convertir la respuesta a minúsculas antes de comparar
     $_SESSION["respuesta"] = "false";
-    $_SESSION["mensaje"] = "No iniciar sesión ";
+    $_SESSION["mensaje"] = "¡Usuario o contraseña INCORRECTOS!";
     $_SESSION["error"] = $response1;
     $_SESSION['userName'] = $user;
    
