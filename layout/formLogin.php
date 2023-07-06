@@ -9,7 +9,7 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
          
    $_SESSION['key']= trim($response);
   
-//echo $response;
+echo $response;
 ?>
 
 
