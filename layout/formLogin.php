@@ -19,7 +19,7 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iniciar - Crystal Models</title>
-  <link rel="stylesheet" href="../style/styleLogin.css">
+  <link rel="stylesheet" href="style/styleLogin.css">
 
 
 </head>
