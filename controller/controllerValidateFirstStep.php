@@ -8,7 +8,15 @@ require_once '../env/domain.php';
 $sub_domaincon = new model_dom();
 $sub_domain = $sub_domaincon->dom();
 
-$url = '' . $sub_domain . '/crystalGateway/apiCore/v1/validateLogIn/';
+
+$headers = array(
+   
+    'Api-Key'=>'', // Token de autorización
+    'x-api-Key'=>$_SESSION['key']
+);
+
+$headerslink = implode(' ', $headers);
+$url = '' . $sub_domain . '/crystalGateway/apiCore/v1/validateLogIn/'.$headerslink;
 
 // Definir los datos a enviar en la solicitud POST
 $data = array(
@@ -29,12 +37,8 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, $json_data);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 // Agregar los headers
-$headers = array(
-    'Content-Type: application/json', // Tipo de contenido JSON
-    'Api-Key: 123456', // Token de autorización
-    'x-api-Key: '.$_SESSION['key']
-);
-curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+
+//curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
 // Ejecutar la solicitud y obtener la respuesta
 $response1 = curl_exec($curl);
