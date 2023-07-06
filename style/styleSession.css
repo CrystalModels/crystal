@@ -1,0 +1,566 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.login-container {
+  width: 1020px; /* Tamaño fijo del formulario */
+  padding: 120px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.login-container:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 24px;
+}
+
+h2 img {
+  display: block;
+  margin: 0 auto;
+  max-width: 20%;
+  height: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #b968ce;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #b968ce;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+button[type="submit"]:hover {
+  background-color: #d786ed;
+}
+
+.forgot-password {
+  text-align: center;
+}
+
+.forgot-password a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+  color: #ccc;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.theme-toggle-label {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle-label:before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .theme-toggle-label {
+  background-color: #222;
+}
+
+input[type="checkbox"]:checked + .theme-toggle-label:before {
+  transform: translateX(20px);
+}
+
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode .login-container {
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .login-container:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.dark-mode h2,
+.dark-mode label,
+.dark-mode input[type="text"],
+.dark-mode input[type="password"],
+.dark-mode button[type="submit"],
+.dark-mode .forgot-password a {
+  color: #fff;
+  text-align: center;
+}
+
+.dark-mode input[type="text"],
+.dark-mode input[type="password"] {
+  border-color: #fff;
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode input[type="text"]:focus,
+.dark-mode input[type="password"]:focus {
+  border-color: #b968ce;
+}
+
+.dark-mode button[type="submit"] {
+  background-color: #b968ce;
+}
+
+.dark-mode button[type="submit"]:hover {
+  background-color: #d786ed;
+}
+
+.dark-mode .forgot-password a {
+  color: #aaa;
+}
+
+.dark-mode .forgot-password a:hover {
+  color: #ccc;
+}
+
+
+
+/*header*/
+
+
+
+
+/* Estilos del menú desplegable */
+.navbar {
+  position: sticky;
+  top: 10px;
+  left: 30px; /* Nueva propiedad para posicionar en la izquierda */
+  z-index: 1;
+  display: flex;
+  flex-direction: column; /* Cambio a dirección vertical */
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(185, 104, 206, 0.8);
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+  background-color: rgba(185, 104, 206, 1);
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: column; /* Cambio a dirección vertical */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin-bottom: 1px; /* Aumento del margen para separar los elementos */
+}
+
+.navbar-item a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+.navbar-item a:hover {
+  color: #C0C0C0;
+}
+
+/* Media query para el menú desplegable en pantallas pequeñas */
+@media screen and (max-width: 730px) {
+  .navbar-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-item {
+    margin-bottom: 10px;
+  }
+
+  /* Estilos para el ícono del menú desplegable */
+  .navbar-toggle-label {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-toggle-label:before,
+  .navbar-toggle-label:after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease;
+  }
+
+  .navbar-toggle-label:before {
+    transform-origin: bottom;
+  }
+
+  .navbar-toggle-label:after {
+    transform-origin: top;
+  }
+
+  input[type="checkbox"]:checked + .navbar-toggle-label:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  input[type="checkbox"]:checked + .navbar-toggle-label:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  input[type="checkbox"]:checked + .navbar-toggle-label {
+    background-color: #222;
+  }
+}
+
+
+.navbar-toggle-button {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar-toggle-button span {
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggle-button.active span:nth-child(1) {
+  transform: rotate(45deg) translate(2px, 2px);
+}
+
+.navbar-toggle-button.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle-button.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(18px, -18px);
+}
+
+/* Estilos del submenú */
+.navbar-menu .submenu {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar-item.active .submenu {
+  display: block;
+}
+
+
+/* Estilos para los botones del submenu */
+.submenu li {
+  margin-bottom: 10px;
+}
+
+.submenu a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:rgba(185, 104, 206, 1);
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.submenu a:hover {
+  background-color:rgba(185, 104, 206, 1);
+}
+
+/* Estilos del submenú */
+.navbar-menu .submenu {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar-item.active .submenu {
+  display: block;
+}
+/*btn*/
+
+.table-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: rgba(185, 104, 206, 0.8);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.table-button:hover {
+  background-color: rgba(185, 104, 206, 1);
+}
+
+/* Agrega cualquier otro estilo personalizado que desees */
+/*table*/
+/* Estilos de la tabla *//* Estilos de la tabla *//* Estilos de la tabla */
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+  border-radius: 10px;
+  white-space: nowrap; /* Evita el ajuste de línea en los elementos de la tabla */
+  display: flex;
+  justify-content: center; /* Centra la tabla horizontalmente */
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%; /* Cambiado a 100% para que la tabla ocupe todo el ancho disponible */
+  border-collapse: collapse;
+  table-layout: fixed;
+  border-radius: 20px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal; /* Permite el ajuste de línea en los elementos de la tabla */
+  word-break: break-word; /* Rompe la palabra en varias líneas si es necesario */
+}
+
+.table th {
+  background-color: rgba(185, 104, 206, 0.8);
+  color: #fff;
+}
+
+/* Media query para hacer la tabla responsive */
+@media screen and (max-width: 600px) {
+  .table th,
+  .table td {
+    white-space: normal; /* Permite el ajuste de línea en dispositivos de pantalla más pequeña */
+  }
+}
+
+
+/* Estilos del modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto; /* Agrega desplazamiento vertical al modal */
+}
+
+.modal-contentProfile {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25%; /* Ajusta el valor para hacer el modal más angosto */
+  max-width: 100%;
+  border-radius: 10px;
+  max-height: calc(100% - 40px);
+  overflow-y: auto; /* Agrega desplazamiento vertical al contenido del modal */
+}
+
+
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow-y: auto; /* Barra de desplazamiento vertical si el contenido excede el tamaño del modal */
+  max-height: 500px; /* Altura máxima del modal (ajustar según sea necesario) */
+}
+
+.table-container-inner {
+  overflow-x: auto; /* Barra de desplazamiento horizontal si el contenido excede el tamaño del contenedor */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border-radius: 20px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal; /* Evita el ajuste de línea en los elementos de la tabla */
+  word-break: break-word; /* Rompe la palabra en varias líneas si es necesario */
+  max-width: 300px; /* Ajusta el ancho máximo de las celdas para evitar la superposición */
+  overflow: hidden; /* Oculta el contenido que excede el ancho máximo */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) para indicar que hay más contenido oculto */
+}
+
+.table th {
+  background-color: rgba(185, 104, 206, 0.8);
+  color: #fff;
+}
+
+    /* Estilos para el modo oscuro */
+    body.dark-mode {
+      background-color: #333;
+      color: #fff;
+  }
+  
+  body.dark-mode .modal-content {
+      background-color: #555;
+      border-color: #888;
+  }
+  body.dark-mode .modal-contentProfile {
+    background-color: #555;
+    border-color: #888;
+}
+  body.dark-mode .close {
+      color: #ccc;
+  }
+
+
+   /* Estilos del botón */
+   .navbar-toggle-button {
+    display: block; /* Muestra el botón por defecto */
+}
+
+@media screen and (min-width: 758px) {
+    .navbar-toggle-button {
+        display: none; /* Oculta el botón en pantallas más grandes */
+    }
+}

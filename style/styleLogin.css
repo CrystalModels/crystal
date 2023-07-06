@@ -1,0 +1,391 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.login-container {
+  max-width: 450px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.login-container:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Cambia el valor de la sombra al pasar el cursor */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+h2 img {
+  display: block;
+  margin: 0 auto;
+  max-width: 20%;
+  height: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea los elementos verticalmente en el centro */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #b968ce;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  background-color: #b968ce;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+button[type="submit"]:hover {
+  background-color: #d786ed;
+}
+
+.forgot-password {
+  text-align: center;
+}
+
+.forgot-password a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+  color: #ccc;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.theme-toggle-label {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle-label:before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .theme-toggle-label {
+  background-color: #222;
+}
+
+input[type="checkbox"]:checked + .theme-toggle-label:before {
+  transform: translateX(20px);
+}
+
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode .login-container {
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Cambia el valor de la sombra en modo oscuro */
+}
+
+.dark-mode .login-container:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Cambia el valor de la sombra al pasar el cursor en modo oscuro */
+}
+
+.dark-mode h2,
+.dark-mode label,
+.dark-mode input[type="text"],
+.dark-mode input[type="password"],
+.dark-mode button[type="submit"],
+.dark-mode .forgot-password a {
+  color: #fff;
+  text-align: center;
+}
+
+.dark-mode input[type="text"],
+.dark-mode input[type="password"] {
+  border-color: #fff;
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode input[type="text"]:focus,
+.dark-mode input[type="password"]:focus {
+  border-color: #b968ce;
+}
+
+.dark-mode button[type="submit"] {
+  background-color: #b968ce;
+}
+
+.dark-mode button[type="submit"]:hover {
+  background-color: #d786ed;
+}
+
+.dark-mode .forgot-password a {
+  color: #aaa;
+}
+
+.dark-mode .forgot-password a:hover {
+  color: #ccc;
+}
+
+
+
+
+
+
+/*barra de navegacion */
+
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar .menu-toggle {
+  display: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px; /* Ajusta el margen derecho para el icono del menú */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #b968ce;
+}
+
+.navbar .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: none;
+  z-index: 999;
+}
+
+.navbar ul li:hover > .dropdown-menu {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .logo {
+    margin: 0;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar .menu-toggle {
+    display: block;
+  }
+
+  .navbar .menu-toggle.active {
+    color: #b968ce;
+  }
+
+  .navbar .menu-toggle.active + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    z-index: 999;
+    width: 100%; /* Ajusta el ancho del menú desplegable */
+  }
+
+  .navbar .menu-toggle.active + ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+/* Estilos del modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto; /* Agrega desplazamiento vertical al modal */
+}
+
+.modal-contentProfile {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25%; /* Ajusta el valor para hacer el modal más angosto */
+  max-width: 100%;
+  border-radius: 10px;
+  max-height: calc(100% - 40px);
+  overflow-y: auto; /* Agrega desplazamiento vertical al contenido del modal */
+}
+
+
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow-y: auto; /* Barra de desplazamiento vertical si el contenido excede el tamaño del modal */
+  max-height: 500px; /* Altura máxima del modal (ajustar según sea necesario) */
+}
+
+.table-container-inner {
+  overflow-x: auto; /* Barra de desplazamiento horizontal si el contenido excede el tamaño del contenedor */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border-radius: 20px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal; /* Evita el ajuste de línea en los elementos de la tabla */
+  word-break: break-word; /* Rompe la palabra en varias líneas si es necesario */
+  max-width: 300px; /* Ajusta el ancho máximo de las celdas para evitar la superposición */
+  overflow: hidden; /* Oculta el contenido que excede el ancho máximo */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) para indicar que hay más contenido oculto */
+}
+
+.table th {
+  background-color: rgba(185, 104, 206, 0.8);
+  color: #fff;
+}
