@@ -9,11 +9,6 @@ $sub_domaincon = new model_dom();
 $sub_domain = $sub_domaincon->dom();
 
 
-$headers = array(
-   
-    'Api-Key'=>'', // Token de autorización
-    'x-api-Key'=>$_SESSION['key']
-);
 
 $headerslink = implode(' ', $headers);
 $url = '' . $sub_domain . '/crystalGateway/apiCore/v1/validateLogIn/'.$_SESSION['key'];
