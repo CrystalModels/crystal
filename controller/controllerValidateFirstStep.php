@@ -58,7 +58,7 @@ if (strtolower($response1) === "false") { // Convertir la respuesta a minúscula
     $_SESSION["mensaje"] = "No iniciar sesión ";
     $_SESSION["error"] = $response1;
     $_SESSION['userName'] = $user;
-  
+    echo $response1;
    
     header ('Location: ../index.php');
 }
