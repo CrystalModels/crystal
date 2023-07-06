@@ -22,21 +22,16 @@
 require_once 'env/domain.php';
 $sub_domaincon=new model_dom;
 $sub_domain=$sub_domaincon->dom();
+$headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	echo '
 	<script>
   //const my_profyle = sessionStorage.getItem("profile");
-  const subdominiocurrency = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllCurrency`;
+  const subdominiocurrency = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllCurrency/'.$headerslink.'`;
 
  // Función para obtener los datos del API
  async function getCurrency() {
 	
-	fetch(subdominiocurrency,{
-        headers: {
-          "Content-Type": "application/json",
-          "Api-Key": "'.$_SESSION['ranCode'].'",
-          "x-api-Key": "'.$_SESSION['key'].'"
-        }
-      })
+	fetch(subdominiocurrency)
     
   .then(response => response.json())
   .then(data => {
