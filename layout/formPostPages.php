@@ -37,7 +37,8 @@
 require_once 'env/domain.php';
 $sub_domaincon=new model_dom;
 $sub_domain=$sub_domaincon->dom();
-echo '<script>const subdominioCurrency = "'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllCurrency";</script>';
+$headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
+echo '<script>const subdominioCurrency = "'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllCurrency/'.$headerslink.'";</script>';
 ?>
  <div class="form-group">
  <label for="currency">Moneda de cobro</label>
@@ -52,13 +53,7 @@ echo '
 
   const reposSelect = document.getElementById("repos-select1");
 
-	fetch(subdominioCurrency,{
-    headers: {
-      "Content-Type": "application/json",
-      "Api-Key": "'.$_SESSION['ranCode'].'",
-      "x-api-Key": "'.$_SESSION['key'].'"
-    }
-  })
+	fetch(subdominioCurrency)
   .then(response => response.json())
   .then(data => {
     data.currency.forEach(sub => {

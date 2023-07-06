@@ -18,7 +18,7 @@
  
     <?php
     //session_start();
-
+    $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     if($_SESSION['rol']=="SUPERADMIN" || $_SESSION['rol']=="ADMIN"){
 echo '
 <form method="post" action="controller/controllerPutUserBySuperAdmin.php?profileId='.$_GET['profileId'].'&userName='.$_GET['userName'].'">
@@ -81,18 +81,12 @@ echo '
         <script>
         //const rancode = sessionStorage.getItem("ranCode");
         //const key = sessionStorage.getItem("key");
-            const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiCore/v1/getProfileInfoLog/'.$_GET['userName'].'";
+            const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiCore/v1/getProfileInfoLog/'.$headerslink.'/'.$_GET['userName'].'";
         </script>';
         echo '<script>
             // Función para obtener los datos del API
             async function getMyProfileInfo() {
-                fetch(urlMyProfile, {
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Api-Key": "'.$_SESSION['ranCode'].'",
-                            "x-api-Key": "'.$_SESSION['key'].'"
-                        }
-                    })
+                fetch(urlMyProfile)
                     .then(response => response.json())
                     .then(data => {
                         const userData = data.users[0];
@@ -176,18 +170,12 @@ echo '
         <script>
         //const rancode = sessionStorage.getItem("ranCode");
         //const key = sessionStorage.getItem("key");
-            const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiCore/v1/getProfileInfoLog/'.$_GET['userName'].'";
+            const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiCore/v1/getProfileInfoLog/'.$headerslink.'/'.$_GET['userName'].'";
         </script>';
         echo '<script>
             // Función para obtener los datos del API
             async function getMyProfileInfo() {
-                fetch(urlMyProfile, {
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Api-Key": "'.$_SESSION['ranCode'].'",
-                            "x-api-Key": "'.$_SESSION['key'].'"
-                        }
-                    })
+                fetch(urlMyProfile)
                     .then(response => response.json())
                     .then(data => {
                         const userData = data.users[0];

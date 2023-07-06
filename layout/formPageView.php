@@ -18,7 +18,7 @@
  
     <?php
     //session_start();
-
+    $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     if($_SESSION['rol']=="SUPERADMIN" || $_SESSION['rol']=="ADMIN"){
 echo '
 <form method="post" action="controller/controllerPutPageBySuperAdmin.php?pageId='.$_GET['pageId'].'">
@@ -81,18 +81,12 @@ echo '
         <script>
         //const rancode = sessionStorage.getItem("ranCode");
         //const key = sessionStorage.getItem("key");
-            const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getOnePages/'.$_GET['pageId'].'";
+            const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getOnePages/'.$headerslink.'/'.$_GET['pageId'].'";
         </script>';
         echo '<script>
             // Función para obtener los datos del API
             async function getRooms() {
-                fetch(urlMyProfile, {
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Api-Key": "'.$_SESSION['ranCode'].'",
-                            "x-api-Key": "'.$_SESSION['key'].'"
-                        }
-                    })
+                fetch(urlMyProfile)
                     .then(response => response.json())
                     .then(data => {
                         const userData = data.pages[0];
@@ -166,18 +160,12 @@ echo '
         <script>
         //const rancode = sessionStorage.getItem("ranCode");
         //const key = sessionStorage.getItem("key");
-        const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getOnePages/'.$_GET['pageId'].'";
+        const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getOnePages/'.$headerslink.'/'.$_GET['pageId'].'";
         </script>';
         echo '<script>
             // Función para obtener los datos del API
             async function getRooms() {
-                fetch(urlMyProfile, {
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Api-Key": "'.$_SESSION['ranCode'].'",
-                            "x-api-Key": "'.$_SESSION['key'].'"
-                        }
-                    })
+                fetch(urlMyProfile)
                     .then(response => response.json())
                     .then(data => {
                         const userData = data.pages[0];

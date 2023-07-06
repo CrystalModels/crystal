@@ -18,7 +18,7 @@
  
     <?php
     //session_start();
-
+    $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     if($_SESSION['rol']=="SUPERADMIN" || $_SESSION['rol']=="ADMIN"){
 echo '
 <form method="post" action="controller/controllerPutRoomBySuperAdmin.php?roomId='.$_GET['roomId'].'">
@@ -81,18 +81,12 @@ echo '
         <script>
         //const rancode = sessionStorage.getItem("ranCode");
         //const key = sessionStorage.getItem("key");
-            const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getOneRooms/'.$_GET['roomId'].'";
+            const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getOneRooms/'.$headerslink.'/'.$_GET['roomId'].'";
         </script>';
         echo '<script>
             // Función para obtener los datos del API
             async function getRooms() {
-                fetch(urlMyProfile, {
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Api-Key": "'.$_SESSION['ranCode'].'",
-                            "x-api-Key": "'.$_SESSION['key'].'"
-                        }
-                    })
+                fetch(urlMyProfile)
                     .then(response => response.json())
                     .then(data => {
                         const userData = data.rooms[0];
@@ -158,24 +152,19 @@ echo '
         require_once 'env/domain.php';
         $sub_domaincon = new model_dom();
         $sub_domain = $sub_domaincon->dom();
+        $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         //echo $_SESSION['key'];
         echo '
         <div id="myProfile-div"></div>
         <script>
         //const rancode = sessionStorage.getItem("ranCode");
         //const key = sessionStorage.getItem("key");
-        const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getOneRooms/'.$_GET['roomId'].'";
+        const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getOneRooms/'.$headerslink.'/'.$_GET['roomId'].'";
            </script>';
         echo '<script>
             // Función para obtener los datos del API
             async function getRooms() {
-                fetch(urlMyProfile, {
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Api-Key": "'.$_SESSION['ranCode'].'",
-                            "x-api-Key": "'.$_SESSION['key'].'"
-                        }
-                    })
+                fetch(urlMyProfile)
                     .then(response => response.json())
                     .then(data => {
                         const userData = data.rooms[0];

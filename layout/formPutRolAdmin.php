@@ -25,7 +25,8 @@ echo '<form method="post" action="controller/controllerPutRolBySuperAdmin.php?pr
 require_once 'env/domain.php';
 $sub_domaincon=new model_dom;
 $sub_domain=$sub_domaincon->dom();
-echo '<script>const subdominioRolesAdmin = "'.$sub_domain.'/crystalGateway/apiCore/v1/getAllRolesAdmin";</script>';
+$headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
+echo '<script>const subdominioRolesAdmin = "'.$sub_domain.'/crystalGateway/apiCore/v1/getAllRolesAdmin/'.$headerslink.'";</script>';
 ?>
  <div class="form-group">
  <label for="rol">Rol</label>
@@ -40,13 +41,7 @@ echo '
 
   const reposSelect = document.getElementById("repos-select1");
 
-	fetch(subdominioRolesAdmin,{
-    headers: {
-      "Content-Type": "application/json",
-      "Api-Key": "'.$_SESSION['ranCode'].'",
-      "x-api-Key": "'.$_SESSION['key'].'"
-    }
-  })
+	fetch(subdominioRolesAdmin)
   .then(response => response.json())
   .then(data => {
     data.roles.forEach(sub => {
