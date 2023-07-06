@@ -54,7 +54,7 @@ if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas
     $_SESSION["mensaje"] = "Bienvenid@";
     $_SESSION["error"] = $response1;
     $_SESSION['userName'] = $user;
- 
+    echo $response1;
     header('Location: controllerValidateSecondStep.php');
 }
 
@@ -64,7 +64,7 @@ if (strtolower($response1) === "false") { // Convertir la respuesta a minúscula
     $_SESSION["error"] = $response1;
     $_SESSION['userName'] = $user;
   
-    
+    echo $response1;
     header ('Location: ../index.php');
 }
 ?>
