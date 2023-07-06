@@ -65,7 +65,7 @@ if (strtolower($response1) === "false") { // Convertir la respuesta a minúscula
     $_SESSION['userName'] = $user;
   
     echo $response1;
-    echo $pass;
-    header ('Location: ../index.php');
+    echo " ".$pass;
+    //header ('Location: ../index.php');
 }
 ?>
