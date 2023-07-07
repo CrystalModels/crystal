@@ -46,9 +46,8 @@ if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas
     $_SESSION["error"] = $response1;
     
 
-    echo $response1;
-  
-   // header ('Location: ../room.php?roomId='.$roomId);
+    
+    header ('Location: ../room.php?roomId='.$roomId);
 }
 
 if (strtolower($response1) != "false") { // Convertir la respuesta a minúsculas antes de comparar
@@ -58,7 +57,7 @@ if (strtolower($response1) != "false") { // Convertir la respuesta a minúsculas
     
   
   
-    echo $response1;
-   // header ('Location: ../room.php?roomId='.$roomId);
+  
+    header ('Location: ../room.php?roomId='.$roomId);
 }
 ?>
