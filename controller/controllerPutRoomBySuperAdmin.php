@@ -45,8 +45,7 @@ if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas
     $_SESSION["mensaje"] = "Room editado correctamente";
     $_SESSION["error"] = $response1;
     
-    echo $response1." ";
-    echo $roomId." ";
+
     echo $response1;
   
    // header ('Location: ../room.php?roomId='.$roomId);
@@ -58,7 +57,7 @@ if (strtolower($response1) === "false") { // Convertir la respuesta a minúscula
     $_SESSION["error"] = $response1;
     
   
-    echo $url;
+  
     echo $response1;
     header ('Location: ../room.php?roomId='.$roomId);
 }
