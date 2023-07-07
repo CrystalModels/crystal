@@ -14,12 +14,12 @@
         <script>
         const rancode = sessionStorage.getItem("ranCode");
         const key = sessionStorage.getItem("key");
-            const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiCore/v1/getProfileInfoLog/'.$_SESSION['ranCode'].'/'.$_SESSION['key'].'/'.$_SESSION['userName'].'";
+            const urlMyProfile1 = "' . $sub_domain . '/crystalGateway/apiCore/v1/getProfileInfoLog/'.$_SESSION['ranCode'].'/'.$_SESSION['key'].'/'.$_SESSION['userName'].'";
         </script>';
         echo '<script>
             // Función para obtener los datos del API
-            async function getMyProfileInfo() {
-                fetch(urlMyProfile)
+            async function getMyProfileInfo1() {
+                fetch(urlMyProfile1)
                     .then(response => response.json())
                     .then(data => {
                         const userData = data.users[0];
@@ -47,7 +47,7 @@
             }
 
             // Llamar a la función para obtener los datos del API
-            getMyProfileInfo();
+            getMyProfileInfo1();
         </script>
 
         <button type="submit" class="table-button">Editar</button>
