@@ -27,6 +27,10 @@ curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_POST, true);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+$headers = array(
+    'Content-Type: application/json'
+);
+curl_setopt($curl1, CURLOPT_HTTPHEADER, $headers);
 
 // Ejecutar la solicitud y obtener la respuesta
 $response1 = curl_exec($curl);
@@ -41,16 +45,16 @@ if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas
     $_SESSION["respuesta"] = "true";
     $_SESSION["mensaje"] = "Room creado correctamente";
     $_SESSION["error"] = $response1;
- 
+    echo $response1;
     header('Location: ../session.php');
 }
 
-if (strtolower($response1) != "false") { // Convertir la respuesta a minúsculas antes de comparar
+if (strtolower($response1) === "false") { // Convertir la respuesta a minúsculas antes de comparar
     $_SESSION["respuesta"] = "false";
     $_SESSION["mensaje"] = "Error al crear room";
     $_SESSION["error"] = $response1;
     echo $response1;
     
-    //header ('Location: ../session.php');
+    header ('Location: ../session.php');
 }
 ?>
