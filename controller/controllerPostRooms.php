@@ -10,10 +10,10 @@ $sub_domaincon = new model_dom();
 $sub_domain = $sub_domaincon->dom();
 $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
-$url = '' . $sub_domain . '/crystalGateway/apiIntegrations/v1/postRooms/'.$_SESSION['ranCode'].'/'.$_SESSION['key'];
+$url = $sub_domain . "/crystalGateway/apiIntegrations/v1/postRooms/".$_SESSION['ranCode']."/".$_SESSION['key'];
 
 echo $url;
-/*
+
 // Definir los datos a enviar en la solicitud POST
 $data = array(
     'name' => $name, 
@@ -62,5 +62,5 @@ if (strtolower($response1) != "false") { // Convertir la respuesta a minúsculas
     echo $response1;
     echo $json_data;
     //header ('Location: ../session.php');
-}*/
+}
 ?>
