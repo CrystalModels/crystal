@@ -41,22 +41,4 @@ curl_close($curl);
 $response1 = trim($response1); // Eliminar espacios en blanco alrededor de la respuesta
 echo $response1;
 echo $json_data;
-//echo $_SESSION['key'];
-if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
-    $_SESSION["respuesta"] = "true";
-    $_SESSION["mensaje"] = "Room creado correctamente";
-    $_SESSION["error"] = $response1;
-    echo $response1;
-    echo $json_data;
-    //header('Location: ../session.php');
-}
-
-if (strtolower($response1) != "false") { // Convertir la respuesta a minúsculas antes de comparar
-    $_SESSION["respuesta"] = "false";
-    $_SESSION["mensaje"] = "Error al crear room";
-    $_SESSION["error"] = $response1;
-    echo $response1;
-    echo $json_data;
-    //header ('Location: ../session.php');
-}
 ?>
