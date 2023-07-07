@@ -56,7 +56,7 @@ if (strtolower($response1) === "false") { // Convertir la respuesta a minúscula
     $_SESSION["error"] = $response1;
     
   
-    
+    echo $url;
     echo $response1;
     header ('Location: ../room.php?roomId='.$roomId);
 }
