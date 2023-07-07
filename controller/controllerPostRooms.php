@@ -22,7 +22,7 @@ $data = array(
 
 // Convertir los datos a formato JSON
 $json_data = json_encode($data);
-
+echo $json_data;
 // Inicializar la sesión cURL
 $curl = curl_init();
 
