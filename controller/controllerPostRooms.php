@@ -31,9 +31,7 @@ curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_POST, true);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $json_data);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-$headers = array(
-    'Content-Type: application/json'
-);
+
 curl_setopt($curl1, CURLOPT_HTTPHEADER, $headers);
 
 // Ejecutar la solicitud y obtener la respuesta
