@@ -104,12 +104,12 @@ echo '
                             <h5 align="center">Activo: ${userData.isActive}</h5>
                             <h5 align="center">Estado: ${userData.status}</h5>
                             <h5 align="center">Horas de Conexión: ${userData.totalHours}</h5>
-                            <h5 align="center">Correo empresarial: <input type="text" id="cmail" name="cmail" placeholder="Ingresa tu nombre" value="${userData.companyMail}"></h5>
-                            <h5 align="center">Correo Interno: <input type="text" id="imail" name="imail" placeholder="Ingresa tu nombre" value="${userData.internalMail}"></h5>
+                            <h5 align="center">Correo empresarial: <input type="email" id="cmail" name="cmail" placeholder="Ingresa tu nombre" value="${userData.companyMail}"></h5>
+                            <h5 align="center">Correo Interno: <input type="email" id="imail" name="imail" placeholder="Ingresa tu nombre" value="${userData.internalMail}"></h5>
                            
                             <h5 align="center">Nombre: <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" value="${userData.name}"></h5>
                             <h5 align="center">Apellido: <input type="text" id="lname" name="lname" placeholder="Ingresa tu apellido" value="${userData.lastName}"></h5>
-                            <h5 align="center">Correo Personal: <input type="text" id="pmail" name="pmail" placeholder="Ingresa tu correo personal" value="${userData.personalMail}"></h5>
+                            <h5 align="center">Correo Personal: <input type="email" id="pmail" name="pmail" placeholder="Ingresa tu correo personal" value="${userData.personalMail}"></h5>
                             <h5 align="center">Url de imagen: <input type="text" id="urlimage" name="urlimage" placeholder="Ingresa tu correo personal" value="${userData.imageUrl}"></h5>
                            
                             <img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;">
@@ -193,12 +193,12 @@ echo '
                             <h5 align="center">Activo: ${userData.isActive}</h5>
                             <h5 align="center">Estado: ${userData.status}</h5>
                             <h5 align="center">Horas de Conexión: ${userData.totalHours}</h5>
-                            <h5 align="center">Correo empresarial: <input type="text" id="cmail" name="cmail" placeholder="Ingresa tu nombre" value="${userData.companyMail}"></h5>
-                            <h5 align="center">Correo Interno: <input type="text" id="imail" name="imail" placeholder="Ingresa tu nombre" value="${userData.internalMail}"></h5>
+                            <h5 align="center">Correo empresarial: <input type="email" id="cmail" name="cmail" placeholder="Ingresa tu nombre" value="${userData.companyMail}"></h5>
+                            <h5 align="center">Correo Interno: <input type="email" id="imail" name="imail" placeholder="Ingresa tu nombre" value="${userData.internalMail}"></h5>
                            
                             <h5 align="center">Nombre: <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" value="${userData.name}"></h5>
                             <h5 align="center">Apellido: <input type="text" id="lname" name="lname" placeholder="Ingresa tu apellido" value="${userData.lastName}"></h5>
-                            <h5 align="center">Correo Personal: <input type="text" id="pmail" name="pmail" placeholder="Ingresa tu correo personal" value="${userData.personalMail}"></h5>
+                            <h5 align="center">Correo Personal: <input type="email" id="pmail" name="pmail" placeholder="Ingresa tu correo personal" value="${userData.personalMail}"></h5>
                             <h5 align="center">Url de imagen: <input type="text" id="urlimage" name="urlimage" placeholder="Ingresa tu correo personal" value="${userData.imageUrl}"></h5>
                            
                             <img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;">
