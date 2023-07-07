@@ -12,8 +12,7 @@ require_once '../env/domain.php';
 $sub_domaincon = new model_dom();
 $sub_domain = $sub_domaincon->dom();
 
-$url = '' . $sub_domain . '/crystalGateway/apiCore/v1/postUsersBySuperAdmin';
-
+$url = $sub_domain . "/crystalGateway/apiCore/v1/postUsersBySuperAdmin".$_SESSION['ranCode']."/".$_SESSION['key'];
 // Definir los datos a enviar en la solicitud POST
 $data = array(
     'name' => $name, 
@@ -34,16 +33,10 @@ $curl = curl_init();
 // Configurar las opciones de la sesión cURL
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_POST, true);
-curl_setopt($curl, CURLOPT_POSTFIELDS, $json_data);
+curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-// Agregar los headers
-$headers = array(
-    'Content-Type: application/json', // Tipo de contenido JSON
-    'Api-Key: '.$_SESSION['ranCode'], // Token de autorización
-    'x-api-Key: '.$_SESSION['key']
-);
-curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+
 
 // Ejecutar la solicitud y obtener la respuesta
 $response1 = curl_exec($curl);
