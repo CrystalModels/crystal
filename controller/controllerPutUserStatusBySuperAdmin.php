@@ -8,7 +8,7 @@ $userName = $_GET['userName'];
 require_once '../env/domain.php';
 $sub_domaincon = new model_dom();
 $sub_domain = $sub_domaincon->dom();
-$url =  $sub_domain . "/crystalGateway/apiCore/v1/putUserStatusBySuperAdmin/".$_SESSION['ranCode']."/".$_SESSION['key']."/".$profileId;
+$url =  $sub_domain . "/crystalGateway/apiCore/v1/putUserStatusBySuperAdmin/".$_SESSION['ranCode']."/".$_SESSION['key'];
 
 // Definir los datos a enviar en la solicitud POST
 $data = array(
