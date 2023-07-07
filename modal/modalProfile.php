@@ -5,6 +5,7 @@
         <span class="close" onclick="closeModalmyModalProfile()">X</span>
         <h2 class="modal-title">Mi perfil</h2>
         <?php
+        echo $_SESSION['userName'];
         require_once 'env/domain.php';
         $sub_domaincon = new model_dom();
         $sub_domain = $sub_domaincon->dom();
