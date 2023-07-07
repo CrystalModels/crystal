@@ -62,7 +62,7 @@
         closeModalmyModalProfile();
     });
 
-    function openModalmyModalProfile() {
+    function openModalmyModalProfile1() {
         document.getElementById("myModalProfile").style.display = "block";
     }
 
