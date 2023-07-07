@@ -1,8 +1,7 @@
 <?php
 
 session_start();
-$name = $_POST['name'];
-$comments = $_POST['comments'];
+$status = $_POST['status'];
 $roomId = $_GET['roomId'];
 
 require_once '../env/domain.php';
@@ -14,7 +13,7 @@ $url = $sub_domain . "/crystalGateway/apiIntegrations/v1/putRoomsStatus/".$_SESS
 // Definir los datos a enviar en la solicitud POST
 $data = array(
     
-    'value' => $value,
+    'value' => $status,
     'roomId' => $roomId
     
 );
