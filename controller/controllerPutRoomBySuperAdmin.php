@@ -39,7 +39,7 @@ curl_close($curl);
 
 $response1 = trim($response1); // Eliminar espacios en blanco alrededor de la respuesta
 
-echo $response1;
+//echo $response1;
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
     $_SESSION["respuesta"] = "true";
     $_SESSION["mensaje"] = "Room editado correctamente";
