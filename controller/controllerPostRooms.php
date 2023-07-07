@@ -12,7 +12,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 $url = $sub_domain . "/crystalGateway/apiIntegrations/v1/postRooms/".$_SESSION['ranCode']."/".$_SESSION['key'];
 
-echo $url;
+
 
 // Definir los datos a enviar en la solicitud POST
 $data = array(
@@ -52,7 +52,7 @@ if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas
     $_SESSION["error"] = $response1;
     echo $response1;
     echo $json_data;
-    //header('Location: ../session.php');
+    header('Location: ../session.php');
 }
 
 if (strtolower($response1) != "false") { // Convertir la respuesta a minúsculas antes de comparar
@@ -61,6 +61,6 @@ if (strtolower($response1) != "false") { // Convertir la respuesta a minúsculas
     $_SESSION["error"] = $response1;
     echo $response1;
     echo $json_data;
-    //header ('Location: ../session.php');
+    header ('Location: ../session.php');
 }
 ?>
