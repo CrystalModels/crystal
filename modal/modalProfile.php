@@ -37,7 +37,7 @@
                             <h5 align="center">Nombre: <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" value="${userData.name}"></h5>
                             <h5 align="center">Apellido: <input type="text" id="lname" name="lname" placeholder="Ingresa tu apellido" value="${userData.lastName}"></h5>
                             <h5 align="center">Correo Personal: <input type="email" id="pmail" name="pmail" placeholder="Ingresa tu correo personal" value="${userData.personalMail}"></h5>
-                            <h5 align="center">Url de imagen: <input type="text" id="urlimage" name="urlimage" placeholder="Ingresa tu correo personal" value="${userData.imageUrl}"></h5>
+                            <h5 align="center">Url de imagen: <input type="url" id="urlimage" name="urlimage" placeholder="Ingresa tu correo personal" value="${userData.imageUrl}"></h5>
                            
                             <img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;">
                         `;
