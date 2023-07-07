@@ -50,7 +50,7 @@ $data = json_decode($_SESSION['userInfo']);
   $_SESSION["respuesta"] = "true";
   $_SESSION["mensaje"] = "Bienvenid@ ".$_SESSION['name']." ".$_SESSION['lastName'];
   $_SESSION["error"] = $response1;
-  $_SESSION['userName'] = $user;
+ 
 //echo $data;
 //echo json_encode($_SESSION['userInfo']);
 header ('Location: ../session.php');

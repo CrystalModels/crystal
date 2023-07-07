@@ -48,7 +48,7 @@ echo $user;
 //echo $_SESSION['key'];
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
    
- 
+    $_SESSION['userName'] = $user;
     header('Location: controllerValidateSecondStep.php');
 }
 
