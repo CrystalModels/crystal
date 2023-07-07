@@ -8,7 +8,7 @@ require_once '../env/domain.php';
 $sub_domaincon = new model_dom();
 $sub_domain = $sub_domaincon->dom();
 $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
-$url = '' . $sub_domain . '/crystalGateway/apiIntegrations/v1/postRooms/'.$headerslink;
+$url = '' . $sub_domain . '/crystalGateway/apiIntegrations/v1/postRooms/'.$_SESSION['ranCode'].'/'.$_SESSION['key'];
 
 // Definir los datos a enviar en la solicitud POST
 $data = array(
