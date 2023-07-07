@@ -47,17 +47,17 @@ if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas
     $_SESSION["respuesta"] = "true";
     $_SESSION["mensaje"] = "Room creado correctamente";
     $_SESSION["error"] = $response1;
-    echo $response1;
+    //echo $response1;
    // echo $json_data;
-    //header('Location: ../session.php');
+    header('Location: ../session.php');
 }
 
 if (strtolower($response1) === "false") { // Convertir la respuesta a minúsculas antes de comparar
     $_SESSION["respuesta"] = "false";
     $_SESSION["mensaje"] = "Error al crear room";
     $_SESSION["error"] = $response1;
-    echo $response1;
+    //echo $response1;
    // echo $json_data;
-   // header ('Location: ../session.php');
+   header ('Location: ../session.php');
 }
 ?>
