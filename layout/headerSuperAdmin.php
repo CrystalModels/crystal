@@ -62,7 +62,7 @@
             <a href="#"><H4>PERFIL</H4></a>
             <ul class="submenu">
                 
-            <li class="navbar-item"><a href="#" onclick="getMyProfileInfo1();openModalmyModalProfile();">Ver</a></li>
+            <li class="navbar-item"><a href="#" onclick="getMyProfileInfo1();openModalmyModalProfile1();">Ver</a></li>
             <li class="navbar-item"><a href="#" onclick="getMyProfileInfo();openModalmyModalProfile();">Cambiar Contraseña</a></li>
             <li class="navbar-item"><a href="#" onclick="getMyProfileInfo();openModalmyModalProfile();">Cerrar Sesión</a></li>
        
