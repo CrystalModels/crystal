@@ -16,7 +16,7 @@
     
   <div class="login-container">
     
-    <form method="post" action="../controller/controllerPostRooms.php">
+    <form method="post" action="controller/controllerPostRooms.php">
       <div class="form-group">
         <label for="name">Room</label>
         <input type="text" id="name" name="name" placeholder="Ingrese nombre de room" required>
