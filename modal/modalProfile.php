@@ -14,7 +14,7 @@
         <script>
         const rancode = sessionStorage.getItem("ranCode");
         const key = sessionStorage.getItem("key");
-            const urlMyProfile1 = "' . $sub_domain . '/crystalGateway/apiCore/v1/getProfileInfoLog/'.$_SESSION['ranCode'].'/'.$_SESSION['key'].'/'.$_SESSION['userName'].'";
+            const urlMyProfile1 = "' . $sub_domain . '/crystalGateway/apiCore/v1/getProfileInfoLogJS/'.$_SESSION['ranCode'].'/'.$_SESSION['key'].'/'.$_SESSION['userName'].'";
         </script>';
         echo '<script>
             // Función para obtener los datos del API
