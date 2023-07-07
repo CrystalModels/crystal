@@ -4,7 +4,7 @@ session_start();
 $name = $_POST['name'];
 $comments = $_POST['comments'];
 
-require_once '../env/domain.php';
+require_once 'env/domain.php';
 $sub_domaincon = new model_dom();
 $sub_domain = $sub_domaincon->dom();
 $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
