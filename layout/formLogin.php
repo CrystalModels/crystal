@@ -9,7 +9,7 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
          
    $_SESSION['key']= trim($response);
    $ip = $_SERVER['REMOTE_ADDR'];
-   echo "Dirección IP: " . $ip;
+   
 //echo $response;
 ?>
 
@@ -88,6 +88,7 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
 
 <?php
   echo "Dirección IP: " . $ip;
+  echo $_SERVER['REQUEST_METHOD'];
   echo '<script>
   const respuesta = "' . $_SESSION["respuesta"] . '";
   sessionStorage.setItem("respuesta", respuesta);
