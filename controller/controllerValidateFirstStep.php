@@ -50,7 +50,7 @@ $response1=$parts[0];
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
    
     $_SESSION['userName'] = $user;
-    $_SESSION['sessionId'] = $parts[0];
+    $_SESSION['sessionId'] = $parts[1];
     header('Location: controllerValidateSecondStep.php');
 }
 
