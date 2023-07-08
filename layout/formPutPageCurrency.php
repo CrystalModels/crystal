@@ -23,7 +23,7 @@ require_once 'env/domain.php';
 $sub_domaincon=new model_dom;
 $sub_domain=$sub_domaincon->dom();
 $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
-echo '<script>const subdominioCurrencyList = "'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllCurrency/'.$headerslink.'";</script>';
+echo '<script>const subdominioCurrencyList = "'.$sub_domain.'/crystalGateway/apiIntegrations/v1/putPageCurrency/'.$headerslink.'";</script>';
 ?>
  <div class="form-group">
  <label for="currency">Moneda</label>
