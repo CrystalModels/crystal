@@ -51,7 +51,7 @@ if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas
     header('Location: ../session.php');
 }
 
-if (strtolower($response1) === "false") { // Convertir la respuesta a minúsculas antes de comparar
+if (strtolower($response1) != "false") { // Convertir la respuesta a minúsculas antes de comparar
     $_SESSION["respuesta"] = "false";
     $_SESSION["mensaje"] = "Error al crear página";
     $_SESSION["error"] = $response1;
