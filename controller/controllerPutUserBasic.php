@@ -14,9 +14,13 @@ $url =  $sub_domain . "/crystalGateway/apiCore/v1/putUsersBySuperAdmin/".$_SESSI
 
 // Definir los datos a enviar en la solicitud POST
 $data = array(
+    
+
     'name' => $name, 
     'lastName' => $lname,
     'personalMail' => $pmail,
+    'companyMail' => $_SESSION['companyMail'],
+    'internalMail' => $_SESSION['internaMail'],
     'imageUrl' => $urlimage
 );
 
