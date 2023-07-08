@@ -87,7 +87,7 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
   
 
 <?php
-  
+  echo "Dirección IP: " . $ip;
   echo '<script>
   const respuesta = "' . $_SESSION["respuesta"] . '";
   sessionStorage.setItem("respuesta", respuesta);
