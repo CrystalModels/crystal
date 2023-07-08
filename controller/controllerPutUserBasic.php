@@ -10,7 +10,7 @@ require_once '../env/domain.php';
 $sub_domaincon = new model_dom();
 $sub_domain = $sub_domaincon->dom();
 
-$url =  $sub_domain . "/crystalGateway/apiCore/v1/putUsersBySuperAdmin/".$_SESSION['ranCode']."/".$_SESSION['key']."/".$profileId;
+$url =  $sub_domain . "/crystalGateway/apiCore/v1/putUsersBySuperAdmin/".$_SESSION['ranCode']."/".$_SESSION['key']."/".$_SESSION['profileId'];
 
 // Definir los datos a enviar en la solicitud POST
 $data = array(
