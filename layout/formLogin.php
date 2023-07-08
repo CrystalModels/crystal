@@ -8,7 +8,8 @@ $sub_domain=$sub_domaincon->dom();
 $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretKey/c66e63ca-fa63-42c8-95e7-eab4db5d41d8', false);
          
    $_SESSION['key']= trim($response);
-  
+   $ip = $_SERVER['REMOTE_ADDR'];
+   echo "Dirección IP: " . $ip;
 //echo $response;
 ?>
 
