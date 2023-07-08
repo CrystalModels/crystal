@@ -87,7 +87,7 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
   
 
 <?php
-  echo "Dirección IP: " . $ip;
+  echo "Dirección IP: " . $_SERVER['SERVER_ADDR'];
   echo " ";
   echo $_SERVER['REQUEST_METHOD'];
   echo " ";
