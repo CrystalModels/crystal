@@ -12,11 +12,13 @@ $sub_domain = $sub_domaincon->dom();
 
 
 $url = '' . $sub_domain . '/crystalGateway/apiCore/v1/validateLogIn/'.$_SESSION['key'];
-
+$browser = base64_encode($_SERVER['HTTP_USER_AGENT']);
 // Definir los datos a enviar en la solicitud POST
 $data = array(
     'userName' => $user, 
-    'keyWord' => $pass
+    'keyWord' => $pass,
+    'ipAdd' => $_SERVER['SERVER_ADDR'],
+    'browser' => $browser
 );
 
 // Convertir los datos a formato JSON
