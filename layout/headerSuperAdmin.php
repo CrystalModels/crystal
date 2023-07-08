@@ -173,6 +173,9 @@
 
   const clientkey = "'.$_SESSION["key"].'";
   sessionStorage.setItem("key", clientkey);
+  
+  const sessionId = "'.$_SESSION["sessionId"].'";
+  sessionStorage.setItem("sessionId", sessionId);
 
 
   const alerta = sessionStorage.getItem("respuesta");

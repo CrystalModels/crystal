@@ -43,14 +43,14 @@ $response1 = curl_exec($curl);
 // Cerrar la sesión cURL
 curl_close($curl);
 
-$response1 = trim($response1); // Eliminar espacios en blanco alrededor de la respuesta
-echo $response1;
-echo $_SESSION['key'];
-echo $user;
+$response2 = trim($response1); // Eliminar espacios en blanco alrededor de la respuesta
+$parts = explode(" ", $response2);
+$response1=$parts[0];
 //echo $_SESSION['key'];
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
    
     $_SESSION['userName'] = $user;
+    $_SESSION['sessionId'] = $parts[0];
     header('Location: controllerValidateSecondStep.php');
 }
 
