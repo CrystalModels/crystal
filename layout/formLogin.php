@@ -87,22 +87,7 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
   
 
 <?php
-  echo $_SERVER['SERVER_ADDR'];
-  echo " ";
-  echo $_SERVER['HTTP_USER_AGENT'];
-  $string = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0";
-  $encodedString = base64_encode($string);
   
-  echo "Cadena original: " . $string . "\n";
-  echo "Cadena codificada en Base64: " . $encodedString;
-  
-
-  $encodedString = $encodedString;
-$decodedString = base64_decode($encodedString);
-
-echo "Cadena codificada en Base64: " . $encodedString . "\n";
-echo "Cadena decodificada: " . $decodedString;
-
 
   echo '<script>
   const respuesta = "' . $_SESSION["respuesta"] . '";
