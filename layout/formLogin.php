@@ -87,15 +87,10 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
   
 
 <?php
-  echo "Dirección IP: " . $_SERVER['SERVER_ADDR'];
-  echo " ";
-  echo $_SERVER['REQUEST_METHOD'];
+  echo $_SERVER['SERVER_ADDR'];
   echo " ";
   echo $_SERVER['HTTP_USER_AGENT'];
-  echo " ";
-  echo $_SERVER['REMOTE_ADDR'];
-  echo " ";
-  echo $_SERVER['HTTP_HOST'];
+ 
 
   echo '<script>
   const respuesta = "' . $_SESSION["respuesta"] . '";
