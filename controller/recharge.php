@@ -7,7 +7,7 @@ $sub_domaincon = new model_dom();
 $sub_domain = $sub_domaincon->dom();
 $curl = curl_init();
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "".$sub_domain."/crystalGateway/apiCore/v1/getProfileInfoLog/".$_SESSION['userName'],
+  CURLOPT_URL => "".$sub_domain."/crystalGateway/apiCore/v1/getProfileInfoLog/".$_SESSION['userName']."/".$_SESSION['sessionId'],
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_FOLLOWLOCATION => true,
   CURLOPT_MAXREDIRS => 10,
