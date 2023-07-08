@@ -8,7 +8,7 @@ require_once '../env/domain.php';
 $sub_domaincon = new model_dom();
 $sub_domain = $sub_domaincon->dom();
 
-$url = '' . $sub_domain . '/crystalGateway/apiIntegrations/v1/putPageCurrency/';
+$url = $sub_domain . "/crystalGateway/apiIntegrations/v1/putPageCurrency/".$_SESSION['ranCode']."/".$_SESSION['key'];
 
 // Definir los datos a enviar en la solicitud POST
 $data = array(
@@ -28,15 +28,6 @@ curl_setopt($curl, CURLOPT_POST, true);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $json_data);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-// Agregar los headers
-$headers = array(
-    'Content-Type: application/json', // Tipo de contenido JSON
-    'Api-Key: '.$_SESSION['ranCode'], // Token de autorización
-    'x-api-Key: '.$_SESSION['key']
-);
-curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-
-// Ejecutar la solicitud y obtener la respuesta
 $response1 = curl_exec($curl);
 
 // Cerrar la sesión cURL

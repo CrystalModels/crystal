@@ -33,13 +33,6 @@ curl_setopt($curl, CURLOPT_POST, true);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $json_data);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-// Agregar los headers
-$headers = array(
-    'Content-Type: application/json', // Tipo de contenido JSON
-    'Api-Key: '.$_SESSION['ranCode'], // Token de autorización
-    'x-api-Key: '.$_SESSION['key']
-);
-curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
 // Ejecutar la solicitud y obtener la respuesta
 $response1 = curl_exec($curl);
