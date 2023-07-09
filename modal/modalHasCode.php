@@ -3,7 +3,7 @@
     <!-- Contenido del modal -->
     <div class="modal-contentProfile">
         <span class="close" onclick="closeModalmyModalHasCode()">X</span>
-        <h2 class="modal-title">Mi perfil</h2>
+        <h2 class="modal-title">Código de Confirmación</h2>
         <?php require_once 'layout/formHasCode.php' ?>
     </div>
 </div>

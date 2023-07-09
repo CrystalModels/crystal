@@ -3,7 +3,7 @@
     <!-- Contenido del modal -->
     <div class="modal-contentProfile">
         <span class="close" onclick="closeModalmyModalForgotPass()">X</span>
-        <h2 class="modal-title">Mi perfil</h2>
+        <h2 class="modal-title">Recuperar Contraseña</h2>
         <?php require_once 'layout/formForgotPass.php' ?>
     </div>
 </div>
