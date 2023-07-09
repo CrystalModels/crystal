@@ -43,19 +43,11 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
         <button type="submit">Iniciar sesión</button>
       </div>
 
-      
-    </form>
-    <form action="tu_archivo_php.php" method="POST">
-  <table>
-    <tr>
-      <td><input type="checkbox" name="registro1" value="1"></td>
-      <td>Registro 1</td>
-    </tr>
-    <!-- Resto de las filas de la tabla -->
-  </table>
-  <input type="submit" value="Guardar">
-</form>
+      <input type="checkbox" id="myCheckbox" name="myCheckbox" value="1">
+<label for="myCheckbox">Seleccionar</label>
 
+    </form>
+    
     <div class="forgot-password">
       <a href="#" onclick="openModalmyModalForgotPass();">¿Olvidó su contraseña?</a>
     </div>
