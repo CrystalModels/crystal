@@ -25,28 +25,6 @@ echo '
 <form method="post" action="controller/controllerPutUserBySuperAdmin.php?profileId='.$_GET['profileId'].'&userName='.$_GET['userName'].'">
  
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
 
 
 ';
