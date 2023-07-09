@@ -56,28 +56,7 @@ echo '
         $sub_domain = $sub_domaincon->dom();
         //echo $_SESSION['key'];
         echo '
-        <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-<br>
-<br>
-<br>
         <div id="myProfile-div"></div>
         <script>
         //const rancode = sessionStorage.getItem("ranCode");
@@ -95,6 +74,10 @@ echo '
                         // Mostrar los datos en la pantalla
                         const profileDiv = document.querySelector("#myProfile-div");
                         profileDiv.innerHTML = `
+                        <h5 align="center"> </h5>
+                        <h5 align="center"> </h5>
+                        <h5 align="center"> </h5>
+                        <h5 align="center"> </h5>
                         <h5 align="center"> </h5>
                         <h5 align="center"> </h5>
                         <h5 align="center"> </h5>
@@ -142,28 +125,7 @@ echo '
       echo '
 <form method="post" action="controller/controllerPutUserBySuperAdmin.php?profileId='.$_GET['profileId'].'&userName='.$_GET['userName'].'">
   
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-<br>
-<br>
-<br>
 ';
         require_once 'env/domain.php';
         $sub_domaincon = new model_dom();
@@ -187,6 +149,10 @@ echo '
                         // Mostrar los datos en la pantalla
                         const profileDiv = document.querySelector("#myProfile-div");
                         profileDiv.innerHTML = `
+                        <h5 align="center"> </h5>
+                        <h5 align="center"> </h5>
+                        <h5 align="center"> </h5>
+                        <h5 align="center"> </h5>
                         <h5 align="center"> </h5>
                         <h5 align="center"> </h5>
                         <h5 align="center"> </h5>
