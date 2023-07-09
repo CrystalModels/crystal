@@ -11,7 +11,7 @@
 <script>
     // JavaScript
     document.addEventListener("DOMContentLoaded", function() {
-        closeModalmyModalProfile();
+        closeModalmyModalForgotPass();
     });
 
     function openModalmyModalForgotPass() {

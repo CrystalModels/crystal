@@ -44,7 +44,7 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
       </div>
     </form>
     <div class="forgot-password">
-      <a href="#" onclick="openModalForgotPass();">¿Olvidó su contraseña?</a>
+      <a href="#" onclick="openModalmyModalForgotPass();">¿Olvidó su contraseña?</a>
     </div>
   </div>
 
