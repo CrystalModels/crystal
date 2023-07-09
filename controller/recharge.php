@@ -50,7 +50,7 @@ $data = json_decode($_SESSION['userInfo']);
 
   if($_SESSION['sessionStatus']=="0"){
 
-header ('Location: ../index.php');
+header ('Location: index.php');
   }else{
 
 
