@@ -45,19 +45,12 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
 
       <table>
   <tr>
-    <th>ID</th>
-    <th>Nombre</th>
-    <th>Editar</th>
-  </tr>
-  <tr>
-    <td><input type="checkbox" id="checkbox1" /></td>
+    <td><input type="checkbox" name="registro1" value="1"></td>
     <td>Registro 1</td>
-    <td><button onclick="editarRegistro('checkbox1')">Editar</button></td>
   </tr>
   <tr>
-    <td><input type="checkbox" id="checkbox2" /></td>
+    <td><input type="checkbox" name="registro2" value="2"></td>
     <td>Registro 2</td>
-    <td><button onclick="editarRegistro('checkbox2')">Editar</button></td>
   </tr>
 </table>
 
