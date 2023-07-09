@@ -48,12 +48,6 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
     </div>
   </div>
 
-  <div class="theme-toggle">
-    <input type="checkbox" id="theme-toggle-checkbox">
-    <label for="theme-toggle-checkbox" class="theme-toggle-label"></label>
-  </div>
-
-  <script src="scripts/scriptDarkMode.js"></script>
 </body>
 </html>
 
