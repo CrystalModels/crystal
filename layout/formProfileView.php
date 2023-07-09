@@ -86,7 +86,7 @@ echo '
      </script>';
         echo '<script>
             // Función para obtener los datos del API
-            async function getMyProfileInfo() {
+            async function getMyProfileInfo1() {
                 fetch(urlMyProfile1)
                     .then(response => response.json())
                     .then(data => {
@@ -124,7 +124,7 @@ echo '
             }
 
             // Llamar a la función para obtener los datos del API
-            getMyProfileInfo();
+            getMyProfileInfo1();
         </script>
        
     
@@ -212,7 +212,7 @@ echo '
             }
 
             // Llamar a la función para obtener los datos del API
-            getMyProfileInfo();
+            getMyProfileInfo1();
         </script>
        
     
