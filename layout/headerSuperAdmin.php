@@ -16,7 +16,7 @@
         <span></span>
     </button>
     <ul class="navbar-menu" id="navbar-menu">
-        <li class="navbar-item"><a href="#"><H4>INICIO</H4></a></li>
+      
         <li class="navbar-item has-submenu">
             <a href="#"><H4>RECURSOS</H4></a>
             <ul class="submenu">
@@ -37,6 +37,14 @@
             <li class="navbar-item"><a href="#" onclick="openModalPhotograph();getPhotographs();">Fotógrafos</a></li>
 
            
+            </ul>
+        </li>
+        <li class="navbar-item has-submenu">
+            <a href="#"><H4>ORGANIZADOR</H4></a>
+            <ul class="submenu">
+            <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Horarios</a></li>
+            <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Alertas</a></li>
+            <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Recordatorio</a></li>
             </ul>
         </li>
         <li class="navbar-item has-submenu">
