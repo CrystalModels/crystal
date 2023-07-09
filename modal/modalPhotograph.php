@@ -4,10 +4,7 @@
         <!-- Contenido del modal -->
         <div class="modal-content">
             <span class="close" onclick="closeModalPhotograph()">X</span>
-            <h2>Fotografos</h2>
-            <button type="submit" class="table-button">Crear Monitor</button>
-      <br>
-            <?php require_once 'layout/tablePhotographs.php' ?>
+                  <?php require_once 'layout/tablePhotographs.php' ?>
         </div>
     </div>
 

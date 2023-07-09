@@ -5,9 +5,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeModalMonitors()">X</span>
             <h2>Monitores</h2>
-            <button type="submit" class="table-button">Crear Monitor</button>
-      <br>
-            <?php require_once 'layout/tableMonitors.php' ?>
+                       <?php require_once 'layout/tableMonitors.php' ?>
         </div>
     </div>
 
