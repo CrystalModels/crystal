@@ -43,10 +43,18 @@ $data = json_decode($_SESSION['userInfo']);
     $_SESSION['totalHours'] =$character->totalHours;
     $_SESSION['rol'] =$character->rol;
     $_SESSION['ranCode'] =$character->ranCode;
+    $_SESSION['sessionStatus'] =$character->sessionStatus;
     
     
   }
 
+  if($_SESSION['sessionStatus']=="0"){
+require_once 'controllerLogOut.php';
+
+  }else{
+
+
+  }
 //echo $data;
 //echo json_encode($_SESSION['userInfo']);
 
