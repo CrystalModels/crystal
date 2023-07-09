@@ -49,7 +49,11 @@ $data = json_decode($_SESSION['userInfo']);
   }
 
   if($_SESSION['sessionStatus']=="0"){
+// Borrar todas las variables de sesión
+session_unset();
 
+// Destruir la sesión
+session_destroy();
 header ('Location: index.php');
   }else{
 

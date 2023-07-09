@@ -47,6 +47,17 @@ if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas
    
     $_SESSION['userName'] = $user;
     $_SESSION['sessionId'] = $parts[1];
+
+    // Borrar todas las variables de sesión
+session_unset();
+
+// Destruir la sesión
+session_destroy();
+
+echo '<script>
+sessionStorage.clear();
+
+<script/>';
     header ('Location: ../index.php');}
 
 if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas antes de comparar
@@ -55,6 +66,6 @@ if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas 
     $_SESSION["error"] = $response1;
     $_SESSION['userName'] = $user;
    
-    header ('Location: ../index.php');
+    //header ('Location: ../index.php');
 }
 ?>
