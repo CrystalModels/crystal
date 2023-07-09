@@ -40,16 +40,14 @@ $response1 = curl_exec($curl);
 // Cerrar la sesión cURL
 curl_close($curl);
 
-$response2 = trim($response1); // Eliminar espacios en blanco alrededor de la respuesta
-$parts = explode(" ", $response2);
-$response1=$parts[0];
+$response1 = trim($response1); // Eliminar espacios en blanco alrededor de la respuesta
+
 //echo $_SESSION['key'];
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
    
     $_SESSION['userName'] = $user;
     $_SESSION['sessionId'] = $parts[1];
-    header('Location: controllerValidateSecondStep.php');
-}
+    header ('Location: ../index.php');}
 
 if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas antes de comparar
     $_SESSION["respuesta"] = "false";
@@ -57,6 +55,6 @@ if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas 
     $_SESSION["error"] = $response1;
     $_SESSION['userName'] = $user;
    
-    header ('Location: ../index.php');
+    //header ('Location: ../index.php');
 }
 ?>
