@@ -11,6 +11,7 @@
       <br>
             <?php require_once 'layout/tableUsersSuperAdmin.php' ?>
         </div>
+        
     </div>
 
     <script>

@@ -452,8 +452,6 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
     white-space: normal; /* Permite el ajuste de línea en dispositivos de pantalla más pequeña */
   }
 }
-
-
 /* Estilos del modal */
 .modal {
   display: none;
@@ -492,8 +490,6 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
   max-height: calc(100% - 40px);
   overflow-y: auto; /* Agrega desplazamiento vertical al contenido del modal */
 }
-
-
 
 .modal-content {
   background-color: #fff;
@@ -534,6 +530,26 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
   background-color: rgba(185, 104, 206, 0.8);
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  .table th,
+  .table td {
+    white-space: nowrap; /* Evita el ajuste de línea en los elementos de la tabla en modo responsive */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /* Estilos para el modo oscuro */
     body.dark-mode {
