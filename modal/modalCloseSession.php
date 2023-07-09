@@ -4,7 +4,7 @@
     <div class="modal-contentProfile">
         <span class="close" onclick="closeModalmyModalCloseSession()">X</span>
         <h2 class="modal-title">Código de Confirmación</h2>
-        <?php require_once 'layout/formHasCloseSession.php' ?>
+        <?php require_once 'layout/formCloseSession.php' ?>
     </div>
 </div>
 
