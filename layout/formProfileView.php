@@ -103,7 +103,6 @@ echo '
                             <h5 align="center">Sesiones Activas: ${userData.sessionCounter}</h5>
                             <h5 align="center">Activo: ${userData.isActive}</h5>
                             <h5 align="center">Estado: ${userData.status}</h5>
-                            <h5 align="center">Horas de Conexión: ${userData.totalHours}</h5>
                             <h5 align="center">Correo empresarial: <input type="email" id="cmail" name="cmail" placeholder="Ingresa tu nombre" value="${userData.companyMail}"></h5>
                             <h5 align="center">Correo Interno: <input type="email" id="imail" name="imail" placeholder="Ingresa tu nombre" value="${userData.internalMail}"></h5>
                            
