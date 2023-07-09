@@ -1,5 +1,6 @@
 
-
+<input type="checkbox" id="myCheckbox" name="myCheckbox" value="1">
+<label for="myCheckbox">Seleccionar</label>
 <?php
 require_once 'env/domain.php';
 session_start();
@@ -43,8 +44,7 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
         <button type="submit">Iniciar sesión</button>
       </div>
 
-      <input type="checkbox" id="myCheckbox" name="myCheckbox" value="1">
-<label for="myCheckbox">Seleccionar</label>
+      
 
     </form>
     
