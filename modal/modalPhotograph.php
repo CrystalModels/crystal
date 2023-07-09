@@ -4,7 +4,9 @@
         <!-- Contenido del modal -->
         <div class="modal-content">
             <span class="close" onclick="closeModalPhotograph()">X</span>
-                  <?php require_once 'layout/tablePhotographs.php' ?>
+                 
+            <h2>Monitores</h2>
+            <?php require_once 'layout/tablePhotographs.php' ?>
         </div>
     </div>
 
