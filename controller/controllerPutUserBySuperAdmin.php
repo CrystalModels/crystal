@@ -21,7 +21,7 @@ $data = array(
     'name' => $name, 
     'lastName' => $lname,
     'personalMail' => $pmail,
-    'companyMail' => $pmail,
+    'companyMail' => $cmail,
     'internalMail' => $imail,
     'imageUrl' => $urlimage
     
