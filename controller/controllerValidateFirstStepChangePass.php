@@ -51,7 +51,8 @@ if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas
    
     $_SESSION['userName'] = $user;
     $_SESSION['sessionId'] = $parts[1];
-    header('Location: controllerValidateSecondStep.php');
+    echo $response1;
+    //header('Location: controllerValidateSecondStep.php');
 }
 
 if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas antes de comparar
@@ -59,7 +60,7 @@ if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas 
     $_SESSION["mensaje"] = $response1;
     $_SESSION["error"] = $response1;
     $_SESSION['userName'] = $user;
-   
-    header ('Location: ../index.php');
+   echo $response1;
+   // header ('Location: ../index.php');
 }
 ?>

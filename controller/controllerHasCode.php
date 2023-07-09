@@ -55,9 +55,12 @@ if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas
     $_SESSION["respuesta"] = "false";
     $_SESSION["mensaje"] = $response1;
     $_SESSION["error"] = $response1;
-    header ('Location: controllerValidateFirstStepChangePass.php?userName='.$uname.'&password='.$newk);}
+    header ('Location: controllerValidateFirstStepChangePass.php?userName='.$uname.'&password='.$newk);
+}
 
-if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas antes de comparar
+
+
+if (strtolower($response1) === "false") { // Convertir la respuesta a minúsculas antes de comparar
     $_SESSION["respuesta"] = "false";
     $_SESSION["mensaje"] = $response1;
     $_SESSION["error"] = $response1;
