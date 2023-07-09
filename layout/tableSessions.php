@@ -20,12 +20,12 @@
 require_once 'env/domain.php';
 $sub_domaincon=new model_dom;
 $sub_domain=$sub_domaincon->dom();
-$headerslink=$_SESSION['key']." ".$_SESSION['key'];
+$headerslink=$_SESSION['key'];
 	echo '
 	<script>
 		
   //const my_profyle = sessionStorage.getItem("profile");
-  const subdominiosessions = `'.$sub_domain.'/crystalGateway/apiCore/v1/getSessions/'.$headerslink.'`;
+  const subdominiosessions = `'.$sub_domain.'/crystalGateway/apiCore/v1/getSessions/'.$headerslink.'/try.8f`;
 
  // Función para obtener los datos del API
  async function getSessions() {';?>
@@ -43,7 +43,7 @@ $headerslink=$_SESSION['key']." ".$_SESSION['key'];
     data.session.forEach(session => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><a class="table-button" href="room.php?roomId=${session.roomId}" target="_blank">Abrir</a>
+      <td><a class="table-button" href="room.php?roomId=${session.sessionId}" target="_blank">Abrir</a>
       </td>
   
       <td>${session.browser}</td>
