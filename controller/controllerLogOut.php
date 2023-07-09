@@ -10,7 +10,7 @@ $sub_domain = $sub_domaincon->dom();
 
 
 
-$url = '' . $sub_domain . '/crystalGateway/apiCore/v1/validateLogOut/'.$_SESSION['key'];
+$url = '' . $sub_domain . '/crystalGateway/apiCore/v1/validateLogOut/';
 $browser = base64_encode($_SERVER['HTTP_USER_AGENT']);
 // Definir los datos a enviar en la solicitud POST
 $data = array(
