@@ -17,7 +17,7 @@
 
   <div class="login-container">
     <h2><img src="public/logo.png" alt="Crystal Models"></h2>
-    <form method="post" action="controller/controllerValidateFirstStep.php">
+    <form method="post" action="controller/controllerForgotPass.php">
 
     <div class="form-group">
         <label for="username">Se enviará un código de recuperación a tu correo Empresarial</label>  </div>
