@@ -22,15 +22,6 @@
         document.getElementById("myModalForgotPass").style.display = "none";
     }
 
-    // Cambiar al modo oscuro
-    function enableDarkMode() {
-        document.body.classList.add("dark-mode");
-    }
-
-    // Cambiar al modo claro
-    function disableDarkMode() {
-        document.body.classList.remove("dark-mode");
-    }
 </script>
 </body>
 </html>
