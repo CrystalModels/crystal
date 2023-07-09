@@ -18,6 +18,10 @@
   <div class="login-container">
     <h2><img src="public/logo.png" alt="Crystal Models"></h2>
     <form method="post" action="controller/controllerValidateFirstStep.php">
+
+    <div class="form-group">
+        <label for="username">Se enviara un código de recuperación a tu correo Empresarial</label>  </div>
+     
       <div class="form-group">
         <label for="username">Usuario / Correo Empresarial</label>
         <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required>
@@ -25,10 +29,13 @@
      
       
       <div class="form-group">
-        <button type="submit">Recuperar Cuenta</button>
+        <button type="submit">Enviar código</button>
       </div>
+
     </form>
-    
+     <div class="forgot-password">
+      <a href="#" onclick="openModalmyModalForgotPass();">Ya tengo código de recuperación</a>
+    </div>
   </div>
 
  
