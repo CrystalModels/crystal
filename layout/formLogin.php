@@ -42,9 +42,31 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
       <div class="form-group">
         <button type="submit">Iniciar sesión</button>
       </div>
+
+      <table>
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Editar</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox1" /></td>
+    <td>Registro 1</td>
+    <td><button onclick="editarRegistro('checkbox1')">Editar</button></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkbox2" /></td>
+    <td>Registro 2</td>
+    <td><button onclick="editarRegistro('checkbox2')">Editar</button></td>
+  </tr>
+</table>
+
     </form>
     <div class="forgot-password">
       <a href="#" onclick="openModalmyModalForgotPass();">¿Olvidó su contraseña?</a>
+    </div>
+    <div class="forgot-password">
+      <a href="#" onclick="openModalmyModalCloseSession();">Cerrar sesión en otros dispositivos</a>
     </div>
   </div>
 
