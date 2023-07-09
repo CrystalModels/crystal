@@ -389,3 +389,45 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
   background-color: rgba(185, 104, 206, 0.8);
   color: #fff;
 }
+
+
+/* Estilos personalizados para el checkbox */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.custom-checkbox label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label::before {
+  background-color: #000;
+}
+
+.custom-checkbox label:hover::before {
+  background-color: #ccc;
+}
+
+/* Agrega estilos adicionales para cada checkbox si es necesario */
+.custom-checkbox-1 label {
+  /* Estilos específicos para el checkbox 1 */
+}
+
+.custom-checkbox-2 label {
+  /* Estilos específicos para el checkbox 2 */
+}
+
+/* Agrega más estilos específicos para cada checkbox si es necesario */

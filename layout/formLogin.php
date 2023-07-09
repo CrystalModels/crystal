@@ -1,6 +1,12 @@
 
-<input type="checkbox" id="myCheckbox" name="myCheckbox" value="1">
-<label for="myCheckbox">Seleccionar</label>
+<input type="checkbox" id="checkbox1" name="checkbox1" value="1">
+<label for="checkbox1" class="custom-checkbox">Checkbox 1</label>
+
+<input type="checkbox" id="checkbox2" name="checkbox2" value="2">
+<label for="checkbox2" class="custom-checkbox">Checkbox 2</label>
+
+<!-- Agrega más checkboxes si es necesario -->
+
 <?php
 require_once 'env/domain.php';
 session_start();
