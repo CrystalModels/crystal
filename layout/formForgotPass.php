@@ -1,18 +1,5 @@
 
 
-<?php
-require_once 'env/domain.php';
-session_start();
-$sub_domaincon=new model_dom();
-$sub_domain=$sub_domaincon->dom();
-$response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretKey/c66e63ca-fa63-42c8-95e7-eab4db5d41d8', false);
-         
-   $_SESSION['key']= trim($response);
-   $_SESSION['sessionStatus']="0";
-   
-//echo $response;
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,20 +19,16 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
     <h2><img src="public/logo.png" alt="Crystal Models"></h2>
     <form method="post" action="controller/controllerValidateFirstStep.php">
       <div class="form-group">
-        <label for="username">Usuario</label>
+        <label for="username">Usuario / Correo Empresarial</label>
         <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required>
       </div>
+     
+      
       <div class="form-group">
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
-      </div>
-      <div class="form-group">
-        <button type="submit">Iniciar sesión</button>
+        <button type="submit">Recuperar Cuenta</button>
       </div>
     </form>
-    <div class="forgot-password">
-      <a href="#" onclick="openModalForgotPass();getUsersSuperAdmin();">¿Olvidó su contraseña?</a>
-    </div>
+    
   </div>
 
   <div class="theme-toggle">
