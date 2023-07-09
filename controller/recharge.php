@@ -49,8 +49,8 @@ $data = json_decode($_SESSION['userInfo']);
   }
 
   if($_SESSION['sessionStatus']=="0"){
-require_once 'controllerLogOut.php';
 
+header ('Location: ../index.php');
   }else{
 
 
