@@ -82,7 +82,7 @@ echo '
         <script>
         //const rancode = sessionStorage.getItem("ranCode");
         //const key = sessionStorage.getItem("key");
-        const urlMyProfile1 = "' . $sub_domain . '/crystalGateway/apiCore/v1/getProfileInfoLogJS/'.$_SESSION['ranCode'].'/'.$_SESSION['key'].'/'.$_SESSION['userName'].'/'.$_SESSION['sessionId'].'";
+        const urlMyProfile1 = "' . $sub_domain . '/crystalGateway/apiCore/v1/getProfileInfoLogJS/'.$_SESSION['ranCode'].'/'.$_SESSION['key'].'/'.$_GET['userName'].'/'.$_SESSION['sessionId'].'";
      </script>';
         echo '<script>
             // Función para obtener los datos del API
