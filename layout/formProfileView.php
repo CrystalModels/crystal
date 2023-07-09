@@ -95,14 +95,18 @@ echo '
                         // Mostrar los datos en la pantalla
                         const profileDiv = document.querySelector("#myProfile-div");
                         profileDiv.innerHTML = `
+                        <h5 align="center"> </h5>
+                        <h5 align="center"> </h5>
+                        <h5 align="center"> </h5>
+                        <h5 align="center"> </h5>
                             <h4 align="center">${userData.name} ${userData.lastName}</h4>
                             <h5 align="center">Usuario: ${userData.userName}</h5>
                             <h5 align="center">Rol: ${userData.rol}</h5>
-                            <h5 align="center">Id de usuario: ${userData.userId}</h5>
+
                             <h5 align="center">Id de Perfil: ${userData.profileId}</h5>
                             <h5 align="center">Sesiones Activas: ${userData.sessionCounter}</h5>
-                            <h5 align="center">Activo: ${userData.isActive}</h5>
-                            <h5 align="center">Estado: ${userData.status}</h5>
+                            <h5 align="center">Activo: ${userData.isActive} >Estado: ${userData.status}</h5>
+
                             <h5 align="center">Correo empresarial: <input type="email" id="cmail" name="cmail" placeholder="Ingresa tu nombre" value="${userData.companyMail}"></h5>
                             <h5 align="center">Correo Interno: <input type="email" id="imail" name="imail" placeholder="Ingresa tu nombre" value="${userData.internalMail}"></h5>
                            
@@ -183,15 +187,18 @@ echo '
                         // Mostrar los datos en la pantalla
                         const profileDiv = document.querySelector("#myProfile-div");
                         profileDiv.innerHTML = `
+                        <h5 align="center"> </h5>
+                        <h5 align="center"> </h5>
+                        <h5 align="center"> </h5>
+                        <h5 align="center"> </h5>
                             <h4 align="center">${userData.name} ${userData.lastName}</h4>
                             <h5 align="center">Usuario: ${userData.userName}</h5>
                             <h5 align="center">Rol: ${userData.rol}</h5>
-                            <h5 align="center">Id de usuario: ${userData.userId}</h5>
+
                             <h5 align="center">Id de Perfil: ${userData.profileId}</h5>
                             <h5 align="center">Sesiones Activas: ${userData.sessionCounter}</h5>
-                            <h5 align="center">Activo: ${userData.isActive}</h5>
-                            <h5 align="center">Estado: ${userData.status}</h5>
-                            <h5 align="center">Horas de Conexión: ${userData.totalHours}</h5>
+                            <h5 align="center">Activo: ${userData.isActive} >Estado: ${userData.status}</h5>
+
                             <h5 align="center">Correo empresarial: <input type="email" id="cmail" name="cmail" placeholder="Ingresa tu nombre" value="${userData.companyMail}"></h5>
                             <h5 align="center">Correo Interno: <input type="email" id="imail" name="imail" placeholder="Ingresa tu nombre" value="${userData.internalMail}"></h5>
                            
@@ -201,7 +208,8 @@ echo '
                             <h5 align="center">Url de imagen: <input type="url" id="urlimage" name="urlimage" placeholder="Ingresa tu correo personal" value="${userData.imageUrl}"></h5>
                            
                             <img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;">
-                            <h5 align="center"><a href="#" onclick="openModalPutRolAdmin();" class="table-button">Cambiar Rol</a><br></h5>
+                            <h5 align="center"><a href="#" onclick="openModalPutRol();" class="table-button">Cambiar Rol</a><br></h5>
+                            <h5 align="center"><a href="#" onclick="openModalPutUserStatus();" class="table-button">Eliminar/Desactivar/Ocultar</a><br></h5>
         
                             `;
                     })
