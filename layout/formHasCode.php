@@ -20,22 +20,25 @@
     <form method="post" action="controller/controllerValidateFirstStep.php">
 
     <div class="form-group">
-        <label for="username">Se enviará un código de recuperación a tu correo Empresarial</label>  </div>
+        <label for="username">Escribe código de confirmación y nueva contraseña</label>  </div>
      
       <div class="form-group">
-        <label for="username">Usuario / Correo Empresarial</label>
-        <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required>
+        <label for="username">Código de confirmación</label>
+        <input type="password" id="username" name="username" placeholder="Ingrese su usuario" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="username">Nueva Contraseña</label>
+        <input type="password" id="username" name="username" placeholder="Ingrese su usuario" required>
       </div>
      
       
       <div class="form-group">
-        <button type="submit">Enviar código</button>
+        <button type="submit">Validar</button>
       </div>
 
     </form>
-     <div class="forgot-password">
-      <a href="#" onclick="openModalmyModalHasCode();">Ya tengo código de recuperación</a>
-    </div>
+    
   </div>
 
  
