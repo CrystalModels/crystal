@@ -43,9 +43,10 @@ $response1 = curl_exec($curl);
 // Cerrar la sesión cURL
 curl_close($curl);
 
-$response2 = trim($response1); // Eliminar espacios en blanco alrededor de la respuesta
-$parts = explode(" ", $response2);
+//$response2 = trim($response1); // Eliminar espacios en blanco alrededor de la respuesta
+$parts = explode("*", $response1);
 $response1=$parts[0];
+$response11=$parts[1];
 //echo $_SESSION['key'];
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
    
@@ -55,9 +56,9 @@ if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas
 }
 
 if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas antes de comparar
-    $_SESSION["respuesta"] = "false";
-    $_SESSION["mensaje"] = $response1;
-    $_SESSION["error"] = $response1;
+    $_SESSION["respuesta"] = $response11;
+    $_SESSION["mensaje"] = $response11;
+    $_SESSION["error"] = $response11;
     $_SESSION['userName'] = $user;
    
     header ('Location: ../index.php');

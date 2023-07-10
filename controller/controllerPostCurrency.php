@@ -42,21 +42,25 @@ $response1 = curl_exec($curl);
 // Cerrar la sesión cURL
 curl_close($curl);
 
-$response1 = trim($response1); // Eliminar espacios en blanco alrededor de la respuesta
+//$response1 = trim($response1); // Eliminar espacios en blanco alrededor de la respuesta
 
+$array = explode("*", $response1);
+
+$response1=$array[0];
+$message=$array[1];
 //echo $_SESSION['key'];
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
-    $_SESSION["respuesta"] = "true";
-    $_SESSION["mensaje"] = "Moneda creada correctamente";
+    $_SESSION["respuesta"] = $response1;
+    $_SESSION["mensaje"] = $message;
     $_SESSION["error"] = $response1;
  
  
     header('Location: ../session.php');
 }
 
-if (strtolower($response1) === "false") { // Convertir la respuesta a minúsculas antes de comparar
-    $_SESSION["respuesta"] = "false";
-    $_SESSION["mensaje"] = "Error al crear moneda";
+if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas antes de comparar
+    $_SESSION["respuesta"] = $response1;
+    $_SESSION["mensaje"] = $message;
     $_SESSION["error"] = $response1;
 
   
