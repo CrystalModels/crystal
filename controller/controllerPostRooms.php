@@ -44,7 +44,7 @@ curl_close($curl);
 
 $array = explode("*", $response1);
 
-$response2=$array[0];
+$response12=$array[0];
 $message=$array[1];
 //echo $_SESSION['key'];
 
