@@ -2,7 +2,7 @@
 
 session_start();
 
-$uname=$_SESSION['username'];
+$uname=$_SESSION['userName'];
 $newk=$_POST['keyword'];
 $vcode=$_POST['nkeyword'];
 

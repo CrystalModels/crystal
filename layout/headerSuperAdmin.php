@@ -71,7 +71,7 @@
             <ul class="submenu">
                 
             <li class="navbar-item"><a href="#" onclick="getMyProfileInfo1();openModalmyModalProfile1();">Ver</a></li>
-            <li class="navbar-item"><a href="#" onclick="getMyProfileInfo();openModalmyModalProfile();">Cambiar Contraseña</a></li>
+            <li class="navbar-item"><a href="#" onclick="openModalmyModalChangePassSession();">Cambiar Contraseña</a></li>
             <li class="navbar-item"><a href="controller/controllerLogOut.php">Cerrar Sesión</a></li>
        
                 
