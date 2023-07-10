@@ -53,6 +53,15 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
     <div class="forgot-password">
       <a href="#" onclick="openModalmyModalCloseSession();">Cerrar sesión en otros dispositivos</a>
     </div>
+
+    <div class="forgot-password">
+      <?php
+      require_once 'version/version.php';
+      $sub_domaincon = new model_ver();
+      echo $sub_domain = $sub_domaincon->versioning();
+      ?>
+  </div>
+
   </div>
 
 </body>
