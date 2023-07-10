@@ -42,10 +42,14 @@ $response1 = curl_exec($curl);
 
 // Cerrar la sesión cURL
 curl_close($curl);
+//$response2 = trim($response1); // Eliminar espacios en blanco alrededor de la respuesta
 $parts = explode("*", $response1);
-$response1=$parts[0];
+$response12=$parts[0];
 $response11=$parts[1];
 //echo $_SESSION['key'];
+
+$response1 = trim($response12); // Eliminar espacios en blanco alrededor de la respuesta
+
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
    
     $_SESSION['userName'] = $user;

@@ -42,10 +42,12 @@ curl_close($curl);
 
 //$response1 = trim($response1); // Eliminar espacios en blanco alrededor de la respuesta
 $array = explode("*", $response1);
-
-$response1=$array[0];
+$response12=$array[0];
 $message=$array[1];
 //echo $_SESSION['key'];
+
+$response1 = trim($response12); // Eliminar espacios en blanco alrededor de la respuesta
+
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
     $_SESSION["respuesta"] = $response1;
     $_SESSION["mensaje"] = $message;

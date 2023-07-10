@@ -44,8 +44,11 @@ curl_close($curl);
 
 $array = explode("*", $response1);
 
-$response1=$array[0];
+$response12=$array[0];
 $message=$array[1];
+
+$response1 = trim($response12); // Eliminar espacios en blanco alrededor de la respuesta
+
 //echo $_SESSION['key'];
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
    
