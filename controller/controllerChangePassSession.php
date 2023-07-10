@@ -3,8 +3,8 @@
 session_start();
 
 $uname=$_SESSION['userName'];
-$newk=$_POST['keyword'];
-$vcode=$_POST['nkeyword'];
+$keyword=$_POST['keyword'];
+$newk=$_POST['nkeyword'];
 
 require_once '../env/domain.php';
 $sub_domaincon = new model_dom();
@@ -47,7 +47,7 @@ curl_close($curl);
 $array = explode("*", $response2);
 
 $response12=$array[0];
-$message=$array[1];
+
 //echo $_SESSION['key'];
 
 $response1 = trim($response12); 
@@ -55,7 +55,7 @@ $response1 = trim($response12);
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
    
 
-
+    $message=$array[1];
 
     $_SESSION["respuesta"] = $response1;
     $_SESSION["mensaje"] = $message;
@@ -65,10 +65,12 @@ if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas
 
 
 
-if (strtolower($response1) === "false") { // Convertir la respuesta a minúsculas antes de comparar
-    $_SESSION["respuesta"] = $response1;
-    $_SESSION["mensaje"] = $message;
-    $_SESSION["error"] = $response1;
+if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas antes de comparar
+   
+    $message=$array[1];
+    $_SESSION["respuesta"] = "false";
+    $_SESSION["mensaje"] = "¡Contraseña incorrecta!";
+    $_SESSION["error"] = $message;
    
     header ('Location: ../session.php');
 }
