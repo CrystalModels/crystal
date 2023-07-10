@@ -37,14 +37,14 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 
 // Ejecutar la solicitud y obtener la respuesta
-$response1 = curl_exec($curl);
+$response2 = curl_exec($curl);
 
 // Cerrar la sesión cURL
 curl_close($curl);
 
 //$response1 = trim($response1); // Eliminar espacios en blanco alrededor de la respuesta
 
-$array = explode("*", $response1);
+$array = explode("*", $response2);
 
 $response1=$array[0];
 $message=$array[1];
