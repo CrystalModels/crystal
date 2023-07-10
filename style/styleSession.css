@@ -1,4 +1,5 @@
 body {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -40,8 +41,6 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  
 }
 
 .form-group {
@@ -207,19 +206,20 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
 
 /* Estilos del menú desplegable */
 .navbar {
-  position: sticky;
-  top: 10px;
-  left: 30px; /* Nueva propiedad para posicionar en la izquierda */
+  font-family: Martian Mono;
+  position: fixed;
+  top: 126px;
   z-index: 1;
   display: flex;
-  flex-direction: column; /* Cambio a dirección vertical */
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(185, 104, 206, 0.8);
-  padding: 20px;
-  border-radius: 25px;
+  padding: 76px;
+  border-radius: 122px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
+  transition: background-color 1s ease;
+}
 }
 
 .navbar:hover {
@@ -504,6 +504,7 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
   max-width: 100%;
   border-radius: 10px;
   overflow-y: auto; /* Barra de desplazamiento vertical si el contenido excede el tamaño del modal */
+  overflow-x: auto;
   max-height: 500px; /* Altura máxima del modal (ajustar según sea necesario) */
 }
 
@@ -514,26 +515,23 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
 .table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
-  border-radius: 20px;
+  table-layout: fixed; /* Fija el ancho de la tabla para un diseño más predecible */
 }
 
 .table th,
 .table td {
+  word-wrap: break-word; /* Permite que las palabras se dividan y ajusten automáticamente */
+  max-width: 150px;
   padding: 8px;
-  text-align: left;
   border: 1px solid #ccc;
-  white-space: normal; /* Evita el ajuste de línea en los elementos de la tabla */
-  word-break: break-word; /* Rompe la palabra en varias líneas si es necesario */
-  max-width: 300px; /* Ajusta el ancho máximo de las celdas para evitar la superposición */
-  overflow: hidden; /* Oculta el contenido que excede el ancho máximo */
-  text-overflow: ellipsis; /* Agrega puntos suspensivos (...) para indicar que hay más contenido oculto */
 }
 
 .table th {
   background-color: rgba(185, 104, 206, 0.8);
   color: #fff;
 }
+
+
 
     /* Estilos para el modo oscuro */
     body.dark-mode {
