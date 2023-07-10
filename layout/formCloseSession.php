@@ -20,9 +20,8 @@
     <form method="post" action="controller/controllerHasCode.php">
 
     <div class="form-group">
-        <label for="username">Escribe código de confirmación y nueva contraseña</label>  </div>
-     
-      <div class="form-group">
+      
+      
        
 
 <?php

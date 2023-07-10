@@ -25,7 +25,7 @@ $headerslink=$_SESSION['key'];
 	<script>
 		
   //const my_profyle = sessionStorage.getItem("profile");
-  const subdominiosessions = `'.$sub_domain.'/crystalGateway/apiCore/v1/getSessions/'.$headerslink.'/try.8f`;
+  const subdominiosessions = `'.$sub_domain.'/crystalGateway/apiCore/v1/getSessions/'.$headerslink.'/'.$_SESSION['userName'].'`;
 
  // Función para obtener los datos del API
  async function getSessions() {';?>
@@ -43,7 +43,7 @@ $headerslink=$_SESSION['key'];
     data.session.forEach(session => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><a class="table-button" href="room.php?roomId=${session.sessionId}" target="_blank">Abrir</a>
+      <td><a class="table-button" href="controller/controllerCloseSession.php?sessionId=${session.sessionId}" target="_blank">Cerrar</a>
       </td>
   
       <td>${session.browser}</td>
