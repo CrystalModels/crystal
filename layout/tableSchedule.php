@@ -50,7 +50,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.sche.forEach(schedule => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><a class="table-button" href="schedule.php?schId=${student.schId}" target="_blank">Abrir</a>
+      <td><a class="table-button" href="schedule.php?schId=${schedule.schId}" target="_blank">Abrir</a>
       </td>
       <td>${schedule.sTime}</td>
       <td>${schedule.mon}<br><a class="btn btn-secondary" href="schedule.php?id=${schedule.schId}&day=mon">Editar</a></td>
