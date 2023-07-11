@@ -32,7 +32,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	<script>
 		
   //const my_profyle = sessionStorage.getItem("profile");
-  const subdominiosch = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getMysche/'.$headerslink.'/'.$_SESSION['profileId'].'`;
+  const subdominiosch = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getMyschedule/'.$headerslink.'/'.$_SESSION['profileId'].'`;
 
  // Función para obtener los datos del API
  async function getSch() {';?>
