@@ -20,7 +20,7 @@
         <li class="navbar-item has-submenu">
             <a href="#"><H4>RECURSOS</H4></a>
             <ul class="submenu">
-            <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Usuarios</a></li>
+            <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();getSchUsersx();">Usuarios</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalRooms();getRooms();">Rooms</a></li>
              
             <li class="navbar-item"><a href="#" onclick="openModalPages();getPages();">Páginas</a></li>
@@ -42,29 +42,51 @@
         <li class="navbar-item has-submenu">
             <a href="#"><H4>ORGANIZADOR</H4></a>
             <ul class="submenu">
-            <li class="navbar-item"><a href="#" onclick="openModalSchedule();getSch();">Horarios</a></li>
+            <li class="navbar-item"><a href="#" onclick="openModalSchedule();getSch();">Mi Horario</a></li>
+            <li class="navbar-item"><a href="#" onclick="openModalUsersSchedule();getUsersSuperAdminSc();">Horarios Generales</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Alertas</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Recordatorio</a></li>
             </ul>
         </li>
-        <li class="navbar-item has-submenu">
-            <a href="#"><H4>SISTEMA</H4></a>
-            <ul class="submenu">
-            <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Credenciales</a></li>
-            <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Roles y permisos</a></li>
-          
-            </ul>
-        </li>
-        <li class="navbar-item has-submenu">
-            <a href="#"><H4>ESTADÍSTICA</H4></a>
-            <ul class="submenu">
-            <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Horas</a></li>
-            <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Pagos</a></li>
-            <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Transmisiones</a></li>
-            
-            </ul>
-        </li>
 
+        <li class="navbar-item has-submenu">
+  <a href="#"><H4>NOTIFICACIONES</H4></a>
+  <ul class="submenu">
+    <li class="navbar-item"><a id="alertas-link" onclick="getSchUsers(profileId)"></a></li>
+    <li class="navbar-item"><a id="recordatorios-link" onclick="getSchUsers(profileId)"></a></li>
+  </ul>
+</li>
+        <?php
+
+require_once 'env/domain.php';
+$sub_domaincon = new model_dom;
+$sub_domain = $sub_domaincon->dom();
+$headerslink = $_SESSION['ranCode'] . " " . $_SESSION['key'];
+echo '
+<script>
+  // Función para obtener los datos del API
+  async function getSchUsersx() {
+   // const subdominioschx = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getMyAlerts/' . $headerslink . '/'.$_SESSION['profileId'].';
+  
+    fetch(subdominioschx)
+      .then(response => response.json())
+      .then(data => {
+        const alertas = data.alerts;
+        const recordatorios = data.alerts;
+        
+        // Actualizar los enlaces del menú con los datos del API
+        const alertasLink = document.querySelector("#alertas-link");
+        const recordatoriosLink = document.querySelector("#recordatorios-link");
+        
+        alertasLink.textContent = alertas;
+        recordatoriosLink.textContent = recordatorios;
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  }
+</script>
+';?>
         
         <li class="navbar-item has-submenu">
             <a href="#"><H4>PERFIL</H4></a>

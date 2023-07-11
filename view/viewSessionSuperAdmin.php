@@ -19,6 +19,8 @@ require_once 'modal/modalModels.php';
 require_once 'modal/modalMonitors.php';
 require_once 'modal/modalPhotograph.php';
 require_once 'modal/modalMySchedule.php';
+require_once 'modal/modalUsersSchedule.php';
+require_once 'modal/modalUsersScheduleEdit.php';
 require_once 'modal/modalChangePassSession.php';
 
 

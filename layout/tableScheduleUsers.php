@@ -3,7 +3,7 @@
 
 <div class="table-container">
     
-<table id="sch-table" class="table">
+<table id="schusers-table" class="table">
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
         
@@ -32,19 +32,22 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	<script>
 		
   //const my_profyle = sessionStorage.getItem("profile");
-  const subdominiosch = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getMyschedule/'.$headerslink.'/'.$_SESSION['profileId'].'`;
-
  // Función para obtener los datos del API
- async function getSch() {';?>
+ async function getSchUsers(profileid) {
+  
+  const subdominioschu = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getMyschedule/' . $headerslink . '/" + profileid;
+
+  
+  ';?>
  
 	<?php
 
   echo '
-	fetch(subdominiosch)
+	fetch(subdominioschu)
     
   .then(response => response.json())
   .then(data => {
-    const publicgroupsTableBody = document.querySelector("#sch-table tbody");
+    const publicgroupsTableBody = document.querySelector("#schusers-table tbody");
     // Borramos los datos antiguos
     publicgroupsTableBody.innerHTML = "";
     data.sche.forEach(schedule => {
@@ -86,7 +89,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
  }
  
  // Llamar a la función para obtener los datos del API
- //getSch();
+ //getSchUsers();
  
 
 

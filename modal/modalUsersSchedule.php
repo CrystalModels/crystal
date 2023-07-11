@@ -1,25 +1,25 @@
 
     <!-- Modal -->
-    <div id="myModalSchedule" class="modal">
+    <div id="myModalUsersSchedule" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalSchedule()">X</span>
-            <h2>Mi Horario</h2>
+            <span class="close" onclick="closeModalUsersSchedule()">X</span>
+            <h2>Horarios Generales</h2>
                
       <br>
-            <?php require_once 'layout/tableSchedule.php' ?>
+            <?php require_once 'layout/tableUsersSchedule.php' ?>
         </div>
     </div>
 
     <script>
         // JavaScript
-        function openModalSchedule() {
-            document.getElementById("myModalSchedule").style.display = "block";
+        function openModalUsersSchedule() {
+            document.getElementById("myModalUsersSchedule").style.display = "block";
         
         }
 
-        function closeModalSchedule() {
-            document.getElementById("myModalSchedule").style.display = "none";
+        function closeModalUsersSchedule() {
+            document.getElementById("myModalUsersSchedule").style.display = "none";
        
         
         }
