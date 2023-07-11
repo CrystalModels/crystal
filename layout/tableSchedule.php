@@ -102,7 +102,7 @@ function editar(id,day) {
   var nombre = document.getElementById(id).value;
 
   // Construir la URL con los parámetros de la petición GET
-  var url = '../controller/controllerEditMySchedule.php?scheduleId=' + encodeURIComponent(id) + '&day=' + encodeURIComponent(day) + '&value=' + encodeURIComponent(nombre);
+  var url = 'controller/controllerEditMySchedule.php?scheduleId=' + encodeURIComponent(id) + '&day=' + encodeURIComponent(day) + '&value=' + encodeURIComponent(nombre);
 
 
   // Realizar la petición GET al archivo PHP

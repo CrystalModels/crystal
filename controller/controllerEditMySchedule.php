@@ -40,7 +40,7 @@ curl_close($curl);
 //$response1 = trim($response1); // Eliminar espacios en blanco alrededor de la respuesta
 $array = explode("*", $response1);
 $response12=$array[0];
-$message=$array[1];
+//$message=$array[1];
 //echo $_SESSION['key'];
 
 $response1 = trim($response12); // Eliminar espacios en blanco alrededor de la respuesta
