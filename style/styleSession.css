@@ -8,6 +8,7 @@ body {
   height: 100vh;
   background-color: #fff;
   transition: background-color 0.3s ease;
+  overflow-y: auto;
 }
 
 .login-container {
@@ -203,7 +204,6 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
 
 
 
-
 /* Estilos del menú desplegable */
 .navbar {
   font-family: Martian Mono;
@@ -219,8 +219,8 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
   border-radius: 122px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: background-color 1s ease;
+  overflow-y: auto; /* Agrega desplazamiento vertical */
 }
-
 
 .navbar:hover {
   background-color: rgba(185, 104, 206, 1);
@@ -318,7 +318,6 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
   }
 }
 
-
 .navbar-toggle-button {
   width: 20px;
   height: 20px;
@@ -361,7 +360,6 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
   display: block;
 }
 
-
 /* Estilos para los botones del submenu */
 .submenu li {
   margin-bottom: 10px;
@@ -370,7 +368,7 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
 .submenu a {
   display: inline-block;
   padding: 10px 20px;
-  background-color:rgba(185, 104, 206, 1);
+  background-color: rgba(185, 104, 206, 1);
   color: #333;
   text-decoration: none;
   border-radius: 5px;
@@ -378,19 +376,9 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
 }
 
 .submenu a:hover {
-  background-color:rgba(185, 104, 206, 1);
+  background-color: rgba(185, 104, 206, 1);
 }
 
-/* Estilos del submenú */
-.navbar-menu .submenu {
-  display: none;
-  list-style: none;
-  padding: 0;
-}
-
-.navbar-item.active .submenu {
-  display: block;
-}
 /*btn*/
 
 .table-button {
