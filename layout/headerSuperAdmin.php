@@ -42,7 +42,7 @@
         <li class="navbar-item has-submenu">
             <a href="#"><H4>ORGANIZADOR</H4></a>
             <ul class="submenu">
-            <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Horarios</a></li>
+            <li class="navbar-item"><a href="#" onclick="openModalSchedule();getSch();">Horarios</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Alertas</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Recordatorio</a></li>
             </ul>
