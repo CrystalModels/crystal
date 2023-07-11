@@ -6,7 +6,7 @@
 <table id="sch-table" class="table">
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
-        <th>Acciones</th>
+        
         <th>Hora</th>
       <th>Lunes</th>
       <th>Martes</th>
@@ -50,20 +50,20 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.sche.forEach(schedule => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><a class="table-button" href="schedule.php?schId=${schedule.schId}" target="_blank">Abrir</a>
-      </td>
       <td>${schedule.sTime}</td>
-      <td>${schedule.mon}<br><a class="btn btn-secondary" href="schedule.php?id=${schedule.schId}&day=mon">Editar</a></td>
-      <td>${schedule.tus}<br><a class="btn btn-secondary" href="schedule.php?id=${schedule.schId}&day=tus">Editar</a></td>
-      <td>${schedule.wen}<br><a class="btn btn-secondary" href="schedule.php?id=${schedule.schId}&day=wen">Editar</a></td>
-      <td>${schedule.thu}<br><a class="btn btn-secondary" href="schedule.php?id=${schedule.schId}&day=thu">Editar</a></td>
-      <td>${schedule.fri}<br><a class="btn btn-secondary" href="schedule.php?id=${schedule.schId}&day=fri">Editar</a></td>
-      <td>${schedule.sat}<br><a class="btn btn-secondary" href="schedule.php?id=${schedule.schId}&day=sat">Editar</a></td>
-      <td>${schedule.sun}<br><a class="btn btn-secondary" href="schedule.php?id=${schedule.schId}&day=sun">Editar</a></td>
-      <td>${schedule.maxTime}<br><a class="btn btn-secondary" href="schedule.php?id=${schedule.schId}&day=maxt">Editar</a></td>
-      <td>${schedule.minTime}<br><a class="btn btn-secondary" href="schedule.php?id=${schedule.schId}&day=mint">Editar</a></td>
- 
-        
+    
+    <td><input type="text" id="${schedule.schId}" value="${schedule.mon}"> <button onclick="editar(&quot;${schedule.schId}&quot;,&quot;mon&quot;)">Editar</button></td>
+    <td><input type="text" id="${schedule.schId}" value="${schedule.tus}"> <button onclick="editar(&quot;${schedule.schId}&quot;,&quot;tus&quot;)">Editar</button></td>
+    <td><input type="text" id="${schedule.schId}" value="${schedule.wen}"> <button onclick="editar(&quot;${schedule.schId}&quot;,&quot;tus&quot;)">Editar</button></td>
+    <td><input type="text" id="${schedule.schId}" value="${schedule.thu}"> <button onclick="editar(&quot;${schedule.schId}&quot;,&quot;tus&quot;)">Editar</button></td>
+    <td><input type="text" id="${schedule.schId}" value="${schedule.fri}"> <button onclick="editar(&quot;${schedule.schId}&quot;,&quot;tus&quot;)">Editar</button></td>
+    <td><input type="text" id="${schedule.schId}" value="${schedule.sat}"> <button onclick="editar(&quot;${schedule.schId}&quot;,&quot;tus&quot;)">Editar</button></td>
+    <td><input type="text" id="${schedule.schId}" value="${schedule.sun}"> <button onclick="editar(&quot;${schedule.schId}&quot;,&quot;tus&quot;)">Editar</button></td>
+    <td><input type="text" id="${schedule.schId}" value="${schedule.maxTime}"> <button onclick="editar(&quot;${schedule.schId}&quot;,&quot;maxt&quot;)">Editar</button></td>
+    <td><input type="text" id="${schedule.schId}" value="${schedule.minTime}"> <button onclick="editar(&quot;${schedule.schId}&quot;,&quot;mint&quot;)">Editar</button></td>
+    
+
+      
        
 
         
@@ -94,6 +94,30 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 ';?>  
 
+
+
+<script>
+function editar(id,day) {
+  // Obtener el valor del campo de texto correspondiente al ID
+  var nombre = document.getElementById(id).value;
+
+  // Construir la URL con los parámetros de la petición GET
+  var url = '../controller/controllerEditMySchedule.php?scheduleId=' + encodeURIComponent(id) + '&day=' + encodeURIComponent(day) + '&value=' + encodeURIComponent(nombre);
+
+
+  // Realizar la petición GET al archivo PHP
+  fetch(url)
+    .then(response => {
+      // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
+      // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
+      console.log(id," ",day," ",nombre);
+    })
+    .catch(error => {
+      // Aquí puedes manejar los errores en caso de que la petición falle
+      console.log('Error en la petición:', error);
+    });
+}
+</script>
 
 
 <div id="publicgroups-container"></div>

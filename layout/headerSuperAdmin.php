@@ -101,6 +101,8 @@
         });
     });
 </script>
+
+
   <style>
 		.alert {
 			position: fixed;
