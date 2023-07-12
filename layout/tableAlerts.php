@@ -43,14 +43,16 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     const publicgroupsTableBody = document.querySelector("#alerts-table tbody");
     // Borramos los datos antiguos
     publicgroupsTableBody.innerHTML = "";
+    var counter=0;
     data.alerts.forEach(alert => {
+  
       const row = document.createElement("tr");
       row.innerHTML = `
       
     
     <td>${alert.comments}</td>
     <td>${alert.alertType}</td>
-    <td><input type="text" class="input-schedule" id="${alert.alertId}" value="${alert.alertResponse}"> <button onclick="editarAlerta(this,&quot;${alert.alertId}&quot;)">Responder</button></td>
+    <td><input type="text" class="input-schedule" id="${alert.alertId}" value="${alert.alertResponse}"> <button onclick="editarAlerta(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)">Responder</button></td>
    
 
       
@@ -65,7 +67,11 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       
 
       publicgroupsTableBody.appendChild(row);
-    });
+      counter++;
+    }
+  );
+
+  sessionStorage.setItem("alertCounter", counter);
   })
   .catch(error => {
     console.error("Error:", error);
@@ -76,7 +82,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
  }
  
  // Llamar a la función para obtener los datos del API
- //getSchUsers();
+ getAlerts();
  
 
 
@@ -92,13 +98,13 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 <script>
 
-function editarAlerta(button, id) {
+function editarAlerta(button, id,profileid) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
   var response = input.value;
 
   // Construir la URL con los parámetros de la petición GET
-  var url = 'controller/controllerEditMyAlert.php?alertId=' + encodeURIComponent(id) + '&response=' + encodeURIComponent(response);
+  var url = 'controller/controllerEditMyAlert.php?alertId=' + encodeURIComponent(id) + '&response=' + encodeURIComponent(response)+ '&profileId=' + encodeURIComponent(profileid);
 
   // Realizar la petición GET al archivo PHP
   fetch(url)
@@ -106,10 +112,9 @@ function editarAlerta(button, id) {
       // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
-      getSch();
+      getAlerts();
       const mensaje = sessionStorage.getItem("mensaje");
       showAlert(mensaje);
-      console.log(url);
       
  
     })
@@ -117,6 +122,20 @@ function editarAlerta(button, id) {
       // Aquí puedes manejar los errores en caso de que la petición falle
       console.log('Error en la petición:', error);
     });
+}
+setInterval(miFuncion, 60000);
+
+function miFuncion() {
+  // Código de la función que se ejecutará cada 5 segundos
+  getAlerts();
+  const alertcounter = sessionStorage.getItem("alertCounter");
+if(alertcounter>0){
+  openModalAlertsMessage();
+
+}else{
+
+}
+  //console.log('Se ejecutó la función');
 }
 
 

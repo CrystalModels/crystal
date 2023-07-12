@@ -4,9 +4,8 @@
         <!-- Contenido del modal -->
         <div class="modal-content">
             <span class="close" onclick="closeModalAlerts()">X</span>
-            <h2>Alertas</h2>
-            <a href="#" onclick="openModalPostRooms();" class="table-button">Crear Room</a>
-        
+            <h2>Mis Alertas</h2>
+            
       <br>
             <?php require_once 'layout/tableAlerts.php' ?>
         </div>

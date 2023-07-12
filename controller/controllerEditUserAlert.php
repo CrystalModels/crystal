@@ -1,21 +1,21 @@
 <?php
 
 session_start();
-$alertId = $_GET['alertId'];
-$response = $_GET['response'];
 $profileId = $_GET['profileId'];
+$comments = $_GET['comments'];
+$ownerId = $_SESSION['profileId'];
 
 require_once '../env/domain.php';
 $sub_domaincon = new model_dom();
 $sub_domain = $sub_domaincon->dom();
 
-$url = $sub_domain . "/crystalGateway/apiIntegrations/v1/putMyAlert/".$_SESSION['ranCode']."/".$_SESSION['key'];
+$url = $sub_domain . "/crystalGateway/apiIntegrations/v1/postAlert/".$_SESSION['ranCode']."/".$_SESSION['key'];
 
 // Definir los datos a enviar en la solicitud POST
 $data = array(
     
-    'response' => $response,
-    'alertId' => $alertId,
+    'comments' => $comments,
+    'ownerId' => $ownerId,
     'profileId' => $profileId
     
 );
