@@ -86,15 +86,19 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 
 
+
+
+
+
 <script>
 
-function editarAlerta(button, id, day) {
+function editarAlerta(button, id) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
-  var nombre = input.value;
+  var response = input.value;
 
   // Construir la URL con los parámetros de la petición GET
-  var url = 'controller/controllerEditMySchedule.php?scheduleId=' + encodeURIComponent(id) + '&day=' + encodeURIComponent(day) + '&value=' + encodeURIComponent(nombre);
+  var url = 'controller/controllerEditMyAlert.php?alertId=' + encodeURIComponent(id) + '&response=' + encodeURIComponent(response);
 
   // Realizar la petición GET al archivo PHP
   fetch(url)
@@ -105,6 +109,7 @@ function editarAlerta(button, id, day) {
       getSch();
       const mensaje = sessionStorage.getItem("mensaje");
       showAlert(mensaje);
+      console.log(url);
       
  
     })
@@ -113,10 +118,14 @@ function editarAlerta(button, id, day) {
       console.log('Error en la petición:', error);
     });
 }
+
+
 </script>
 
 
 <div id="publicgroups-container"></div>
+
+
 
 
 
@@ -222,3 +231,8 @@ $_SESSION['mensaje']="";
 $_SESSION['error']="";
 //echo $_SESSION['key'];
 ?>
+
+
+<?php
+require_once 'alertsCounter.php';
+?>  
