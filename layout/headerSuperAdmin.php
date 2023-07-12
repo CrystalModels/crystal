@@ -4,10 +4,45 @@
 
 ?>
 
-
-
-
 <!-- HTML -->
+<script>
+    // Aquí puedes colocar tu código JavaScript
+    async function getSchUsersx() {
+      // Tu código aquí
+    }
+  </script>
+<?php
+
+require_once 'env/domain.php';
+$sub_domaincon = new model_dom;
+$sub_domain = $sub_domaincon->dom();
+$headerslink = $_SESSION['ranCode'] . " " . $_SESSION['key'];
+echo '
+<script>
+  // Función para obtener los datos del API
+  async function getSchUsersx() {
+   const subdominioschx = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getMyAlerts/' . $headerslink . '/'.$_SESSION['profileId'].';
+  
+    fetch(subdominioschx)
+      .then(response => response.json())
+      .then(data => {
+        const alertas = data.alerts;
+        const recordatorios = data.alerts;
+        
+        // Actualizar los enlaces del menú con los datos del API
+        const alertasLink = document.querySelector("#alertas-link");
+        const recordatoriosLink = document.querySelector("#recordatorios-link");
+        
+        alertasLink.textContent = alertas;
+        recordatoriosLink.textContent = recordatorios;
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  }
+  getSchUsersx();
+</script>
+';?>
 
 <nav class="navbar">
     <button id="navbar-toggle-button" class="navbar-toggle-button">
@@ -52,41 +87,10 @@
         <li class="navbar-item has-submenu">
   <a href="#"><H4>NOTIFICACIONES</H4></a>
   <ul class="submenu">
-    <li class="navbar-item"><a id="alertas-link" onclick="getSchUsers(profileId)"></a></li>
+    <li class="navbar-item"><a id="alertas-link" onclick="getSchUsersx();"></a>link</li>
     <li class="navbar-item"><a id="recordatorios-link" onclick="getSchUsers(profileId)"></a></li>
   </ul>
 </li>
-        <?php
-
-require_once 'env/domain.php';
-$sub_domaincon = new model_dom;
-$sub_domain = $sub_domaincon->dom();
-$headerslink = $_SESSION['ranCode'] . " " . $_SESSION['key'];
-echo '
-<script>
-  // Función para obtener los datos del API
-  async function getSchUsersx() {
-   // const subdominioschx = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getMyAlerts/' . $headerslink . '/'.$_SESSION['profileId'].';
-  
-    fetch(subdominioschx)
-      .then(response => response.json())
-      .then(data => {
-        const alertas = data.alerts;
-        const recordatorios = data.alerts;
-        
-        // Actualizar los enlaces del menú con los datos del API
-        const alertasLink = document.querySelector("#alertas-link");
-        const recordatoriosLink = document.querySelector("#recordatorios-link");
-        
-        alertasLink.textContent = alertas;
-        recordatoriosLink.textContent = recordatorios;
-      })
-      .catch(error => {
-        console.error("Error:", error);
-      });
-  }
-</script>
-';?>
         
         <li class="navbar-item has-submenu">
             <a href="#"><H4>PERFIL</H4></a>

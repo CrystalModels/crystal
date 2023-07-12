@@ -90,6 +90,41 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 
 
+<?php
+
+require_once 'env/domain.php';
+$sub_domaincon = new model_dom;
+$sub_domain = $sub_domaincon->dom();
+$headerslink = $_SESSION['ranCode'] . " " . $_SESSION['key'];
+echo '
+<script>
+  // Función para obtener los datos del API
+  async function getSchUsersx() {
+   const subdominioschx = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getMyAlerts/' . $headerslink . '/'.$_SESSION['profileId'].';
+  
+    fetch(subdominioschx)
+      .then(response => response.json())
+      .then(data => {
+        const alertas = data.alerts;
+        const recordatorios = data.alerts;
+        
+        // Actualizar los enlaces del menú con los datos del API
+        const alertasLink = document.querySelector("#alertas-link");
+        const recordatoriosLink = document.querySelector("#recordatorios-link");
+        
+        alertasLink.textContent = alertas;
+        recordatoriosLink.textContent = recordatorios;
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  }
+  getSchUsersx();
+</script>
+';?>
+
+
+
 
 
 
