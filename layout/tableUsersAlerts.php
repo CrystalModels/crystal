@@ -43,7 +43,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       const row = document.createElement("tr");
       row.innerHTML = `
      
-    <td><input type="text" class="input-schedule" id="${profile.profileId}" value=""> <button onclick="editarAlertaUsuario(this,&quot;${profile.profileId}&quot;)">Alertar</button></td>
+    <td><input type="text" class="input-schedule" id="${profile.profileId}" value="" require><button onclick="editarAlertaUsuario(this,&quot;${profile.profileId}&quot;)">Alertar</button></td>
     
   <td>${profile.userName}</td> 
       <td>${profile.name}</td>
@@ -89,7 +89,7 @@ function editarAlertaUsuario(button, id) {
   var nombre = input.value;
 
   // Construir la URL con los parámetros de la petición GET
-  var url = 'controller/controllerEditUserAlert.php?profileId=' + encodeURIComponent(id) + '&value=' + encodeURIComponent(nombre);
+  var url = 'controller/controllerEditUserAlert.php?profileId=' + encodeURIComponent(id) + '&comments=' + encodeURIComponent(nombre);
 
   // Realizar la petición GET al archivo PHP
   fetch(url)
@@ -100,7 +100,6 @@ function editarAlertaUsuario(button, id) {
      //getSch();
       const mensaje = sessionStorage.getItem("mensaje");
       showAlert(mensaje);
-      
  
     })
     .catch(error => {
