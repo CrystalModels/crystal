@@ -5,6 +5,7 @@ session_start();
 require_once 'env/domain.php';
 $sub_domaincon = new model_dom();
 $sub_domain = $sub_domaincon->dom();
+$_SESSION['gatewayDomain']=$sub_domain;
 $curl = curl_init();
 curl_setopt_array($curl, array(
   CURLOPT_URL => "".$sub_domain."/crystalGateway/apiCore/v1/getProfileInfoLog/".$_SESSION['userName']."/".$_SESSION['sessionId'],
@@ -56,8 +57,11 @@ session_unset();
 session_destroy();
 
 header ('Location: index.php');
-  }else{
 
+
+
+  }else{
+    
 
   }
 //echo $data;

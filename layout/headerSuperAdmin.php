@@ -1,48 +1,6 @@
 
 
-<?php
-
-?>
-
 <!-- HTML -->
-<script>
-    // Aquí puedes colocar tu código JavaScript
-    async function getSchUsersx() {
-      // Tu código aquí
-    }
-  </script>
-<?php
-
-require_once 'env/domain.php';
-$sub_domaincon = new model_dom;
-$sub_domain = $sub_domaincon->dom();
-$headerslink = $_SESSION['ranCode'] . " " . $_SESSION['key'];
-echo '
-<script>
-  // Función para obtener los datos del API
-  async function getSchUsersx() {
-   const subdominioschx = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getMyAlerts/' . $headerslink . '/'.$_SESSION['profileId'].';
-  
-    fetch(subdominioschx)
-      .then(response => response.json())
-      .then(data => {
-        const alertas = data.alerts;
-        const recordatorios = data.alerts;
-        
-        // Actualizar los enlaces del menú con los datos del API
-        const alertasLink = document.querySelector("#alertas-link");
-        const recordatoriosLink = document.querySelector("#recordatorios-link");
-        
-        alertasLink.textContent = alertas;
-        recordatoriosLink.textContent = recordatorios;
-      })
-      .catch(error => {
-        console.error("Error:", error);
-      });
-  }
-  getSchUsersx();
-</script>
-';?>
 
 <nav class="navbar">
     <button id="navbar-toggle-button" class="navbar-toggle-button">
@@ -55,7 +13,7 @@ echo '
         <li class="navbar-item has-submenu">
             <a href="#"><H4>RECURSOS</H4></a>
             <ul class="submenu">
-            <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();getSchUsersx();">Usuarios</a></li>
+            <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Usuarios</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalRooms();getRooms();">Rooms</a></li>
              
             <li class="navbar-item"><a href="#" onclick="openModalPages();getPages();">Páginas</a></li>
@@ -77,7 +35,7 @@ echo '
         <li class="navbar-item has-submenu">
             <a href="#"><H4>ORGANIZADOR</H4></a>
             <ul class="submenu">
-            <li class="navbar-item"><a href="#" onclick="openModalSchedule();getSch();">Mi Horario</a></li>
+            <li class="navbar-item"><a href="#" onclick="openModalSchedule();getSch();getAlerts();">Mi Horario</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersSchedule();getUsersSuperAdminSc();">Horarios Generales</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Alertas</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Recordatorio</a></li>
@@ -87,7 +45,7 @@ echo '
         <li class="navbar-item has-submenu">
   <a href="#"><H4>NOTIFICACIONES</H4></a>
   <ul class="submenu">
-    <li class="navbar-item"><a id="alertas-link" onclick="getSchUsersx();"></a>link</li>
+    <li class="navbar-item"><a  href="#" id="alertas-link" onclick="openModalSchedule();getAlerts();"></a>---</li>
     <li class="navbar-item"><a id="recordatorios-link" onclick="getSchUsers(profileId)"></a></li>
   </ul>
 </li>
@@ -96,7 +54,7 @@ echo '
             <a href="#"><H4>PERFIL</H4></a>
             <ul class="submenu">
                 
-            <li class="navbar-item"><a href="#" onclick="getMyProfileInfo1();openModalmyModalProfile1();">Ver</a></li>
+            <li class="navbar-item"><a href="#" onclick="getMyProfileInfo();openModalmyModalProfile1();">Ver</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalmyModalChangePassSession();">Cambiar Contraseña</a></li>
             <li class="navbar-item"><a href="controller/controllerLogOut.php">Cerrar Sesión</a></li>
        
@@ -106,6 +64,8 @@ echo '
         
          </ul>
 </nav>
+
+
 
 <script>
     // JavaScript
@@ -129,6 +89,9 @@ echo '
 </script>
 
 
+<script>
+
+</script>
   <style>
 		.alert {
 			position: fixed;
@@ -163,6 +126,8 @@ echo '
 <?php
   
   echo '<script>
+  const gatewayDomain = "' . $_SESSION["gatewayDomain"] . '";
+  sessionStorage.setItem("gatewayDomain", gatewayDomain);
   const respuesta = "' . $_SESSION["respuesta"] . '";
   sessionStorage.setItem("respuesta", respuesta);
   const mensaje = "' . $_SESSION["mensaje"] . '";
