@@ -45,7 +45,7 @@
         <li class="navbar-item has-submenu">
   <a href="#"><H4>NOTIFICACIONES</H4></a>
   <ul class="submenu">
-    <li class="navbar-item"><a  href="#" id="alertas-link" onclick="openModalSchedule();getAlerts();"></a>---</li>
+    <li class="navbar-item"><a  href="#" id="alertas-link" onclick="openModalAlerts();getAlerts();"></a>---</li>
     <li class="navbar-item"><a id="recordatorios-link" onclick="getSchUsers(profileId)"></a></li>
   </ul>
 </li>

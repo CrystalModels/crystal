@@ -25,11 +25,10 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	echo '
 	<script>
 		
-  //const my_profyle = sessionStorage.getItem("profile");
+  //const profileid = sessionStorage.getItem("profileId");
  // Función para obtener los datos del API
- async function getAlerts(profileid) {
-  
-  const subdominioalerts = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getMyAlerts/' . $headerslink . '/" + profileid;
+ async function getAlerts() {
+  const subdominioalerts = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getMyAlerts/'.$headerslink.'/'.$_SESSION['profileId'].'`;
 
   
   ';?>
@@ -44,14 +43,14 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     const publicgroupsTableBody = document.querySelector("#alerts-table tbody");
     // Borramos los datos antiguos
     publicgroupsTableBody.innerHTML = "";
-    data.sche.forEach(alert => {
+    data.alerts.forEach(alert => {
       const row = document.createElement("tr");
       row.innerHTML = `
       
     
     <td>${alert.comments}</td>
     <td>${alert.alertType}</td>
-    <td><input type="text" class="input-schedule" id="${alertt.alertId}" value="${alert.alertResponse}"> <button onclick="editarAlerta(this,&quot;${alertt.alertId}&quot;)">Responder</button></td>
+    <td><input type="text" class="input-schedule" id="${alert.alertId}" value="${alert.alertResponse}"> <button onclick="editarAlerta(this,&quot;${alert.alertId}&quot;)">Responder</button></td>
    
 
       
