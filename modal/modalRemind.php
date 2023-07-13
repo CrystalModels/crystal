@@ -5,7 +5,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeModalReminds()">X</span>
             <h2>Mis Recordatorios</h2>
-            
+            <a href="#" onclick="openModalRemindsPost();" class="table-button">Crear Recordatorio</a>
       <br>
             <?php require_once 'layout/tableReminds.php' ?>
         </div>
