@@ -202,24 +202,23 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
 
 /*header*/
 
-
-
 /* Estilos del menú desplegable */
 .navbar {
   font-family: Martian Mono;
   position: fixed;
-  top: 126px;
+  top: 10px;
+  left: 10px; /* Ajusta el valor según tu necesidad */
   z-index: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex;
   background-color: rgba(185, 104, 206, 0.8);
-  padding: 76px;
-  border-radius: 122px;
+  padding: 5px;
+  border-radius: 10px; /* Ajusta el valor según tu necesidad */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: background-color 1s ease;
-  overflow-y: auto; /* Agrega desplazamiento vertical */
+  overflow-y: none;
 }
 
 .navbar:hover {
@@ -232,14 +231,17 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
 
 .navbar-menu {
   display: flex;
-  flex-direction: column; /* Cambio a dirección vertical */
+  flex-direction: row; /* Cambio a dirección vertical */
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .navbar-item {
-  margin-bottom: 1px; /* Aumento del margen para separar los elementos */
+ 
+
+    margin-right: 10px; /* Aumento del margen derecho para separar los elementos */
+  
 }
 
 .navbar-item a {
@@ -253,7 +255,7 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
 }
 
 /* Media query para el menú desplegable en pantallas pequeñas */
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 700px) {
   .navbar-toggle {
     display: block;
     cursor: pointer;
@@ -261,22 +263,32 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
 
   .navbar-menu {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(185, 104, 206, 0.8);
+    padding: 10px;
+    border-radius: 10px; /* Ajusta el valor según tu necesidad */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
   }
 
-  .navbar-menu.active {
+  .navbar-toggle:checked + .navbar-menu {
     display: flex;
     flex-direction: column;
   }
 
   .navbar-item {
-    margin-bottom: 10px;
+    
+    margin-right: 10px;
   }
 
   /* Estilos para el ícono del menú desplegable */
   .navbar-toggle-label {
     display: inline-block;
-    width: 30px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background-color: #ccc;
     border-radius: 10px;
     position: relative;
@@ -305,29 +317,21 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
     transform-origin: top;
   }
 
-  input[type="checkbox"]:checked + .navbar-toggle-label:before {
+  .navbar-toggle:checked + .navbar-toggle-label:before {
     transform: translate(-50%, -50%) rotate(45deg);
   }
 
-  input[type="checkbox"]:checked + .navbar-toggle-label:after {
+  .navbar-toggle:checked + .navbar-toggle-label:after {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 
-  input[type="checkbox"]:checked + .navbar-toggle-label {
+  .navbar-toggle:checked + .navbar-toggle-label {
     background-color: #222;
   }
 }
 
 .navbar-toggle-button {
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: none;
 }
 
 .navbar-toggle-button span {

@@ -17,18 +17,24 @@
 </head>
 <body>
 
-  <div class="login-container">
+
 
 
     <div class="form-container">
         
       <form>
         
-    
+      <h2>USUARIOS</h2>
+      <?php require_once 'layout/tableUsersSuperAdmin.php';?>
+      <h2>ROOMS</h2>
+      <?php
+      require_once 'layout/tableRooms.php';
+      ?>
+      <script>getUsersSuperAdmin();getRooms();</script>
       </form>
     </div>
     
-  </div>
+
   <div class="theme-toggle">
         <input type="checkbox" id="theme-toggle-checkbox">
         <label for="theme-toggle-checkbox" class="theme-toggle-label"></label>

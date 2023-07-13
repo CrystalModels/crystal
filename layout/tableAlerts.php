@@ -128,7 +128,9 @@ setInterval(miFuncion, 60000);
 
 function miFuncion() {
   // Código de la función que se ejecutará cada 5 segundos
-  getAlerts();
+  const profileid = sessionStorage.getItem("profileId");
+      getAlerts(profileid);
+  //getAlerts();
   const alertcounter = sessionStorage.getItem("alertCounter");
 if(alertcounter>0){
   openModalAlertsMessage();
