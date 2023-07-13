@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style/styleSession.css">
   <style>
     .form-container {
-      max-height: 400px;
+      max-height: 300px;
       overflow-y: auto;
     }
   </style>
@@ -25,12 +25,14 @@
       <form>
         
       <h2>USUARIOS</h2>
-      <?php require_once 'layout/tableUsersSuperAdmin.php';?>
+      <?php
+      // require_once 'layout/tableUsersSuperAdmin.php';
+      ?>
       <h2>ROOMS</h2>
       <?php
-      require_once 'layout/tableRooms.php';
+     // require_once 'layout/tableRooms.php';
       ?>
-      <script>getUsersSuperAdmin();getRooms();</script>
+     
       </form>
     </div>
     

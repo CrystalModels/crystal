@@ -22,10 +22,13 @@ require_once 'modal/modalMySchedule.php';
 require_once 'modal/modalUsersSchedule.php';
 require_once 'modal/modalUsersScheduleEdit.php';
 require_once 'modal/modalAlerts.php';
+
+
+
 require_once 'modal/modalUsersAlerts.php';
 require_once 'modal/modalAlertsMessage.php';
 require_once 'modal/modalAlertsUsers.php';
-
+require_once 'modal/modalRemind.php';
 require_once 'modal/modalChangePassSession.php';
 
 
