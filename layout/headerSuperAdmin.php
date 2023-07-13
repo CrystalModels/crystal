@@ -35,7 +35,7 @@
         <li class="navbar-item has-submenu">
             <a href="#"><H4>ORGANIZADOR</H4></a>
             <ul class="submenu">
-            <li class="navbar-item"><a href="#" onclick="openModalSchedule();getSch();getAlerts();">Mi Horario</a></li>
+            <li class="navbar-item"><a href="#" onclick="openModalSchedule();getSch();">Mi Horario</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersSchedule();getUsersSuperAdminSc();">Horarios Generales</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersAlerts();getUsersSuperAdminAlerts();">Alertas</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Recordatorio</a></li>
@@ -44,8 +44,8 @@
 
         <li class="navbar-item has-submenu">
   <a href="#"><H4>NOTIFICACIONES</H4></a>
-  <ul class="submenu">
-    <li class="navbar-item"><a href="#" id="alertas-link" onclick="openModalAlerts();getAlerts();">Alertas</a></li>
+  <ul class="submenu"><script>var profileif=sessionStorage.getItem("profileId") </script>
+    <li class="navbar-item"><a href="#" id="alertas-link" onclick="openModalAlerts();getAlerts(profileif);">Alertas</a></li>
     <li class="navbar-item"><a id="recordatorios-link" onclick="getSchUsers(profileId)">Recordatorios</a></li>
   </ul>
 </li>

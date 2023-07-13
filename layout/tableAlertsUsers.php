@@ -3,7 +3,7 @@
 
 <div class="table-container">
     
-<table id="alerts-table" class="table">
+<table id="alertsusers-table" class="table">
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
         
@@ -27,9 +27,9 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 		
   //const profileid = sessionStorage.getItem("profileId");
  // Función para obtener los datos del API
- async function getAlerts(profileid) {
+ async function getAlertsUsers(profileid) {
   
-  const subdominioalerts = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getMyAlerts/' . $headerslink . '/" + profileid;
+  const subdominioalertsusers = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getMyAlerts/' . $headerslink . '/" + profileid;
     
   
   ';?>
@@ -37,11 +37,11 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	<?php
 
   echo '
-	fetch(subdominioalerts)
+	fetch(subdominioalertsusers)
     
   .then(response => response.json())
   .then(data => {
-    const publicgroupsTableBody = document.querySelector("#alerts-table tbody");
+    const publicgroupsTableBody = document.querySelector("#alertsusers-table tbody");
     // Borramos los datos antiguos
     publicgroupsTableBody.innerHTML = "";
     var counter=0;
@@ -53,7 +53,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     
     <td>${alert.comments}</td>
     <td>${alert.alertType}</td>
-    <td><input type="text" class="input-schedule" id="${alert.alertId}" value="${alert.alertResponse}"> <button onclick="editarAlerta(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)">Responder</button></td>
+    <td><input type="text" class="input-schedule" id="${alert.alertId}" value="${alert.alertResponse}"> <button onclick="editarAlertaUsuario1(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)">Responder</button></td>
    
 
       
@@ -83,7 +83,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
  }
  
  // Llamar a la función para obtener los datos del API
- //getAlerts();
+
  
 
 
@@ -99,7 +99,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 <script>
 
-function editarAlerta(button, id,profileid) {
+function editarAlertaUsuario1(button, id,profileid) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
   var response = input.value;
@@ -112,9 +112,9 @@ function editarAlerta(button, id,profileid) {
     .then(response => {
       // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
-      const profileid = sessionStorage.getItem("profileId");
-      getAlerts(profileid);
+     
       const mensaje = sessionStorage.getItem("mensaje");
+      getAlertsUsers(profileid);
       showAlert(mensaje);
       
  
@@ -124,21 +124,7 @@ function editarAlerta(button, id,profileid) {
       console.log('Error en la petición:', error);
     });
 }
-setInterval(miFuncion, 60000);
-
-function miFuncion() {
-  // Código de la función que se ejecutará cada 5 segundos
-  getAlerts();
-  const alertcounter = sessionStorage.getItem("alertCounter");
-if(alertcounter>0){
-  openModalAlertsMessage();
-
-}else{
-
-}
   //console.log('Se ejecutó la función');
-}
-
 
 </script>
 

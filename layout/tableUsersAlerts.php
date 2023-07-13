@@ -43,7 +43,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       const row = document.createElement("tr");
       row.innerHTML = `
      
-    <td><input type="text" class="input-schedule" id="${profile.profileId}" value="" require><button onclick="editarAlertaUsuario(this,&quot;${profile.profileId}&quot;)">Alertar</button></td>
+    <td><input type="text" class="input-schedule" id="${profile.profileId}" value="" require><button onclick="editarAlertaUsuario(this,&quot;${profile.profileId}&quot;)">Alertar</button><button onclick="getAlertsUsers(&quot;${profile.profileId}&quot;);openModalAlertsUsers();">Ver Alertas</button></td>
     
   <td>${profile.userName}</td> 
       <td>${profile.name}</td>
@@ -71,8 +71,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
  }
  
  // Llamar a la función para obtener los datos del API
- //getUsersSuperAdminSc();
- 
+  
+ //getAlerts(&quot;${profile.profileId}&quot;);
 
 
 	</script>
@@ -84,6 +84,32 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 <script>
 
 function editarAlertaUsuario(button, id) {
+  // Obtener el valor del campo de texto correspondiente al botón
+  var input = button.previousElementSibling;
+  var nombre = input.value;
+
+  // Construir la URL con los parámetros de la petición GET
+  var url = 'controller/controllerEditUserAlert.php?profileId=' + encodeURIComponent(id) + '&comments=' + encodeURIComponent(nombre);
+
+  // Realizar la petición GET al archivo PHP
+  fetch(url)
+    .then(response => {
+      // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
+      // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
+      getAlerts();
+     //getSch();
+      const mensaje = sessionStorage.getItem("mensaje");
+      showAlert(mensaje);
+ 
+    })
+    .catch(error => {
+      // Aquí puedes manejar los errores en caso de que la petición falle
+      console.log('Error en la petición:', error);
+    });
+}
+
+
+function AlertaUsuario(button, id) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
   var nombre = input.value;
