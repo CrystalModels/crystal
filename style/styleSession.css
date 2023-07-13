@@ -202,20 +202,20 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
 
 /*header*/
 
-/* Estilos del menú desplegable */
+/* Estilos del menú desplegable *//* Estilos del menú desplegable */
 .navbar {
   font-family: Martian Mono;
   position: fixed;
   top: 10px;
-  left: 10px; /* Ajusta el valor según tu necesidad */
+  left: 10px;
   z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex;
+  align-items: center;
   background-color: rgba(185, 104, 206, 0.8);
   padding: 5px;
-  border-radius: 10px; /* Ajusta el valor según tu necesidad */
+  border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: background-color 1s ease;
   overflow-y: none;
@@ -231,17 +231,15 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
 
 .navbar-menu {
   display: flex;
-  flex-direction: row; /* Cambio a dirección vertical */
+  flex-direction: row;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .navbar-item {
- 
-
-    margin-right: 10px; /* Aumento del margen derecho para separar los elementos */
-  
+  position: relative; /* Agregado */
+  margin-right: 10px;
 }
 
 .navbar-item a {
@@ -253,6 +251,39 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
 .navbar-item a:hover {
   color: #C0C0C0;
 }
+
+.submenu {
+  display: none; /* Agregado */
+  position: absolute; /* Agregado */
+  top: 100%; /* Agregado */
+  background-color: rgba(185, 104, 206, 0.8); /* Agregado */
+  padding: 5px; /* Agregado */
+  border-radius: 10px; /* Agregado */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Agregado */
+}
+
+.navbar-item:hover .submenu {
+  display: block; /* Agregado */
+}
+
+.submenu-item {
+  margin-bottom: 5px;
+}
+
+.submenu-item a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: rgba(185, 104, 206, 1);
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.submenu-item a:hover {
+  background-color: rgba(185, 104, 206, 1);
+}
+
 
 /* Media query para el menú desplegable en pantallas pequeñas */
 @media screen and (max-width: 700px) {

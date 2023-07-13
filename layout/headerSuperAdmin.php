@@ -88,6 +88,28 @@
             });
         });
     });
+
+
+
+   
+function setupMenu() {
+  const menuItems = document.querySelectorAll('.navbar-item');
+
+  menuItems.forEach((menuItem) => {
+    menuItem.addEventListener('click', () => {
+      const submenu = menuItem.querySelector('.submenu');
+      if (submenu) {
+        submenu.classList.toggle('active');
+      }
+    });
+  });
+}
+
+// Ejecutar la función de configuración del menú cuando se carga el DOM
+document.addEventListener('DOMContentLoaded', () => {
+  setupMenu();
+});
+
 </script>
 
 
