@@ -5,12 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iniciar - Crystal Models</title>
   <link rel="icon" type="image/x-icon" href="public/logo.png">
-  <link rel="stylesheet" href="style/styleSession.css">
+  
   <style>
-    .form-container {
-      max-height: 300px;
-      overflow-y: auto;
-    }
+  .form-container {
+  max-height: 800px; /* Establecer la altura máxima deseada */
+  overflow-y: auto; /* Agregar desplazamiento vertical */
+  padding: 20px;
+  margin: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+  .form-container {
+    max-width: 100%; /* Hacer el formulario ocupar el ancho completo en pantallas pequeñas */
+  }
+}
+
   </style>
 
 
@@ -19,21 +29,61 @@
 
 
 
+<form class="form-container">
+  <h2>USUARIOS</h2>
 
-    <div class="form-container">
+  
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <!-- Contenido adicional -->
+</form>
+
+<form class="form-container">
+  <h2>USUARIOS</h2>
+
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <!-- Contenido adicional -->
+</form>
         
-      <form>
-        
-      <h2>USUARIOS</h2>
-      <?php
-      // require_once 'layout/tableUsersSuperAdmin.php';
-      ?>
-      <h2>ROOMS</h2>
-      <?php
-     // require_once 'layout/tableRooms.php';
-      ?>
-     
-      </form>
+    <form class="form-container">
+  <h2>USUARIOS</h2>
+  
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <h2>ROOMS</h2>
+  <!-- Contenido adicional -->
+</form>
+
     </div>
     
 

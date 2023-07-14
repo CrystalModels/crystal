@@ -4,7 +4,7 @@
         <!-- Contenido del modal -->
         <div class="modal-content">
             <span class="close" onclick="closeModalPostRooms()">X</span>
-        
+            <h2>Crear Room</h2>
             <?php require_once 'layout/formPostRooms.php' ?>
             
         </div>

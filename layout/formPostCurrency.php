@@ -14,7 +14,7 @@
 </head>
 <body>
     
-  <div class="login-container">
+
     
     <form method="post" action="controller/controllerPostCurrency.php">
       <div class="form-group">
@@ -163,7 +163,7 @@ echo '
       </div>
     </form>
     
-  </div>
+
 
 
 </body>

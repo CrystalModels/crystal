@@ -49,16 +49,19 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
   
       const row = document.createElement("tr");
       row.innerHTML = `
-      
-    
-    <td>${alert.comments}</td>
-    <td>${alert.alertType}</td>
-    <td><input type="text" class="input-schedule" id="${alert.alertId}" value="${alert.alertResponse}"> <button onclick="editarAlerta(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)">Responder</button></td>
+         
+        
+        <td><button onclick="editarAlerta(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)">Cerrar</button></td>
    
-
+    <td>${alert.comments}</td>
+    
+    <td><input type="text" class="input-schedule" id="${alert.alertId}" value="${alert.rDate}"> <button onclick="editarAlerta(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)">Cambiar</button></td>
+   
+    <td><input type="text" class="input-schedule" id="${alert.alertId}" value="${alert.rTime}"> <button onclick="editarAlerta(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)">Cambiar</button></td>
+    <td>${alert.remindType}</td>
       
        
-
+    
         
        
         

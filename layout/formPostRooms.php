@@ -14,7 +14,7 @@
 </head>
 <body>
     
-  <div class="login-container">
+ 
     
     <form method="post" action="controller/controllerPostRooms.php">
       <div class="form-group">
@@ -32,7 +32,7 @@
       </div>
     </form>
     
-  </div>
+
 
   
 

@@ -6,7 +6,7 @@
             <span class="close" onclick="closeModalRemindsPost()">X</span>
             <h2>Crear Recordatorio</h2>
             <br>
-           <?php // require_once 'layout/formPostRemind.php' ?>
+           <?php  require_once 'layout/formPostReminds.php' ?>
         </div>
     </div>
 

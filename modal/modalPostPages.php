@@ -4,7 +4,7 @@
         <!-- Contenido del modal -->
         <div class="modal-content">
             <span class="close" onclick="closeModalPostPages()">X</span>
-        
+            <h2>Crear Página</h2>
             <?php require_once 'layout/formPostPages.php' ?>
             
         </div>

@@ -4,7 +4,7 @@
         <!-- Contenido del modal -->
         <div class="modal-content">
             <span class="close" onclick="closeModalPostUsers()">X</span>
-        
+            <h2>Crear Usuario</h2>
             <?php require_once 'layout/formPostUsers.php' ?>
             
         </div>

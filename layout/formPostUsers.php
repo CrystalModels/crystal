@@ -13,8 +13,7 @@
 
 </head>
 <body>
-    
-  <div class="login-container">
+
     
     <form method="post" action="controller/controllerPostUsersBySuperAdmin.php">
       <div class="form-group">
@@ -90,7 +89,6 @@ echo '
       </div>
     </form>
     
-  </div>
 
   
 
