@@ -2,15 +2,18 @@
 
 <?php
 require_once 'env/domain.php';
+require_once 'env/codes.php';
 session_start();
 $sub_domaincon=new model_dom();
 $sub_domain=$sub_domaincon->dom();
-$response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretKey/c66e63ca-fa63-42c8-95e7-eab4db5d41d8', false);
+$codes=new model_code();
+$code=$codes->domcode();
+$response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretKey/'.$code, false);
          
    $_SESSION['key']= trim($response);
    $_SESSION['sessionStatus']="0";
    
-//echo $response;
+echo $response;
 ?>
 
 

@@ -17,7 +17,7 @@
   <div class="login-container">
  
     <?php
-    //session_start();
+    session_start();
     $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
     if($_SESSION['rol']=="SUPERADMIN" || $_SESSION['rol']=="ADMIN"){

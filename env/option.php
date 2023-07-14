@@ -13,8 +13,6 @@ $prod=4;
 return $option;
 
     
-   //$sub_domain="https://dev-lugmacore.lugma.tech"; // o dirección IP del servidor de la base de datos remota
-   
 }
 }
 
