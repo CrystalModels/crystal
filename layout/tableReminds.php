@@ -45,20 +45,20 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     // Borramos los datos antiguos
     publicgroupsTableBody.innerHTML = "";
     //var counter=0;
-    data.reminds.forEach(alert => {
+    data.reminds.forEach(remind => {
   
       const row = document.createElement("tr");
       row.innerHTML = `
          
         
-        <td><button onclick="editarAlerta(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)">Cerrar</button></td>
+        <td><button onclick="editarRemind(this,&quot;${remind.remindId}&quot;,&quot;${remind.profileId}&quot;,"rclose")">Cerrar</button></td>
    
-    <td>${alert.comments}</td>
+    <td>${remind.comments}</td>
     
-    <td><input type="text" class="input-schedule" id="${alert.alertId}" value="${alert.rDate}"> <button onclick="editarAlerta(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)">Cambiar</button></td>
+    <td><input type="text" class="input-schedule" id="${remind.remindId}" value="${remind.rDate}"> <button onclick="editarRemind(this,&quot;${remind.remindId}&quot;,&quot;${remind.profileId}&quot;,"sdate")">Cambiar</button></td>
    
-    <td><input type="text" class="input-schedule" id="${alert.alertId}" value="${alert.rTime}"> <button onclick="editarAlerta(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)">Cambiar</button></td>
-    <td>${alert.remindType}</td>
+    <td><input type="text" class="input-schedule" id="${remind.remindId}" value="${remind.rTime}"> <button onclick="editarRemind(this,&quot;${remind.alertId}&quot;,&quot;${remind.profileId}&quot;,"stime")">Cambiar</button></td>
+    <td>${remind.remindType}</td>
       
        
     
@@ -102,21 +102,25 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 <script>
 
-function editarAlerta(button, id,profileid) {
+function editarRemind(button, id,profileid,rtype) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
   var response = input.value;
 
   // Construir la URL con los parámetros de la petición GET
-  var url = 'controller/controllerEditMyAlert.php?alertId=' + encodeURIComponent(id) + '&response=' + encodeURIComponent(response)+ '&profileId=' + encodeURIComponent(profileid);
+  if(rtype=="rclose"){
+    var url = 'controller/controllerEditMyRemindClose.php?remindId=' + encodeURIComponent(id) + '&profileId=' + encodeURIComponent(profileid);
 
+  }else{
+  var url = 'controller/controllerEditMyRemind.php?remindId=' + encodeURIComponent(id) + '&response=' + encodeURIComponent(response)+ '&profileId=' + encodeURIComponent(profileid);
+  }
   // Realizar la petición GET al archivo PHP
   fetch(url)
     .then(response => {
       // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       const profileid = sessionStorage.getItem("profileId");
-      getAlerts(profileid);
+      getReminds(profileid);
       const mensaje = sessionStorage.getItem("mensaje");
       showAlert(mensaje);
       
