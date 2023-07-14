@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$remindId = $_GET['alertId'];
+$remindId = $_GET['remindId'];
 $profileId = $_GET['profileId'];
 
 require_once '../env/domain.php';
@@ -13,7 +13,7 @@ $url = $sub_domain . "/crystalGateway/apiIntegrations/v1/putMyRemindStatus/".$_S
 // Definir los datos a enviar en la solicitud POST
 $data = array(
     
-    'remindId' => $response,
+    'remindId' => $remindId,
     'profileId' => $profileId
     
 );
