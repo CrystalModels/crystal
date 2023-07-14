@@ -10,17 +10,6 @@
     </button>
     <ul class="navbar-menu" id="navbar-menu">
       
-        <li class="navbar-item has-submenu">
-            <a href="#"><H4> RECURSOS </H4></a>
-            <ul class="submenu">
-            <li class="navbar-item"><a href="#" onclick="openModalUsersSuperAdmin();getUsersSuperAdmin();">Usuarios</a></li>
-            <li class="navbar-item"><a href="#" onclick="openModalRooms();getRooms();">Rooms</a></li>
-             
-            <li class="navbar-item"><a href="#" onclick="openModalPages();getPages();">Páginas</a></li>
-          
-                <li class="navbar-item"><a href="#" onclick="openModalCurrency();getCurrency();">Moneda</a></li>
-            </ul>
-        </li>
         
         <li class="navbar-item has-submenu">
             <a href="#"> <H4> OPERACIÓN </H4></a>
@@ -37,10 +26,9 @@
          
             <a href="#"><H4> ORGANIZADOR </H4></a>
             <ul class="submenu">
-            <li class="navbar-item"><a href="#" onclick="openModalSchedule();getSch();">Mi Horario</a></li>
-            <li class="navbar-item"><a href="#" onclick="openModalUsersSchedule();getUsersSuperAdminSc();">Horarios Generales</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersAlerts();getUsersSuperAdminAlerts();">Alertas</a></li>
-             </ul>
+             
+          </ul>
         </li>
         <script>var profileif=sessionStorage.getItem("profileId") </script>
        

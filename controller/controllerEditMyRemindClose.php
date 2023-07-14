@@ -2,7 +2,7 @@
 
 session_start();
 $remindId = $_GET['remindId'];
-$profileId = $_GET['profileId'];
+$profileId = $_SESSION['profileId'];
 
 require_once '../env/domain.php';
 $sub_domaincon = new model_dom();

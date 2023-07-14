@@ -48,41 +48,8 @@
   <!-- Contenido adicional -->
 </form>
 
-<form class="form-container">
-  <h2>USUARIOS</h2>
 
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <!-- Contenido adicional -->
-</form>
         
-    <form class="form-container">
-  <h2>USUARIOS</h2>
-  
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <!-- Contenido adicional -->
-</form>
 
     </div>
     

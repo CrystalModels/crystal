@@ -152,7 +152,7 @@ echo '
                             <h5 align="center">Url de imagen: <input type="url" id="urlimage" name="urlimage" placeholder="Ingresa tu correo personal" value="${userData.imageUrl}"></h5>
                            
                             <img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;">
-                            <h5 align="center"><a href="#" onclick="openModalPutRol();" class="table-button">Cambiar Rol</a><br></h5>
+                            <h5 align="center"><a href="#" onclick="openModalPutRolAdmin();" class="table-button">Cambiar Rol</a><br></h5>
                             <h5 align="center"><a href="#" onclick="openModalPutUserStatus();" class="table-button">Eliminar/Desactivar/Ocultar</a><br></h5>
         
                             `;
@@ -163,7 +163,7 @@ echo '
             }
 
             // Llamar a la función para obtener los datos del API
-            getMyProfileInfo1();
+            getMyProfileInfo();
         </script>
        
     
