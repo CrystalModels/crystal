@@ -51,14 +51,12 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       row.innerHTML = `
          
         
-        <td><button onclick="editarRemind(this,&quot;${remind.remindId}&quot;,&quot;${remind.profileId}&quot;,"rclose")">Cerrar</button></td>
+        <td><button onclick="editarRemind(this,&quot;${remind.remindId}&quot;,&quot;${remind.profileId}&quot;)">Cerrar</button></td>
    
     <td>${remind.comments}</td>
-    
-    <td><input type="text" class="input-schedule" id="${remind.remindId}" value="${remind.rDate}"> <button onclick="editarRemind(this,&quot;${remind.remindId}&quot;,&quot;${remind.profileId}&quot;,"sdate")">Cambiar</button></td>
-   
-    <td><input type="text" class="input-schedule" id="${remind.remindId}" value="${remind.rTime}"> <button onclick="editarRemind(this,&quot;${remind.alertId}&quot;,&quot;${remind.profileId}&quot;,"stime")">Cambiar</button></td>
-    <td>${remind.remindType}</td>
+    <td>${remind.rDate}</td>
+    <td>${remind.rTime}</td>
+      <td>${remind.remindType}</td>
       
        
     
@@ -102,25 +100,22 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 <script>
 
-function editarRemind(button, id,profileid,rtype) {
+function editarRemind(button, id,profileid) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
-  var response = input.value;
+  //var response = input.value;
 
   // Construir la URL con los parámetros de la petición GET
-  if(rtype=="rclose"){
+
     var url = 'controller/controllerEditMyRemindClose.php?remindId=' + encodeURIComponent(id) + '&profileId=' + encodeURIComponent(profileid);
 
-  }else{
-  var url = 'controller/controllerEditMyRemind.php?remindId=' + encodeURIComponent(id) + '&response=' + encodeURIComponent(response)+ '&profileId=' + encodeURIComponent(profileid);
-  }
   // Realizar la petición GET al archivo PHP
   fetch(url)
     .then(response => {
       // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       const profileid = sessionStorage.getItem("profileId");
-      getReminds(profileid);
+      getReminds();
       const mensaje = sessionStorage.getItem("mensaje");
       showAlert(mensaje);
       
