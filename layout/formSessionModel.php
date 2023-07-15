@@ -66,16 +66,27 @@
 
 <div class="option-toggle-left">
   <input type="checkbox" id="break-toggle" class="option-toggle-checkbox" disabled>
-  <label for="break-toggle" class="option-toggle-label">BREAK</label>
+  <label for="break-toggle" class="option-toggle-label">Break</label>
 </div>
 
 <div class="option-toggle-left1">
   <input type="checkbox" id="lunch-toggle" class="option-toggle-checkbox" disabled>
-  <label for="lunch-toggle" class="option-toggle-label">LUNCH</label>
+  <label for="lunch-toggle" class="option-toggle-label">Lunch</label>
 </div>
 
+<div class="option-toggle-left2">
+  <input type="checkbox" id="broom-toggle" class="option-toggle-checkbox" disabled>
+  <label for="broom-toggle" class="option-toggle-label">Baño</label>
+</div>
+<div class="option-toggle-left3">
+  <input type="checkbox" id="meet-toggle" class="option-toggle-checkbox" disabled>
+  <label for="meet-toggle" class="option-toggle-label">Reunión</label>
+</div>
 
-
+<div class="option-toggle-left4">
+  <input type="checkbox" id="techissue-toggle" class="option-toggle-checkbox" disabled>
+  <label for="techissue-toggle" class="option-toggle-label">Problema</label>
+</div>
 </html>
 
 
@@ -280,12 +291,176 @@
   transform: translateX(50px);
 }
 
+
+
+
+.option-toggle-left2 {
+  position: fixed;
+  top: 150px;
+  left: 20px;
+}
+
+.option-toggle-left2 + .option-toggle-left2 {
+  margin-top: 10px;
+}
+
+.option-toggle-label {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.option-toggle-checkbox {
+  display: none;
+}
+
+.option-toggle-checkbox:checked + .option-toggle-label {
+  background-color: #9a5cab;
+}
+
+.option-toggle-label:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #9a5cab;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.option-toggle-checkbox:checked + .option-toggle-label:before {
+  transform: translateX(50px);
+}
+
+
+
+
+
+
+
+
+.option-toggle-left3 {
+  position: fixed;
+  top: 200px;
+  left: 20px;
+}
+
+.option-toggle-left3 + .option-toggle-left3 {
+  margin-top: 10px;
+}
+
+.option-toggle-label {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.option-toggle-checkbox {
+  display: none;
+}
+
+.option-toggle-checkbox:checked + .option-toggle-label {
+  background-color: #9a5cab;
+}
+
+.option-toggle-label:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #9a5cab;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.option-toggle-checkbox:checked + .option-toggle-label:before {
+  transform: translateX(50px);
+}
+
+
+
+
+
+
+
+
+
+
+.option-toggle-left4 {
+  position: fixed;
+  top: 250px;
+  left: 20px;
+}
+
+.option-toggle-left4 + .option-toggle-left4 {
+  margin-top: 10px;
+}
+
+.option-toggle-label {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.option-toggle-checkbox {
+  display: none;
+}
+
+.option-toggle-checkbox:checked + .option-toggle-label {
+  background-color: #9a5cab;
+}
+
+.option-toggle-label:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #9a5cab;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.option-toggle-checkbox:checked + .option-toggle-label:before {
+  transform: translateX(50px);
+}
+
 </style>
 
 <script>
-  const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox-left');
+
+const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox-left');
 const breakToggleCheckbox = document.getElementById('break-toggle');
 const lunchToggleCheckbox = document.getElementById('lunch-toggle');
+const broomToggleCheckbox = document.getElementById('broom-toggle');
+const meetToggleCheckbox = document.getElementById('meet-toggle');
+const techissueToggleCheckbox = document.getElementById('techissue-toggle');
 const statusLabel = document.getElementById('status-label');
 
 // Verificar el estado almacenado en el localStorage
@@ -294,7 +469,6 @@ if (savedState === 'connected') {
   themeToggleCheckbox.checked = true;
   statusLabel.textContent = 'Conectado';
   enableDisableOptions(true);
-  
 }
 
 // Manejar el cambio de estado del botón principal
@@ -304,17 +478,22 @@ themeToggleCheckbox.addEventListener('change', () => {
     enableDisableOptions(true);
     localStorage.setItem('themeToggleState', 'connected');
     logInfo('conect');
-    
   } else {
     statusLabel.textContent = 'Desconectado';
     enableDisableOptions(false);
     localStorage.setItem('themeToggleState', 'disconnected');
     lunchToggleCheckbox.checked = false;
     breakToggleCheckbox.checked = false;
+    broomToggleCheckbox.checked = false;
+    meetToggleCheckbox.checked = false;
+    techissueToggleCheckbox.checked = false;
     enableDisableOptions(false);
     showOption('break-toggle');
-     showOption('lunch-toggle');
-     logInfo('disconect');
+    showOption('lunch-toggle');
+    showOption('broom-toggle');
+    showOption('meet-toggle');
+    showOption('techissue-toggle');
+    logInfo('disconect');
   }
 });
 
@@ -322,12 +501,21 @@ themeToggleCheckbox.addEventListener('change', () => {
 breakToggleCheckbox.addEventListener('change', () => {
   if (breakToggleCheckbox.checked) {
     lunchToggleCheckbox.checked = false;
+    broomToggleCheckbox.checked = false;
+    meetToggleCheckbox.checked = false;
+    techissueToggleCheckbox.checked = false;
     hideOption('lunch-toggle');
+    hideOption('broom-toggle');
+    hideOption('meet-toggle');
+    hideOption('techissue-toggle');
     // Ejecutar código específico para la opción BREAK activada
     // ...
     logInfo('break');
   } else {
     showOption('lunch-toggle');
+    showOption('meet-toggle');
+    showOption('broom-toggle');
+    showOption('techissue-toggle');
     // Ejecutar código específico para la opción BREAK desactivada
     // ...
     logInfo('conect');
@@ -338,13 +526,97 @@ breakToggleCheckbox.addEventListener('change', () => {
 lunchToggleCheckbox.addEventListener('change', () => {
   if (lunchToggleCheckbox.checked) {
     breakToggleCheckbox.checked = false;
+    broomToggleCheckbox.checked = false;
+    meetToggleCheckbox.checked = false;
+    techissueToggleCheckbox.checked = false;
     hideOption('break-toggle');
+    hideOption('broom-toggle');
+    hideOption('meet-toggle');
+    hideOption('techissue-toggle');
     // Ejecutar código específico para la opción LUNCH activada
     // ...
     logInfo('lunch');
   } else {
     showOption('break-toggle');
+    showOption('meet-toggle');
+    showOption('broom-toggle');
+    showOption('techissue-toggle');
     // Ejecutar código específico para la opción LUNCH desactivada
+    // ...
+    logInfo('conect');
+  }
+});
+
+// Manejar el cambio de estado del botón BAÑO
+broomToggleCheckbox.addEventListener('change', () => {
+  if (broomToggleCheckbox.checked) {
+    lunchToggleCheckbox.checked = false;
+    breakToggleCheckbox.checked = false;
+    meetToggleCheckbox.checked = false;
+    techissueToggleCheckbox.checked = false;
+    hideOption('meet-toggle');
+    hideOption('break-toggle');
+    hideOption('lunch-toggle');
+    hideOption('techissue-toggle');
+    // Ejecutar código específico para la opción BAÑO activada
+    // ...
+    logInfo('broom');
+  } else {
+    showOption('lunch-toggle');
+    showOption('break-toggle');
+    showOption('meet-toggle');
+    showOption('techissue-toggle');
+    // Ejecutar código específico para la opción BAÑO desactivada
+    // ...
+    logInfo('conect');
+  }
+});
+
+// Manejar el cambio de estado del botón REUNIÓN
+meetToggleCheckbox.addEventListener('change', () => {
+  if (meetToggleCheckbox.checked) {
+    lunchToggleCheckbox.checked = false;
+    breakToggleCheckbox.checked = false;
+    broomToggleCheckbox.checked = false;
+    techissueToggleCheckbox.checked = false;
+    hideOption('techissue-toggle');
+    hideOption('break-toggle');
+    hideOption('broom-toggle');
+    hideOption('lunch-toggle');
+    // Ejecutar código específico para la opción REUNIÓN activada
+    // ...
+    logInfo('meet');
+  } else {
+    showOption('lunch-toggle');
+    showOption('break-toggle');
+    showOption('broom-toggle');
+    showOption('techissue-toggle');
+    // Ejecutar código específico para la opción REUNIÓN desactivada
+    // ...
+    logInfo('conect');
+  }
+});
+
+// Manejar el cambio de estado del botón PROBLEMA
+techissueToggleCheckbox.addEventListener('change', () => {
+  if (techissueToggleCheckbox.checked) {
+    lunchToggleCheckbox.checked = false;
+    breakToggleCheckbox.checked = false;
+    broomToggleCheckbox.checked = false;
+    meetToggleCheckbox.checked = false;
+    hideOption('break-toggle');
+    hideOption('broom-toggle');
+    hideOption('lunch-toggle');
+    hideOption('meet-toggle');
+    // Ejecutar código específico para la opción PROBLEMA activada
+    // ...
+    logInfo('techissue');
+  } else {
+    showOption('lunch-toggle');
+    showOption('break-toggle');
+    showOption('broom-toggle');
+    showOption('meet-toggle');
+    // Ejecutar código específico para la opción PROBLEMA desactivada
     // ...
     logInfo('conect');
   }
@@ -354,6 +626,9 @@ lunchToggleCheckbox.addEventListener('change', () => {
 function enableDisableOptions(enabled) {
   breakToggleCheckbox.disabled = !enabled;
   lunchToggleCheckbox.disabled = !enabled;
+  broomToggleCheckbox.disabled = !enabled;
+  meetToggleCheckbox.disabled = !enabled;
+  techissueToggleCheckbox.disabled = !enabled;
 }
 
 // Función para ocultar una opción
@@ -368,9 +643,10 @@ function showOption(optionId) {
   optionElement.parentNode.style.display = 'block';
 }
 
-
-
-
+// Función para imprimir información en la consola
+function logInfo(message) {
+  console.log(`Estado actual: ${message}`);
+}
 
 
 
