@@ -296,6 +296,7 @@ if (savedState === 'connected') {
   themeToggleCheckbox.checked = true;
   statusLabel.textContent = 'Conectado';
   enableDisableOptions(true);
+  
 }
 
 // Manejar el cambio de estado del botón principal
@@ -304,6 +305,8 @@ themeToggleCheckbox.addEventListener('change', () => {
     statusLabel.textContent = 'Conectado';
     enableDisableOptions(true);
     localStorage.setItem('themeToggleState', 'connected');
+    logInfo('conect');
+    
   } else {
     statusLabel.textContent = 'Desconectado';
     enableDisableOptions(false);
@@ -313,6 +316,7 @@ themeToggleCheckbox.addEventListener('change', () => {
     enableDisableOptions(false);
     showOption('break-toggle');
      showOption('lunch-toggle');
+     logInfo('disconect');
   }
 });
 
@@ -323,10 +327,12 @@ breakToggleCheckbox.addEventListener('change', () => {
     hideOption('lunch-toggle');
     // Ejecutar código específico para la opción BREAK activada
     // ...
+    logInfo('break');
   } else {
     showOption('lunch-toggle');
     // Ejecutar código específico para la opción BREAK desactivada
     // ...
+    logInfo('conect');
   }
 });
 
@@ -337,10 +343,12 @@ lunchToggleCheckbox.addEventListener('change', () => {
     hideOption('break-toggle');
     // Ejecutar código específico para la opción LUNCH activada
     // ...
+    logInfo('lunch');
   } else {
     showOption('break-toggle');
     // Ejecutar código específico para la opción LUNCH desactivada
     // ...
+    logInfo('conect');
   }
 });
 
@@ -362,5 +370,32 @@ function showOption(optionId) {
   optionElement.parentNode.style.display = 'block';
 }
 
+
+
+
+
+
+
+function logInfo(value) {
+  // Obtener el valor del campo de texto correspondiente al botón
+  
+
+  // Construir la URL con los parámetros de la petición GET
+  var url = 'controller/controllerPostLogReport.php?value=' + encodeURIComponent(value);
+
+  // Realizar la petición GET al archivo PHP
+  fetch(url)
+    .then(response => {
+      // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
+      // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
+      
+      
+ 
+    })
+    .catch(error => {
+      // Aquí puedes manejar los errores en caso de que la petición falle
+      console.log('Error en la petición:', error);
+    });
+}
 
 </script>
