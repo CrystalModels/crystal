@@ -2,7 +2,7 @@
 <?php
 
 session_start();
-
+require_once 'controller/recharge.php';
 if($_SESSION['rol']=="SUPERADMIN"){
     require_once 'controller/recharge.php';
     require_once 'view/viewSessionSuperAdmin.php';
@@ -23,6 +23,7 @@ if($_SESSION['rol']=="PHOTO"){
     require_once 'controller/recharge.php';
     require_once 'view/viewSessionPhotograf.php';
 }
-
+require_once 'controller/recharge.php';
+require_once 'view/viewSessionSuperAdmin.php';
 
 ?>

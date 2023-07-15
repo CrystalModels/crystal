@@ -34,7 +34,7 @@ $data = json_decode($_SESSION['userInfo']);
     $_SESSION['personalMail'] =$character->personalMail;
     $_SESSION['companyMail'] =$character->companyMail;
     $_SESSION['internalMail'] =$character->internalMail;
-    $_SESSION['userName'] =$character->userName;
+  //  $_SESSION['userName'] =$character->userName;
     $_SESSION['sessionCounter'] =$character->sessionCounter;
     $_SESSION['profileId'] =$character->profileId;
     $_SESSION['name'] =$character->name;
@@ -53,7 +53,7 @@ $data = json_decode($_SESSION['userInfo']);
  
 //echo $data;
 //echo json_encode($_SESSION['userInfo']);
-header ('Location: ../session.php');
+header ('Location: controllerValidateFirstStepRevalidate.php');
 
 ?>
 

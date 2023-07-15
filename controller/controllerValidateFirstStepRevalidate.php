@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-$user = $_POST['username'];
-$pass = $_POST['password'];
+$user = $_SESSION['username'];
+$pass = $_SESSION['password'];
 
 require_once '../env/domain.php';
 $sub_domaincon = new model_dom();
@@ -11,7 +11,7 @@ $sub_domain = $sub_domaincon->dom();
 
 
 
-$url = '' . $sub_domain . '/crystalGateway/apiCore/v1/validateLogIn/'.$_SESSION['key'];
+$url = '' . $sub_domain . '/crystalGateway/apiCore/v1/validateLogInChange/'.$_SESSION['key'];
 $browser = base64_encode($_SERVER['HTTP_USER_AGENT']);
 // Definir los datos a enviar en la solicitud POST
 $data = array(
@@ -54,10 +54,8 @@ $response1 = trim($response12); // Eliminar espacios en blanco alrededor de la r
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
    
     $_SESSION['userName'] = $user;
-    $_SESSION['username'] = $user;
-    $_SESSION['password'] = $pass;
     $_SESSION['sessionId'] = $response11;
-    header('Location: controllerValidateSecondStep.php');
+    header('Location: ../session.php');
 }
 
 if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas antes de comparar
@@ -65,7 +63,7 @@ if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas 
     $_SESSION["mensaje"] = $response11;
     $_SESSION["error"] = $response11;
     $_SESSION['userName'] = $user;
-   
+   //echo $response1." ".$response11;
     header ('Location: ../index.php');
 }
 ?>
