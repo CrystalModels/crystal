@@ -54,7 +54,7 @@ $response1 = trim($response12); // Eliminar espacios en blanco alrededor de la r
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
    
     $_SESSION['userName'] = $user;
-    $_SESSION['sessionId'] = $response11;
+    $_SESSION['sessionId1'] = $response11;
     header('Location: ../session.php');
 }
 

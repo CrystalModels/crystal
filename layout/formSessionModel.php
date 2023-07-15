@@ -37,7 +37,8 @@
   <h2>USUARIOS</h2>
 
   
-
+<?php echo $_SESSION['sessionStatus']; ?>
+<?php echo $_SESSION['sessionId']; ?>
   <!-- Contenido adicional -->
 </form>
 

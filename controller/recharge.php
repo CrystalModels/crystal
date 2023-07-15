@@ -51,6 +51,7 @@ $data = json_decode($_SESSION['userInfo']);
 
   if($_SESSION['sessionStatus']=="0"){
 // Borrar todas las variables de sesión
+
 session_unset();
 
 // Destruir la sesión
@@ -61,10 +62,10 @@ header ('Location: index.php');
 
 
   }else{
-
+    echo $_SESSION['sessionStatus'];
   }
 //echo $data;
 //echo json_encode($_SESSION['userInfo']);
-
+//echo $_SESSION['sessionStatus'];
 ?>
 
