@@ -62,7 +62,7 @@ header ('Location: index.php');
 
 
   }else{
-    echo $_SESSION['sessionStatus'];
+    //echo $_SESSION['sessionStatus'];
   }
 //echo $data;
 //echo json_encode($_SESSION['userInfo']);
