@@ -464,24 +464,81 @@ const techissueToggleCheckbox = document.getElementById('techissue-toggle');
 const statusLabel = document.getElementById('status-label');
 
 // Verificar el estado almacenado en el localStorage
-const savedState = localStorage.getItem('themeToggleState');
+const savedState = sessionStorage.getItem('isConnected');
+const isbroom = sessionStorage.getItem('isBroom');
+const ismeet = sessionStorage.getItem('isMeet');
+const isbreak = sessionStorage.getItem('isBreak');
+const islunch = sessionStorage.getItem('isLunch');
+const isissue = sessionStorage.getItem('isIssue');
+
 if (savedState === 'connected') {
   themeToggleCheckbox.checked = true;
   statusLabel.textContent = 'Conectado';
   enableDisableOptions(true);
 }
+if (isbroom === 'true') {
+  broomToggleCheckbox.checked = true;
+ 
+  hideOption('lunch-toggle');
+    hideOption('break-toggle');
+    hideOption('meet-toggle');
+    hideOption('techissue-toggle');
+}
 
+if (ismeet === 'true') {
+  meetToggleCheckbox.checked = true;
+ 
+  hideOption('lunch-toggle');
+    hideOption('break-toggle');
+    hideOption('broom-toggle');
+    hideOption('techissue-toggle');
+}
+
+if (isbreak === 'true') {
+  breakToggleCheckbox.checked = true;
+ 
+  hideOption('lunch-toggle');
+    hideOption('meet-toggle');
+    hideOption('broom-toggle');
+    hideOption('techissue-toggle');
+}
+
+
+if (islunch === 'true') {
+  lunchToggleCheckbox.checked = true;
+ 
+  hideOption('break-toggle');
+    hideOption('meet-toggle');
+    hideOption('broom-toggle');
+    hideOption('techissue-toggle');
+}
+
+
+if (isissue === 'true') {
+  techissueToggleCheckbox.checked = true;
+ 
+  hideOption('break-toggle');
+    hideOption('meet-toggle');
+    hideOption('broom-toggle');
+    hideOption('lunch-toggle');
+}
 // Manejar el cambio de estado del botón principal
 themeToggleCheckbox.addEventListener('change', () => {
   if (themeToggleCheckbox.checked) {
     statusLabel.textContent = 'Conectado';
     enableDisableOptions(true);
-    localStorage.setItem('themeToggleState', 'connected');
+    //localStorage.setItem('themeToggleState', 'connected');
+    sessionStorage.setItem('isConnected','connected');
     logInfo('conect');
   } else {
     statusLabel.textContent = 'Desconectado';
     enableDisableOptions(false);
-    localStorage.setItem('themeToggleState', 'disconnected');
+    sessionStorage.setItem('isConnected', 'disconnected');
+    sessionStorage.setItem('isBroom','false');
+    sessionStorage.setItem('isLunch','false');
+    sessionStorage.setItem('isBreak','false');
+    sessionStorage.setItem('isIssue','false');
+    sessionStorage.setItem('isMeet','false');
     lunchToggleCheckbox.checked = false;
     breakToggleCheckbox.checked = false;
     broomToggleCheckbox.checked = false;
@@ -508,6 +565,7 @@ breakToggleCheckbox.addEventListener('change', () => {
     hideOption('broom-toggle');
     hideOption('meet-toggle');
     hideOption('techissue-toggle');
+    sessionStorage.setItem('isBreak','true');
     // Ejecutar código específico para la opción BREAK activada
     // ...
     logInfo('break');
@@ -516,6 +574,7 @@ breakToggleCheckbox.addEventListener('change', () => {
     showOption('meet-toggle');
     showOption('broom-toggle');
     showOption('techissue-toggle');
+    sessionStorage.setItem('isBreak','false');
     // Ejecutar código específico para la opción BREAK desactivada
     // ...
     logInfo('conect');
@@ -533,6 +592,7 @@ lunchToggleCheckbox.addEventListener('change', () => {
     hideOption('broom-toggle');
     hideOption('meet-toggle');
     hideOption('techissue-toggle');
+    sessionStorage.setItem('isLunch','true');
     // Ejecutar código específico para la opción LUNCH activada
     // ...
     logInfo('lunch');
@@ -541,6 +601,8 @@ lunchToggleCheckbox.addEventListener('change', () => {
     showOption('meet-toggle');
     showOption('broom-toggle');
     showOption('techissue-toggle');
+    
+    sessionStorage.setItem('isLunch','false');
     // Ejecutar código específico para la opción LUNCH desactivada
     // ...
     logInfo('conect');
@@ -558,6 +620,8 @@ broomToggleCheckbox.addEventListener('change', () => {
     hideOption('break-toggle');
     hideOption('lunch-toggle');
     hideOption('techissue-toggle');
+    
+    sessionStorage.setItem('isBroom','true');
     // Ejecutar código específico para la opción BAÑO activada
     // ...
     logInfo('broom');
@@ -566,6 +630,8 @@ broomToggleCheckbox.addEventListener('change', () => {
     showOption('break-toggle');
     showOption('meet-toggle');
     showOption('techissue-toggle');
+    
+    sessionStorage.setItem('isBroom','false');
     // Ejecutar código específico para la opción BAÑO desactivada
     // ...
     logInfo('conect');
@@ -583,6 +649,8 @@ meetToggleCheckbox.addEventListener('change', () => {
     hideOption('break-toggle');
     hideOption('broom-toggle');
     hideOption('lunch-toggle');
+    
+    sessionStorage.setItem('isMeet','true');
     // Ejecutar código específico para la opción REUNIÓN activada
     // ...
     logInfo('meet');
@@ -593,6 +661,7 @@ meetToggleCheckbox.addEventListener('change', () => {
     showOption('techissue-toggle');
     // Ejecutar código específico para la opción REUNIÓN desactivada
     // ...
+    sessionStorage.setItem('isMeet','false');
     logInfo('conect');
   }
 });
@@ -608,6 +677,7 @@ techissueToggleCheckbox.addEventListener('change', () => {
     hideOption('broom-toggle');
     hideOption('lunch-toggle');
     hideOption('meet-toggle');
+    sessionStorage.setItem('isIssue','true');
     // Ejecutar código específico para la opción PROBLEMA activada
     // ...
     logInfo('techissue');
@@ -616,6 +686,7 @@ techissueToggleCheckbox.addEventListener('change', () => {
     showOption('break-toggle');
     showOption('broom-toggle');
     showOption('meet-toggle');
+    sessionStorage.setItem('isIssue','false');
     // Ejecutar código específico para la opción PROBLEMA desactivada
     // ...
     logInfo('conect');
