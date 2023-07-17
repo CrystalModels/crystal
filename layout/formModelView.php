@@ -19,37 +19,14 @@
     <?php
     //session_start();
     $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
-    if($_SESSION['rol']=="SUPERADMIN" || $_SESSION['rol']=="ADMIN"){
+    if($_SESSION['rol']=="SUPERADMIN" || $_SESSION['rol']=="ADMIN" || $_SESSION['rol']=="MONITOR"){
 echo '
-<form method="post" action="controller/controllerPutUserBySuperAdmin.php?profileId='.$_GET['profileId'].'&userName='.$_GET['userName'].'">
+<form method="post" action="controller/controllerPutUserBySuperAdmin.php?profileId='.$_GET['names'].'&userName='.$_GET['names'].'">
  
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
 
 
 ';
-    if($_SESSION['rol']=="SUPERADMIN"){
+  
         require_once 'env/domain.php';
         $sub_domaincon = new model_dom();
         $sub_domain = $sub_domaincon->dom();
@@ -77,44 +54,37 @@ echo '
 <br>
 <br>
 <br>
-        <div id="myProfile-div"></div>
+        <div id="modelLog-div"></div>
         <script>
         //const rancode = sessionStorage.getItem("ranCode");
         //const key = sessionStorage.getItem("key");
-            const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiCore/v1/getProfileInfoLog/'.$headerslink.'/'.$_GET['userName'].'";
+            const modelLog = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getModelLog/'.$headerslink.'/'.$_GET['profileId'].'";
         </script>';
+        ; 
+                        echo    $names=$_GET['names'];
         echo '<script>
             // Función para obtener los datos del API
-            async function getMyProfileInfo() {
-                fetch(urlMyProfile)
+            async function modelLog() {
+                fetch(modelLog)
                     .then(response => response.json())
                     .then(data => {
-                        const userData = data.users[0];
+                        const userData = data.models[0];
 
                         // Mostrar los datos en la pantalla
-                        const profileDiv = document.querySelector("#myProfile-div");
+                        const profileDiv = document.querySelector("#modelLog-div");
                         profileDiv.innerHTML = `
-                            <h4 align="center">${userData.name} ${userData.lastName}</h4>
-                            <h5 align="center">Usuario: ${userData.userName}</h5>
-                            <h5 align="center">Rol: ${userData.rol}</h5>
-                            <h5 align="center">Id de usuario: ${userData.userId}</h5>
-                            <h5 align="center">Id de Perfil: ${userData.profileId}</h5>
-                            <h5 align="center">Sesiones Activas: ${userData.sessionCounter}</h5>
-                            <h5 align="center">Activo: ${userData.isActive}</h5>
-                            <h5 align="center">Estado: ${userData.status}</h5>
-                            <h5 align="center">Horas de Conexión: ${userData.totalHours}</h5>
-                            <h5 align="center">Correo empresarial: <input type="text" id="cmail" name="cmail" placeholder="Ingresa tu nombre" value="${userData.companyMail}"></h5>
-                            <h5 align="center">Correo Interno: <input type="text" id="imail" name="imail" placeholder="Ingresa tu nombre" value="${userData.internalMail}"></h5>
+                            <h4 align="center">
+                            '.$names.'
+                           </h4>
+                         
                            
-                            <h5 align="center">Nombre: <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" value="${userData.name}"></h5>
-                            <h5 align="center">Apellido: <input type="text" id="lname" name="lname" placeholder="Ingresa tu apellido" value="${userData.lastName}"></h5>
-                            <h5 align="center">Correo Personal: <input type="text" id="pmail" name="pmail" placeholder="Ingresa tu correo personal" value="${userData.personalMail}"></h5>
-                            <h5 align="center">Url de imagen: <input type="text" id="urlimage" name="urlimage" placeholder="Ingresa tu correo personal" value="${userData.imageUrl}"></h5>
-                           
-                            <img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;">
-                            <h5 align="center"><a href="#" onclick="openModalPutRol();" class="table-button">Cambiar Rol</a><br></h5>
-                            <h5 align="center"><a href="#" onclick="openModalPutUserStatus();" class="table-button">Eliminar/Desactivar/Ocultar</a><br></h5>
-        
+                            
+                            <h5 align="center">Id de Perfil: ${userData.modelId}</h5>
+                          
+                        
+                            
+                       
+                              
                             `;
                     })
                     .catch(error => {
@@ -132,92 +102,7 @@ echo '
           }
         
        
-          
-
-    if($_SESSION['rol']=="ADMIN"){
-      echo '
-<form method="post" action="controller/controllerPutUserBySuperAdmin.php?profileId='.$_GET['profileId'].'&userName='.$_GET['userName'].'">
-  
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-';
-        require_once 'env/domain.php';
-        $sub_domaincon = new model_dom();
-        $sub_domain = $sub_domaincon->dom();
-        //echo $_SESSION['key'];
-        echo '
-        <div id="myProfile-div"></div>
-        <script>
-        //const rancode = sessionStorage.getItem("ranCode");
-        //const key = sessionStorage.getItem("key");
-            const urlMyProfile = "' . $sub_domain . '/crystalGateway/apiCore/v1/getProfileInfoLog/'.$headerslink.'/'.$_GET['userName'].'";
-        </script>';
-        echo '<script>
-            // Función para obtener los datos del API
-            async function getMyProfileInfo() {
-                fetch(urlMyProfile)
-                    .then(response => response.json())
-                    .then(data => {
-                        const userData = data.users[0];
-
-                        // Mostrar los datos en la pantalla
-                        const profileDiv = document.querySelector("#myProfile-div");
-                        profileDiv.innerHTML = `
-                            <h4 align="center">${userData.name} ${userData.lastName}</h4>
-                            <h5 align="center">Usuario: ${userData.userName}</h5>
-                            <h5 align="center">Rol: ${userData.rol}</h5>
-                            <h5 align="center">Id de usuario: ${userData.userId}</h5>
-                            <h5 align="center">Id de Perfil: ${userData.profileId}</h5>
-                            <h5 align="center">Sesiones Activas: ${userData.sessionCounter}</h5>
-                            <h5 align="center">Activo: ${userData.isActive}</h5>
-                            <h5 align="center">Estado: ${userData.status}</h5>
-                            <h5 align="center">Horas de Conexión: ${userData.totalHours}</h5>
-                            <h5 align="center">Correo empresarial: <input type="text" id="cmail" name="cmail" placeholder="Ingresa tu nombre" value="${userData.companyMail}"></h5>
-                            <h5 align="center">Correo Interno: <input type="text" id="imail" name="imail" placeholder="Ingresa tu nombre" value="${userData.internalMail}"></h5>
-                           
-                            <h5 align="center">Nombre: <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" value="${userData.name}"></h5>
-                            <h5 align="center">Apellido: <input type="text" id="lname" name="lname" placeholder="Ingresa tu apellido" value="${userData.lastName}"></h5>
-                            <h5 align="center">Correo Personal: <input type="text" id="pmail" name="pmail" placeholder="Ingresa tu correo personal" value="${userData.personalMail}"></h5>
-                            <h5 align="center">Url de imagen: <input type="text" id="urlimage" name="urlimage" placeholder="Ingresa tu correo personal" value="${userData.imageUrl}"></h5>
-                           
-                            <img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;">
-                            <h5 align="center"><a href="#" onclick="openModalPutRolAdmin();" class="table-button">Cambiar Rol</a><br></h5>
-        
-                            `;
-                    })
-                    .catch(error => {
-                        console.error("Error:", error);
-                    });
-            }
-
-            // Llamar a la función para obtener los datos del API
-            getMyProfileInfo();
-        </script>
-       
-    
-        <button type="submit" class="table-button">Editar</button>
-       ';}
-          }else{
+          else{
 
             echo "UNAUTHORIZED";
           }

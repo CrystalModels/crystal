@@ -39,7 +39,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.models.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><a class="table-button" href="group.php?student_id=${student.profileId}&my_profile=${student.profileId}&owner_id=${student.profileId}">Abrir</a>
+      <td><a class="table-button" href="model.php?modelId=${student.profileId}&names=${student.name} ${student.lastName}" target="_blank">Estado</a>
       </td>
   <td>${student.userName}</td> 
       <td>${student.name}</td>

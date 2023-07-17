@@ -530,6 +530,7 @@ themeToggleCheckbox.addEventListener('change', () => {
     //localStorage.setItem('themeToggleState', 'connected');
     sessionStorage.setItem('isConnected','connected');
     logInfo('conect');
+    modelStatus('isConnected','connected')
   } else {
     statusLabel.textContent = 'Desconectado';
     enableDisableOptions(false);
@@ -551,6 +552,7 @@ themeToggleCheckbox.addEventListener('change', () => {
     showOption('meet-toggle');
     showOption('techissue-toggle');
     logInfo('disconect');
+    modelStatus('isConnected','disconect')
   }
 });
 
@@ -760,7 +762,7 @@ function modelStatus(dbvalue,value) {
   
 
   // Construir la URL con los parámetros de la petición GET
-  var url = 'controller/controllerPutModelStatus.php?dbvalue=' + encodeURIComponent(dbvalue) + '&value=' + encodeURIComponent(nombre);
+  var url = 'controller/controllerPutModelStatus.php?dbvalue=' + encodeURIComponent(dbvalue) + '&value=' + encodeURIComponent(value);
 
   // Realizar la petición GET al archivo PHP
   fetch(url)
