@@ -569,6 +569,7 @@ breakToggleCheckbox.addEventListener('change', () => {
     // Ejecutar código específico para la opción BREAK activada
     // ...
     logInfo('break');
+    modelStatus('isBreak','true')
   } else {
     showOption('lunch-toggle');
     showOption('meet-toggle');
@@ -578,6 +579,7 @@ breakToggleCheckbox.addEventListener('change', () => {
     // Ejecutar código específico para la opción BREAK desactivada
     // ...
     logInfo('conect');
+    modelStatus('isBreak','false')
   }
 });
 
@@ -596,6 +598,7 @@ lunchToggleCheckbox.addEventListener('change', () => {
     // Ejecutar código específico para la opción LUNCH activada
     // ...
     logInfo('lunch');
+    modelStatus('isLunch','true')
   } else {
     showOption('break-toggle');
     showOption('meet-toggle');
@@ -606,6 +609,7 @@ lunchToggleCheckbox.addEventListener('change', () => {
     // Ejecutar código específico para la opción LUNCH desactivada
     // ...
     logInfo('conect');
+    modelStatus('isLunch','false')
   }
 });
 
@@ -625,6 +629,7 @@ broomToggleCheckbox.addEventListener('change', () => {
     // Ejecutar código específico para la opción BAÑO activada
     // ...
     logInfo('broom');
+    modelStatus('isBroom','true')
   } else {
     showOption('lunch-toggle');
     showOption('break-toggle');
@@ -635,6 +640,7 @@ broomToggleCheckbox.addEventListener('change', () => {
     // Ejecutar código específico para la opción BAÑO desactivada
     // ...
     logInfo('conect');
+    modelStatus('isBroom','false')
   }
 });
 
@@ -654,6 +660,7 @@ meetToggleCheckbox.addEventListener('change', () => {
     // Ejecutar código específico para la opción REUNIÓN activada
     // ...
     logInfo('meet');
+    modelStatus('isMeet','true')
   } else {
     showOption('lunch-toggle');
     showOption('break-toggle');
@@ -663,6 +670,7 @@ meetToggleCheckbox.addEventListener('change', () => {
     // ...
     sessionStorage.setItem('isMeet','false');
     logInfo('conect');
+    modelStatus('isMeet','false')
   }
 });
 
@@ -681,6 +689,7 @@ techissueToggleCheckbox.addEventListener('change', () => {
     // Ejecutar código específico para la opción PROBLEMA activada
     // ...
     logInfo('techissue');
+    modelStatus('isIssue','true')
   } else {
     showOption('lunch-toggle');
     showOption('break-toggle');
@@ -690,6 +699,7 @@ techissueToggleCheckbox.addEventListener('change', () => {
     // Ejecutar código específico para la opción PROBLEMA desactivada
     // ...
     logInfo('conect');
+    modelStatus('isIssue','false')
   }
 });
 
@@ -727,6 +737,30 @@ function logInfo(value) {
 
   // Construir la URL con los parámetros de la petición GET
   var url = 'controller/controllerPostLogReport.php?value=' + encodeURIComponent(value);
+
+  // Realizar la petición GET al archivo PHP
+  fetch(url)
+    .then(response => {
+      // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
+      // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
+      
+      
+ 
+    })
+    .catch(error => {
+      // Aquí puedes manejar los errores en caso de que la petición falle
+      console.log('Error en la petición:', error);
+    });
+}
+
+
+
+function modelStatus(dbvalue,value) {
+  // Obtener el valor del campo de texto correspondiente al botón
+  
+
+  // Construir la URL con los parámetros de la petición GET
+  var url = 'controller/controllerPutModelStatus.php?dbvalue=' + encodeURIComponent(dbvalue) + '&value=' + encodeURIComponent(nombre);
 
   // Realizar la petición GET al archivo PHP
   fetch(url)
