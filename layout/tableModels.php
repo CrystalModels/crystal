@@ -11,6 +11,7 @@
       <th>Nombres</th>
       <th>Apellido</th>
       <th>Rol</th>
+      <th>Asignación</th>
     </tr>
   </thead>
             <tbody>
@@ -45,7 +46,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         <td>${student.lastName}</td>
         <td>${student.rol}</td>
 
-        
+        <td><button onclick="openModalPagesAssign();getPagesAssign(&quot;${student.profileId}&quot;);">Asigna Página</button></td>
+    
        
         
       `;

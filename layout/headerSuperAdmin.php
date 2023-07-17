@@ -40,6 +40,7 @@
             <li class="navbar-item"><a href="#" onclick="openModalSchedule();getSch();">Mi Horario</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersSchedule();getUsersSuperAdminSc();">Horarios Generales</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersAlerts();getUsersSuperAdminAlerts();">Alertas</a></li>
+            <li class="navbar-item"><a href="#" onclick="openModalPageAssign();getUsersSuperAdminAlerts();">Asignar Páginas</a></li>
              </ul>
         </li>
         <script>var profileif=sessionStorage.getItem("profileId") </script>

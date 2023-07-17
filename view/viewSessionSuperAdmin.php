@@ -12,12 +12,14 @@ require_once 'modal/modalPostRooms.php';
 require_once 'modal/modalPages.php';
 require_once 'modal/modalPostPages.php';
 
+
 require_once 'modal/modalCurrency.php';
 require_once 'modal/modalPostCurrency.php';
 
 require_once 'modal/modalModels.php';
 require_once 'modal/modalMonitors.php';
 require_once 'modal/modalPhotograph.php';
+require_once 'modal/modalPagesAssign.php';
 
 require_once 'modal/modalMySchedule.php';
 require_once 'modal/modalUsersSchedule.php';
