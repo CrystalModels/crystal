@@ -58,7 +58,7 @@ echo '
         <script>
         //const rancode = sessionStorage.getItem("ranCode");
         //const key = sessionStorage.getItem("key");
-            const modelLog = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getModelLog/'.$headerslink.'/'.$_GET['profileId'].'";
+            const modelLog = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getModelLog/'.$headerslink.'/'.$_GET['modelId'].'";
         </script>';
         ; 
                         echo    $names=$_GET['names'];
@@ -73,9 +73,7 @@ echo '
                         // Mostrar los datos en la pantalla
                         const profileDiv = document.querySelector("#modelLog-div");
                         profileDiv.innerHTML = `
-                            <h4 align="center">
-                            '.$names.'
-                           </h4>
+                       
                          
                            
                             
@@ -93,7 +91,7 @@ echo '
             }
 
             // Llamar a la función para obtener los datos del API
-            getMyProfileInfo();
+            modelLog();
         </script>
        
     
