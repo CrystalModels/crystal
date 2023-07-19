@@ -8,6 +8,11 @@
     <tr>
         <th>Acciones</th>
       <th>Página</th>
+      <th>Url</th>
+      <th>Inicio</th>
+      <th>Final</th>
+      <th>Tiempo promedio</th>
+
       <th>Estado</th>
       
     </tr>
@@ -41,11 +46,15 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.pages.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="desconectarModel(this,&quot;${student.pageId}&quot;,&quot;${pid}&quot;)">Desconectar Transmisión</button></td>
+      <td><button onclick="desconectarModel(this,&quot;${student.pageId}&quot;)">Desconectar Transmisión</button></td>
     
   
-      <td>${student.name}</td>
+      <td>${student.pageName}</td>
         <td>${student.urlPage}</td>
+        <td>${student.startDate} ${student.startTime}</td>
+        <td>${student.endDate} ${student.endTime}</td>
+        <td>${student.totalTime}</td>
+        <td>${student.isActive}</td>
        
 
         
@@ -68,7 +77,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
  }
  
  // Llamar a la función para obtener los datos del API
- //getPagesAssignModels();
+ getPagesAssignModels();
  
 
 

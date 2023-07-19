@@ -68,10 +68,9 @@ echo '
                           
                          
                     
-                         
+                          <h5 align="center"><a href="#" onclick="openModalPagesModel();getPagesAssignModels();" class="table-button">Lista de Transmisión</a><br></h5>
+        
                           
-                          
-                     
                             
                           `;
                        
@@ -97,7 +96,7 @@ echo '
           }
         
         ?>
-          <button onclick="openModalPagesAssign();">Transmisiones</button>
+          
                         
     </form>
     
@@ -212,6 +211,7 @@ function miFuncion() {
   // Código de la función que se ejecutará cada 5 segundos
   
   modelLog();
+  getPagesAssignModels();
   //getAlerts();
 
   //console.log('Se ejecutó la función');
