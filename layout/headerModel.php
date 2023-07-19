@@ -32,7 +32,7 @@
       link1.href = '#';
       link1.addEventListener('click', function() {
         openModalPagesModelNot();
-        getPagesAssignModelsNot();
+        getPagesAssignModelsNot1();
       });
       link1.textContent = 'Iniciar Transmisión';
       listItem1.appendChild(link1);
