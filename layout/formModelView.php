@@ -70,6 +70,8 @@ echo '
                     
                           <h5 align="center"><a href="#" onclick="openModalPagesModel();getPagesAssignModels();" class="table-button">Lista de Transmisión</a><br></h5>
         
+                          <h5 align="center"><a href="#" onclick="openModalPagesModelNot();getPagesAssignModelsNot();" class="table-button">Lista de  no Transmisión</a><br></h5>
+        
                           
                             
                           `;
@@ -212,6 +214,7 @@ function miFuncion() {
   
   modelLog();
   getPagesAssignModels();
+  getPagesAssignModelsNot();
   //getAlerts();
 
   //console.log('Se ejecutó la función');
