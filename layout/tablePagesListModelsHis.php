@@ -2,7 +2,37 @@
 
 
 <div class="table-container">
-    
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fecha Actual</title>
+</head>
+<body>
+  <h3>Seleccionar Fecha Inicial</h3>
+
+  <input type="date" id="fechaInput">
+
+  
+  
+  <h3>Seleccionar Fecha Final</h3>
+
+  <input type="date" id="fechaInput1">
+
+  <a href="#" onclick="openModalPagesModelHis1();" class="table-button">Historial</a>
+
+  <script>
+    function openModalPagesModelHis1() {
+      var fechaSeleccionada = document.getElementById('fechaInput').value;
+      var fechaSeleccionada1 = document.getElementById('fechaInput1').value;
+      // Realizar las acciones deseadas con la fecha seleccionada
+      getPagesAssignModelsHis(fechaSeleccionada,fechaSeleccionada1);
+      console.log(fechaSeleccionada);
+      console.log(fechaSeleccionada1);
+    }
+  </script>
+</body>
+</html>
+
 <table id="pagesassignmodelhis-table" class="table">
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
@@ -30,10 +60,10 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 		
  
  // Función para obtener los datos del API
- async function getPagesAssignModelsHis() {
+ async function getPagesAssignModelsHis(datetime,datetimeend) {
   
   //const my_profyle = sessionStorage.getItem("profile");
-  const subdominiopagesmodelshis = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllPagesModelsHis/'.$headerslink.'/'.$_GET['modelId'].'/2023-07-18`;
+  const subdominiopagesmodelshis = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllPagesModelsHis/'.$headerslink.'/'.$_GET['modelId'].'/${datetime}/${datetimeend}`;
 
 	
 	fetch(subdominiopagesmodelshis)
