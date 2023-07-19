@@ -47,7 +47,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         <td>${student.rol}</td>
 
         <td><button onclick="openModalPagesAssign();getPagesAssign(&quot;${student.profileId}&quot;);">Asigna Página</button></td>
-        <td><button onclick="openModalPagesModelHis();getPagesAssignModelsHis1(&quot;${student.profileId}&quot;,&quot;${student.profileId}&quot;);">Asigna Página</button></td>
+        <td><button onclick="openModalPagesModelHis();getPagesAssignModelsHis1(&quot;${student.profileId}&quot;,&quot;${student.profileId}&quot;);">Historial</button></td>
        
         
       `;
