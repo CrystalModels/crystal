@@ -1,4 +1,5 @@
 <?php
+
 require_once 'layout/headerModel.php';
 require_once 'layout/formSessionModel.php';
 require_once 'modal/modalProfile.php';

@@ -1,5 +1,4 @@
 
-
 <!-- HTML -->
 
 <nav class="navbar">
@@ -139,6 +138,14 @@ document.addEventListener('DOMContentLoaded', () => {
 <?php
   
   echo '<script>
+
+
+
+  
+
+
+
+
   const gatewayDomain = "' . $_SESSION["gatewayDomain"] . '";
   sessionStorage.setItem("gatewayDomain", gatewayDomain);
   const respuesta = "' . $_SESSION["respuesta"] . '";

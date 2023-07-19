@@ -15,7 +15,7 @@ if($_SESSION['rol']=="ADMIN"){
     require_once 'view/viewSessionAdmin.php';
 }
 if($_SESSION['rol']=="MODEL"){
-   
+    
     require_once 'view/viewSessionModel.php';
 }
 if($_SESSION['rol']=="MONITOR"){
