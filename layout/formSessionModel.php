@@ -530,7 +530,8 @@ themeToggleCheckbox.addEventListener('change', () => {
     //localStorage.setItem('themeToggleState', 'connected');
     sessionStorage.setItem('isConnected','connected');
     logInfo('conect');
-    modelStatus('isConnected','connected')
+    modelStatus('isConnected','connected');
+    rechargePage();
   } else {
     statusLabel.textContent = 'Desconectado';
     enableDisableOptions(false);
@@ -552,7 +553,8 @@ themeToggleCheckbox.addEventListener('change', () => {
     showOption('meet-toggle');
     showOption('techissue-toggle');
     logInfo('disconect');
-    modelStatus('isConnected','disconect')
+    modelStatus('isConnected','disconect');
+    rechargePage();
   }
 });
 

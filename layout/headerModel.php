@@ -11,16 +11,72 @@
       
        
         
-        
-    <li class="navbar-item has-submenu">
-         
-         <a href="#"><H4> TRANSMISIÓN </H4></a>
-         <ul class="submenu">
-         <li class="navbar-item"><a href="#" onclick="openModalPagesModelNot();getPagesAssignModelsNot();">Iniciar Transmisión</a></li>
-         <li class="navbar-item"><a href="#" onclick="openModalPagesModel();getPagesAssignModels1();">Para Transmisión</a></li>
-        
-       </ul>
-     </li>
+    <script>
+  window.addEventListener('DOMContentLoaded', function() {
+    const isConnected = sessionStorage.getItem('isConnected');
+
+    if (isConnected === 'connected') {
+      const navbarItem = document.createElement('li');
+      navbarItem.className = 'navbar-item has-submenu';
+
+      const link = document.createElement('a');
+      link.href = '#';
+      link.innerHTML = '<h4>TRANSMISIÓN</h4>';
+
+      const submenu = document.createElement('ul');
+      submenu.className = 'submenu';
+
+      const listItem1 = document.createElement('li');
+      listItem1.className = 'navbar-item';
+      const link1 = document.createElement('a');
+      link1.href = '#';
+      link1.addEventListener('click', function() {
+        openModalPagesModelNot();
+        getPagesAssignModelsNot();
+      });
+      link1.textContent = 'Iniciar Transmisión';
+      listItem1.appendChild(link1);
+
+      const listItem2 = document.createElement('li');
+      listItem2.className = 'navbar-item';
+      const link2 = document.createElement('a');
+      link2.href = '#';
+      link2.addEventListener('click', function() {
+        openModalPagesModel();
+        getPagesAssignModels1();
+      });
+      link2.textContent = 'Para Transmisión';
+      listItem2.appendChild(link2);
+
+      submenu.appendChild(listItem1);
+      submenu.appendChild(listItem2);
+
+      navbarItem.appendChild(link);
+      navbarItem.appendChild(submenu);
+
+      const navbar = document.querySelector('.navbar');
+      navbar.appendChild(navbarItem);
+    }
+  });
+
+  function rechargePage() {
+    location.reload(true); 
+  }
+</script>
+<style>
+  .navbar {
+    list-style: none;
+  }
+
+ 
+
+  .submenu {
+    list-style: none;
+  }
+
+</style>
+
+
         <script>var profileif=sessionStorage.getItem("profileId") </script>
        <li class="navbar-item has-submenu">
          

@@ -43,7 +43,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.pages.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="desconectarModel(this,&quot;${student.pageId}&quot;)">Conectar Transmisión</button></td>
+      <td><button onclick="conectarTransmision(this,&quot;${student.pageId}&quot;,&quot;${student.transId}&quot;,&quot;${student.modelId}&quot;)">Conectar Transmisiónq</button></td>
     
   
       <td>${student.pageName}</td>
@@ -92,7 +92,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 		
  
  // Función para obtener los datos del API
- async function getPagesAssignModelsNot() {
+ async function getPagesAssignModelsNot1() {
   
   //const my_profyle = sessionStorage.getItem("profile");
   const subdominiopagesmodelsnot1 = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllPagesModelsNot/'.$headerslink.'/'.$_SESSION['profileId'].'`;
@@ -108,7 +108,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.pages.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="desconectarModel(this,&quot;${student.pageId}&quot;)">Conectar Transmisión</button></td>
+      <td><button onclick="conectarTransmision(this,&quot;${student.pageId}&quot;,&quot;${student.transId}&quot;,&quot;${student.modelId}&quot;)">Conectar Transmisiónq</button></td>
     
   
       <td>${student.pageName}</td>
@@ -164,13 +164,13 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 <script>
 
-function desconectarModel(button, pageid, profileid) {
+function conectarTransmision(button, pageid, profileid,transid) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
   //var nombre = input.value;
 
   // Construir la URL con los parámetros de la petición GET
-  var url = 'controller/controllerAssignPage.php?pageId=' + encodeURIComponent(pageid) + '&profileId=' + encodeURIComponent(profileid);
+  var url = 'controller/controllerConnectModelPage.php?pageId=' + encodeURIComponent(pageid) + '&profileId=' + encodeURIComponent(profileid) + '&transId=' + encodeURIComponent(transid);
 
   // Realizar la petición GET al archivo PHP
   fetch(url)
@@ -181,7 +181,7 @@ function desconectarModel(button, pageid, profileid) {
       //getSch();
       const mensaje = sessionStorage.getItem("mensaje");
       showAlert(mensaje);
-      
+      console.log(transid); 
  console.log(profileid);
  console.log(pageid);
     })

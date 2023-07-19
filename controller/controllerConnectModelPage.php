@@ -1,19 +1,21 @@
 <?php
 
 session_start();
-$value = $_GET['value'];
-$profileId = $_SESSION['profileId'];
+$profileId = $_GET['profileId'];
+$pageid = $_GET['pageId'];
+$transId = $_GET['transId'];
 
 require_once '../env/domain.php';
 $sub_domaincon = new model_dom();
 $sub_domain = $sub_domaincon->dom();
 
-$url = $sub_domain . "/crystalGateway/apiIntegrations/v1/postLogReport/".$_SESSION['ranCode']."/".$_SESSION['key'];
+$url = $sub_domain . "/crystalGateway/apiIntegrations/v1/connectModelPage/".$_SESSION['ranCode']."/".$_SESSION['key'];
 
 // Definir los datos a enviar en la solicitud POST
 $data = array(
     
-    'value' => $value,
+    'transId' => $transId,
+    'pageId' => $pageid,
     'profileId' => $profileId
     
 );
@@ -50,6 +52,7 @@ if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas
     $_SESSION["error"] = $response1;
 
     
+   // header ('Location: ../room.php?roomId='.$roomId);
 }
 
 if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas antes de comparar
@@ -57,7 +60,7 @@ if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas 
     $_SESSION["mensaje"] = $message;
     $_SESSION["error"] = $response1;
     
-
+  
   
   
     //header ('Location: ../room.php?roomId='.$roomId);
