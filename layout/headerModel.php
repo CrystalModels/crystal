@@ -17,8 +17,8 @@
          
          <a href="#"><H4> TRANSMISIÓN </H4></a>
          <ul class="submenu">
-         <li class="navbar-item"><a href="#" onclick="openModalPagesModel();getPagesAssignModels1();">Iniciar Transmisión</a></li>
-         <li class="navbar-item"><a href="#" onclick="openModalSchedule();getSch();">Para Transmisión</a></li>
+         <li class="navbar-item"><a href="#" onclick="openModalPagesModelNot();getPagesAssignModelsNot();">Iniciar Transmisión</a></li>
+         <li class="navbar-item"><a href="#" onclick="openModalPagesModel();getPagesAssignModels1();">Para Transmisión</a></li>
         
        </ul>
      </li>

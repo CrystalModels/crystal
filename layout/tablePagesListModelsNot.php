@@ -81,6 +81,71 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 
 
+<?php
+
+require_once 'env/domain.php';
+$sub_domaincon=new model_dom;
+$sub_domain=$sub_domaincon->dom();
+$headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
+	echo '
+	<script>
+		
+ 
+ // Función para obtener los datos del API
+ async function getPagesAssignModelsNot() {
+  
+  //const my_profyle = sessionStorage.getItem("profile");
+  const subdominiopagesmodelsnot1 = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllPagesModelsNot/'.$headerslink.'/'.$_SESSION['profileId'].'`;
+
+	
+	fetch(subdominiopagesmodelsnot1)
+   
+  .then(response => response.json())
+  .then(data => {
+    const publicgroupsTableBody = document.querySelector("#pagesassignmodelnot-table tbody");
+    // Borramos los datos antiguos
+    publicgroupsTableBody.innerHTML = "";
+    data.pages.forEach(student => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+      <td><button onclick="desconectarModel(this,&quot;${student.pageId}&quot;)">Conectar Transmisión</button></td>
+    
+  
+      <td>${student.pageName}</td>
+        <td>${student.urlPage}</td>
+        <td>${student.isActive}</td>
+       
+
+        
+       
+        
+      `;
+
+      
+      
+
+      publicgroupsTableBody.appendChild(row);
+    });
+  })
+  .catch(error => {
+    console.error("Error:", error);
+  });
+
+
+
+ }
+ 
+ // Llamar a la función para obtener los datos del API
+ //getPagesAssignModelsNot1();
+ 
+
+
+	</script>
+
+';?>  
+
+
+
 <div id="publicgroups-container"></div>
 
 
