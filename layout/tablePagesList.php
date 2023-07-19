@@ -115,7 +115,8 @@ function asignarPagina(button, pageid, profileid) {
       const mensaje = sessionStorage.getItem("mensaje");
       showAlert(mensaje);
       
- 
+ console.log(profileid);
+ console.log(pageid);
     })
     .catch(error => {
       // Aquí puedes manejar los errores en caso de que la petición falle

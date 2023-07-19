@@ -21,69 +21,60 @@
     $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     if($_SESSION['rol']=="SUPERADMIN" || $_SESSION['rol']=="ADMIN" || $_SESSION['rol']=="MONITOR"){
 echo '
-<form method="post" action="controller/controllerPutUserBySuperAdmin.php?profileId='.$_GET['names'].'&userName='.$_GET['names'].'">
+<form>
  
 
 
-';
+';echo    $modelId=$_GET['modelId'];
   
         require_once 'env/domain.php';
         $sub_domaincon = new model_dom();
         $sub_domain = $sub_domaincon->dom();
         //echo $_SESSION['key'];
         echo '
-        <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
+  
         <div id="modelLog-div"></div>
         <script>
         //const rancode = sessionStorage.getItem("ranCode");
         //const key = sessionStorage.getItem("key");
-            const modelLog = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getModelLog/'.$headerslink.'/'.$_GET['modelId'].'";
+            const modelLog1 = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getModelLog/'.$headerslink.'/'.$modelId.'";
         </script>';
         ; 
-                        echo    $names=$_GET['names'];
+                        
         echo '<script>
             // Función para obtener los datos del API
             async function modelLog() {
-                fetch(modelLog)
+                fetch(modelLog1)
                     .then(response => response.json())
                     .then(data => {
                         const userData = data.models[0];
 
                         // Mostrar los datos en la pantalla
                         const profileDiv = document.querySelector("#modelLog-div");
-                        profileDiv.innerHTML = `
+
+                 
+                          profileDiv.innerHTML = `
                        
                          
                            
                             
-                            <h5 align="center">Id de Perfil: ${userData.modelId}</h5>
+                          <h5 align="center">Id de Perfil: ${userData.modelId}</h5>
+                          <h5 align="center">Conectado: ${userData.isConnected}</h5>
+                          <h5 align="center">Break: ${userData.isBreak}</h5>
+                          <h5 align="center">Almuerzo: ${userData.isLunch}</h5>
+                          <h5 align="center">Reunión: ${userData.isMeet}</h5>
+                          <h5 align="center">Problema: ${userData.isIssue}</h5>
+                          <h5 align="center">Baño: ${userData.isBroom}</h5>
                           
-                        
+                         
+                    
+                         
+                          
+                          
+                     
                             
+                          `;
                        
-                              
-                            `;
                     })
                     .catch(error => {
                         console.error("Error:", error);
@@ -95,7 +86,7 @@ echo '
         </script>
        
     
-        <button type="submit" class="table-button">Editar</button>
+        
        ';
           }
         
@@ -106,6 +97,8 @@ echo '
           }
         
         ?>
+          <button onclick="openModalPagesAssign();">Transmisiones</button>
+                        
     </form>
     
   </div>
@@ -208,3 +201,20 @@ $_SESSION['respuesta']="";
 $_SESSION['mensaje']="";
 $_SESSION['error']="";
 ?>
+
+<script>
+
+
+
+setInterval(miFuncion, 20000);
+
+function miFuncion() {
+  // Código de la función que se ejecutará cada 5 segundos
+  
+  modelLog();
+  //getAlerts();
+
+  //console.log('Se ejecutó la función');
+}
+
+</script>
