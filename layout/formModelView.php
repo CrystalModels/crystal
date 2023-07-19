@@ -72,7 +72,8 @@ echo '
         
                           <h5 align="center"><a href="#" onclick="openModalPagesModelNot();getPagesAssignModelsNot();" class="table-button">Lista de  no Transmisión</a><br></h5>
         
-                          
+                          <h5 align="center"><a href="#" onclick="openModalPagesModelHis();getPagesAssignModelsHis();" class="table-button">Historial</a><br></h5>
+        
                             
                           `;
                        
@@ -207,7 +208,7 @@ $_SESSION['error']="";
 
 
 
-setInterval(miFuncion, 20000);
+setInterval(miFuncion, 60000);
 
 function miFuncion() {
   // Código de la función que se ejecutará cada 5 segundos

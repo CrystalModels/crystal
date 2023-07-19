@@ -3,7 +3,7 @@
 
 <div class="table-container">
     
-<table id="pagesassignmodelnot-table" class="table">
+<table id="pagesassignmodelhis-table" class="table">
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
         <th>Acciones</th>
@@ -27,17 +27,17 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 		
  
  // Función para obtener los datos del API
- async function getPagesAssignModelsNot() {
+ async function getPagesAssignModelsHis() {
   
   //const my_profyle = sessionStorage.getItem("profile");
-  const subdominiopagesmodelsnot = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllPagesModelsNot/'.$headerslink.'/'.$_GET['modelId'].'`;
+  const subdominiopagesmodelshis = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllPagesModelsHis/'.$headerslink.'/'.$_GET['modelId'].'`;
 
 	
-	fetch(subdominiopagesmodelsnot)
+	fetch(subdominiopagesmodelshis)
    
   .then(response => response.json())
   .then(data => {
-    const publicgroupsTableBody = document.querySelector("#pagesassignmodelnot-table tbody");
+    const publicgroupsTableBody = document.querySelector("#pagesassignmodelhis-table tbody");
     // Borramos los datos antiguos
     publicgroupsTableBody.innerHTML = "";
     data.pages.forEach(student => {
@@ -71,7 +71,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
  }
  
  // Llamar a la función para obtener los datos del API
- //getPagesAssignModelsNot();
+ //getPagesAssignModelsHis();
  
 
 
