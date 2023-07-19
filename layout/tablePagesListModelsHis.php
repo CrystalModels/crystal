@@ -1,7 +1,7 @@
 
 
 
-<div class="table-container">
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,17 +26,21 @@
       var fechaSeleccionada1 = document.getElementById('fechaInput1').value;
       // Realizar las acciones deseadas con la fecha seleccionada
       getPagesAssignModelsHis(fechaSeleccionada,fechaSeleccionada1);
+      
+  var modelidnow = sessionStorage.getItem("modelIdNow");
+      getPagesAssignModelsHis1(modelidnow,fechaSeleccionada,fechaSeleccionada1);
       console.log(fechaSeleccionada);
+      
       console.log(fechaSeleccionada1);
     }
   </script>
 </body>
 </html>
-
+<div class="table-container">
 <table id="pagesassignmodelhis-table" class="table">
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
-    <th>Acciones</th>
+   
       <th>Página</th>
       <th>Url</th>
       <th>Inicio</th>
@@ -76,9 +80,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.pages.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="desconectarModel(this,&quot;${student.pageId}&quot;)">Conectar Transmisión</button></td>
-    
-  
+     
       <td>${student.pageName}</td>
       <td>${student.urlPage}</td>
       <td>${student.startDate} ${student.startTime}</td>
@@ -106,6 +108,69 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
  
  // Llamar a la función para obtener los datos del API
  //getPagesAssignModelsHis();
+ 
+
+
+	</script>
+
+';?>  
+
+
+	<?php
+
+require_once 'env/domain.php';
+$sub_domaincon=new model_dom;
+$sub_domain=$sub_domaincon->dom();
+$headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
+	echo '
+	<script>
+		
+ 
+ // Función para obtener los datos del API
+ async function getPagesAssignModelsHis1(modelid,datetime,datetimeend) {
+  sessionStorage.setItem("modelIdNow", modelid);
+  //const my_profyle = sessionStorage.getItem("profile");
+  const subdominiopagesmodelshis1 = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllPagesModelsHis/'.$headerslink.'/${modelid}/${datetime}/${datetimeend}`;
+
+	
+	fetch(subdominiopagesmodelshis1)
+   
+  .then(response => response.json())
+  .then(data => {
+    const publicgroupsTableBody = document.querySelector("#pagesassignmodelhis-table tbody");
+    // Borramos los datos antiguos
+    publicgroupsTableBody.innerHTML = "";
+    data.pages.forEach(student => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+     
+      <td>${student.pageName}</td>
+      <td>${student.urlPage}</td>
+      <td>${student.startDate} ${student.startTime}</td>
+      <td>${student.endDate} ${student.endTime}</td>
+      <td>${student.totalTime}</td>
+      <td>${student.isActive}</td>
+        
+       
+        
+      `;
+
+      
+      
+
+      publicgroupsTableBody.appendChild(row);
+    });
+  })
+  .catch(error => {
+    console.error("Error:", error);
+  });
+
+
+
+ }
+ 
+ // Llamar a la función para obtener los datos del API
+ //getPagesAssignModelsHis1();
  
 
 
