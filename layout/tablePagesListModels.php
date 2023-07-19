@@ -87,6 +87,73 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 
 
+<?php
+
+require_once 'env/domain.php';
+$sub_domaincon=new model_dom;
+$sub_domain=$sub_domaincon->dom();
+$headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
+	echo '
+	<script>
+		
+ 
+ // Función para obtener los datos del API
+ async function getPagesAssignModels1() {
+  
+  //const my_profyle = sessionStorage.getItem("profile");
+  const subdominiopagesmodels1 = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllPagesModels/'.$headerslink.'/'.$_SESSION['profileId'].'`;
+
+	
+	fetch(subdominiopagesmodels1)
+   
+  .then(response => response.json())
+  .then(data => {
+    const publicgroupsTableBody = document.querySelector("#pagesassignmodel-table tbody");
+    // Borramos los datos antiguos
+    publicgroupsTableBody.innerHTML = "";
+    data.pages.forEach(student => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+      <td><button onclick="desconectarModel(this,&quot;${student.pageId}&quot;)">Desconectar Transmisión</button></td>
+    
+  
+      <td>${student.pageName}</td>
+        <td>${student.urlPage}</td>
+        <td>${student.startDate} ${student.startTime}</td>
+        <td>${student.endDate} ${student.endTime}</td>
+        <td>${student.totalTime}</td>
+        <td>${student.isActive}</td>
+       
+
+        
+       
+        
+      `;
+
+      
+      
+
+      publicgroupsTableBody.appendChild(row);
+    });
+  })
+  .catch(error => {
+    console.error("Error:", error);
+  });
+
+
+
+ }
+ 
+ // Llamar a la función para obtener los datos del API
+ //getPagesAssignModels1();
+ 
+
+
+	</script>
+
+';?>  
+
+
 <div id="publicgroups-container"></div>
 
 

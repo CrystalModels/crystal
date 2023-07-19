@@ -4,7 +4,8 @@ require_once 'layout/formSessionModel.php';
 require_once 'modal/modalProfile.php';
 
 
-
+require_once 'modal/modalPagesModels.php';
+require_once 'modal/modalPagesModelsNot.php';
 
 
 require_once 'modal/modalMySchedule.php';

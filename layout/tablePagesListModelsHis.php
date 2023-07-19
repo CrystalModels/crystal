@@ -6,9 +6,12 @@
 <table id="pagesassignmodelhis-table" class="table">
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
-        <th>Acciones</th>
+    <th>Acciones</th>
       <th>Página</th>
       <th>Url</th>
+      <th>Inicio</th>
+      <th>Final</th>
+      <th>Tiempo promedio</th>
 
       <th>Estado</th>
       
@@ -30,7 +33,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
  async function getPagesAssignModelsHis() {
   
   //const my_profyle = sessionStorage.getItem("profile");
-  const subdominiopagesmodelshis = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllPagesModelsHis/'.$headerslink.'/'.$_GET['modelId'].'`;
+  const subdominiopagesmodelshis = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllPagesModelsHis/'.$headerslink.'/'.$_GET['modelId'].'/2023-07-18`;
 
 	
 	fetch(subdominiopagesmodelshis)
@@ -47,10 +50,11 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     
   
       <td>${student.pageName}</td>
-        <td>${student.urlPage}</td>
-        <td>${student.isActive}</td>
-       
-
+      <td>${student.urlPage}</td>
+      <td>${student.startDate} ${student.startTime}</td>
+      <td>${student.endDate} ${student.endTime}</td>
+      <td>${student.totalTime}</td>
+      <td>${student.isActive}</td>
         
        
         
