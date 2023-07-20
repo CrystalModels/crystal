@@ -30,21 +30,12 @@
 
 
 <form class="form-container">
-  <h2>USUARIOS</h2>
+ 
+
+
+<div id="barchart" style="width: 800px; height: 400px;"></div>
 
   
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
-  <h2>ROOMS</h2>
   <!-- Contenido adicional -->
 </form>
 
@@ -70,4 +61,39 @@
 </html>
 
 
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Diagrama de Barras con Google Charts</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+  
+
+  <script>
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      const data = google.visualization.arrayToDataTable([
+        ['Categoría', 'Valor'],
+        ['Categoría 1', 30],
+        ['Categoría 2', 40],
+        ['Categoría 3', 50]
+      ]);
+
+      const options = {
+        title: 'Mi Diagrama de Barras',
+        legend: { position: 'none' },
+        bars: 'vertical', // Orientación de las barras (vertical u horizontal)
+        hAxis: { title: 'Categoría', minValue: 0 },
+        vAxis: { title: 'Valor' }
+      };
+
+      const chart = new google.visualization.PieChart(document.getElementById('barchart'));
+      chart.draw(data, options);
+    }
+  </script>
+</body>
 </html>
