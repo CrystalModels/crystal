@@ -35,13 +35,22 @@
 
 <div id="barchart" style="width: 800px; height: 400px;"></div>
 
-<div id="barchart1" style="width: 800px; height: 400px;"></div>
 
   
   <!-- Contenido adicional -->
 </form>
 
 
+<form class="form-container">
+ 
+
+
+
+<div id="barchart1" style="width: 800px; height: 400px;"></div>
+
+  
+  <!-- Contenido adicional -->
+</form>
         
 
     </div>
