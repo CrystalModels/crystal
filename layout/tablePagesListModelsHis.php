@@ -6,6 +6,7 @@
 <html>
 <head>
   <title>Fecha Actual</title>
+ 
 </head>
 <body>
   <h3>Seleccionar Fecha Inicial</h3>
@@ -20,20 +21,6 @@
 
   <a href="#" onclick="openModalPagesModelHis1();" class="table-button">Historial</a>
 
-  <script>
-    function openModalPagesModelHis1() {
-      var fechaSeleccionada = document.getElementById('fechaInput').value;
-      var fechaSeleccionada1 = document.getElementById('fechaInput1').value;
-      // Realizar las acciones deseadas con la fecha seleccionada
-      getPagesAssignModelsHis(fechaSeleccionada,fechaSeleccionada1);
-      
-  var modelidnow = sessionStorage.getItem("modelIdNow");
-      getPagesAssignModelsHis1(modelidnow,fechaSeleccionada,fechaSeleccionada1);
-      console.log(fechaSeleccionada);
-      
-      console.log(fechaSeleccionada1);
-    }
-  </script>
 </body>
 </html>
 <div class="table-container">
@@ -55,6 +42,12 @@
 
 	<?php
 
+if (isset($_GET['modelId'])) {
+  // La variable GET 'nombre' existe
+
+
+  
+
 require_once 'env/domain.php';
 $sub_domaincon=new model_dom;
 $sub_domain=$sub_domaincon->dom();
@@ -62,6 +55,18 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	echo '
 	<script>
 		
+  function openModalPagesModelHis1() {
+    var fechaSeleccionada = document.getElementById("fechaInput").value;
+    var fechaSeleccionada1 = document.getElementById("fechaInput1").value;
+    // Realizar las acciones deseadas con la fecha seleccionada
+    getPagesAssignModelsHis(fechaSeleccionada,fechaSeleccionada1);
+    
+var modelidnow = sessionStorage.getItem("modelIdNow");
+   // getPagesAssignModelsHis1(modelidnow,fechaSeleccionada,fechaSeleccionada1);
+    console.log(fechaSeleccionada);
+    
+    console.log(fechaSeleccionada1);
+  }
  
  // Función para obtener los datos del API
  async function getPagesAssignModelsHis(datetime,datetimeend) {
@@ -113,11 +118,10 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 	</script>
 
-';?>  
-
-
-	<?php
-
+';
+  
+} else {
+  
 require_once 'env/domain.php';
 $sub_domaincon=new model_dom;
 $sub_domain=$sub_domaincon->dom();
@@ -125,6 +129,19 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	echo '
 	<script>
 		
+ 
+  function openModalPagesModelHis1() {
+    var fechaSeleccionada = document.getElementById("fechaInput").value;
+    var fechaSeleccionada1 = document.getElementById("fechaInput1").value;
+    // Realizar las acciones deseadas con la fecha seleccionada
+    //getPagesAssignModelsHis(fechaSeleccionada,fechaSeleccionada1);
+    
+var modelidnow = sessionStorage.getItem("modelIdNow");
+    getPagesAssignModelsHis1(modelidnow,fechaSeleccionada,fechaSeleccionada1);
+    console.log(fechaSeleccionada);
+    
+    console.log(fechaSeleccionada1);
+  }
  
  // Función para obtener los datos del API
  async function getPagesAssignModelsHis1(modelid,datetime,datetimeend) {
@@ -176,7 +193,11 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 	</script>
 
-';?>  
+';
+}
+?>  
+
+
 
 
 
@@ -225,3 +246,15 @@ function desconectarModel(button, pageid, profileid) {
     });
 }
 </script>
+
+  <!-- Botón para imprimir la tabla en PDF -->
+  <button onclick="printPDF()">Descargar PDF</button>
+
+  <script>
+    function printPDF() {
+      // Ejecuta el método de impresión del navegador
+      window.print();
+    }
+  </script>
+</body>
+</html>
