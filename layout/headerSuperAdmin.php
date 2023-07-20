@@ -28,7 +28,6 @@
             <li class="navbar-item"><a href="#" onclick="openModalModels();getModels();">Modelos</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalMonitors();getMonitors();">Monitores</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalPhotograph();getPhotographs();">Fotógrafos</a></li>
-            <li class="navbar-item"><a href="#" onclick="openModalPagesModelHis();">Resultados</a></li>
 
            
             </ul>
@@ -41,8 +40,7 @@
             <li class="navbar-item"><a href="#" onclick="openModalSchedule();getSch();">Mi Horario</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersSchedule();getUsersSuperAdminSc();">Horarios Generales</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersAlerts();getUsersSuperAdminAlerts();">Alertas</a></li>
-            <li class="navbar-item"><a href="#" onclick="openModalPageAssign();getUsersSuperAdminAlerts();">Asignar Páginas</a></li>
-             </ul>
+              </ul>
         </li>
         <script>var profileif=sessionStorage.getItem("profileId") </script>
        

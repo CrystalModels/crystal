@@ -28,7 +28,6 @@
             <li class="navbar-item"><a href="#" onclick="openModalModels();getModels();">Modelos</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalMonitors();getMonitors();">Monitores</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalPhotograph();getPhotographs();">Fotógrafos</a></li>
-            <li class="navbar-item"><a href="#" onclick="openModalPagesModelHis();">Resultados</a></li>
            
             </ul>
         </li>
