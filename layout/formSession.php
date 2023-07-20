@@ -35,6 +35,8 @@
 
 <div id="barchart" style="width: 800px; height: 400px;"></div>
 
+<div id="barchart1" style="width: 800px; height: 400px;"></div>
+
   
   <!-- Contenido adicional -->
 </form>
@@ -65,7 +67,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Diagrama de Barras con Google Charts</title>
+ 
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
@@ -92,6 +94,30 @@
       };
 
       const chart = new google.visualization.PieChart(document.getElementById('barchart'));
+      chart.draw(data, options);
+    }
+  </script>
+
+<script>
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart1);
+
+    function drawChart1() {
+      const data = google.visualization.arrayToDataTable([
+        ['Categoría', 'Valor'],
+        ['Categoría 1', 30],
+        ['Categoría 2', 40]
+      ]);
+
+      const options = {
+        title: 'Mi Diagrama de Barras',
+        legend: { position: 'none' },
+        bars: 'vertical', // Orientación de las barras (vertical u horizontal)
+        hAxis: { title: 'Categoría', minValue: 0 },
+        vAxis: { title: 'Valor' }
+      };
+
+      const chart = new google.visualization.ColumnChart(document.getElementById('barchart1'));
       chart.draw(data, options);
     }
   </script>
