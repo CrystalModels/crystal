@@ -6,12 +6,9 @@
 <table id="roomsassign-table" class="table">
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
-        <th>Acciones</th>
-      <th>Room</th>
+      <th>Acciones</th>
+        <th>Room</th>
       <th>Comentario</th>
-      <th>Estado</th>
-      <th>Activo</th>
-      <th>Actualizado</th>
       
     </tr>
   </thead>
