@@ -21,7 +21,7 @@ function domcode() {
 
     }
     if($option==3){//pruebas-staging
-        $code="c66e63ca-fa63-42c8-95e7-eab4db5d41d8";
+        $code="e00945de-1c0d-455e-a5eb-08bdec622147";
         return $code;
     }
     if($option==4){//ptoducción
