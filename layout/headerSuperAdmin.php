@@ -3,11 +3,11 @@
 <!-- HTML -->
 
 <nav class="navbar">
-    <button id="navbar-toggle-button" class="navbar-toggle-button">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+
+
+<!-- Asegúrate de que el atributo id del menú tenga el valor "navbar-menu" -->
+
+
     <ul class="navbar-menu" id="navbar-menu">
       
         <li class="navbar-item has-submenu">
@@ -73,25 +73,23 @@
 
 <script>
 
-    document.addEventListener("DOMContentLoaded", function() {
-        const button = document.getElementById("navbar-toggle-button");
-        const menu = document.getElementById("navbar-menu");
+document.addEventListener("DOMContentLoaded", function() {
+  const button = document.getElementById("navbar-toggle-button");
+  const menu = document.getElementById("navbar-menu");
 
-        button.addEventListener("click", function() {
-            this.classList.toggle("active");
-            menu.classList.toggle("active");
-        });
+  button.addEventListener("click", function() {
+    this.classList.toggle("active");
+    menu.classList.toggle("active");
+  });
 
-        const submenuItems = document.querySelectorAll(".has-submenu");
-        submenuItems.forEach(function(item) {
-            item.addEventListener("click", function(e) {
-                e.stopPropagation();
-                this.classList.toggle("active");
-            });
-        });
+  const submenuItems = document.querySelectorAll(".has-submenu");
+  submenuItems.forEach(function(item) {
+    item.addEventListener("click", function(e) {
+      e.stopPropagation();
+      this.classList.toggle("active");
     });
-
-
+  });
+});
 
    
 function setupMenu() {
