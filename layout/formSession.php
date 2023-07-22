@@ -132,3 +132,28 @@
   </script>
 </body>
 </html>
+<?php 
+
+// Horas en formato HH:mm
+$horaInicio = '23:45';
+$horaFin = '03:15';
+
+// Convertir horas a minutos
+$inicio = strtotime($horaInicio);
+$fin = strtotime($horaFin);
+
+// Si la hora final es anterior a la hora inicial, sumar 24 horas al final para obtener la diferencia correcta
+if ($fin < $inicio) {
+    $fin += 86400; // 24 horas en segundos (24 * 60 * 60)
+}
+
+// Calcular la diferencia en minutos
+$diferenciaMinutos = ($fin - $inicio) / 60;
+
+// Calcular las horas y minutos transcurridos
+$horasTranscurridas = floor($diferenciaMinutos / 60);
+$minutosTranscurridos = $diferenciaMinutos % 60;
+
+echo "Han transcurrido " . $horasTranscurridas . " horas y " . $minutosTranscurridos . " minutos desde las " . $horaInicio . " hasta las " . $horaFin . ".";
+
+?>
