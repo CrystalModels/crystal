@@ -3,7 +3,7 @@
     <div id="myModalRoomsModels" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalRoomsModel()">X</span>
+            <span class="close" onclick="closeModalRoomsModelassign()">X</span>
             <h2>En transmisión</h2>
            
         
@@ -14,11 +14,11 @@
 
     <script>
         // JavaScript
-        function openModalRoomsModel() {
+        function openModalRoomsModelassign() {
             document.getElementById("myModalRoomsModels").style.display = "block";
         }
 
-        function closeModalRoomsModel() {
+        function closeModalRoomsModelassign() {
             document.getElementById("myModalRoomsModels").style.display = "none";
         }
         
