@@ -4,7 +4,7 @@
         <!-- Contenido del modal -->
         <div class="modal-content">
             <span class="close" onclick="closeModalRoomsModelassign()">X</span>
-            <h2>En transmisión</h2>
+            <h2>Asignar Room</h2>
            
         
       <br>
