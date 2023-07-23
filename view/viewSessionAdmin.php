@@ -14,6 +14,9 @@ require_once 'modal/modalModels.php';
 require_once 'modal/modalMonitors.php';
 require_once 'modal/modalPhotograph.php';
 require_once 'modal/modalPagesModelsHis.php';
+require_once 'modal/modalRoomsAssignModel.php';
+require_once 'modal/modalRoomsAssignModelf.php';
+require_once 'modal/modalModelsAssignRoom.php';
 
 require_once 'modal/modalMySchedule.php';
 require_once 'modal/modalUsersSchedule.php';
