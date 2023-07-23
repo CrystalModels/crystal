@@ -3,7 +3,7 @@
     <div id="myModalModelsassignroom" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalModelsar()">X</span>
+            <span class="close" onclick="closeModalModelsar();getRoomsamf();">X</span>
             <h2>Modelos</h2>
           
       <br>

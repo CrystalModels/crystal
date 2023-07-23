@@ -105,8 +105,7 @@ function asignarRoomModel(button, modelId, roomId) {
       const mensaje = sessionStorage.getItem("mensaje");
       showAlert(mensaje);
       
- console.log(modelId);
- console.log(roomId);
+ 
     })
     .catch(error => {
       // Aquí puedes manejar los errores en caso de que la petición falle
