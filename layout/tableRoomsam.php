@@ -52,8 +52,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       
       <td>${student.roomName}</td>
         <td>${student.comments}</td>
-        <td>${student.name}</td>
-        <td>${student.isActive}</td>
+        <td>${student.profileId}</td>
         <td>${student.updatedAt}</td>
        
        
