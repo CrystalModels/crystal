@@ -7,6 +7,7 @@
 
             <h2>Rooms ocupados</h2>
             <a href="#" onclick="openModalRoomsamf();getRoomsamf();" class="table-button">Rooms Desocupados</a>
+            <a href="#" onclick="openModalRoomsLista();getRoomsLista();" class="table-button">Lista de Rooms</a>
            
       <br>
             <?php require_once 'layout/tableRoomsam.php' ?>

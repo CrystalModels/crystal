@@ -3,14 +3,14 @@
 
 <div class="table-container">
     
-<table id="roomsam-table" class="table">
+<table id="roomslista-table" class="table">
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
-        <th>Acciones</th>
+  
       <th>Room</th>
       <th>Comentario</th>
       <th>Modelo</th>
-      <th>Actualizado</th>
+      <th>Usuario</th>
       
     </tr>
   </thead>
@@ -28,33 +28,31 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	<script>
 		
   //const my_profyle = sessionStorage.getItem("profile");
-  const subdominioroomsam = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllRoomsTrue/'.$headerslink.'`;
+  const subdominioroomslista = `'.$sub_domain.'/crystalGateway/apiBroker/v1/getModelInfo/'.$headerslink.'/12345`;
 
  // Función para obtener los datos del API
- async function getRoomsam() {
+ async function getRoomsLista() {
   var pid="del";
   ';?>
  
 	<?php
 
   echo '
-	fetch(subdominioroomsam)
+	fetch(subdominioroomslista)
     
   .then(response => response.json())
   .then(data => {
-    const publicgroupsTableBody = document.querySelector("#roomsam-table tbody");
+    const publicgroupsTableBody = document.querySelector("#roomslista-table tbody");
     // Borramos los datos antiguos
     publicgroupsTableBody.innerHTML = "";
-    data.rooms.forEach(student => {
+    data.modelInfo.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="asignarRoomModel1(this,&quot;${student.roomId}&quot;,&quot;${pid}&quot;)">Desasignar Room</button></td>
       
       <td>${student.roomName}</td>
         <td>${student.comments}</td>
-        <td>${student.status}</td>
-        <td>${student.isActive}</td>
-        <td>${student.updatedAt}</td>
+        <td>${student.name} ${student.lastName}</td>
+        <td>${student.userName}</td>
        
        
         
@@ -77,7 +75,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
  }
  
  // Llamar a la función para obtener los datos del API
- //getRoomsam();
+ //getRoomsLista();
  
 
 

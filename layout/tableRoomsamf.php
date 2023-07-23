@@ -47,7 +47,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.rooms.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="openModalModelsar();getModelsar(&quot;${student.roomId}&quot;);">Asignar página</button></td>
+      <td><button onclick="openModalModelsar();getModelsar(&quot;${student.roomId}&quot;);">Asignar Room</button></td>
     
   
       <td>${student.name}</td>
