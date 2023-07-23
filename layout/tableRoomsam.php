@@ -3,15 +3,19 @@
 
 <div class="table-container">
     
-<table id="roomsassign-table" class="table">
+<table id="roomsam-table" class="table">
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
-      <th>Acciones</th>
-        <th>Room</th>
+        <th>Acciones</th>
+      <th>Room</th>
       <th>Comentario</th>
+      <th>Modelo</th>
+      <th>Actualizado</th>
       
     </tr>
   </thead>
+
+
             <tbody>
 
 	<?php
@@ -24,33 +28,35 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	<script>
 		
   //const my_profyle = sessionStorage.getItem("profile");
-  const subdominiorooms1 = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllRooms/'.$headerslink.'`;
+  const subdominioroomsam = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllRoomsTrue/'.$headerslink.'`;
 
  // Función para obtener los datos del API
- async function getRoomsAssign(profileid) {';?>
+ async function getRoomsam() {
+  var pid="del";
+  ';?>
  
 	<?php
 
   echo '
-  var pid=profileid;
-  sessionStorage.setItem("assignPageId", pid);
-	fetch(subdominiorooms1)
+	fetch(subdominioroomsam)
     
   .then(response => response.json())
   .then(data => {
-    const publicgroupsTableBody = document.querySelector("#roomsassign-table tbody");
+    const publicgroupsTableBody = document.querySelector("#roomsam-table tbody");
     // Borramos los datos antiguos
     publicgroupsTableBody.innerHTML = "";
     data.rooms.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="asignarRoom(this,&quot;${student.roomId}&quot;,&quot;${pid}&quot;)">Asignar Room</button></td>
-    
-  
+      <td><button onclick="asignarRoomModel1(this,&quot;${student.roomId}&quot;,&quot;${pid}&quot;)">Desasignar Room</button></td>
+      
       <td>${student.roomName}</td>
         <td>${student.comments}</td>
+        <td>${student.status}</td>
+        <td>${student.isActive}</td>
+        <td>${student.updatedAt}</td>
        
-
+       
         
        
         
@@ -71,38 +77,32 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
  }
  
  // Llamar a la función para obtener los datos del API
- //getRoomsAssign();
+ //getRoomsam();
  
 
 
 	</script>
 
 ';?>  
+  </tbody>
 
-
-
-<div id="publicgroups-container"></div>
-
-
-
-
-
-</tbody>
           </table>
        
 </div>
 
 
 
+
+
 <script>
 
-function asignarRoom(button, roomID, profileid) {
+function asignarRoomModel1(button, roomId, modelId) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
   //var nombre = input.value;
 
   // Construir la URL con los parámetros de la petición GET
-  var url = 'controller/controllerAssignRoom.php?roomId=' + encodeURIComponent(roomID) + '&profileId=' + encodeURIComponent(profileid);
+  var url = 'controller/controllerAssignRoomByModel.php?roomId=' + encodeURIComponent(roomId) + '&modelId=' + encodeURIComponent(modelId);
 
   // Realizar la petición GET al archivo PHP
   fetch(url)
@@ -113,7 +113,7 @@ function asignarRoom(button, roomID, profileid) {
       //getSch();
       const mensaje = sessionStorage.getItem("mensaje");
       showAlert(mensaje);
-      
+      getRoomsam();
  
     })
     .catch(error => {
@@ -122,3 +122,9 @@ function asignarRoom(button, roomID, profileid) {
     });
 }
 </script>
+
+
+
+
+
+
