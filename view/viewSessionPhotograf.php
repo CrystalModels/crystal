@@ -1,6 +1,6 @@
 <?php
 require_once 'layout/headerPhoto.php';
-require_once 'layout/formSession.php';
+require_once 'layout/formSessionPhoto.php';
 require_once 'modal/modalProfile.php';
 
 
