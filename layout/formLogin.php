@@ -13,7 +13,7 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
    $_SESSION['key']= trim($response);
    $_SESSION['sessionStatus']="0";
    
-echo $response;
+//echo $response;
 ?>
 
 
@@ -32,6 +32,24 @@ echo $response;
     
 
   <div class="login-container">
+    
+<?php
+require_once 'env/option.php';
+$opt=new model_option();
+$opt1=$opt->dom();
+
+if($opt1=="1"){
+echo "<H2>ESTE ES UN AMBIENTE LOCAL<H2>";
+}
+if($opt1=="2"){
+  echo "<H2>ESTE ES UN AMBIENTE DE DESARROLLO<H2>";
+}
+if($opt1=="3"){
+  echo "<H2>ESTE ES UN AMBIENTE DE PRUEBAS<H2>";
+}
+
+
+?>
     <h2><img src="public/logo.png" alt="Crystal Models"></h2>
     <form method="post" action="controller/controllerValidateFirstStep.php">
       <div class="form-group">
