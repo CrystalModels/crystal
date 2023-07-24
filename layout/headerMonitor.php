@@ -3,11 +3,7 @@
 <!-- HTML -->
 
 <nav class="navbar">
-    <button id="navbar-toggle-button" class="navbar-toggle-button">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+    
     <ul class="navbar-menu" id="navbar-menu">
       
         
