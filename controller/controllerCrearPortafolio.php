@@ -7,7 +7,7 @@ $rutaCarpeta = "../public/images/" . $nombreCarpeta; // Ruta completa de la nuev
 // Verificar si la carpeta ya existe antes de intentar crearla
 if (!is_dir($rutaCarpeta)) {
     // Crear la carpeta con permisos 0755 (puedes ajustarlos según tus necesidades)
-    if (mkdir($rutaCarpeta, 0755)) {
+    if (mkdir($rutaCarpeta, 0757)) {
       //  echo "La carpeta se ha creado correctamente.";
     } else {
        // echo "Error al crear la carpeta.";
