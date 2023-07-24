@@ -132,3 +132,19 @@
   </script>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subir Fotos</title>
+</head>
+<body>
+    <h1>Subir Fotos</h1>
+    <form action="subir.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="foto" id="foto">
+        <input type="submit" name="submit" value="Subir Foto">
+    </form>
+</body>
+</html>
+

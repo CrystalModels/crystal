@@ -48,7 +48,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
         <td><button onclick="openModalPagesAssign();getPagesAssign(&quot;${student.profileId}&quot;);">Asigna Página</button><button onclick="openModalRoomsModelassign();getRoomsAssign(&quot;${student.profileId}&quot;);">Asigna Room</button></td>
         <td><button onclick="openModalPagesModelHis();getPagesAssignModelsHis1(&quot;${student.profileId}&quot;,&quot;${student.profileId}&quot;);">Historial</button></td>
-       
+        <td><button onclick="crearCarpeta(this,&quot;${student.profileId}&quot;)">Crear Portafolio</button></td>
+      
         
       `;
 
@@ -90,4 +91,39 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
           </table>
        
 </div>
+
+
+<script>
+
+function crearCarpeta(button, modelId) {
+  // Obtener el valor del campo de texto correspondiente al botón
+  var input = button.previousElementSibling;
+  //var nombre = input.value;
+
+  // Construir la URL con los parámetros de la petición GET
+  var url = 'controller/controllerCrearPortafolio.php?profileId=' + encodeURIComponent(modelId);
+
+  // Realizar la petición GET al archivo PHP
+  fetch(url)
+    .then(response => {
+      // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
+      // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
+      
+      //getSch();
+      const mensaje = sessionStorage.getItem("mensaje");
+      showAlert(mensaje);
+      //getRoomsam();
+ 
+    })
+    .catch(error => {
+      // Aquí puedes manejar los errores en caso de que la petición falle
+      console.log('Error en la petición:', error);
+    });
+}
+</script>
+
+
+
+
+
 
