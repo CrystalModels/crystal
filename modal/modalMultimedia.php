@@ -3,7 +3,7 @@
     <div id="myModalMultimedia" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalMultimedia()">X</span>
+            <span class="close" onclick="closeModalMultimedia()"><h3>X</h3></span>
             <h2>Multimedia</h2>
             
       <br>

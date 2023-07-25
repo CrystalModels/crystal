@@ -3,8 +3,8 @@
     <div id="myModalPagesModelsNot" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalPagesModelNot()">X</span>
-            <h2>Sin Transmisión</h2>
+            <span class="close" onclick="closeModalPagesModelNot()"><h3>X</h3></span>
+            <h2>Sin transmisión</h2>
            
         
       <br>

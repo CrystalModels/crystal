@@ -2,8 +2,8 @@
 <div id="myModalHasCode" class="modalProfile">
     <!-- Contenido del modal -->
     <div class="modal-contentProfile">
-        <span class="close" onclick="closeModalmyModalHasCode()">X</span>
-        <h2 class="modal-title">Código de Confirmación</h2>
+        <span class="close" onclick="closeModalmyModalHasCode()"><h3>X</h3></span>
+        <h2 class="modal-title">Código de confirmación</h2>
         <?php require_once 'layout/formHasCode.php' ?>
     </div>
 </div>

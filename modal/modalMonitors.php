@@ -3,7 +3,7 @@
     <div id="myModalMonitors" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalMonitors()">X</span>
+            <span class="close" onclick="closeModalMonitors()"><h3>X</h3></span>
             <h2>Monitores</h2>
                        <?php require_once 'layout/tableMonitors.php' ?>
         </div>

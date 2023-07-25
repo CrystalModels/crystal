@@ -3,8 +3,8 @@
     <div id="myModalPagesModelsHis" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalPagesModelHis()">X</span>
-            <h2>Historial</h2>
+            <span class="close" onclick="closeModalPagesModelHis()"><h3>X</h3></span>
+            <h2>Historial de transmisión</h2>
            
         
       <br>

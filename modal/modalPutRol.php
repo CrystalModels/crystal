@@ -3,8 +3,8 @@
     <div id="myModalPutRol" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalPutRol()">X</span>
-            <h2>Cambiar Rol</h2>
+            <span class="close" onclick="closeModalPutRol()"><h3>X</h3></span>
+            <h2>Cambiar rol</h2>
                
             <?php require_once 'layout/formPutRol.php' ?>
         </div>

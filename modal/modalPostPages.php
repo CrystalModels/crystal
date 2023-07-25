@@ -3,8 +3,8 @@
     <div id="myModalPostPages" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalPostPages()">X</span>
-            <h2>Crear Página</h2>
+            <span class="close" onclick="closeModalPostPages()"><h3>X</h3></span>
+            <h2>Crear página</h2>
             <?php require_once 'layout/formPostPages.php' ?>
             
         </div>

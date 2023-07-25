@@ -3,8 +3,8 @@
     <div id="myModalPutPageCurrency" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalPutPageCurrency()">X</span>
-            <h2>Cambiar Moneda de Cobro</h2>
+            <span class="close" onclick="closeModalPutPageCurrency()"><h3>X</h3></span>
+            <h2>Cambiar moneda de cobro</h2>
                
             <?php require_once 'layout/formPutPageCurrency.php' ?>
         </div>

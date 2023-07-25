@@ -3,10 +3,10 @@
     <div id="myModalUsersSuperAdmin" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalUsersSuperAdmin()">X</span>
-            <h2>Usuarios de Sistema</h2>
+            <span class="close" onclick="closeModalUsersSuperAdmin()"><h3>X</h3></span>
+            <h2>Usuarios de sistema</h2>
             
-            <a href="#" onclick="openModalPostUsers();" class="table-button">Crear Usuario</a>
+            <a href="#" onclick="openModalPostUsers();" class="table-button">Crear usuario</a>
            
       <br>
             <?php require_once 'layout/tableUsersSuperAdmin.php' ?>

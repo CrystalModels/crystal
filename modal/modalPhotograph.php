@@ -3,7 +3,7 @@
     <div id="myModalPhotograph" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalPhotograph()">X</span>
+            <span class="close" onclick="closeModalPhotograph()"><h3>X</h3></span>
                  
             <h2>Fotógrafos</h2>
             <?php require_once 'layout/tablePhotographs.php' ?>

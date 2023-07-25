@@ -3,9 +3,9 @@
     <div id="myModalCurrency" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalCurrency()">X</span>
+            <span class="close" onclick="closeModalCurrency()"><h3>X</h3></span>
             <h2>Monedas</h2>
-            <a href="#" onclick="openModalPostCurrency();" class="table-button">Crear Moneda</a>
+            <a href="#" onclick="openModalPostCurrency();" class="table-button">Crear moneda</a>
       <br>
             <?php require_once 'layout/tableCurrencys.php' ?>
         </div>

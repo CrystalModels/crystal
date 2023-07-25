@@ -3,8 +3,8 @@
     <div id="myModalPutRolAdmin" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalPutRolAdmin()">X</span>
-            <h2>Cambiar Rol</h2>
+            <span class="close" onclick="closeModalPutRolAdmin()"><h3>X</h3></span>
+            <h2>Cambiar rol</h2>
                
             <?php require_once 'layout/formPutRolAdmin.php' ?>
         </div>

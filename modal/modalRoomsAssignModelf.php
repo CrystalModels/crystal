@@ -3,9 +3,9 @@
     <div id="myModalRoomsamf" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalRoomsamf();getRoomsam();">X</span>
+            <span class="close" onclick="closeModalRoomsamf();getRoomsam();"><h3>X</h3></span>
           
-            <h2>Rooms Desocupados</h2>
+            <h2>Rooms desocupados</h2>
            
       <br>
             <?php require_once 'layout/tableRoomsamf.php' ?>

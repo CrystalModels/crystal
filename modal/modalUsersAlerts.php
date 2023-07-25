@@ -3,7 +3,7 @@
     <div id="myModalUsersAlerts" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalUsersAlerts()">X</span>
+            <span class="close" onclick="closeModalUsersAlerts()"><h3>X</h3></span>
             <h2>Alertas</h2>
                
       <br>
