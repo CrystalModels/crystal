@@ -15,26 +15,26 @@
 <body>
     
 
-  <div class="login-container">
+  
     <h2><img src="public/logo.png" alt="Crystal Models"></h2>
     <form method="post" action="controller/controllerChangePass.php">
 
     <div class="form-group">
-        <label for="username">Escribe código de confirmación y nueva contraseña</label>  </div>
+        <label for="username">Escribe el código de confirmación y nueva contraseña</label>  </div>
      
       <div class="form-group">
         <label for="vcode">Código de confirmación</label>
-        <input type="password" id="vcode" name="vcode" placeholder="Ingrese su usuario" required>
+        <input type="password" id="vcode" name="vcode" placeholder="Ingresa código" required>
       </div>
       
       <div class="form-group">
         <label for="username">Usuario</label>
-        <input type="password" id="username" name="username" placeholder="Ingrese su usuario" required>
+        <input type="password" id="username" name="username" placeholder="Ingresa usuario" required>
       </div>
       
       <div class="form-group">
         <label for="keyword">Nueva Contraseña</label>
-        <input type="password" id="keyword" name="keyword" placeholder="Ingrese su usuario" required>
+        <input type="password" id="keyword" name="keyword" placeholder="Ingrese nueva contraseña" required>
       </div>
      
       
@@ -44,7 +44,7 @@
 
     </form>
 
-  </div>
+  
 
  
 </body>

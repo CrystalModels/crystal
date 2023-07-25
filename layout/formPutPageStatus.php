@@ -31,7 +31,7 @@ echo '<form method="post" action="controller/controllerPutPageStatusBySuperAdmin
       </div>
       
       <div class="form-group">
-        <button type="submit">Cambiar Estado</button>
+        <button type="submit">Cambiar estado</button>
       </div>
     </form>
    

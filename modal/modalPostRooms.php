@@ -3,8 +3,8 @@
     <div id="myModalPostRooms" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalPostRooms()">X</span>
-            <h2>Crear Room</h2>
+            <span class="close" onclick="closeModalPostRooms()"><h3>X</h3></span>
+            <h2>Crear room</h2>
             <?php require_once 'layout/formPostRooms.php' ?>
             
         </div>

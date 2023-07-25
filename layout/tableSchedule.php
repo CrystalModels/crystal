@@ -52,15 +52,15 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       row.innerHTML = `
       <td>${schedule.sTime}</td>
     
-    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.mon}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;mon&quot;)">Editar</button></td>
-    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.tus}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;tus&quot;)">Editar</button></td>
-    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.wen}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;wen&quot;)">Editar</button></td>
-    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.thu}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;thu&quot;)">Editar</button></td>
-    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.fri}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;fri&quot;)">Editar</button></td>
-    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.sat}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;sat&quot;)">Editar</button></td>
-    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.sun}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;sun&quot;)">Editar</button></td>
-    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.maxTime}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;maxHoursPerWeek&quot;)">Editar</button></td>
-    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.minTime}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;minHoursPerWeek&quot;)">Editar</button></td>
+    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.mon}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;mon&quot;)" class="table-button">Editar</button></td>
+    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.tus}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;tus&quot;)" class="table-button">Editar</button></td>
+    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.wen}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;wen&quot;)" class="table-button">Editar</button></td>
+    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.thu}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;thu&quot;)" class="table-button">Editar</button></td>
+    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.fri}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;fri&quot;)" class="table-button">Editar</button></td>
+    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.sat}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;sat&quot;)" class="table-button">Editar</button></td>
+    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.sun}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;sun&quot;)" class="table-button">Editar</button></td>
+    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.maxTime}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;maxHoursPerWeek&quot;)" class="table-button">Editar</button></td>
+    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.minTime}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;minHoursPerWeek&quot;)" class="table-button">Editar</button></td>
     
 
       

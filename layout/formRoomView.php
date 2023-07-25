@@ -95,13 +95,13 @@ echo '
                         const profileDiv = document.querySelector("#myProfile-div");
                         profileDiv.innerHTML = `
                               
-                            <h5 align="center">Room Id: ${userData.roomId}</h5>
+                            <h5 align="center">Id-room: ${userData.roomId}</h5>
                             <h5 align="center">Conectado: ${userData.profileId}</h5>
                             <h5 align="center">Activo: ${userData.isActive}</h5>
                             <h5 align="center">Estado: ${userData.status}</h5>
-                            <h5 align="center">Room: <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" value="${userData.name}"></h5>
-                            <h5 align="center">Comentarios: <input type="text" id="comments" name="comments" placeholder="Ingresa tu apellido" value="${userData.comments}"></h5>
-                            <h5 align="center"><a href="#" onclick="openModalPutRoomStatus();" class="table-button">Cambiar Estado</a><br></h5>
+                            <h5 align="center">Room: <input type="text" id="name" name="name" placeholder="Ingresa room" value="${userData.name}"></h5>
+                            <h5 align="center">Comentarios: <input type="text" id="comments" name="comments" placeholder="Ingresa comentarios" value="${userData.comments}"></h5>
+                            <h5 align="center"><a href="#" onclick="openModalPutRoomStatus();" class="table-button">Cambiar estado</a><br></h5>
         
                             `;
                     })
@@ -172,13 +172,13 @@ echo '
                         // Mostrar los datos en la pantalla
                         const profileDiv = document.querySelector("#myProfile-div");
                         profileDiv.innerHTML = `
-                        <h5 align="center">Room Id: ${userData.roomId}</h5>
+                        <h5 align="center">Id-room: ${userData.roomId}</h5>
                         <h5 align="center">Conectado: ${userData.profileId}</h5>
                         <h5 align="center">Activo: ${userData.isActive}</h5>
                         <h5 align="center">Estado: ${userData.status}</h5>
-                        <h5 align="center">Room: <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" value="${userData.name}"></h5>
-                        <h5 align="center">Comentarios: <input type="text" id="comments" name="comments" placeholder="Ingresa tu apellido" value="${userData.comments}"></h5>
-                        <h5 align="center"><a href="#" onclick="openModalPutRoomStatus();" class="table-button">Cambiar Estado</a><br></h5>
+                        <h5 align="center">Room: <input type="text" id="name" name="name" placeholder="Ingresa room" value="${userData.name}"></h5>
+                        <h5 align="center">Comentarios: <input type="text" id="comments" name="comments" placeholder="Ingresa comentarios" value="${userData.comments}"></h5>
+                        <h5 align="center"><a href="#" onclick="openModalPutRoomStatus();" class="table-button">Cambiar estado</a><br></h5>
     
                             `;
                     })

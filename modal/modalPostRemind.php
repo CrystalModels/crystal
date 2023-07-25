@@ -3,8 +3,8 @@
     <div id="myModalRemindsPost" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalRemindsPost()">X</span>
-            <h2>Crear Recordatorio</h2>
+            <span class="close" onclick="closeModalRemindsPost()"><h3>X</h3></span>
+            <h2>Crear recordatorio</h2>
             <br>
            <?php  require_once 'layout/formPostReminds.php' ?>
         </div>

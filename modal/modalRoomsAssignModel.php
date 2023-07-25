@@ -3,11 +3,11 @@
     <div id="myModalRoomsam" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalRoomsam()">X</span>
+            <span class="close" onclick="closeModalRoomsam()"><h3>X</h3></span>
 
             <h2>Rooms ocupados</h2>
-            <a href="#" onclick="openModalRoomsamf();getRoomsamf();" class="table-button">Rooms Desocupados</a>
-            <a href="#" onclick="openModalRoomsLista();getRoomsLista();" class="table-button">Lista de Rooms</a>
+            <a href="#" onclick="openModalRoomsamf();getRoomsamf();" class="table-button">Rooms desocupados</a>
+            <a href="#" onclick="openModalRoomsLista();getRoomsLista();" class="table-button">Lista de rooms con modelos</a>
            
       <br>
             <?php require_once 'layout/tableRoomsam.php' ?>

@@ -3,8 +3,8 @@
     <div id="myModalPortafolio" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalPortafolio()">X</span>
-            <h2>Agregar Imagen al portafolio</h2>
+            <span class="close" onclick="closeModalPortafolio()"><h3>X</h3></span>
+            <h2>Agregar imágen al portafólio</h2>
             
       <br>
             <?php require_once 'layout/tableModelsPhoto.php' ?>

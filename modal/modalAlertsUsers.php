@@ -3,8 +3,8 @@
     <div id="myModalAlertsUsers" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalAlertsUsers()">X</span>
-            <h2>Mis Alertas</h2>
+            <span class="close" onclick="closeModalAlertsUsers()"><h3>X</h3></span>
+            <h2>Mis alertas</h2>
             
       <br>
             <?php require_once 'layout/tableAlertsUsers.php' ?>

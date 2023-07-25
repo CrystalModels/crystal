@@ -41,7 +41,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       <td>${student.name}</td>
         <td>${student.lastName}</td>
 
-        <td><button onclick="asignarRoomModel(this,&quot;${student.profileId}&quot;,&quot;${pid}&quot;)">Asignar Room</button></td>
+        <td><button onclick="asignarRoomModel(this,&quot;${student.profileId}&quot;,&quot;${pid}&quot;)" class="table-button">Asignar room</button></td>
       
         
       `;

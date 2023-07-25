@@ -3,7 +3,7 @@
     <div id="myModalRoomsLista" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalRoomsLista()">X</span>
+            <span class="close" onclick="closeModalRoomsLista()"><h3>X</h3></span>
 
             <h2>Rooms ocupados</h2>
            

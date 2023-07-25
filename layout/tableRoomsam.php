@@ -48,7 +48,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.rooms.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="asignarRoomModel1(this,&quot;${student.roomId}&quot;,&quot;${pid}&quot;)">Liberar Room</button></td>
+      <td><button onclick="asignarRoomModel1(this,&quot;${student.roomId}&quot;,&quot;${pid}&quot;)" class="table-button">Liberar room</button></td>
       
       <td>${student.roomName}</td>
         <td>${student.comments}</td>

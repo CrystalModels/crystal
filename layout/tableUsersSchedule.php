@@ -42,7 +42,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.users.forEach(profile => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><a href="#" onclick="openModalScheduleUsers();getSchUsers(&quot;${profile.profileId}&quot;);">Ver</a>
+      <td><a href="#" onclick="openModalScheduleUsers();getSchUsers(&quot;${profile.profileId}&quot;);" class="table-button">Ver</a>
       </td>
   <td>${profile.userName}</td> 
       <td>${profile.name}</td>

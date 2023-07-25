@@ -3,7 +3,11 @@
 <!-- HTML -->
 
 <nav class="navbar">
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> dev
     <ul class="navbar-menu" id="navbar-menu">
       
         

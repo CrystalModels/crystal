@@ -45,7 +45,7 @@
       </div>
 
       <div class="form-group">
-        <button type="submit">Crear Usuario</button>
+        <button type="submit">Crear recordatorio</button>
       </div>
       </div>
       

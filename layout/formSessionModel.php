@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar - Crystal Models</title>
+  <title>Crystal Models</title>
   <link rel="icon" type="image/x-icon" href="public/logo.png">
   
   <style>
@@ -26,19 +26,12 @@
 
 </head>
 <body>
-
+<h2><img src="public/logo.png" alt="Crystal Models"></h2>
 <div class="theme-toggle">
   <input type="checkbox" id="theme-toggle-checkbox" class="theme-toggle-checkbox">
   <label for="theme-toggle-checkbox" class="theme-toggle-label"></label>
 </div>
 
-
-<form class="form-container">
-  <h2>USUARIOS</h2>
-
-
-  <!-- Contenido adicional -->
-</form>
 
 
         

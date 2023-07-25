@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar - Crystal Models</title>
+  <title>Crystal Models</title>
   <link rel="icon" type="image/x-icon" href="public/logo.png">
   
   <style>
@@ -28,7 +28,11 @@
 <body>
 
 
+<<<<<<< HEAD
 
+=======
+<h2><img src="public/logo.png" alt="Crystal Models"></h2>
+>>>>>>> dev
 
 
 

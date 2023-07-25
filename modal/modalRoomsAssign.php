@@ -3,8 +3,8 @@
     <div id="myModalRoomsModels" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalRoomsModelassign()">X</span>
-            <h2>Asignar Room</h2>
+            <span class="close" onclick="closeModalRoomsModelassign()"><h3>X</h3></span>
+            <h2>Asignar room</h2>
            
         
       <br>

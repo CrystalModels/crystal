@@ -20,11 +20,11 @@
     <form method="post" action="controller/controllerForgotPass.php">
 
     <div class="form-group">
-        <label for="username">Se enviará un código de recuperación a tu correo Empresarial</label>  </div>
+        <label for="username">Se enviará un código de recuperación a tu correo empresarial</label>  </div>
      
       <div class="form-group">
         <label for="username">Usuario / Correo Empresarial</label>
-        <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required>
+        <input type="text" id="username" name="username" placeholder="Ingrese tu usuario" required>
       </div>
      
       

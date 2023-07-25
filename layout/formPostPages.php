@@ -19,15 +19,15 @@
     <form method="post" action="controller/controllerPostPages.php">
       <div class="form-group">
         <label for="name">Nombre de página</label>
-        <input type="text" id="name" name="name" placeholder="Ingrese nombre de la pagina" required>
+        <input type="text" id="name" name="name" placeholder="Ingresa nombre de la pagina" required>
       </div>
       <div class="form-group">
         <label for="urlpage">Url de página</label>
-        <input type="text" id="urlpage" name="urlpage" placeholder="Ingrese url de la pagina" required>
+        <input type="text" id="urlpage" name="urlpage" placeholder="Ingresa url de la pagina" required>
       </div>
       <div class="form-group">
         <label for="percent">% de cobro</label>
-        <input type="text" id="percent" name="percent" placeholder="Ingrese porcentaje de cobro" >
+        <input type="text" id="percent" name="percent" placeholder="Ingresa porcentaje de cobro" >
       </div>
       
       
@@ -80,7 +80,7 @@ echo '
       
       
       <div class="form-group">
-        <button type="submit">Crear Página</button>
+        <button type="submit">Crear página</button>
       </div>
     </form>
     

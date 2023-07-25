@@ -15,21 +15,21 @@
 <body>
     
 
-  <div class="login-container">
+ 
     <h2><img src="public/logo.png" alt="Crystal Models"></h2>
     <form method="post" action="controller/controllerChangePassSession.php">
 
     <div class="form-group">
        
-    <label for="nkeyword">Recuerde que la contraseña debe contener mínimo 8 carácteres (MAYúSCULAS, minúsculas y simbolos *.-_?¡¿!)</label>
+    <label for="nkeyword">Recuerda que la contraseña debe contener mínimo 8 carácteres (MAYúSCULAS, minúsculas, simbolos (*.-_?¡¿!) y números)</label>
       <div class="form-group">
         <label for="keyword">Contraseña Actual</label>
-        <input type="password" id="keyword" name="keyword" placeholder="Contraseña actual" required>
+        <input type="password" id="keyword" name="keyword" placeholder="Ingresa contraseña actual" required>
       </div>
       
       <div class="form-group">
         <label for="nkeyword">Nueva contraseña</label>
-        <input type="password" id="nkeyword" name="nkeyword" placeholder="Nueva contraseña" required>
+        <input type="password" id="nkeyword" name="nkeyword" placeholder="Ingresa nueva contraseña" required>
       </div>
       
       
@@ -39,7 +39,7 @@
 
     </form>
 
-  </div>
+ 
 
  
 </body>

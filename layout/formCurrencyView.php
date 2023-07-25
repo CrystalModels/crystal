@@ -96,16 +96,16 @@ echo '
                         const profileDiv = document.querySelector("#myProfile-div");
                         profileDiv.innerHTML = `
                               
-                        <h5 align="center">Moneda Id: ${userData.curId}</h5>
+                        <h5 align="center">Id-Moneda: ${userData.curId}</h5>
                         <h5 align="center">Abreviación: ${userData.currency}</h5>
                         <h5 align="center">Activo: ${userData.isActive}</h5>
                         <h5 align="center">Estado: ${userData.status}</h5>
                         <h5 align="center">Moneda a comparar: ${userData.comparative}</h5>
                         <h5 align="center">Nombre de moneda: <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" value="${userData.name}"></h5>
                         <h5 align="center">Valor Actual: <input type="text" id="cvalue" name="cvalue" placeholder="Ingresa tu apellido" value="${userData.currentValue}"></h5>
-                        <h5 align="center">Simbolo: <input type="text" id="symbol" name="symbol" placeholder="Ingresa tu apellido" value="${userData.symbol}"></h5>
+                        <h5 align="center">Símbolo: <input type="text" id="symbol" name="symbol" placeholder="Ingresa tu apellido" value="${userData.symbol}"></h5>
                         
-                        <h5 align="center"><a href="#" onclick="openModalPutCurrencyStatus();" class="table-button">Cambiar Estado</a><br></h5>
+                        <h5 align="center"><a href="#" onclick="openModalPutCurrencyStatus();" class="table-button">Cambiar estado</a><br></h5>
                
     
                             `;
@@ -175,7 +175,7 @@ echo '
                         // Mostrar los datos en la pantalla
                         const profileDiv = document.querySelector("#myProfile-div");
                         profileDiv.innerHTML = `
-                        <h5 align="center">Moneda Id: ${userData.curId}</h5>
+                        <h5 align="center">Id-Moneda: ${userData.curId}</h5>
                         <h5 align="center">Abreviación: ${userData.currency}</h5>
                         <h5 align="center">Activo: ${userData.isActive}</h5>
                         <h5 align="center">Estado: ${userData.status}</h5>
@@ -184,7 +184,7 @@ echo '
                         <h5 align="center">Valor Actual: <input type="text" id="pageurl" name="pageurl" placeholder="Ingresa tu apellido" value="${userData.currentValue}"></h5>
                         <h5 align="center">Simbolo: <input type="text" id="percent" name="percent" placeholder="Ingresa tu apellido" value="${userData.symbol}"></h5>
                         
-                        <h5 align="center"><a href="#" onclick="openModalPutCurrencyStatus();" class="table-button">Cambiar Estado</a><br></h5>
+                        <h5 align="center"><a href="#" onclick="openModalPutCurrencyStatus();" class="table-button">Cambiar estado</a><br></h5>
                
     
                             `;

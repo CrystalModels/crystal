@@ -3,8 +3,8 @@
     <div id="myModalPostUsers" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalPostUsers()">X</span>
-            <h2>Crear Usuario</h2>
+            <span class="close" onclick="closeModalPostUsers()"><h3>X</h3></span>
+            <h2>Crear usuario</h2>
             <?php require_once 'layout/formPostUsers.php' ?>
             
         </div>

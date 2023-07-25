@@ -3,8 +3,8 @@
     <div id="myModalScheduleUsers" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalScheduleUsers()">X</span>
-            <h2>Horario de usuario</h2>
+            <span class="close" onclick="closeModalScheduleUsers()"><h3>X</h3></span>
+            <h2>Horarios de usuario</h2>
                
       <br>
             <?php require_once 'layout/tableScheduleUsers.php' ?>

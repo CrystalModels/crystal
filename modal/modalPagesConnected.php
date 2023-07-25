@@ -3,7 +3,7 @@
     <div id="myModalPagesConnected" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalPagesConnected()">X</span>
+            <span class="close" onclick="closeModalPagesConnected()"><h3>X</h3></span>
             <h2>Páginas</h2>
            
         

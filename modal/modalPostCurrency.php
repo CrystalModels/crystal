@@ -3,7 +3,7 @@
     <div id="myModalPostCurrency" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalPostCurrency()">X</span>
+            <span class="close" onclick="closeModalPostCurrency()"><h3>X</h3></span>
         
             <?php require_once 'layout/formPostCurrency.php' ?>
             

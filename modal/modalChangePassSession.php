@@ -2,7 +2,7 @@
 <div id="myModalChangePassSession" class="modalProfile">
     <!-- Contenido del modal -->
     <div class="modal-contentProfile">
-        <span class="close" onclick="closeModalmyModalChangePassSession()">X</span>
+        <span class="close" onclick="closeModalmyModalChangePassSession()"><h3>X</h3></span>
         <h2 class="modal-title">Credenciales</h2>
         <?php require_once 'layout/formChangePassSession.php' ?>
     </div>

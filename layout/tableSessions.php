@@ -43,7 +43,7 @@ $headerslink=$_SESSION['key'];
     data.session.forEach(session => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><a class="table-button" href="controller/controllerCloseSession.php?sessionId=${session.sessionId}">Cerrar</a>
+      <td><a class="table-button" href="controller/controllerCloseSession.php?sessionId=${session.sessionId}">Cerrar sesión</a>
       </td>
   
       <td>${session.browser}</td>

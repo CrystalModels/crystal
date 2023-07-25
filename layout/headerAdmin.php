@@ -3,7 +3,6 @@
 <!-- HTML -->
 
 <nav class="navbar">
- 
     <ul class="navbar-menu" id="navbar-menu">
       
         <li class="navbar-item has-submenu">

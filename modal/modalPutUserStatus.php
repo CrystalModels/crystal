@@ -3,8 +3,8 @@
     <div id="myModalPutUserStatus" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalPutUserStatus()">X</span>
-            <h2>Cambiar Estado</h2>
+            <span class="close" onclick="closeModalPutUserStatus()"><h3>X</h3></span>
+            <h2>Cambiar estado</h2>
                
             <?php require_once 'layout/formPutUserStatus.php' ?>
         </div>
