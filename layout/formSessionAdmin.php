@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-  <title>Iniciar - Crystal Models</title>
-=======
   <title>Crystal Models</title>
->>>>>>> dev
   <link rel="icon" type="image/x-icon" href="public/logo.png">
   
   <style>
@@ -33,36 +29,8 @@
 
 
 
-<<<<<<< HEAD
-<form class="form-container">
- 
-
-
-<div id="barchart" style="width: 800px; height: 400px;"></div>
-
-
-  
-  <!-- Contenido adicional -->
-</form>
-
-
-<form class="form-container">
- 
-
-
-
-<div id="barchart1" style="width: 800px; height: 400px;"></div>
-
-  
-  <!-- Contenido adicional -->
-</form>
-        
-
-    </div>
-=======
 
 <h2><img src="public/logo.png" alt="Crystal Models"></h2>
->>>>>>> dev
     
 
   <div class="theme-toggle">

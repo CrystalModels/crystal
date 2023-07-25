@@ -13,7 +13,7 @@
   padding: 20px;
   margin: auto;
 }
-
+   
 
 @media screen and (max-width: 768px) {
   .form-container {
@@ -28,11 +28,7 @@
 <body>
 
 
-<<<<<<< HEAD
-
-=======
 <h2><img src="public/logo.png" alt="Crystal Models"></h2>
->>>>>>> dev
 
 
 
