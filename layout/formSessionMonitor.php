@@ -29,7 +29,7 @@
 
 
 
-    
+<h2><img src="public/logo.png" alt="Crystal Models"></h2>
 
   <div class="theme-toggle">
         <input type="checkbox" id="theme-toggle-checkbox">

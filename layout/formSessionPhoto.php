@@ -28,7 +28,7 @@
 <body>
 
 
-
+<h2><img src="public/logo.png" alt="Crystal Models"></h2>
 
 
 
