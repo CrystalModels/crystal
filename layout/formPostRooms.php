@@ -28,7 +28,7 @@
       
       
       <div class="form-group">
-        <button type="submit">Crear Room</button>
+        <button type="submit">Crear room</button>
       </div>
     </form>
     

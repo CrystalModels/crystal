@@ -18,23 +18,23 @@
     <form method="post" action="controller/controllerPostUsersBySuperAdmin.php">
       <div class="form-group">
         <label for="name">Nombres</label>
-        <input type="text" id="name" name="name" placeholder="Ingrese nombres de usuario" required>
+        <input type="text" id="name" name="name" placeholder="Ingresa nombres de usuario" required>
       </div>
       <div class="form-group">
         <label for="lastname">Apellidos</label>
-        <input type="text" id="lastname" name="lastname" placeholder="Ingrese apellidos de usuario" required>
+        <input type="text" id="lastname" name="lastname" placeholder="Ingresa apellidos de usuario" required>
       </div>
       <div class="form-group">
         <label for="pmail">Correo personal</label>
-        <input type="text" id="pmail" name="pmail" placeholder="Ingrese correo personal de usuario" required>
+        <input type="text" id="pmail" name="pmail" placeholder="Ingresa correo personal de usuario" required>
       </div>
       <div class="form-group">
         <label for="cmail">Correo empresarial</label>
-        <input type="text" id="cmail" name="cmail" placeholder="Ingrese correo empresarial de usuario" required>
+        <input type="text" id="cmail" name="cmail" placeholder="Ingresa correo empresarial de usuario" required>
       </div>
       <div class="form-group">
         <label for="imageurl">Imagen de perfil</label>
-        <input type="text" id="imageurl" name="imageurl" placeholder="Ingrese URL de imagen" required>
+        <input type="text" id="imageurl" name="imageurl" placeholder="Ingrese URL de imagen/perfil" required>
       </div>
 
       
@@ -85,7 +85,7 @@ echo '
       
       
       <div class="form-group">
-        <button type="submit">Crear Usuario</button>
+        <button type="submit">Crear usuario</button>
       </div>
     </form>
     

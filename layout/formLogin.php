@@ -54,11 +54,11 @@ if($opt1=="3"){
     <form method="post" action="controller/controllerValidateFirstStep.php">
       <div class="form-group">
         <label for="username">Usuario</label>
-        <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required>
+        <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
       </div>
       <div class="form-group">
         <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
       </div>
       <div class="form-group">
         <button type="submit">Iniciar sesión</button>
@@ -69,7 +69,7 @@ if($opt1=="3"){
     </form>
     
     <div class="forgot-password">
-      <a href="#" onclick="openModalmyModalForgotPass();">¿Olvidó su contraseña?</a>
+      <a href="#" onclick="openModalmyModalForgotPass();">¿Olvidaste tu contraseña?</a>
     </div>
     <div class="forgot-password">
       <a href="#" onclick="openModalmyModalCloseSession();">Cerrar sesión en otros dispositivos</a>

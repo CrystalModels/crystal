@@ -63,7 +63,7 @@ echo '
 ?>
       
       <div class="form-group">
-        <button type="submit">Cambiar Moneda</button>
+        <button type="submit">Cambiar moneda</button>
       </div>
     </form>
    

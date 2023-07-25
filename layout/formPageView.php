@@ -24,29 +24,6 @@ echo '
 <form method="post" action="controller/controllerPutPageBySuperAdmin.php?pageId='.$_GET['pageId'].'">
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-
 
 ';
     if($_SESSION['rol']=="SUPERADMIN"){
@@ -55,28 +32,7 @@ echo '
         $sub_domain = $sub_domaincon->dom();
         //echo $_SESSION['key'];
         echo '
-        <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
+        
         <div id="myProfile-div"></div>
         <script>
         //const rancode = sessionStorage.getItem("ranCode");
@@ -99,11 +55,11 @@ echo '
                         <h5 align="center">Moneda de pago: ${userData.currency}</h5>
                         <h5 align="center">Activo: ${userData.isActive}</h5>
                         <h5 align="center">Estado: ${userData.status}</h5>
-                        <h5 align="center">Página: <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" value="${userData.name}"></h5>
-                        <h5 align="center">Url de página: <input type="text" id="pageurl" name="pageurl" placeholder="Ingresa tu apellido" value="${userData.urlPage}"></h5>
-                        <h5 align="center">Porcentaje de cobro: <input type="text" id="percent" name="percent" placeholder="Ingresa tu apellido" value="${userData.percentValue}"></h5>
+                        <h5 align="center">Página: <input type="text" id="name" name="name" placeholder="Ingresa nombre de página" value="${userData.name}"></h5>
+                        <h5 align="center">Url de página: <input type="text" id="pageurl" name="pageurl" placeholder="Ingresa url de página" value="${userData.urlPage}"></h5>
+                        <h5 align="center">Porcentaje de cobro: <input type="text" id="percent" name="percent" placeholder="Ingresa porcentaje de cobro" value="${userData.percentValue}"></h5>
                         
-                        <h5 align="center"><a href="#" onclick="openModalPutPageStatus();" class="table-button">Cambiar Estado</a><br></h5>
+                        <h5 align="center"><a href="#" onclick="openModalPutPageStatus();" class="table-button">Cambiar estado</a><br></h5>
                         <h5 align="center"><a href="#" onclick="openModalPutPageCurrency();" class="table-button">Cambiar moneda de pago</a><br></h5>
     
                             `;
@@ -128,28 +84,7 @@ echo '
     if($_SESSION['rol']=="ADMIN"){
       echo '
       <form method="post" action="controller/controllerPutPageBySuperAdmin.php?pageId='.$_GET['pageId'].'"> 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-<br>
-<br>
-<br>
 ';
         require_once 'env/domain.php';
         $sub_domaincon = new model_dom();
@@ -177,11 +112,11 @@ echo '
                         <h5 align="center">Moneda de pago: ${userData.currency}</h5>
                         <h5 align="center">Activo: ${userData.isActive}</h5>
                         <h5 align="center">Estado: ${userData.status}</h5>
-                        <h5 align="center">Página: <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" value="${userData.name}"></h5>
-                        <h5 align="center">Url de página: <input type="text" id="pageurl" name="pageurl" placeholder="Ingresa tu apellido" value="${userData.urlPage}"></h5>
-                        <h5 align="center">Porcentaje de cobro: <input type="text" id="percent" name="percent" placeholder="Ingresa tu apellido" value="${userData.percentValue}"></h5>
+                        <h5 align="center">Página: <input type="text" id="name" name="name" placeholder="Ingresa nombre de página" value="${userData.name}"></h5>
+                        <h5 align="center">Url de página: <input type="text" id="pageurl" name="pageurl" placeholder="Ingresa url de página" value="${userData.urlPage}"></h5>
+                        <h5 align="center">Porcentaje de cobro: <input type="text" id="percent" name="percent" placeholder="Ingresa porcentaje de cobro" value="${userData.percentValue}"></h5>
                       
-                        <h5 align="center"><a href="#" onclick="openModalPutPageStatus();" class="table-button">Cambiar Estado</a><br></h5>
+                        <h5 align="center"><a href="#" onclick="openModalPutPageStatus();" class="table-button">Cambiar estado</a><br></h5>
                         <h5 align="center"><a href="#" onclick="openModalPutPageCurrency();" class="table-button">Cambiar moneda de pago</a><br></h5>
     
                             `;

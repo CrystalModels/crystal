@@ -21,11 +21,11 @@
     <form method="post" action="controller/controllerValidateFirstStepCancel.php">
       <div class="form-group">
         <label for="username">Usuario</label>
-        <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required>
+        <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
       </div>
       <div class="form-group">
         <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
       </div>
       <div class="form-group">
         <button type="submit">Validar</button>

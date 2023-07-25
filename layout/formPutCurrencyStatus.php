@@ -31,7 +31,7 @@ echo '<form method="post" action="controller/controllerPutCurrencyStatusBySuperA
       </div>
       
       <div class="form-group">
-        <button type="submit">Cambiar Estado</button>
+        <button type="submit">Cambiar estado</button>
       </div>
     </form>
    

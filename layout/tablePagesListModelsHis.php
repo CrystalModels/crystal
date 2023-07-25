@@ -9,17 +9,17 @@
  
 </head>
 <body>
-  <h3>Seleccionar Fecha Inicial</h3>
+  <h3>Seleccionar fecha inicial</h3>
 
   <input type="date" id="fechaInput">
 
   
   
-  <h3>Seleccionar Fecha Final</h3>
+  <h3>Seleccionar fecha final</h3>
 
   <input type="date" id="fechaInput1">
-
-  <a href="#" onclick="openModalPagesModelHis1();" class="table-button">Historial</a>
+<br>
+  <a href="#" onclick="openModalPagesModelHis1();" class="table-button">Ver historial</a>
 
 </body>
 </html>

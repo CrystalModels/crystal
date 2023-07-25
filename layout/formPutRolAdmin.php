@@ -67,7 +67,7 @@ echo '
       </div>
       
       <div class="form-group">
-        <button type="submit">Cambiar Rol</button>
+        <button type="submit">Cambiar rol</button>
       </div>
     </form>
    

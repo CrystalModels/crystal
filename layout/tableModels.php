@@ -39,15 +39,15 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.models.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><a class="table-button" href="model.php?modelId=${student.profileId}&names=${student.name} ${student.lastName}" target="_blank">Estado</a>
+      <td><a class="table-button" href="model.php?modelId=${student.profileId}&names=${student.name} ${student.lastName}" target="_blank">Estado actual</a>
       </td>
   <td>${student.userName}</td> 
       <td>${student.name}</td>
         <td>${student.lastName}</td>
         <td>${student.rol}</td>
 
-        <td><button onclick="openModalPagesAssign();getPagesAssign(&quot;${student.profileId}&quot;);">Asigna Página</button><button onclick="openModalRoomsModelassign();getRoomsAssign(&quot;${student.profileId}&quot;);">Asigna Room</button></td>
-        <td><button onclick="openModalPagesModelHis();getPagesAssignModelsHis1(&quot;${student.profileId}&quot;,&quot;${student.profileId}&quot;);">Historial</button></td>
+        <td><button onclick="openModalPagesAssign();getPagesAssign(&quot;${student.profileId}&quot;);">Asigna Página</button><button onclick="openModalRoomsModelassign();getRoomsAssign(&quot;${student.profileId}&quot;);">Asignar room</button></td>
+        <td><button onclick="openModalPagesModelHis();getPagesAssignModelsHis1(&quot;${student.profileId}&quot;,&quot;${student.profileId}&quot;);">Historial de transmisión</button></td>
       
       
         

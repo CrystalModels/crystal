@@ -51,7 +51,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       row.innerHTML = `
          
         
-        <td><button onclick="editarRemind(this,&quot;${remind.remindId}&quot;,&quot;${remind.ownerId}&quot;)">Cerrar</button></td>
+        <td><button onclick="editarRemind(this,&quot;${remind.remindId}&quot;,&quot;${remind.ownerId}&quot;)">Cerrar recordatorio</button></td>
    
     <td>${remind.comments}</td>
     <td>${remind.rDate}</td>

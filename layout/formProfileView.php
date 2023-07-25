@@ -64,21 +64,21 @@ echo '
                             <h5 align="center">Usuario: ${userData.userName}</h5>
                             <h5 align="center">Rol: ${userData.rol}</h5>
 
-                            <h5 align="center">Id de Perfil: ${userData.profileId}</h5>
-                            <h5 align="center">Sesiones Activas: ${userData.sessionCounter}</h5>
+                            <h5 align="center">Id de perfil: ${userData.profileId}</h5>
+                            <h5 align="center">Sesiones activas: ${userData.sessionCounter}</h5>
                             <h5 align="center">Activo: ${userData.isActive} >Estado: ${userData.status}</h5>
 
                             <h5 align="center">Correo empresarial: <input type="email" id="cmail" name="cmail" placeholder="Ingresa tu nombre" value="${userData.companyMail}"></h5>
-                            <h5 align="center">Correo Interno: <input type="email" id="imail" name="imail" placeholder="Ingresa tu nombre" value="${userData.internalMail}"></h5>
+                            <h5 align="center">Correo interno: <input type="email" id="imail" name="imail" placeholder="Ingresa tu nombre" value="${userData.internalMail}"></h5>
                            
-                            <h5 align="center">Nombre: <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" value="${userData.name}"></h5>
-                            <h5 align="center">Apellido: <input type="text" id="lname" name="lname" placeholder="Ingresa tu apellido" value="${userData.lastName}"></h5>
-                            <h5 align="center">Correo Personal: <input type="email" id="pmail" name="pmail" placeholder="Ingresa tu correo personal" value="${userData.personalMail}"></h5>
-                            <h5 align="center">Url de imagen: <input type="url" id="urlimage" name="urlimage" placeholder="Ingresa tu correo personal" value="${userData.imageUrl}"></h5>
+                            <h5 align="center">Nombres: <input type="text" id="name" name="name" placeholder="Ingresa tus nombres" value="${userData.name}"></h5>
+                            <h5 align="center">Apellidos: <input type="text" id="lname" name="lname" placeholder="Ingresa tus apellidos" value="${userData.lastName}"></h5>
+                            <h5 align="center">Correo personal: <input type="email" id="pmail" name="pmail" placeholder="Ingresa tu correo personal" value="${userData.personalMail}"></h5>
+                            <h5 align="center">Url de imagen: <input type="url" id="urlimage" name="urlimage" placeholder="Ingresa url de imagen" value="${userData.imageUrl}"></h5>
                            
-                            <img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;">
-                            <h5 align="center"><a href="#" onclick="openModalPutRol();" class="table-button">Cambiar Rol</a><br></h5>
-                            <h5 align="center"><a href="#" onclick="openModalPutUserStatus();" class="table-button">Eliminar/Desactivar/Ocultar</a><br></h5>
+                            <img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;" align="center">
+                            <h5 align="center"><a href="#" onclick="openModalPutRol();" class="table-button">Cambiar rol</a><br></h5>
+                            <h5 align="center"><a href="#" onclick="openModalPutUserStatus();" class="table-button">Desactivar/Ocultar</a><br></h5>
         
                             `;
                     })
@@ -139,20 +139,20 @@ echo '
                             <h5 align="center">Usuario: ${userData.userName}</h5>
                             <h5 align="center">Rol: ${userData.rol}</h5>
 
-                            <h5 align="center">Id de Perfil: ${userData.profileId}</h5>
-                            <h5 align="center">Sesiones Activas: ${userData.sessionCounter}</h5>
+                            <h5 align="center">Id de perfil: ${userData.profileId}</h5>
+                            <h5 align="center">Sesiones activas: ${userData.sessionCounter}</h5>
                             <h5 align="center">Activo: ${userData.isActive} >Estado: ${userData.status}</h5>
 
                             <h5 align="center">Correo empresarial: <input type="email" id="cmail" name="cmail" placeholder="Ingresa tu nombre" value="${userData.companyMail}"></h5>
-                            <h5 align="center">Correo Interno: <input type="email" id="imail" name="imail" placeholder="Ingresa tu nombre" value="${userData.internalMail}"></h5>
+                            <h5 align="center">Correo interno: <input type="email" id="imail" name="imail" placeholder="Ingresa tu nombre" value="${userData.internalMail}"></h5>
                            
-                            <h5 align="center">Nombre: <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" value="${userData.name}"></h5>
-                            <h5 align="center">Apellido: <input type="text" id="lname" name="lname" placeholder="Ingresa tu apellido" value="${userData.lastName}"></h5>
-                            <h5 align="center">Correo Personal: <input type="email" id="pmail" name="pmail" placeholder="Ingresa tu correo personal" value="${userData.personalMail}"></h5>
-                            <h5 align="center">Url de imagen: <input type="url" id="urlimage" name="urlimage" placeholder="Ingresa tu correo personal" value="${userData.imageUrl}"></h5>
+                            <h5 align="center">Nombre: <input type="text" id="name" name="name" placeholder="Ingresa tus nombres" value="${userData.name}"></h5>
+                            <h5 align="center">Apellido: <input type="text" id="lname" name="lname" placeholder="Ingresa tus apellidos" value="${userData.lastName}"></h5>
+                            <h5 align="center">Correo personal: <input type="email" id="pmail" name="pmail" placeholder="Ingresa tu correo personal" value="${userData.personalMail}"></h5>
+                            <h5 align="center">Url de imagen: <input type="url" id="urlimage" name="urlimage" placeholder="Ingresa url de imagen" value="${userData.imageUrl}"></h5>
                            
                             <img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;">
-                            <h5 align="center"><a href="#" onclick="openModalPutRolAdmin();" class="table-button">Cambiar Rol</a><br></h5>
+                            <h5 align="center"><a href="#" onclick="openModalPutRolAdmin();" class="table-button">Cambiar rol</a><br></h5>
                             <h5 align="center"><a href="#" onclick="openModalPutUserStatus();" class="table-button">Eliminar/Desactivar/Ocultar</a><br></h5>
         
                             `;
