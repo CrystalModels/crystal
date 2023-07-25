@@ -28,29 +28,7 @@
 <body>
 
 
-
-<form class="form-container">
- 
-
-
-<div id="barchart" style="width: 800px; height: 400px;"></div>
-
-
-  
-  <!-- Contenido adicional -->
-</form>
-
-
-<form class="form-container">
- 
-
-
-
-<div id="barchart1" style="width: 800px; height: 400px;"></div>
-
-  
-  <!-- Contenido adicional -->
-</form>
+<h2><img src="public/logo.png" alt="Crystal Models"></h2>
         
 
     </div>
