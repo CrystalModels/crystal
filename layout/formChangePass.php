@@ -15,7 +15,7 @@
 <body>
     
 
-  <div class="login-container">
+  
     <h2><img src="public/logo.png" alt="Crystal Models"></h2>
     <form method="post" action="controller/controllerChangePass.php">
 
@@ -44,7 +44,7 @@
 
     </form>
 
-  </div>
+  
 
  
 </body>
