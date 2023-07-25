@@ -40,7 +40,7 @@
                             <h5 align="center">Correo personal: <input type="email" id="pmail" name="pmail" placeholder="Ingresa tu correo personal" value="${userData.personalMail}"></h5>
                             <h5 align="center">Url de imagen: <input type="url" id="urlimage" name="urlimage" placeholder="Ingresa url de imagen/perfil" value="${userData.imageUrl}"></h5>
                            
-                            <img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;">
+                            <h2><img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;"></h2>
                         `;
                     })
                     .catch(error => {
