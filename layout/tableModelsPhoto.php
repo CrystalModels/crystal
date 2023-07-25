@@ -46,7 +46,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         <td> <form action="subir.php?profileId=${student.profileId}" method="POST" enctype="multipart/form-data">
         <input type="file" name="foto" id="foto">
        
-        <input type="submit" name="submit" value="Subir foto">
+        <input type="submit" name="submit" value="Subir foto" class="table-button">
     </form></td>
 
         

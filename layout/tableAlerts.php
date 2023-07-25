@@ -53,7 +53,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     
     <td>${alert.comments}</td>
     <td>${alert.alertType}</td>
-    <td><input type="text" class="input-schedule" id="${alert.alertId}" value="${alert.alertResponse}"> <button onclick="editarAlerta(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)">Responder alerta</button></td>
+    <td><input type="text" class="input-schedule" id="${alert.alertId}" value="${alert.alertResponse}"> <button onclick="editarAlerta(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)" class="table-button">Responder alerta</button></td>
    
 
       
