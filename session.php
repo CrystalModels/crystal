@@ -29,3 +29,6 @@ if($_SESSION['rol']=="PHOTO"){
 
 
 ?>
+<?php 
+ 
+?>

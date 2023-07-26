@@ -77,11 +77,11 @@ if($opt1=="3"){
     </div>
 
     <div class="forgot-password">
-      <?php
+    <p>Versión del software: <?php
       require_once 'version/version.php';
       $sub_domaincon = new model_ver();
       echo $sub_domain = $sub_domaincon->versioning();
-      ?>
+      ?></p>
   </div>
 
   </div>

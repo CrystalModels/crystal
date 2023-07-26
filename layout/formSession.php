@@ -31,7 +31,7 @@
 <h2><img src="public/logo.png" alt="Crystal Models"></h2>
         
 
-    </div>
+    
     
 
   <div class="theme-toggle">
@@ -43,72 +43,10 @@
 
   </script>
 
-   
-<body>
-    
 </body>
-</html>
 
 
-</html>
-<!DOCTYPE html>
-<html>
-<head>
- 
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-</head>
-<body>
-  
-
-  <script>
-    google.charts.load('current', { 'packages': ['corechart'] });
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-      const data = google.visualization.arrayToDataTable([
-        ['Categoría', 'Valor'],
-        ['Categoría 1', 30],
-        ['Categoría 2', 40],
-        ['Categoría 3', 50]
-      ]);
-
-      const options = {
-        title: 'Mi Diagrama de Barras',
-        legend: { position: 'none' },
-        bars: 'vertical', // Orientación de las barras (vertical u horizontal)
-        hAxis: { title: 'Categoría', minValue: 0 },
-        vAxis: { title: 'Valor' }
-      };
-
-      const chart = new google.visualization.PieChart(document.getElementById('barchart'));
-      chart.draw(data, options);
-    }
-  </script>
-
-<script>
-    google.charts.load('current', { 'packages': ['corechart'] });
-    google.charts.setOnLoadCallback(drawChart1);
-
-    function drawChart1() {
-      const data = google.visualization.arrayToDataTable([
-        ['Categoría', 'Valor'],
-        ['Categoría 1', 30],
-        ['Categoría 2', 40]
-      ]);
-
-      const options = {
-        title: 'Mi Diagrama de Barras',
-        legend: { position: 'none' },
-        bars: 'vertical', // Orientación de las barras (vertical u horizontal)
-        hAxis: { title: 'Categoría', minValue: 0 },
-        vAxis: { title: 'Valor' }
-      };
-
-      const chart = new google.visualization.ColumnChart(document.getElementById('barchart1'));
-      chart.draw(data, options);
-    }
-  </script>
-</body>
+     <?php require_once 'footer.php';?>
 </html>
 
 

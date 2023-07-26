@@ -47,21 +47,8 @@
   </script>
 
    
-<body>
-    
-</body>
-</html>
-
-
-</html>
-<!DOCTYPE html>
-<html>
-<head>
- 
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-</head>
-<body>
-  
 
 </body>
+<?php require_once 'footer.php';?>
 </html>
+
