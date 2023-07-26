@@ -21,7 +21,10 @@
 
    
 
-
+    <div class="form-group">
+    <label for="nkeyword">## [1.0.5-Beta] - 2023-07-26
+- Visualizador de versiones.</label>
+    </div> 
     <div class="form-group">
     <label for="nkeyword">## [1.0.4-Beta] - 2023-07-26
 - Homologación de footer.</label>

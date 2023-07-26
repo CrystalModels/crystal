@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.5-Beta] - 2023-07-26
+- Visualizador de versiones.
+
 ## [1.0.4-Beta] - 2023-07-26
 - Homologación de footer.
 
