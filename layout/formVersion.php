@@ -282,7 +282,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	echo '
     <script>
         // URL del API
-        const apiUrl3 = `'.$sub_domain.'/crystalGateway/apiCore/v1/getVersionListThis/'.$headerslink.'`;
+        const apiUrl3 = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getVersionListThis/'.$headerslink.'`;
 
         // Obtener la referencia a la tabla
         const tablaVersions3 = document.getElementById("tabla-versions3").getElementsByTagName("tbody")[0];
@@ -295,7 +295,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
                 const data = await response.json();
 
                 // Iterar sobre los datos y llenar la tabla
-                for (const entry of data["crystalGateway-apiCore"]) {
+                for (const entry of data["crystalGateway-apiIntegrations"]) {
                     for (const version in entry) {
                         const fecha = entry[version];
 
