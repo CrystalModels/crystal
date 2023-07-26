@@ -69,7 +69,7 @@
    
 </head>
 <body>
-    <h1>Tabla de Versiones</h1>
+    <h2>CORE</h2>
     <table id="tabla-versions">
         <thead>
             <tr>
