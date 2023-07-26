@@ -81,14 +81,14 @@
 
 
 
-
+    <div class="form-group">
 
     <h2>FRONT</h2>
     <table id="tabla-versionsF">
         <thead>
             <tr>
-                <th>Versión</th>
-                <th>Fecha</th>
+                <th>---Versión---</th>
+                <th>---Fecha---</th>
             </tr>
         </thead>
         <tbody>
@@ -129,7 +129,7 @@
 
 
 
-       <div class="form-group">
+       
     <h2>CORE</h2>
     <table id="tabla-versions">
         <thead>
