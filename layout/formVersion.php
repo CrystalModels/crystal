@@ -17,8 +17,7 @@
 <div class="login-container">
  
  
-    <form method="post" action="controller/controllerChangePassSession.php">
-
+ 
     <div class="form-group">
     <label for="nkeyword">----</label>
     </div> 
@@ -446,7 +445,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         llenarTabla5();
     </script>';?>
     </div>
-    </form>
+  
     <div>
 </body>
 </html>
