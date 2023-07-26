@@ -16,17 +16,17 @@
     
 
  
-    <h2><img src="public/logo.png" alt="Crystal Models"></h2>
+ 
     <form method="post" action="controller/controllerChangePassSession.php">
 
-    <div class="form-group">
+   
 
 
     <div class="form-group">
     <label for="nkeyword">Recuerda que la contraseña debe contener mínimo 8 carácteres (MAYúSCULAS, minúsculas, simbolos (*.-_?¡¿!) y números)</label>
     </div> 
 
-    
+
        </form>
 
  
