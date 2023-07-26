@@ -72,7 +72,7 @@
             for (const version in entry) {
                 const fecha = entry[version];
 
-                const row = tablaVersions.insertRow();
+                const row = tablaVersionsF.insertRow();
                 const cellVersion = row.insertCell();
                 const cellFecha = row.insertCell();
 
