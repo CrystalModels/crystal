@@ -54,7 +54,7 @@
             background-color: #f0f0f0;
             padding: 5px;
             text-align: center;
-            font-size: 12px;
+            font-size: 10px;
             color: #555;
             position: fixed;
             bottom: 0;
