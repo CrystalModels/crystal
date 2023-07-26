@@ -261,7 +261,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
     
     <div class="form-group">
-    <h2>GATEWAY CORE</h2>
+    <h2>GATEWAY INTEGRATIONS</h2>
     <table id="tabla-versions3">
         <thead>
             <tr>
@@ -314,6 +314,69 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
         // Llamar a la función para llenar la tabla
         llenarTabla3();
+    </script>';?>
+    </div>
+
+
+
+
+
+
+    
+    <div class="form-group">
+    <h2>GATEWAY BROKER</h2>
+    <table id="tabla-versions4">
+        <thead>
+            <tr>
+                <th>---Versión---</th>
+                <th>---Contenido---</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- La tabla se llenará dinámicamente aquí -->
+        </tbody>
+    </table>
+    <?php
+
+require_once 'env/domain.php';
+$sub_domaincon=new model_dom;
+$sub_domain=$sub_domaincon->dom();
+$headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
+	echo '
+    <script>
+        // URL del API
+        const apiUrl4 = `'.$sub_domain.'/crystalGateway/apiBroker/v1/getVersionListThis/'.$headerslink.'`;
+
+        // Obtener la referencia a la tabla
+        const tablaVersions4 = document.getElementById("tabla-versions4").getElementsByTagName("tbody")[0];
+
+        // Función para llenar la tabla con los datos del API
+        async function llenarTabla4() {
+            try {
+                // Realizar la solicitud al API
+                const response = await fetch(apiUrl4);
+                const data = await response.json();
+
+                // Iterar sobre los datos y llenar la tabla
+                for (const entry of data["crystalGateway-apiBroker"]) {
+                    for (const version in entry) {
+                        const fecha = entry[version];
+
+                        const row = tablaVersions4.insertRow();
+                        const cellVersion = row.insertCell();
+                        const cellFecha = row.insertCell();
+
+                        cellVersion.textContent = version;
+                        cellFecha.textContent = fecha;
+                    }
+                }
+            } catch (error) {
+                console.error("Error al obtener los datos del API:", error);
+            }
+        }
+
+        // Llamar a la función para llenar la tabla
+        llenarTabla4();
     </script>';?>
     </div>
     </form>
