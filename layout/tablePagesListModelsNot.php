@@ -43,7 +43,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.pages.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="conectarTransmision(this,&quot;${student.pageId}&quot;,&quot;${student.modelId}&quot;,&quot;${student.transId}&quot;);">iniciar transmisión</button></td>
+      <td><button onclick="conectarTransmision(this,&quot;${student.pageId}&quot;,&quot;${student.modelId}&quot;,&quot;${student.transId}&quot;);">Iniciar transmisión</button></td>
     
   
       <td>${student.pageName}</td>
