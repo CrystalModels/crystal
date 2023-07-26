@@ -385,7 +385,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
     
     <div class="form-group">
-    <h2>GATEWAY BROKER</h2>
+    <h2>GATEWAY CORE</h2>
     <table id="tabla-versions5">
         <thead>
             <tr>
@@ -409,7 +409,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         const apiUrl5 = `'.$sub_domain.'/crystalGateway/apiCore/v1/getVersionListThis/'.$headerslink.'`;
 
         // Obtener la referencia a la tabla
-        const tablaVersions5 = document.getElementById("tabla-versions4").getElementsByTagName("tbody")[0];
+        const tablaVersions5 = document.getElementById("tabla-versions5").getElementsByTagName("tbody")[0];
 
         // Función para llenar la tabla con los datos del API
         async function llenarTabla5() {
