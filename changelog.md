@@ -1,5 +1,10 @@
 # Changelog
 
+
+
+
+## [1.0.6.1-Beta] - 2023-07-26
+- Visualizador de versiones sistema general fix de front.
 ## [1.0.6-Beta] - 2023-07-26
 - Visualizador de versiones sistema general.
 ## [1.0.5-Beta] - 2023-07-26

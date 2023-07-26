@@ -37,6 +37,12 @@
     <div class="form-group">
     <label for="nkeyword">FRONT</label>
     </div> 
+
+    
+    <div class="form-group">
+    <label for="nkeyword">[1.0.6.1-Beta] - 2023-07-26
+- Visualizador de versiones sistema general fix de front.</label>
+    </div> 
     <div class="form-group">
     <label for="nkeyword">[1.0.6-Beta] - 2023-07-26
 - Visualizador de versiones sistema general.</label>
