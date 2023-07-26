@@ -34,54 +34,13 @@
     <div class="form-group">
     <label for="nkeyword">----</label>
     </div> 
+    
+    <div class="form-group">
     <div class="form-group">
     <label for="nkeyword">FRONT</label>
     </div> 
 
 
-
-
-    <h2>FRONT</h2>
-    <table id="tabla-versionsF">
-        <thead>
-            <tr>
-                <th>Versión</th>
-                <th>Fecha</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- La tabla se llenará dinámicamente aquí -->
-        </tbody>
-    </table>
-
-    <script>
-        const data = {
-          "crystal-front": [
-            {"1.0.0-Beta": "2023-07-25-sistema base"},
-            {"1.0.0-Beta": "2023-07-25-sistema base"},
-            {"1.0.0-Beta": "2023-07-25-sistema base"},
-            {"1.0.0-Beta": "2023-07-25-sistema base"},
-            {"2.0.0": "2023-08-10-nueva versión"}
-          ]
-        };
-
-        const tablaVersions = document.getElementById('tabla-versionsF').getElementsByTagName('tbody')[0];
-
-        // Iterar sobre el JSON y llenar la tabla
-        for (const entry of data["crystal-front"]) {
-            for (const version in entry) {
-                const fecha = entry[version];
-
-                const row = tablaVersions.insertRow();
-                const cellVersion = row.insertCell();
-                const cellFecha = row.insertCell();
-
-                cellVersion.textContent = version;
-                cellFecha.textContent = fecha;
-            }
-        }
-    </script>
-    
     <div class="form-group">
     <label for="nkeyword">[1.0.6.1-Beta] - 2023-07-26
 - Visualizador de versiones sistema general fix de front.</label>
@@ -129,7 +88,49 @@
 
 
 
-       <div class="form-group">
+    <h2>FRONT</h2>
+    <table id="tabla-versionsF">
+        <thead>
+            <tr>
+                <th>Versión</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- La tabla se llenará dinámicamente aquí -->
+        </tbody>
+    </table>
+
+    <script>
+        const data = {
+          "crystal-front": [
+            {"1.0.0-Beta": "2023-07-25-sistema base"},
+            {"1.0.0-Beta": "2023-07-25-sistema base"},
+            {"1.0.0-Beta": "2023-07-25-sistema base"},
+            {"1.0.0-Beta": "2023-07-25-sistema base"},
+            {"2.0.0": "2023-08-10-nueva versión"}
+          ]
+        };
+
+        const tablaVersions = document.getElementById('tabla-versionsF').getElementsByTagName('tbody')[0];
+
+        // Iterar sobre el JSON y llenar la tabla
+        for (const entry of data["crystal-front"]) {
+            for (const version in entry) {
+                const fecha = entry[version];
+
+                const row = tablaVersions.insertRow();
+                const cellVersion = row.insertCell();
+                const cellFecha = row.insertCell();
+
+                cellVersion.textContent = version;
+                cellFecha.textContent = fecha;
+            }
+        }
+    </script>
+    
+
+
     <h2>CORE</h2>
     <table id="tabla-versions">
         <thead>
