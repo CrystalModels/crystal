@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.4-Beta] - 2023-07-26
+- Homologación de footer.
+
 ## [1.0.3-Beta] - 2023-07-25
 - Homologación de interfaz, textos,botones.
 

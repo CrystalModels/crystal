@@ -80,10 +80,11 @@
   <input type="checkbox" id="techissue-toggle" class="option-toggle-checkbox" disabled>
   <label for="techissue-toggle" class="option-toggle-label">Problema</label>
 </div>
+<?php require_once 'footer.php';?>
 </html>
 
 
-</html>
+
 <style>
 
 .theme-toggle-left {
