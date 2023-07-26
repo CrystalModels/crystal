@@ -9,13 +9,13 @@
  
 </head>
 <body>
-  <h5>Seleccionar fecha inicial</h5>
+  <h2>Seleccionar fecha inicial</h2>
 
   <h2><input type="date" id="fechaInput"></h2>
 
   
   
-  <h5>Seleccionar fecha final</h5>
+  <h2>Seleccionar fecha final</h2>
 
   <h2><input type="date" id="fechaInput1"></h2>
 <br>
