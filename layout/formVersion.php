@@ -25,6 +25,9 @@
 h1 {
     text-align: center;
 }
+h2 {
+    text-align: center;
+}
 
 table {
     margin: 0 auto;
