@@ -249,13 +249,6 @@ function desconectarModel(button, pageid, profileid) {
 </script>
 
   <!-- Botón para imprimir la tabla en PDF -->
-  <button onclick="printPDF()">Descargar PDF</button>
-
-  <script>
-    function printPDF() {
-      // Ejecuta el método de impresión del navegador
-      window.print();
-    }
-  </script>
+  
 </body>
 </html>
