@@ -12,30 +12,55 @@
 
 
   <style>
-    body {
-        margin: 0;
-        padding: 0;
-    }
+   body {
+    margin: 0;
+    padding: 0;
+}
 
-    .form-group {
-        margin-bottom: 100px; /* Ajusta este valor para dar margen inferior al contenido */
-    }
+/* Agregar espacio inferior al contenido principal */
+#main-content {
+    padding-bottom: 100px; /* Ajusta este valor para dar margen inferior al contenido */
+}
 
-    footer {
-        background-color: #f0f0f0;
-        padding: 20px;
-        text-align: center;
-        font-size: 14px;
-        color: #555;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-    }
+h1 {
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+tfoot {
+    display: table-footer-group;
+    font-weight: bold;
+}
+
+tfoot th {
+    text-align: right;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
 </style>
 </head>
 <body>
-    
+<div id="main-content">
 <div class="form-group">
  
  
@@ -49,7 +74,7 @@
         <thead>
             <tr>
                 <th>---Versión---</th>
-                <th>---Fecha---</th>
+                <th>---Contenido---</th>
             </tr>
         </thead>
         <tbody>
@@ -457,5 +482,6 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     </div>
     </form>
     <div>
+      </div>
 </body>
 </html>
