@@ -30,5 +30,5 @@ if($_SESSION['rol']=="PHOTO"){
 
 ?>
 <?php 
- require_once 'layout/footer.php';
+ 
 ?>
