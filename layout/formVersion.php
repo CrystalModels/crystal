@@ -59,7 +59,7 @@
 
 
 
-
+       <div class="form-group">
     <h2>CORE</h2>
     <table id="tabla-versions">
         <thead>
@@ -114,5 +114,6 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         // Llamar a la función para llenar la tabla
         llenarTabla();
     </script>';?>
+    </div>
 </body>
 </html>
