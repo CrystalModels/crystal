@@ -19,7 +19,21 @@
  
     <form method="post" action="controller/controllerChangePassSession.php">
 
-   
+    <div class="form-group">
+    <label for="nkeyword">----</label>
+    </div> 
+    <div class="form-group">
+    <label for="nkeyword">----</label>
+    </div> 
+    <div class="form-group">
+    <label for="nkeyword">----</label>
+    </div> 
+    <div class="form-group">
+    <label for="nkeyword">----</label>
+    </div> 
+    <div class="form-group">
+    <label for="nkeyword">----</label>
+    </div> 
     <div class="form-group">
     <label for="nkeyword">FRONT</label>
     </div> 
