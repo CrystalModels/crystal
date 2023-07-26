@@ -52,7 +52,7 @@
 <style>
           footer {
             background-color: #f0f0f0;
-            padding: 10px;
+            padding: 5px;
             text-align: center;
             font-size: 12px;
             color: #555;
