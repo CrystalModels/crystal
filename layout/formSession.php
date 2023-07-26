@@ -52,14 +52,14 @@
 <style>
           footer {
             background-color: #f0f0f0;
-            padding: 15px;
+            padding: 10px;
             text-align: center;
             font-size: 12px;
             color: #555;
             position: fixed;
             bottom: 0;
             left: 0;
-            width: 80%;
+            width: 100%;
         }
     </style>
 <footer>
