@@ -74,8 +74,8 @@ footer {
     <table id="tabla-versionsF">
         <thead>
             <tr>
-                <th>---Versión---</th>
-                <th>---Contenido---</th>
+                <th>Versión</th>
+                <th>Contenido</th>
             </tr>
         </thead>
         <tbody>
@@ -126,8 +126,8 @@ footer {
     <table id="tabla-versions">
         <thead>
             <tr>
-                <th>---Versión---</th>
-                <th>---Contenido---</th>
+            <th>Versión</th>
+                <th>Contenido</th>
             </tr>
         </thead>
         <tbody>
@@ -189,8 +189,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     <table id="tabla-versions1">
         <thead>
             <tr>
-                <th>---Versión---</th>
-                <th>---Contenido---</th>
+            <th>Versión</th>
+                <th>Contenido</th>
             </tr>
         </thead>
         <tbody>
@@ -248,8 +248,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     <table id="tabla-versions2">
         <thead>
             <tr>
-                <th>---Versión---</th>
-                <th>---Contenido---</th>
+            <th>Versión</th>
+                <th>Contenido</th>
             </tr>
         </thead>
         <tbody>
@@ -306,8 +306,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     <table id="tabla-versions3">
         <thead>
             <tr>
-                <th>---Versión---</th>
-                <th>---Contenido---</th>
+            <th>Versión</th>
+                <th>Contenido</th>
             </tr>
         </thead>
         <tbody>
@@ -369,8 +369,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     <table id="tabla-versions4">
         <thead>
             <tr>
-                <th>---Versión---</th>
-                <th>---Contenido---</th>
+            <th>Versión</th>
+                <th>Contenido</th>
             </tr>
         </thead>
         <tbody>
@@ -430,8 +430,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     <table id="tabla-versions5">
         <thead>
             <tr>
-                <th>---Versión---</th>
-                <th>---Contenido---</th>
+            <th>Versión</th>
+                <th>Contenido</th>
             </tr>
         </thead>
         <tbody>
