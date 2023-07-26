@@ -2,11 +2,11 @@
 
 <style>
           footer {
-            background-color: #f0f0f0;
+            background-color: #b968ce;
             padding: 5px;
             text-align: center;
             font-size: 10px;
-            color: #b968ce;
+            color: #555;
             position: fixed;
             bottom: 0;
             left: 0;
