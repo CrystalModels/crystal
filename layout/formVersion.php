@@ -67,8 +67,8 @@
     <table id="tabla-versions">
         <thead>
             <tr>
-                <th>Versión</th>
-                <th>Contenido</th>
+                <th>---Versión---</th>
+                <th>---Contenido---</th>
             </tr>
         </thead>
         <tbody>
@@ -130,8 +130,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     <table id="tabla-versions1">
         <thead>
             <tr>
-                <th>Versión</th>
-                <th>Contenido</th>
+                <th>---Versión---</th>
+                <th>---Contenido---</th>
             </tr>
         </thead>
         <tbody>
