@@ -48,7 +48,7 @@
     </div> 
 
 
-       </form>
+      
 
  
 
@@ -115,5 +115,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         llenarTabla();
     </script>';?>
     </div>
+
+    </form>
 </body>
 </html>
