@@ -46,16 +46,20 @@
 </body>
 
 
->
+
 
 
 <style>
-        footer {
+          footer {
             background-color: #f0f0f0;
             padding: 20px;
             text-align: center;
             font-size: 14px;
             color: #555;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
         }
     </style>
 <footer>
