@@ -71,7 +71,7 @@
       ?></p>
             <p>&copy; 2023 Todos los derechos reservados</p>
             <p>Soporte: soporte@example.com</p>
-            <p><a class="table-button" href="room.php?roomId=${student.roomId}" target="_blank">Versiones anteriores</a></p>
+            <p><a href="room.php?roomId=${student.roomId}" target="_blank">Versiones anteriores</a></p>
         </div>
     </footer>
 </html>
