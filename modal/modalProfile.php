@@ -30,15 +30,15 @@
                         const profileDiv = document.querySelector("#myProfile-div");
                         profileDiv.innerHTML = `
                             <h3 align="center">${userData.name} ${userData.lastName}</h3>
-                            <h4 align="center">Usuario:</h4> <h5>${userData.userName}</h5>
-                            <h4 align="center">Rol:</h4> <h5>${userData.rol}</h5>
-                            <h4 align="center">Id de usuario:</h4> <h5>${userData.userId}</h5>
-                            <h4 align="center">Id de perfil:</h4> <h5>${userData.profileId}</h5>
-                            <h4 align="center">Correo empresarial:</h4> <h5>${userData.companyMail}</h5>
-                            <h4 align="center">Nombres:</h4> <h5><input type="text" id="name" name="name" placeholder="Ingresa tus nombres" value="${userData.name}"></h5>
-                            <h4 align="center">Apellidos:</h4> <h5><input type="text" id="lname" name="lname" placeholder="Ingresa tus apellidos" value="${userData.lastName}"></h5>
-                            <h4 align="center">Correo personal:</h4> <h5><input type="email" id="pmail" name="pmail" placeholder="Ingresa tu correo personal" value="${userData.personalMail}"></h5>
-                            <h4 align="center">Url de imagen:</h4> <h5><input type="url" id="urlimage" name="urlimage" placeholder="Ingresa url de imagen/perfil" value="${userData.imageUrl}"></h5>
+                            <h4 align="center">Usuario: ${userData.userName}</h4>
+                            <h4 align="center">Rol: ${userData.rol}</h4>
+                            <h4 align="center">Id de usuario: ${userData.userId}</h4>
+                            <h4 align="center">Id de perfil: ${userData.profileId}</h4>
+                            <h4 align="center">Correo empresarial: ${userData.companyMail}</h4>
+                            <h4 align="center">Nombres: <input type="text" id="name" name="name" placeholder="Ingresa tus nombres" value="${userData.name}"></h4>
+                            <h4 align="center">Apellidos: <input type="text" id="lname" name="lname" placeholder="Ingresa tus apellidos" value="${userData.lastName}"></h4>
+                            <h4 align="center">Correo personal: <input type="email" id="pmail" name="pmail" placeholder="Ingresa tu correo personal" value="${userData.personalMail}"></h4>
+                            <h4 align="center">Url de imagen: <input type="url" id="urlimage" name="urlimage" placeholder="Ingresa url de imagen/perfil" value="${userData.imageUrl}"></h4>
                            
                             <h2><img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;"></h2>
                         `;
