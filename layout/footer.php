@@ -6,7 +6,7 @@
             padding: 5px;
             text-align: center;
             font-size: 10px;
-            color: #555;
+            color: #fff;
             position: fixed;
             bottom: 0;
             left: 0;
