@@ -354,7 +354,7 @@ input[type="checkbox"]:checked + .theme-toggle-label:before {
 /* Media query para el menú desplegable en pantallas pequeñas */
 
 /* Media query para el menú desplegable en pantallas pequeñas */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .navbar {
     flex-direction: column;
     position: fixed;
