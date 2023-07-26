@@ -22,7 +22,7 @@
       ?></p>
             
             <p>Soporte: soporte@example.com</p>
-            <p><a href="room.php?roomId=${student.roomId}" target="_blank">Versiones anteriores</a></p>
+            <p><a href="#" onclick="openModalPrevVer();">Versiones anteriores</a></p>
             <p>&copy; <?php 
     echo $ano_actual = date('Y');?></p>
           </div>
