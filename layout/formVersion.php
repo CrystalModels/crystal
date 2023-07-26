@@ -14,7 +14,7 @@
 </head>
 <body>
     
-
+<div class="login-container">
  
  
     <form method="post" action="controller/controllerChangePassSession.php">
@@ -447,5 +447,6 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     </script>';?>
     </div>
     </form>
+    <div>
 </body>
 </html>
