@@ -181,6 +181,65 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         llenarTabla1();
     </script>';?>
     </div>
+
+    
+
+    <div class="form-group">
+    <h2>BROKER</h2>
+    <table id="tabla-versions2">
+        <thead>
+            <tr>
+                <th>---Versión---</th>
+                <th>---Contenido---</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- La tabla se llenará dinámicamente aquí -->
+        </tbody>
+    </table>
+    <?php
+
+require_once 'env/domain.php';
+$sub_domaincon=new model_dom;
+$sub_domain=$sub_domaincon->dom();
+$headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
+	echo '
+    <script>
+        // URL del API
+        const apiUrl2 = `'.$sub_domain.'/crystalGateway/apiBroker/v1/getVersionListBroker/'.$headerslink.'`;
+
+        // Obtener la referencia a la tabla
+        const tablaVersions2 = document.getElementById("tabla-versions2").getElementsByTagName("tbody")[0];
+
+        // Función para llenar la tabla con los datos del API
+        async function llenarTabla2() {
+            try {
+                // Realizar la solicitud al API
+                const response = await fetch(apiUrl2);
+                const data = await response.json();
+
+                // Iterar sobre los datos y llenar la tabla
+                for (const entry of data["crystalBroker-apiJoin"]) {
+                    for (const version in entry) {
+                        const fecha = entry[version];
+
+                        const row = tablaVersions2.insertRow();
+                        const cellVersion = row.insertCell();
+                        const cellFecha = row.insertCell();
+
+                        cellVersion.textContent = version;
+                        cellFecha.textContent = fecha;
+                    }
+                }
+            } catch (error) {
+                console.error("Error al obtener los datos del API:", error);
+            }
+        }
+
+        // Llamar a la función para llenar la tabla
+        llenarTabla2();
+    </script>';?>
+    </div>
     </form>
 </body>
 </html>
