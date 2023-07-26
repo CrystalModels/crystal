@@ -6,7 +6,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page</title>
+  <title>Página</title>
+  <link rel="icon" type="image/x-icon" href="public/logo.png">
+  
   <link rel="stylesheet" href="style/styleLogin.css">
 
 
