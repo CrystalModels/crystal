@@ -53,7 +53,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.sche.forEach(schedule => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td>${schedule.sTime}</td>
+      <td><h3>${schedule.sTime}</h3></td>
     
     <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.mon}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;mon&quot;)" class="table-button">Editar</button></td>
     <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.tus}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;tus&quot;)" class="table-button">Editar</button></td>

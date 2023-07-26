@@ -15,7 +15,7 @@
 
 
   <div class="login-container">
- 
+  <br><br><br>
     <?php
     session_start();
     $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
@@ -76,7 +76,7 @@ echo '
                             <h5 align="center">Correo personal: <input type="email" id="pmail" name="pmail" placeholder="Ingresa tu correo personal" value="${userData.personalMail}"></h5>
                             <h5 align="center">Url de imagen: <input type="url" id="urlimage" name="urlimage" placeholder="Ingresa url de imagen" value="${userData.imageUrl}"></h5>
                            
-                            <img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;" align="center">
+                           <h2><img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;" align="center"></h2>
                             <h5 align="center"><a href="#" onclick="openModalPutRol();" class="table-button">Cambiar rol</a><br></h5>
                             <h5 align="center"><a href="#" onclick="openModalPutUserStatus();" class="table-button">Desactivar/Ocultar</a><br></h5>
         
