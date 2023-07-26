@@ -65,7 +65,7 @@
           ]
         };
 
-        const tablaVersions = document.getElementById('tabla-versionsF').getElementsByTagName('tbody')[0];
+        const tablaVersionsF = document.getElementById('tabla-versionsF').getElementsByTagName('tbody')[0];
 
         // Iterar sobre el JSON y llenar la tabla
         for (const entry of data["crystal-front"]) {
