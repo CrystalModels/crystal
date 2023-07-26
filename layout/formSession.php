@@ -70,7 +70,7 @@
       echo $sub_domain = $sub_domaincon->versioning();
       ?></p>
             <p>&copy; <?php 
-    $ano_actual = date('Y');?></p>
+    echo $ano_actual = date('Y');?></p>
             <p>Soporte: soporte@example.com</p>
             <p><a href="room.php?roomId=${student.roomId}" target="_blank">Versiones anteriores</a></p>
         </div>
