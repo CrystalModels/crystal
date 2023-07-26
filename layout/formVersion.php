@@ -81,8 +81,8 @@
 
 
 
-    <div class="form-group">
 
+    <div class="form-group">
     <h2>FRONT</h2>
     <table id="tabla-versionsF">
         <thead>
@@ -124,12 +124,12 @@
         }
     </script>
     
+    </div>
 
 
 
 
-
-       
+       <div class="form-group">
     <h2>CORE</h2>
     <table id="tabla-versions">
         <thead>
