@@ -34,7 +34,6 @@
     <div class="form-group">
     <label for="nkeyword">----</label>
     </div> 
-    
     <div class="form-group">
     <label for="nkeyword">FRONT</label>
     </div> 
@@ -61,7 +60,7 @@
             {"1.0.0-Beta": "2023-07-25-sistema base"},
             {"1.0.0-Beta": "2023-07-25-sistema base"},
             {"1.0.0-Beta": "2023-07-25-sistema base"},
-            {"1.0.0-Beta": "2023-07-25-sistema base"},
+            
             {"2.0.0": "2023-08-10-nueva versión"}
           ]
         };
@@ -130,6 +129,7 @@
 
 
 
+       <div class="form-group">
     <h2>CORE</h2>
     <table id="tabla-versions">
         <thead>
