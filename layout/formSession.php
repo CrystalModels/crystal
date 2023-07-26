@@ -52,9 +52,9 @@
 <style>
           footer {
             background-color: #f0f0f0;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
-            font-size: 14px;
+            font-size: 12px;
             color: #555;
             position: fixed;
             bottom: 0;
@@ -66,7 +66,7 @@
         <div>
             <p>Versión del software: 1.0.0</p>
             <p>&copy; 2023 Todos los derechos reservados</p>
-            <p>Contacto de soporte: soporte@example.com</p>
+            <p>Soporte: soporte@example.com</p>
         </div>
     </footer>
 </html>
