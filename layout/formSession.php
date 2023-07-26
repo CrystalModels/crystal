@@ -64,7 +64,11 @@
     </style>
 <footer>
         <div>
-            <p>Versión del software: 1.0.0</p>
+            <p>Versión del software: <?php
+      require_once 'version/version.php';
+      $sub_domaincon = new model_ver();
+      echo $sub_domain = $sub_domaincon->versioning();
+      ?></p>
             <p>&copy; 2023 Todos los derechos reservados</p>
             <p>Soporte: soporte@example.com</p>
         </div>
