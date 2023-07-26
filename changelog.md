@@ -7,7 +7,7 @@
 - Homologación de interfaz, textos,botones.
 
 ## [1.0.2-Beta] - 2023-07-25
-- Homologación de modales, textos..
+- Homologación de modales, textos.
 
 ## [1.0.1-Beta] - 2023-07-25
 - Homologación de layouts, textos.

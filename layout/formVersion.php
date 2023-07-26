@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="public/logo.png">
-  <title>Iniciar - Crystal Models</title>
+  <title>Versiones</title>
   <link rel="stylesheet" href="style/styleSession.css">
 
 
@@ -23,7 +23,25 @@
 
 
     <div class="form-group">
-    <label for="nkeyword">Recuerda que la contraseña debe contener mínimo 8 carácteres (MAYúSCULAS, minúsculas, simbolos (*.-_?¡¿!) y números)</label>
+    <label for="nkeyword">## [1.0.4-Beta] - 2023-07-26
+- Homologación de footer.</label>
+    </div> 
+    <div class="form-group">
+    <label for="nkeyword">## [1.0.3-Beta] - 2023-07-25
+- Homologación de interfaz, textos,botones.</label>
+    </div> 
+    <div class="form-group">
+    <label for="nkeyword">## [1.0.2-Beta] - 2023-07-25
+- Homologación de modales, textos.</label>
+    </div> 
+    <div class="form-group">
+    <label for="nkeyword">## [1.0.1-Beta] - 2023-07-25
+- Homologación de layouts, textos.</label>
+    </div> 
+
+    <div class="form-group">
+    <label for="nkeyword">## [1.0.0-Beta] - 2023-07-24
+- SISTEMA BASE</label>
     </div> 
 
 
