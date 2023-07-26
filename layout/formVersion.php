@@ -19,67 +19,6 @@
  
     <form method="post" action="controller/controllerChangePassSession.php">
 
-    <div class="form-group">
-    <label for="nkeyword">----</label>
-    </div> 
-    <div class="form-group">
-    <label for="nkeyword">----</label>
-    </div> 
-    <div class="form-group">
-    <label for="nkeyword">----</label>
-    </div> 
-    <div class="form-group">
-    <label for="nkeyword">----</label>
-    </div> 
-    <div class="form-group">
-    <label for="nkeyword">----</label>
-    </div> 
-    <div class="form-group">
-    <label for="nkeyword">FRONT</label>
-    </div> 
-
-
-    <div class="form-group">
-    <label for="nkeyword">[1.0.6.1-Beta] - 2023-07-26
-- Visualizador de versiones sistema general fix de front.</label>
-    </div> 
-    <div class="form-group">
-    <label for="nkeyword">[1.0.6-Beta] - 2023-07-26
-- Visualizador de versiones sistema general.</label>
-    </div> 
-
-    <div class="form-group">
-    <label for="nkeyword">[1.0.5-Beta] - 2023-07-26
-- Visualizador de versiones.</label>
-    </div> 
-    <div class="form-group">
-    <label for="nkeyword">[1.0.4-Beta] - 2023-07-26
-- Homologación de footer.</label>
-    </div> 
-    <div class="form-group">
-    <label for="nkeyword">[1.0.3-Beta] - 2023-07-25
-- Homologación de interfaz, textos,botones.</label>
-    </div> 
-    <div class="form-group">
-    <label for="nkeyword">[1.0.2-Beta] - 2023-07-25
-- Homologación de modales, textos.</label>
-    </div> 
-    <div class="form-group">
-    <label for="nkeyword">[1.0.1-Beta] - 2023-07-25
-- Homologación de layouts, textos.</label>
-    </div> 
-
-    <div class="form-group">
-    <label for="nkeyword">[1.0.0-Beta] - 2023-07-24
-- SISTEMA BASE</label>
-    </div> 
-
-
-      
-
- 
-
-
 
 
     <div class="form-group">
@@ -99,11 +38,16 @@
     <script>
         const data = {
           "crystal-front": [
-            {"1.0.0-Beta": "2023-07-25-sistema base"},
-            {"1.0.0-Beta": "2023-07-25-sistema base"},
-            {"1.0.0-Beta": "2023-07-25-sistema base"},
+            {"1.0.6.2-Beta": "2023-07-26-Visualizador de versiones sistema general fix de front versionamiento."},
+            {"1.0.6.1-Beta": "2023-07-26-Visualizador de versiones sistema general fix de front."},
+            {"1.0.6-Beta": "2023-07-26-Visualizador de versiones sistema general."},
+            {"1.0.5-Beta": "2023-07-26-Visualizador de versiones."},
+            {"1.0.4-Beta": "2023-07-26-Homologación de footer."},
+            {"1.0.3-Beta": "2023-07-25-Homologación de interfaz, textos,botones."},
+            {"1.0.2-Beta": "2023-07-25-Homologación de modales, textos."},
+            {"1.0.1-Beta": "2023-07-25-Homologación de layouts, textos."},
             
-            {"2.0.0": "2023-08-10-nueva versión"}
+            {"1.0.0": "2023-07-24- sistema base"}
           ]
         };
 
