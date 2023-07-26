@@ -164,7 +164,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
                     for (const version in entry) {
                         const fecha = entry[version];
 
-                        const row = tablaVersions.insertRow();
+                        const row = tablaVersions1.insertRow();
                         const cellVersion = row.insertCell();
                         const cellFecha = row.insertCell();
 
