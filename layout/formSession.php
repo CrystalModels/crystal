@@ -119,6 +119,8 @@
         }
     </style>
 
+
+</body>
 <footer>
         <div>
             <p>Versión del software: 1.0.0</p>
@@ -126,7 +128,6 @@
             <p>Contacto de soporte: soporte@example.com</p>
         </div>
     </footer>
-</body>
 </html>
 
 
