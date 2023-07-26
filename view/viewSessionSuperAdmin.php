@@ -43,7 +43,7 @@ require_once 'modal/modalRemind.php';
 require_once 'modal/modalPostRemind.php';
 
 require_once 'modal/modalChangePassSession.php';
-require_once 'modal/modalPrevVer.php';
+
 
 
 ?>

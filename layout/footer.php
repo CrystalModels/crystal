@@ -27,3 +27,7 @@
     echo $ano_actual = date('Y');?></p>
           </div>
     </footer>
+
+    <?php
+    require_once 'modal/modalPrevVer.php';
+    ?>
