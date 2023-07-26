@@ -64,9 +64,7 @@ footer {
 <div class="form-group">
  
  
-    <form method="post" action="controller/controllerChangePassSession.php">
-
-
+ 
 
     <div class="form-group">
     <h2>FRONT</h2>
@@ -480,7 +478,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         llenarTabla5();
     </script>';?>
     </div>
-    </form>
+    
     <div>
       </div>
 </body>
