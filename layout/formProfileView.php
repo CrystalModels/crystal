@@ -77,8 +77,8 @@ echo '
                             <h5 align="center">Url de imagen: <input type="url" id="urlimage" name="urlimage" placeholder="Ingresa url de imagen" value="${userData.imageUrl}"></h5>
                            
                             <img src="${userData.imageUrl}" alt="profile_image" class="img-fluid mx-auto d-block rounded" style="max-height: 200px;" align="center">
-                            <h5 align="center"><button onclick="openModalPutRol();" class="table-button">Cambiar rol</button><br></h5>
-                            <h5 align="center"><button onclick="openModalPutUserStatus();" class="table-button">Desactivar/Ocultar</button><br></h5>
+                          <button onclick="openModalPutRol();" class="table-button">Cambiar rol</button><br>
+                           <button onclick="openModalPutUserStatus();" class="table-button">Desactivar/Ocultar</button><br>
         
                             `;
                     })
