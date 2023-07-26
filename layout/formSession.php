@@ -109,7 +109,15 @@
     }
   </script>
 
-
+<style>
+        footer {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
 
 <footer>
         <div>
