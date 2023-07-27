@@ -17,7 +17,7 @@
             <li class="navbar-item"><a href="#" onclick="openModalRooms();getRooms();">Rooms</a></li>
              
             <li class="navbar-item"><a href="#" onclick="openModalPages();getPages();">Páginas</a></li>
-          
+            <li class="navbar-item"><a href="#" onclick="openModalPut();getCurrency();">Cortes</a></li>
                 <li class="navbar-item"><a href="#" onclick="openModalCurrency();getCurrency();">Moneda</a></li>
             </ul>
         </li>

@@ -14,6 +14,7 @@ require_once 'modal/modalPostRooms.php';
 require_once 'modal/modalPages.php';
 require_once 'modal/modalPostPages.php';
 
+require_once 'modal/modalPutting.php';
 
 require_once 'modal/modalCurrency.php';
 require_once 'modal/modalPostCurrency.php';
