@@ -2,7 +2,58 @@
 
 
 <div class="table-container">
+
+<h2>Seleccionar fecha inicial</h2>
+
+<h2><input type="date" id="fechaInput" class="table-button"></h2>
+
+
+
+<h2>Seleccionar fecha final</h2>
+
+<h2><input type="date" id="fechaInput1" class="table-button"></h2>
+<h2><input type="text" id="putName" class="table-button"></h2>
+
+<h2><a href="#" onclick="createPut();" class="table-button">Ver historial</a></h2>
+
     
+
+
+
+
+<script>
+
+function createPut() {
+  // Obtener el valor del campo de texto correspondiente al botón
+  var fechaSeleccionada = document.getElementById("fechaInput").value;
+    var fechaSeleccionada1 = document.getElementById("fechaInput1").value;
+  //var nombre = input.value;
+
+  // Construir la URL con los parámetros de la petición GET
+  var url = 'controller/controllerAssignRoom.php?roomId=' + encodeURIComponent(roomID) + '&profileId=' + encodeURIComponent(profileid);
+
+  // Realizar la petición GET al archivo PHP
+  fetch(url)
+    .then(response => {
+      // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
+      // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
+      
+      //getSch();
+      const mensaje = sessionStorage.getItem("mensaje");
+      showAlert(mensaje);
+      
+ 
+    })
+    .catch(error => {
+      // Aquí puedes manejar los errores en caso de que la petición falle
+      console.log('Error en la petición:', error);
+    });
+}
+</script>
+
+
+
+
 <table id="puts-table" class="table">
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
