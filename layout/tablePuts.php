@@ -1,8 +1,5 @@
 
 
-
-<div class="table-container">
-
 <h2>Seleccionar fecha inicial</h2>
 
 <h2><input type="date" id="fechaInput" class="table-button"></h2>
@@ -17,9 +14,6 @@
 <h2><a href="#" onclick="createPut();" class="table-button">Ver historial</a></h2>
 
     
-
-
-
 
 <script>
 
@@ -50,6 +44,12 @@ function createPut() {
     });
 }
 </script>
+
+
+<div class="table-container">
+
+
+
 
 
 
