@@ -26,7 +26,7 @@ function createPut() {
   //var nombre = input.value;
 
   // Construir la URL con los parámetros de la petición GET
-  var url = 'controller/controllerCreatePut.php?roomId=' + encodeURIComponent(fechaSeleccionada) + '&profileId=' + encodeURIComponent(fechaSeleccionada1);
+  var url = 'controller/controllerCreatePut.php?fechaInput=' + encodeURIComponent(fechaInput) + '&fechaInput1=' + encodeURIComponent(fechaInput1)+ '&putName=' + encodeURIComponent(putname);
 
   // Realizar la petición GET al archivo PHP
   fetch(url)
@@ -37,15 +37,15 @@ function createPut() {
       //getSch();
       const mensaje = sessionStorage.getItem("mensaje");
       showAlert(mensaje);
-      
+      console.log(fechaSeleccionada);
+console.log(fechaSeleccionada1);
+console.log(putname);
  
     })
     .catch(error => {
       // Aquí puedes manejar los errores en caso de que la petición falle
       console.log('Error en la petición:', error);
-      console.log(fechaSeleccionada);
-console.log(fechaSeleccionada1);
-console.log(putname);
+    
     });
 }
 </script>
