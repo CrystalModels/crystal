@@ -1,17 +1,18 @@
 
 
-<h2>Seleccionar fecha inicial</h2>
+<h3>Seleccionar fecha inicial</h3>
 
-<h2><input type="date" id="fechaInput" class="table-button"></h2>
+<h3><input type="date" id="fechaInput" class="table-button"></h3>
 
 
 
-<h2>Seleccionar fecha final</h2>
+<h3>Seleccionar fecha final</h2>
 
-<h2><input type="date" id="fechaInput1" class="table-button"></h2>
-<h2><input type="text" id="putName" class="table-button"></h2>
+<h3><input type="date" id="fechaInput1" class="table-button"></h3>
+<h3>Nombre o referencia de corte</h2>
+<h3><input type="text" id="putName" ></h3>
 
-<h2><a href="#" onclick="createPut();" class="table-button">Ver historial</a></h2>
+<h3><a href="#" onclick="createPut();" class="table-button">Ver historial</a></h3>
 
     
 
@@ -21,11 +22,14 @@ function createPut() {
   // Obtener el valor del campo de texto correspondiente al botón
   var fechaSeleccionada = document.getElementById("fechaInput").value;
     var fechaSeleccionada1 = document.getElementById("fechaInput1").value;
+    var putname = document.getElementById("putName").value;
   //var nombre = input.value;
 
   // Construir la URL con los parámetros de la petición GET
-  var url = 'controller/controllerAssignRoom.php?roomId=' + encodeURIComponent(roomID) + '&profileId=' + encodeURIComponent(profileid);
-
+  var url = 'controller/controllerCreatePut.php?roomId=' + encodeURIComponent(roomID) + '&profileId=' + encodeURIComponent(profileid);
+console.log(fechaSeleccionada);
+console.log(fechaSeleccionada1);
+console.log(putname);
   // Realizar la petición GET al archivo PHP
   fetch(url)
     .then(response => {
