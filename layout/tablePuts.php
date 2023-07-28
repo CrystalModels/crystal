@@ -6,13 +6,13 @@
 
 
 
-<h3>Seleccionar fecha final</h2>
+<h3>Seleccionar fecha final</h3>
 
 <h3><input type="date" id="fechaInput1" class="table-button"></h3>
-<h3>Nombre o referencia de corte</h2>
-<h3><input type="text" id="putName" ></h3>
+<h3>Nombre o referencia de corte</h3>
+<h3><input type="text" id="putName"></h3>
 
-<h3><a href="#" onclick="createPut();" class="table-button">Ver historial</a></h3>
+<h3><a href="#" onclick="createPut();" class="table-button">Crear corte</a></h3>
 
     
 
