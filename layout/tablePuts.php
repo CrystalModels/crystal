@@ -26,7 +26,7 @@ function createPut() {
   //var nombre = input.value;
 
   // Construir la URL con los parámetros de la petición GET
-  var url = 'controller/controllerCreatePut.php?fechaInput=' + encodeURIComponent(fechaInput) + '&fechaInput1=' + encodeURIComponent(fechaInput1)+ '&putName=' + encodeURIComponent(putname);
+  var url = 'controller/controllerCreatePut.php?fechaInput=' + encodeURIComponent(fechaSeleccionada) + '&fechaInput1=' + encodeURIComponent(fechaSeleccionada1)+ '&putName=' + encodeURIComponent(putname);
 
   // Realizar la petición GET al archivo PHP
   fetch(url)
