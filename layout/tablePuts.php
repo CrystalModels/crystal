@@ -2,13 +2,13 @@
 
 <h3>Seleccionar fecha inicial</h3>
 
-<h3><input type="date" id="fechaInput" class="table-button"></h3>
+<h3><input type="date" id="fechaInput"></h3>
 
 
 
 <h3>Seleccionar fecha final</h3>
 
-<h3><input type="date" id="fechaInput1" class="table-button"></h3>
+<h3><input type="date" id="fechaInput1"></h3>
 <h3>Nombre o referencia de corte</h3>
 <h3><input type="text" id="putName"></h3>
 
