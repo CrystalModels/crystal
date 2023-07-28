@@ -47,7 +47,7 @@ $message=$array[1];
 $response1 = trim($response12); // Eliminar espacios en blanco alrededor de la respuesta
 
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
-  
+  echo $fechaInput;
 
     
    // header ('Location: ../room.php?roomId='.$roomId);
