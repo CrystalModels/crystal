@@ -26,7 +26,7 @@ function createPut() {
   //var nombre = input.value;
 
   // Construir la URL con los parámetros de la petición GET
-  var url = 'controller/controllerCreatePut.php?roomId=' + encodeURIComponent(roomID) + '&profileId=' + encodeURIComponent(profileid);
+  var url = 'controller/controllerCreatePut.php?roomId=' + encodeURIComponent(fechaSeleccionada) + '&profileId=' + encodeURIComponent(fechaSeleccionada1);
 console.log(fechaSeleccionada);
 console.log(fechaSeleccionada1);
 console.log(putname);
