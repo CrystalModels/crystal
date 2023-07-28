@@ -4,8 +4,6 @@
 
 <h3><input type="date" id="fechaInput"></h3>
 
-
-
 <h3>Seleccionar fecha final</h3>
 
 <h3><input type="date" id="fechaInput1"></h3>
@@ -36,10 +34,8 @@ function createPut() {
       
       //getSch();
       const mensaje = sessionStorage.getItem("mensaje");
-      showAlert(mensaje);
-      console.log(fechaSeleccionada);
-console.log(fechaSeleccionada1);
-console.log(putname);
+      //showAlert(mensaje);
+     
  
     })
     .catch(error => {
