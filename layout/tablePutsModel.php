@@ -62,7 +62,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       row.innerHTML = `
       
       <td> </td>
-      <td>${student.cuttingId}</td>
+      <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.cuttingId}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Editar</button></td>
+       
         <td>${student.startDate} ${student.startTime}</td>
         <td>${student.endDate} ${student.endTime}</td>
         <td>${student.totalTime}</td>
