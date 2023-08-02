@@ -176,6 +176,8 @@ function corteStatusPut(button, putId,value) {
       const mensaje = sessionStorage.getItem("mensaje");
       showAlert(mensaje);
       getPuts();
+      getPutsactive();
+      getPutsclose();
  
     })
     .catch(error => {

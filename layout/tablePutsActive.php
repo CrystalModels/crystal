@@ -53,8 +53,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.puts.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="corteStatusPut(this,&quot;${student.cutId}&quot;,&quot;${pid3}&quot;);getPutsactive();" class="table-button">Parar corte</button>
-      <button onclick="corteStatusPut(this,&quot;${student.cutId}&quot;,&quot;${pid2}&quot;);getPutsactive();" class="table-button">Calcular corte</button></td>
+      <td><button onclick="corteStatusPut(this,&quot;${student.cutId}&quot;,&quot;${pid3}&quot;)" class="table-button">Parar corte</button>
+      <button onclick="corteStatusPut(this,&quot;${student.cutId}&quot;,&quot;${pid2}&quot;)" class="table-button">Calcular corte</button></td>
     
   
       <td>${student.cutName}</td>
