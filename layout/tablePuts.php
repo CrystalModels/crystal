@@ -35,7 +35,7 @@ function createPut() {
       //getSch();
       const mensaje = sessionStorage.getItem("mensaje");
       //showAlert(mensaje);
-     
+      getPuts();
  
     })
     .catch(error => {
@@ -79,7 +79,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	<script>
 		
   //const my_profyle = sessionStorage.getItem("profile");
-  const subputs = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllRooms/'.$headerslink.'`;
+  const subputs = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getPutsCreatedNotStart/'.$headerslink.'`;
 
  // Función para obtener los datos del API
  async function getPuts() {';?>
@@ -97,14 +97,14 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.puts.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><a class="table-button" href="room.php?roomId=${student.roomId}" target="_blank">Abrir</a>
+      <td><a class="table-button" href="room.php?roomId=${student.cutId}" target="_blank">Abrir</a>
       </td>
   
-      <td>${student.name}</td>
-        <td>${student.comments}</td>
-        <td>${student.status}</td>
-        <td>${student.isActive}</td>
-        <td>${student.updatedAt}</td>
+      <td>${student.cutName}</td>
+        <td>${student.startDate}</td>
+        <td>${student.endDate}</td>
+        <td>${student.totalDays}</td>
+        <td>${student.totalAmount}</td>
        
 
         
@@ -127,7 +127,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
  }
  
  // Llamar a la función para obtener los datos del API
- //getPuts();
+ getPuts();
  
 
 
