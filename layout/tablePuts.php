@@ -47,13 +47,13 @@ function createPut() {
 </script>
 
 
+<h2>Cortes creados inactivos</h2>
+
 <div class="table-container">
 
 
 
 
-
-<h2>Cortes creados inactivos</h2>
 
 <table id="puts-table" class="table">
  
