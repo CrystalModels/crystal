@@ -61,6 +61,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       const row = document.createElement("tr");
       row.innerHTML = `
       
+      <td> </td>
       <td>${student.cuttingId}</td>
         <td>${student.startDate} ${student.startTime}</td>
         <td>${student.endDate} ${student.endTime}</td>
