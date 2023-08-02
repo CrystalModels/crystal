@@ -60,11 +60,11 @@ function createPut() {
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
         <th>Acciones</th>
-      <th>Room</th>
-      <th>Comentario</th>
-      <th>Estado</th>
+      <th>Corte</th>
+      <th>Inicio</th>
+      <th>Final</th>
       <th>Activo</th>
-      <th>Actualizado</th>
+      <th>Estado</th>
       
     </tr>
   </thead>
@@ -98,14 +98,14 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.puts.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><a class="table-button" href="room.php?roomId=${student.cutId}" target="_blank">Abrir</a>
-      </td>
+      <td><button onclick="asignarPagina(this,&quot;${student.pageId}&quot;,&quot;${pid}&quot;)" class="table-button">Iniciar corte</button></td>
+    
   
       <td>${student.cutName}</td>
         <td>${student.startDate}</td>
         <td>${student.endDate}</td>
-        <td>${student.totalDays}</td>
-        <td>${student.totalAmount}</td>
+        <td>${student.isActive}</td>
+        <td>${student.status}</td>
        
 
         
