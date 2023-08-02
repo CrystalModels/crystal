@@ -62,19 +62,19 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       row.innerHTML = `
       
       <td> </td>
-      <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.cuttingId}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Editar</button></td>
+      <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.cuttingId}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
        
         <td>${student.startDate} ${student.startTime}</td>
         <td>${student.endDate} ${student.endTime}</td>
         <td>${student.totalTime}</td>
 
-        <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.startAmount}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Editar</button></td>
+        <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.startAmount}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
         
-        <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.endAmount}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Editar</button></td>
+        <td>${student.endAmount}</td>
+        <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.paymentCurrency}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
         
-        <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.paymentCurrency}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Editar</button></td>
         
-        <td>${student.discountAmmount}</td>
+        <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.discountAmmount}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
         <td>${student.discountPercent}</td>
         <td>${student.comments}</td>
        
