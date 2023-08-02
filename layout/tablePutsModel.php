@@ -16,8 +16,13 @@
       <th>Corte</th>
       <th>Inicio</th>
       <th>Final</th>
-      <th>Activo</th>
-      <th>Estado</th>
+      <th>Tiempo total</th>
+      <th>Monto inicial</th>
+      <th>Monto Final</th>
+      <th>Moneda</th>
+      <th>Descuentos</th>
+      <th>% Descuento</th>
+      <th>Comentarios</th>
       
     </tr>
   </thead>
@@ -44,8 +49,6 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
   
   const subputsmodel = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getModelEarnAdd/' . $headerslink . '/" + modelid;
 
-  //const subputsmodel = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getModelEarnAdd/'.$headerslink.'`;
-
   
 	fetch(subputsmodel)
     
@@ -58,11 +61,16 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       const row = document.createElement("tr");
       row.innerHTML = `
       
-      <td>${student.cutName}</td>
-        <td>${student.startDate}</td>
-        <td>${student.endDate}</td>
-        <td>${student.isActive}</td>
-        <td>${student.status}</td>
+      <td>${student.cuttingId}</td>
+        <td>${student.startDate} ${student.startTime}</td>
+        <td>${student.endDate} ${student.endTime}</td>
+        <td>${student.totalTime}</td>
+        <td>${student.startAmount}</td>
+        <td>${student.endAmount}</td>
+        <td>${student.paymentCurrency}</td>
+        <td>${student.discountAmmount}</td>
+        <td>${student.discountPercent}</td>
+        <td>${student.comments}</td>
        
 
         
