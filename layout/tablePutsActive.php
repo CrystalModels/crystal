@@ -40,6 +40,9 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	<?php
 
   echo '
+
+  var pid2="stop";
+  var pid3="close";
 	fetch(subputsactive)
     
   .then(response => response.json())
@@ -50,7 +53,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.puts.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="asignarPagina(this,&quot;${student.cutId}&quot;)" class="table-button">Iniciar corte</button></td>
+      <td><button onclick="corteStatusPut(this,&quot;${student.cutId}&quot;,&quot;${pid3}&quot;)" class="table-button">Parar corte</button>
+      <button onclick="corteStatusPut(this,&quot;${student.cutId}&quot;,&quot;${pid2}&quot;)" class="table-button">Calcular corte</button></td>
     
   
       <td>${student.cutName}</td>
