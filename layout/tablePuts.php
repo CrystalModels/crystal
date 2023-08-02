@@ -56,6 +56,7 @@ function createPut() {
 
 
 <table id="puts-table" class="table">
+  <h2>Cortes creados inactivos</h2>
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
         <th>Acciones</th>
