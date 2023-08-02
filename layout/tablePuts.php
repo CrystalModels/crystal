@@ -98,7 +98,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.puts.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="asignarPagina(this,&quot;${student.pageId}&quot;,&quot;${pid}&quot;)" class="table-button">Iniciar corte</button></td>
+      <td><button onclick="asignarPagina(this,&quot;${student.cutId}&quot;)" class="table-button">Iniciar corte</button></td>
     
   
       <td>${student.cutName}</td>
