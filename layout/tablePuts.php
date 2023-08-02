@@ -88,6 +88,9 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	<?php
 
   echo '
+
+  var pid="del";
+  var pid1="start";
 	fetch(subputs)
     
   .then(response => response.json())
@@ -98,8 +101,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.puts.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="asignarPagina(this,&quot;${student.cutId}&quot;)" class="table-button">Iniciar corte</button>
-      <button onclick="asignarPagina(this,&quot;${student.cutId}&quot;)" class="table-button">Eliminar corte</button></td>
+      <td><button onclick="corteStatusPut(this,&quot;${student.cutId}&quot;,&quot;${pid1}&quot;)" class="table-button">Iniciar corte</button>
+      <button onclick="asignarPagina(this,&quot;${student.cutId}&quot;,&quot;${pid}&quot;)" class="table-button">Eliminar corte</button></td>
     
   
       <td>${student.cutName}</td>
@@ -144,43 +147,6 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 
 
-<?php
-
-require_once 'env/domain.php';
-$sub_domaincon = new model_dom;
-$sub_domain = $sub_domaincon->dom();
-$headerslink = $_SESSION['ranCode'] . " " . $_SESSION['key'];
-echo '
-<script>
-  // Función para obtener los datos del API
-  async function getSchUsersx() {
-   const subdominioschx = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getMyAlerts/' . $headerslink . '/'.$_SESSION['profileId'].';
-  
-    fetch(subdominioschx)
-      .then(response => response.json())
-      .then(data => {
-        const alertas = data.alerts;
-        const recordatorios = data.alerts;
-        
-        // Actualizar los enlaces del menú con los datos del API
-        const alertasLink = document.querySelector("#alertas-link");
-        const recordatoriosLink = document.querySelector("#recordatorios-link");
-        
-        alertasLink.textContent = alertas;
-        recordatoriosLink.textContent = recordatorios;
-      })
-      .catch(error => {
-        console.error("Error:", error);
-      });
-  }
-  getSchUsersx();
-</script>
-';?>
-
-
-
-
-
 
 
 </tbody>
@@ -188,3 +154,33 @@ echo '
        
 </div>
 
+
+
+<script>
+
+function corteStatusPut(button, putId,value) {
+  // Obtener el valor del campo de texto correspondiente al botón
+  var input = button.previousElementSibling;
+  //var nombre = input.value;
+
+  // Construir la URL con los parámetros de la petición GET
+  var url = 'controller/controllerPuttingStatus.php?putId=' + encodeURIComponent(putId) + '&value=' + encodeURIComponent(value);
+
+  // Realizar la petición GET al archivo PHP
+  fetch(url)
+    .then(response => {
+      // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
+      // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
+      
+      //getSch();
+      const mensaje = sessionStorage.getItem("mensaje");
+      showAlert(mensaje);
+      getPuts();
+ 
+    })
+    .catch(error => {
+      // Aquí puedes manejar los errores en caso de que la petición falle
+      console.log('Error en la petición:', error);
+    });
+}
+</script>
