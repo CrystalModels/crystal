@@ -2,11 +2,11 @@
 
 <h3>Seleccionar fecha inicial</h3>
 
-<h3><input type="date" id="fechaInput"></h3>
+<h3><input type="date" id="fechaInput22"></h3>
 
 <h3>Seleccionar fecha final</h3>
 
-<h3><input type="date" id="fechaInput1"></h3>
+<h3><input type="date" id="fechaInput11"></h3>
 <h3>Nombre o referencia de corte</h3>
 <h3><input type="text" id="putName"></h3>
 
@@ -18,8 +18,8 @@
 
 function createPut() {
   // Obtener el valor del campo de texto correspondiente al botón
-  var fechaSeleccionada = document.getElementById("fechaInput").value;
-    var fechaSeleccionada1 = document.getElementById("fechaInput1").value;
+  var fechaSeleccionada = document.getElementById("fechaInput22").value;
+    var fechaSeleccionada1 = document.getElementById("fechaInput11").value;
     var putname = document.getElementById("putName").value;
   //var nombre = input.value;
 
