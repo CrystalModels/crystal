@@ -32,7 +32,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	<script>
 		
   //const my_profyle = sessionStorage.getItem("profile");
-  const subputsclose = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getPutsCreatedClose/'.$headerslink.'`;
+  const subputsclose = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getPutsCreatedFinished/'.$headerslink.'`;
 
  // Función para obtener los datos del API
  async function getPutsclose() {';?>
