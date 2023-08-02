@@ -75,8 +75,10 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         
         
         <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.discountAmmount}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
-        <td>${student.discountPercent}</td>
-        <td>${student.comments}</td>
+        <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.discountPercent}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
+       
+        <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.comments}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
+       
        
 
         
