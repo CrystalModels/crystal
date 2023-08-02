@@ -5,8 +5,8 @@
         <div class="modal-content">
             <span class="close" onclick="closeModalPut()"><h3>X</h3></span>
             <h2>Cortes</h2>
-            <a href="#" onclick="openModalPutActive();" class="table-button">Cortes activos</a>
-            <a href="#" onclick="openModalPutClose();" class="table-button">Cortes cerrados</a>
+            <a href="#" onclick="openModalPutActive();getPutsactive();" class="table-button">Cortes activos</a>
+            <a href="#" onclick="openModalPutClose();getPutsclose();" class="table-button">Cortes cerrados</a>
       <br>
             <?php require_once 'layout/tablePuts.php' ?>
         </div>
