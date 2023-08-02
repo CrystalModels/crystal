@@ -1,20 +1,28 @@
 
 
 
+
 <div class="table-container">
-    
-<table id="models-table" class="table">
+
+
+
+
+
+<table id="putsmodel-table" class="table">
+ 
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
-    <th>Acciones</th>
-      <th>Usuario</th>
-      <th>Nombres</th>
-      <th>Apellido</th>
-      <th>Rol</th>
-      <th>Asignación</th>
+        <th>Acciones</th>
+      <th>Corte</th>
+      <th>Inicio</th>
+      <th>Final</th>
+      <th>Activo</th>
+      <th>Estado</th>
+      
     </tr>
   </thead>
             <tbody>
+
 	<?php
 
 require_once 'env/domain.php';
@@ -23,34 +31,45 @@ $sub_domain=$sub_domaincon->dom();
 $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	echo '
 	<script>
+		
   //const my_profyle = sessionStorage.getItem("profile");
-  const subdominiomodels = `'.$sub_domain.'/crystalGateway/apiCore/v1/getAllModels/'.$headerslink.'`;
-
+  
  // Función para obtener los datos del API
- async function getModels() {
-	
-	fetch(subdominiomodels)
+ async function getPutsModel(modelid) {';?>
+ 
+	<?php
+
+  echo '
+
+  
+  const subputsmodel = "' . $sub_domain . '/crystalGateway/apiIntegrations/v1/getModelEarnAdd/' . $headerslink . '/" + modelid;
+
+  //const subputsmodel = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getModelEarnAdd/'.$headerslink.'`;
+
+  
+	fetch(subputsmodel)
     
   .then(response => response.json())
   .then(data => {
-    const publicgroupsTableBody = document.querySelector("#models-table tbody");
+    const publicgroupsTableBody = document.querySelector("#putsmodel-table tbody");
     // Borramos los datos antiguos
     publicgroupsTableBody.innerHTML = "";
-    data.models.forEach(student => {
+    data.puts.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><a class="table-button" href="model.php?modelId=${student.profileId}&names=${student.name} ${student.lastName}" target="_blank">Estado actual</a>
-      </td>
-  <td>${student.userName}</td> 
-      <td>${student.name}</td>
-        <td>${student.lastName}</td>
-        <td>${student.rol}</td>
+      <td><button onclick="corteStatusPut(this,&quot;${student.cutId}&quot;,&quot;${pid1}&quot;)" class="table-button">Iniciar corte</button>
+      <button onclick="corteStatusPut(this,&quot;${student.cutId}&quot;,&quot;${pid}&quot;)" class="table-button">Eliminar corte</button></td>
+    
+  
+      <td>${student.cutName}</td>
+        <td>${student.startDate}</td>
+        <td>${student.endDate}</td>
+        <td>${student.isActive}</td>
+        <td>${student.status}</td>
+       
 
-        <td><button onclick="openModalPagesAssign();getPagesAssign(&quot;${student.profileId}&quot;);" class="table-button">Asigna página</button><button onclick="openModalRoomsModelassign();getRoomsAssign(&quot;${student.profileId}&quot;);" class="table-button">Asignar room</button></td>
-        <td><button onclick="openModalPagesModelHis();getPagesAssignModelsHis1(&quot;${student.profileId}&quot;,&quot;${student.profileId}&quot;);" class="table-button">Historial de transmisión</button>
-        <button onclick="openModalPutModel();getPutsModel(&quot;${student.profileId}&quot;);" class="table-button">Cortes</button></td>
-      
-      
+        
+       
         
       `;
 
@@ -69,19 +88,17 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
  }
  
  // Llamar a la función para obtener los datos del API
- //getModels();
+ //getPutsModel();
  
 
 
 	</script>
 
 ';?>  
-
+  
 
 
 <div id="publicgroups-container"></div>
-
-
 
 
 
@@ -94,15 +111,16 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 </div>
 
 
+
 <script>
 
-function crearCarpeta(button, modelId) {
+function corteStatusPut(button, putId,value) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
   //var nombre = input.value;
 
   // Construir la URL con los parámetros de la petición GET
-  var url = 'controller/controllerCrearPortafolio.php?profileId=' + encodeURIComponent(modelId);
+  var url = 'controller/controllerPuttingStatus.php?putId=' + encodeURIComponent(putId) + '&value=' + encodeURIComponent(value);
 
   // Realizar la petición GET al archivo PHP
   fetch(url)
@@ -113,7 +131,9 @@ function crearCarpeta(button, modelId) {
       //getSch();
       const mensaje = sessionStorage.getItem("mensaje");
       showAlert(mensaje);
-      //getRoomsam();
+      getPuts();
+      getPutsactive();
+      getPutsclose();
  
     })
     .catch(error => {
@@ -122,9 +142,3 @@ function crearCarpeta(button, modelId) {
     });
 }
 </script>
-
-
-
-
-
-
