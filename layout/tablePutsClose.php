@@ -15,6 +15,12 @@
       <th>Corte</th>
       <th>Inicio</th>
       <th>Final</th>
+      <th>Días</th>
+      <th>Ganancia</th>
+      <th>Inicio sistema</th>
+      <th>Final sistema</th>
+      <th>Días sistema</th>
+      <th>Ganancia sistema</th>
       <th>Activo</th>
       <th>Estado</th>
       
@@ -56,8 +62,17 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       <td>${student.cutName}</td>
         <td>${student.startDate}</td>
         <td>${student.endDate}</td>
+        <td>${student.totalDays}</td>
+        <td>${student.totalAmount}</td>
+        <td>${student.realStartDate}</td>
+        <td>${student.realEndDate}</td>
+        <td>${student.realTotalDays}</td>
+        
+        <td>${student.realTotalAmount}</td>
         <td>${student.isActive}</td>
         <td>${student.status}</td>
+      
+        
        
 
         
