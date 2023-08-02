@@ -3,7 +3,7 @@
     <div id="myModalPutActive" class="modal">
         <!-- Contenido del modal -->
         <div class="modal-content">
-            <span class="close" onclick="closeModalPutActive()"><h3>X</h3></span>
+            <span class="close" onclick="closeModalPutActive();getPuts();"><h3>X</h3></span>
             <h2>Cortes activos</h2>
            
       <br>

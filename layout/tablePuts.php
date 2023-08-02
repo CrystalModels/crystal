@@ -128,7 +128,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
  }
  
  // Llamar a la función para obtener los datos del API
- getPuts();
+ //getPuts();
  
 
 
