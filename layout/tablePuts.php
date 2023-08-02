@@ -90,7 +90,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
   echo '
 
   var pid="del";
-  var pid1="start";
+  var pid1="open";
 	fetch(subputs)
     
   .then(response => response.json())
