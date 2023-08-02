@@ -102,7 +102,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       const row = document.createElement("tr");
       row.innerHTML = `
       <td><button onclick="corteStatusPut(this,&quot;${student.cutId}&quot;,&quot;${pid1}&quot;)" class="table-button">Iniciar corte</button>
-      <button onclick="asignarPagina(this,&quot;${student.cutId}&quot;,&quot;${pid}&quot;)" class="table-button">Eliminar corte</button></td>
+      <button onclick="corteStatusPut(this,&quot;${student.cutId}&quot;,&quot;${pid}&quot;)" class="table-button">Eliminar corte</button></td>
     
   
       <td>${student.cutName}</td>
