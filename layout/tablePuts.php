@@ -139,7 +139,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	</script>
 
 ';?>  
-
+  
 
 
 <div id="publicgroups-container"></div>
