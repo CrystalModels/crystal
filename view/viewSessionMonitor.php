@@ -19,6 +19,10 @@ require_once 'modal/modalRoomsAssignModelf.php';
 require_once 'modal/modalModelsAssignRoom.php';
 require_once 'modal/modalRoomsListAssignation.php';
 
+
+require_once 'modal/modalPuttingModel.php';
+
+
 require_once 'modal/modalMySchedule.php';
 require_once 'modal/modalUsersSchedule.php';
 require_once 'modal/modalUsersScheduleEdit.php';

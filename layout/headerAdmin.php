@@ -13,7 +13,7 @@
             <li class="navbar-item"><a href="#" onclick="openModalRooms();getRooms();">Rooms</a></li>
              
             <li class="navbar-item"><a href="#" onclick="openModalPages();getPages();">Páginas</a></li>
-          
+            <li class="navbar-item"><a href="#" onclick="openModalPut();getPuts();">Cortes</a></li>
                 <li class="navbar-item"><a href="#" onclick="openModalCurrency();getCurrency();">Moneda</a></li>
             </ul>
         </li>
@@ -25,6 +25,8 @@
             <li class="navbar-item"><a href="#" onclick="openModalMonitors();getMonitors();">Monitores</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalPhotograph();getPhotographs();">Fotógrafos</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalRoomsam();getRoomsam();getRoomsamf();">Rooms</a></li>
+            <li class="navbar-item"><a href="#" onclick="openModalModelsrev();getModelsrev();">Revisión</a></li>
+           
             </ul>
         </li>
      
