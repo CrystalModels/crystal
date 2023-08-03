@@ -61,7 +61,7 @@ var modeliid=modelid;
       const row = document.createElement("tr");
       row.innerHTML = `
       
-      <td> </td>
+      <td><button onclick="ajusteRev(this,&quot;${student.earnId}&quot;,&quot;rev&quot;,&quot;${student.modelId}&quot;)" class="table-button">Revisión</button></td>
       <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.cuttingId}"> <button onclick="ajuste(this,&quot;${student.earnId}&quot;,&quot;cuttingId&quot;,&quot;${student.modelId}&quot;)" class="table-button">Ajustar</button></td>
        
         <td>${student.startDate} ${student.startTime}</td>
@@ -135,6 +135,35 @@ function ajuste(button, id, value,modeliid) {
 
   // Construir la URL con los parámetros de la petición GET
   var url = 'controller/controllerPutsModel.php?earnId=' + encodeURIComponent(id) + '&value=' + encodeURIComponent(value) + '&comment=' + encodeURIComponent(nombre);
+
+  // Realizar la petición GET al archivo PHP
+  fetch(url)
+    .then(response => {
+      // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
+      // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
+      
+      //getSch();
+      const mensaje = sessionStorage.getItem("mensaje");
+      getPutsModel(modeliid);
+      
+ 
+    })
+    .catch(error => {
+      // Aquí puedes manejar los errores en caso de que la petición falle
+      console.log('Error en la petición:', error);
+    });
+}
+
+
+
+function ajusteRev(button, id, value,modeliid) {
+  // Obtener el valor del campo de texto correspondiente al botón
+  var input = button.previousElementSibling;
+  //var nombre = input.value;
+  var valor = value;
+
+  // Construir la URL con los parámetros de la petición GET
+  var url = 'controller/controllerPutsModelRev.php?earnId=' + encodeURIComponent(id) + '&value=' + encodeURIComponent(value);
 
   // Realizar la petición GET al archivo PHP
   fetch(url)
