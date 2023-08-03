@@ -1,7 +1,9 @@
 # Changelog
 
 
-
+## [1.3.0-Beta] - 2023-08-03
+- implementación de calculos por transmisión
+- implementación de cortes
 ## [1.2.0-Beta] - 2023-07-28
 - creador de cortes
 
