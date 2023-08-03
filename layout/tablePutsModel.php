@@ -62,22 +62,22 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       row.innerHTML = `
       
       <td> </td>
-      <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.cuttingId}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
+      <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.cuttingId}"> <button onclick="editar(this,&quot;${student.earnId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
        
         <td>${student.startDate} ${student.startTime}</td>
         <td>${student.endDate} ${student.endTime}</td>
         <td>${student.totalTime}</td>
 
-        <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.startAmount}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
+        <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.startAmount}"> <button onclick="editar(this,&quot;${student.earnId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
         
         <td>${student.endAmount}</td>
-        <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.paymentCurrency}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
+        <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.paymentCurrency}"> <button onclick="editar(this,&quot;${student.earnId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
         
         
-        <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.discountAmmount}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
-        <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.discountPercent}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
+        <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.discountAmmount}"> <button onclick="editar(this,&quot;${student.earnId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
+        <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.discountPercent}"> <button onclick="editar(this,&quot;${student.earnId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
        
-        <td><input type="text" class="input-schedule" id="${student.cuttingId}" value="${student.comments}"> <button onclick="editar(this,&quot;${student.schId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
+        <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.comments}"> <button onclick="editar(this,&quot;${student.earnId}&quot;,&quot;mon&quot;)" class="table-button">Ajustar</button></td>
        
        
 
@@ -127,13 +127,13 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 <script>
 
-function corteStatusPut(button, putId,value) {
+function editar(button, id, day) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
-  //var nombre = input.value;
+  var nombre = input.value;
 
   // Construir la URL con los parámetros de la petición GET
-  var url = 'controller/controllerPuttingStatus.php?putId=' + encodeURIComponent(putId) + '&value=' + encodeURIComponent(value);
+  var url = 'controller/controllerEditMySchedule.php?scheduleId=' + encodeURIComponent(id) + '&day=' + encodeURIComponent(day) + '&value=' + encodeURIComponent(nombre);
 
   // Realizar la petición GET al archivo PHP
   fetch(url)
@@ -141,12 +141,10 @@ function corteStatusPut(button, putId,value) {
       // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
-      //getSch();
+      getSch();
       const mensaje = sessionStorage.getItem("mensaje");
       showAlert(mensaje);
-      getPuts();
-      getPutsactive();
-      getPutsclose();
+      
  
     })
     .catch(error => {
@@ -155,3 +153,4 @@ function corteStatusPut(button, putId,value) {
     });
 }
 </script>
+
