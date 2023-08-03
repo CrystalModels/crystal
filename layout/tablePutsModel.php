@@ -62,7 +62,7 @@ var modeliid=modelid;
       row.innerHTML = `
       
       <td> </td>
-      <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.cuttingId}"> <button onclick="ajuste(this,&quot;${student.earnId}&quot;,&quot;roomId&quot;,&quot;${student.modelId}&quot;)" class="table-button">Ajustar</button></td>
+      <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.cuttingId}"> <button onclick="ajuste(this,&quot;${student.earnId}&quot;,&quot;cuttingId&quot;,&quot;${student.modelId}&quot;)" class="table-button">Ajustar</button></td>
        
         <td>${student.startDate} ${student.startTime}</td>
         <td>${student.endDate} ${student.endTime}</td>
