@@ -45,7 +45,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
         <td>
         <button onclick="openModalPutModelVer();getPutsModelver(&quot;${student.profileId}&quot;);" class="table-button">Cortes</button>
-        <button onclick="setitems(&quot;${student.profileId}&quot;);" class="table-button">Total</button></td>
+        <button onclick="setItems(&quot;${student.profileId}&quot;);" class="table-button">Total</button></td>
       
       
         
