@@ -13,7 +13,7 @@ $url = $sub_domain . "/crystalGateway/apiIntegrations/v1/adjustModelEarn/".$_SES
 // Definir los datos a enviar en la solicitud POST
 $data = array(
     
-    'value' => $value,
+    'value' => 'rev',
     'earnId' => $earnId,
     'comment' => ''
     
