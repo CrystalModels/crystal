@@ -62,22 +62,22 @@ var modeliid=modelid;
       row.innerHTML = `
       
       <td> </td>
-      <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.cuttingId}"> <button onclick="ajuste(this,&quot;${student.earnId}&quot;,&quot;roomId&quot;)" class="table-button">Ajustar</button></td>
+      <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.cuttingId}"> <button onclick="ajuste(this,&quot;${student.earnId}&quot;,&quot;roomId&quot;,&quot;${student.modelId}&quot;)" class="table-button">Ajustar</button></td>
        
         <td>${student.startDate} ${student.startTime}</td>
         <td>${student.endDate} ${student.endTime}</td>
         <td>${student.totalTime}</td>
 
-        <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.startAmount}"> <button onclick="ajuste(this,&quot;${student.earnId}&quot;,&quot;startAmmount&quot;)" class="table-button">Ajustar</button></td>
+        <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.startAmount}"> <button onclick="ajuste(this,&quot;${student.earnId}&quot;,&quot;startAmmount&quot;,&quot;${student.modelId}&quot;)" class="table-button">Ajustar</button></td>
         
         <td>${student.endAmount}</td>
-        <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.paymentCurrency}"> <button onclick="ajuste(this,&quot;${student.earnId}&quot;,&quot;paymentCurrency&quot;)" class="table-button">Ajustar</button></td>
+        <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.paymentCurrency}"> <button onclick="ajuste(this,&quot;${student.earnId}&quot;,&quot;paymentCurrency&quot;,&quot;${student.modelId}&quot;)" class="table-button">Ajustar</button></td>
         
         
-        <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.discountAmmount}"> <button onclick="ajuste(this,&quot;${student.earnId}&quot;,&quot;discountAmmount&quot;)" class="table-button">Ajustar</button></td>
-        <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.discountPercent}"> <button onclick="ajuste(this,&quot;${student.earnId}&quot;,&quot;discountPercent&quot;)" class="table-button">Ajustar</button></td>
+        <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.discountAmmount}"> <button onclick="ajuste(this,&quot;${student.earnId}&quot;,&quot;discountAmmount&quot;,&quot;${student.modelId}&quot;)" class="table-button">Ajustar</button></td>
+        <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.discountPercent}"> <button onclick="ajuste(this,&quot;${student.earnId}&quot;,&quot;discountPercent&quot;,&quot;${student.modelId}&quot;)" class="table-button">Ajustar</button></td>
        
-        <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.comments}"> <button onclick="ajuste(this,&quot;${student.earnId}&quot;,&quot;comments&quot;)" class="table-button">Ajustar</button></td>
+        <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.comments}"> <button onclick="ajuste(this,&quot;${student.earnId}&quot;,&quot;comments&quot;,&quot;${student.modelId}&quot;)" class="table-button">Ajustar</button></td>
        
        
 
@@ -127,7 +127,7 @@ var modeliid=modelid;
 
 <script>
 
-function ajuste(button, id, value) {
+function ajuste(button, id, value,modeliid) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
   var nombre = input.value;
