@@ -109,6 +109,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       const row = document.createElement("tr");
       row.innerHTML = `
       <td><button onclick="conectarTransmisionModel(this,&quot;${student.pageId}&quot;,&quot;${student.modelId}&quot;,&quot;${student.transId}&quot;);getPagesAssignModelsNot1();" class="table-button">Iniciar transmisión</button></td>
+      <td><button onclick="desconectarTransmision(this,&quot;${student.pageId}&quot;,&quot;${student.modelId}&quot;,&quot;${student.transId}&quot;);" class="table-button">Desconectar transmisión</button></td>
     
   
       <td>${student.pageName}</td>
