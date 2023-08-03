@@ -145,7 +145,7 @@ function ajuste1(button, id, value,modeliid) {
       
       //getSch();
       const mensaje = sessionStorage.getItem("mensaje");
-      getPutsModel(modeliid);
+      getPutsModelver(modeliid);
       
  
     })
@@ -174,7 +174,7 @@ function ajusteRev1(button, id, value,modeliid) {
       
       //getSch();
       const mensaje = sessionStorage.getItem("mensaje");
-      getPutsModel(modeliid);
+      getPutsModelver(modeliid);
       
  
     })
