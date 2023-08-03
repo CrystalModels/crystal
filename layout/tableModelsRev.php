@@ -44,7 +44,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         <td>${student.lastName}</td>
 
         <td>
-        <button onclick="openModalPutModelVer();getPutsModelver(&quot;${student.profileId}&quot;);" class="table-button">Cortes</button></td>
+        <button onclick="openModalPutModelVer();getPutsModelver(&quot;${student.profileId}&quot;);" class="table-button">Cortes</button>
+        <button onclick="openModalPutModelTotal();setitems(&quot;${student.profileId}&quot;);" class="table-button">Total</button></td>
       
       
         
@@ -146,6 +147,19 @@ function ajusteRev(button, id, value,modeliid) {
       // Aquí puedes manejar los errores en caso de que la petición falle
       console.log('Error en la petición:', error);
     });
+}
+
+
+
+
+function setItems(id) {
+  // Obtener el valor del campo de texto correspondiente al botón
+ 
+  // Realizar la petición GET al archivo PHP
+  
+     var currentModel=sessionStorage.setItem("currentModel", id);
+      
+ 
 }
 </script>
 
