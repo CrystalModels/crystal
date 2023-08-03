@@ -44,8 +44,9 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         <td>${student.lastName}</td>
 
         <td>
-        <button onclick="openModalPutModelVer();getPutsModelver(&quot;${student.profileId}&quot;);" class="table-button">Cortes</button>
-        <button onclick="setItems(&quot;${student.profileId}&quot;);" class="table-button">Total</button></td>
+        <button onclick="openModalPutModelVer();getPutsModelver(&quot;${student.profileId}&quot;);" class="table-button">Validar</button>
+        <button onclick="setItems(&quot;${student.profileId}&quot;);openModalPutModelTotal();" class="table-button">Total</button>
+        <button onclick="setItems(&quot;${student.profileId}&quot;);openModalPutModelTotalList();" class="table-button">Listado</button></td>
       
       
         
@@ -158,7 +159,7 @@ function setItems(id) {
   // Realizar la petición GET al archivo PHP
   
      sessionStorage.setItem("currentModel", id);
-     openModalPutModelTotal();
+     
  
 }
 </script>
