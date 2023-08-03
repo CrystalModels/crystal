@@ -32,7 +32,7 @@ echo '<script>const subdominioCurrencyList = "'.$sub_domain.'/crystalGateway/api
 ?>
  <div class="form-group">
  <label for="currency">Abreviación</label>
-<select id="repos-select2" class="form-group" name="currency"></select>
+<select id="repos-select2" class="form-group table-button" name="currency"></select>
 
 <?php
 echo '
@@ -78,7 +78,7 @@ echo '
  
  <div class="form-group">
  <label for="comparative">Comparativa de Cambio</label>
-<select id="repos-select3" class="form-group" name="comparative"></select>
+<select id="repos-select3" class="form-group table-button" name="comparative"></select>
 
 <?php
 echo '
@@ -120,7 +120,7 @@ echo '
 
  <div class="form-group">
  <label for="symbol">Simbolo de moneda</label>
-<select id="repos-select4" class="form-group" name="symbol"></select>
+<select id="repos-select4" class="form-group table-button" name="symbol"></select>
 
 <?php
 echo '

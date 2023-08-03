@@ -18,7 +18,7 @@ echo '<form method="post" action="controller/controllerPutCurrencyStatusBySuperA
 ?>
  <div class="form-group">
  <label for="status">Estado</label>
-<select id="repos-select" class="form-group" name="status">
+<select id="repos-select" class="form-group table-button" name="status">
 
 <option value="act">Activar</option>
   <option value="dec">Desactivar</option>

@@ -30,7 +30,7 @@ echo '<script>const subdominioRolesAdmin = "'.$sub_domain.'/crystalGateway/apiCo
 ?>
  <div class="form-group">
  <label for="rol">Rol</label>
-<select id="repos-select1" class="form-group" name="rol"></select>
+<select id="repos-select1" class="form-group table-button" name="rol"></select>
 
 <?php
 echo '

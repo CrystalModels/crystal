@@ -27,7 +27,7 @@ echo '<script>const subdominioCurrencyList = "'.$sub_domain.'/crystalGateway/api
 ?>
  <div class="form-group">
  <label for="currency">Moneda</label>
-<select id="repos-select2" class="form-group" name="currency"></select>
+<select id="repos-select2" class="form-group table-button" name="currency"></select>
 
 <?php
 echo '
