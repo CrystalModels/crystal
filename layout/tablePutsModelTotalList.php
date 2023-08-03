@@ -9,7 +9,7 @@
  
 </head>
 <body>
-  <h2>Seleccionar fecha inicial</h2>
+<h2>Escribe nombre de corte</h2>
 
   <h2><input type="text" id="fechaInput121" class="table-button"></h2>
 
