@@ -29,6 +29,7 @@
             <li class="navbar-item"><a href="#" onclick="openModalMonitors();getMonitors();">Monitores</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalPhotograph();getPhotographs();">Fotógrafos</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalRoomsam();getRoomsam();getRoomsamf();">Rooms</a></li>
+            <li class="navbar-item"><a href="#" onclick="openModalModelsrev();getModelsrev();">Revisión</a></li>
            
             </ul>
         </li>
