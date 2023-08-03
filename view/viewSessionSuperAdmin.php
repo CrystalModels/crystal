@@ -14,6 +14,9 @@ require_once 'modal/modalPostRooms.php';
 require_once 'modal/modalPages.php';
 require_once 'modal/modalPostPages.php';
 
+require_once 'modal/modalPutting.php';
+require_once 'modal/modalPuttingActive.php';
+require_once 'modal/modalPuttingClose.php';
 
 require_once 'modal/modalCurrency.php';
 require_once 'modal/modalPostCurrency.php';
@@ -28,6 +31,14 @@ require_once 'modal/modalRoomsAssignModel.php';
 require_once 'modal/modalRoomsAssignModelf.php';
 require_once 'modal/modalModelsAssignRoom.php';
 require_once 'modal/modalRoomsListAssignation.php';
+
+
+require_once 'modal/modalPuttingModel.php';
+
+require_once 'modal/modalModelsRev.php';
+require_once 'modal/modalPuttingModelVer.php';
+require_once 'modal/modalPuttingModelTotal.php';
+require_once 'modal/modalPuttingModelTotalList.php';
 
 require_once 'modal/modalMySchedule.php';
 require_once 'modal/modalUsersSchedule.php';
