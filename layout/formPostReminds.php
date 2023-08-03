@@ -25,7 +25,7 @@
       
  <div class="form-group">
  <label for="rtype">Tipo de Recordatorio</label>
-<select id="repos-select" class="form-group" name="rtype">
+<select id="repos-select" class="form-group table-button" name="rtype">
 
 <option value="personal">Personal</option>
   <option value="general">General</option>
