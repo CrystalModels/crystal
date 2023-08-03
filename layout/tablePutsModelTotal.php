@@ -11,7 +11,7 @@
 <body>
   <h2>Seleccionar fecha inicial</h2>
 
-  <h2><input type="text" id="fechaInput" class="table-button"></h2>
+  <h2><input type="text" id="fechaInput12" class="table-button"></h2>
 
   
   
@@ -51,7 +51,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 		
  
   function openModalPutModelTotal1() {
-    var fechaSeleccionada = document.getElementById("fechaInput").value;
+    var fechaSeleccionada = document.getElementById("fechaInput12").value;
     // Realizar las acciones deseadas con la fecha seleccionada
     //getPagesAssignModelsHis(fechaSeleccionada,fechaSeleccionada1);
     
