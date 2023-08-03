@@ -11,7 +11,7 @@
 <body>
   <h2>Seleccionar fecha inicial</h2>
 
-  <h2><input type="date" id="fechaInput" class="table-button"></h2>
+  <h2><input type="text" id="fechaInput" class="table-button"></h2>
 
   
   
@@ -74,16 +74,17 @@ var modelidnow = sessionStorage.getItem("currentModel");
     const publicgroupsTableBody = document.querySelector("#pagesassignmodelhis11-table tbody");
     // Borramos los datos antiguos
     publicgroupsTableBody.innerHTML = "";
-    data.pages.forEach(student => {
+    data.earns.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
      
-      <td>${student.pageName}</td>
-      <td>${student.urlPage}</td>
-      <td>${student.startDate} ${student.startTime}</td>
-      <td>${student.endDate} ${student.endTime}</td>
-      <td>${student.totalTime}</td>
-      <td>${student.isActive}</td>
+      <td>${student.cuttingId}</td>
+      <td>${student.modelId}</td>
+      <td>${student.start}</td>
+      <td>${student.end}</td>
+      <td>${student.discount}</td>
+      <td>${student.percent}</td>
+      <td>${student.time}</td>
         
        
         
