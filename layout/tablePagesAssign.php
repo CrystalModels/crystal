@@ -194,7 +194,7 @@ sessionStorage.setItem("error", nuevoError);
 
       mostrarNotificacion(nuevoMensaje, re);
      
-console.log(res);
+
     })
     .catch(error => {
       console.error('Error al obtener las variables PHP:', error);
