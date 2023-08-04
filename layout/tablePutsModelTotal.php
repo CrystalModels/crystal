@@ -142,29 +142,3 @@ var modelidnow = sessionStorage.getItem("currentModel");
   
 </body>
 </html>
-<script>
-function enviarCorreo(button,modeliid,value) {
- 
-
-  // Construir la URL con los parámetros de la petición GET
-  var url = 'controller/controllerSendMessageCut.php?modelId=' + encodeURIComponent(modeliid) + '&value=' + encodeURIComponent(value);
-
-  // Realizar la petición GET al archivo PHP
-  fetch(url)
-    .then(response => {
-      // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
-      // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
-      
-      obtenerVariablesPHP();
-       getPutsModelver(modeliid);
-      
- 
-    })
-    .catch(error => {
-      // Aquí puedes manejar los errores en caso de que la petición falle
-      console.log('Error en la petición:', error);
-    });
-}
-
-
-</script>
