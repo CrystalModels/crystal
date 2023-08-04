@@ -95,7 +95,7 @@ function asignarRoomModel(button, modelId, roomId) {
       
       //getSch();
       obtenerVariablesPHP();
-      
+      enviarCorreo(modelId,'Room '+roomId+' asignado.','Asignación');
  
     })
     .catch(error => {
