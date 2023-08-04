@@ -92,8 +92,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
        
 </div>
 
-<div class="notification" id="notification">
-        <p id="notificationText"></p>
+<div class="notification" id="notification1">
+        <p id="notificationText1"></p>
     </div>
 
 <script>
@@ -113,7 +113,7 @@ function asignarRoom(button, roomID, profileid) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      obtenerVariablesPHP();
+      obtenerVariablesPHP1();
       
  
     })
@@ -133,12 +133,12 @@ function asignarRoom(button, roomID, profileid) {
 
 
 // Función para mostrar la notificación
-function mostrarNotificacion(mensaje, tipo) {
-    const notificacion = document.getElementById('notification');
-    const notificacionText = document.getElementById('notificationText');
+function mostrarNotificacion1(mensaje, tipo) {
+    const notificacion1 = document.getElementById('notification1');
+    const notificacionText1 = document.getElementById('notificationText1');
 
-    notificacionText.textContent = mensaje;
-    notificacion.classList.remove('error'); // Remover clase de error (en caso de que esté presente)
+    notificacionText1.textContent = mensaje;
+    notificacion1.classList.remove('error'); // Remover clase de error (en caso de que esté presente)
 
     if (tipo === 'error') {
         notificacion.classList.add('error');
@@ -163,7 +163,7 @@ function mostrarNotificacion(mensaje, tipo) {
 
 
 
-function obtenerVariablesPHP() {
+function obtenerVariablesPHP1() {
   fetch('layout/getPHPVariables.php')
     .then(response => response.json())
     .then(data => {
@@ -186,7 +186,7 @@ function obtenerVariablesPHP() {
         
       }
 
-      mostrarNotificacion(nuevoMensaje, re);
+      mostrarNotificacion1(nuevoMensaje, re);
      
 
     })
