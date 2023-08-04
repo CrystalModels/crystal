@@ -113,6 +113,8 @@ function asignarPagina(button, pageid, profileid) {
       
       //getSch();
       const mensaje = sessionStorage.getItem("mensaje");
+      var res='<?php $_SESSION['mensaje'];?>'
+      sessionStorage.setItem('mensaje',res);
       showAlert(mensaje);
       
  
