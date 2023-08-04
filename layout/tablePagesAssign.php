@@ -42,7 +42,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.pages.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="asignarPagina(this,&quot;${student.pageId}&quot;,&quot;${pid}&quot;)" class="table-button">Asignar página</button></td>
+      <td><button onclick="asignarPagina(this,&quot;${student.pageId}&quot;,&quot;${pid}&quot;,&quot;${student.name}&quot;)" class="table-button">Asignar página</button></td>
     
   
       <td>${student.name}</td>
@@ -99,7 +99,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 <script>
 
-function asignarPagina(button, pageid, profileid) {
+function asignarPagina(button, pageid, profileid,pname) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
   //var nombre = input.value;
@@ -116,7 +116,7 @@ function asignarPagina(button, pageid, profileid) {
       //getSch();
       obtenerVariablesPHP();
       
-      
+      enviarCorreo(profileid,'Página '+pname+' asignada.','Asignación de página.');
       
       
  
