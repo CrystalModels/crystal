@@ -147,9 +147,7 @@ function asignarPagina(button, pageid, profileid) {
       
       mostrarNotificacion(res, re);
 
-      sessionStorage.setItem('mensaje', '');
-      var res = "";
-      var er1="";
+      
  
     })
     .catch(error => {
