@@ -237,11 +237,7 @@ function desconectarModel(button, pageid, profileid) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      const mensaje = sessionStorage.getItem("mensaje");
-      showAlert(mensaje);
-      
- console.log(profileid);
- console.log(pageid);
+      obtenerVariablesPHP();
     })
     .catch(error => {
       // Aquí puedes manejar los errores en caso de que la petición falle

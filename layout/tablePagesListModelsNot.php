@@ -179,8 +179,7 @@ function conectarTransmision(button, pageid, profileid,transid) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      const mensaje = sessionStorage.getItem("mensaje");
-      showAlert(mensaje);
+      obtenerVariablesPHP();
       getPagesAssignModelsNot();
       
     })
@@ -207,8 +206,7 @@ function conectarTransmisionModel(button, pageid, profileid,transid) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      const mensaje = sessionStorage.getItem("mensaje");
-      showAlert(mensaje);
+      obtenerVariablesPHP();
       getPagesAssignModelsNot1();
       
     })

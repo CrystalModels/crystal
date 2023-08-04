@@ -109,8 +109,7 @@ function crearCarpeta(button, modelId) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      const mensaje = sessionStorage.getItem("mensaje");
-      showAlert(mensaje);
+      obtenerVariablesPHP();
       //getRoomsam();
  
     })
