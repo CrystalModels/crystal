@@ -111,7 +111,9 @@ function asignarRoom(button, roomID, profileid) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      const mensaje = sessionStorage.getItem("mensaje");
+      var res='<?php $_SESSION['mensaje'];?>'
+      sessionStorage.setItem('mensaje',res);
+      var mensaje = sessionStorage.getItem("mensaje");
       showAlert(mensaje);
       
  
