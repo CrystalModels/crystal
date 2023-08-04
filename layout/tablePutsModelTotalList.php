@@ -36,6 +36,7 @@
       <th>%descuento</th>
       <th>Tiempo promedio</th>
       
+      
     </tr>
   </thead>
             <tbody>

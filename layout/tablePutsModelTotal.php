@@ -35,6 +35,7 @@
 
       <th>%descuento</th>
       <th>Tiempo promedio</th>
+      <th>Acciones</th>
       
     </tr>
   </thead>
@@ -86,7 +87,8 @@ var modelidnow = sessionStorage.getItem("currentModel");
       <td>${student.discount}</td>
       <td>${student.percent}</td>
       <td>${student.time}</td>
-        
+      <td><button onclick="enviarCorreo(this,&quot;${student.modelId}&quot;,&quot;El corte ${student.cuttingId} fue cerrado con un valor inicial de ${student.start} descuentos de ${student.discount} ${student.percent} para un total de ${student.end} por recibir, un promedio de tiempo trabajado ${student.time}&quot;)" class="table-button">Enviar correo</button></td>
+       
        
         
       `;
@@ -140,3 +142,29 @@ var modelidnow = sessionStorage.getItem("currentModel");
   
 </body>
 </html>
+<script>
+function enviarCorreo(button,modeliid,value) {
+ 
+
+  // Construir la URL con los parámetros de la petición GET
+  var url = 'controller/controllerSendMessageCut.php?modelId=' + encodeURIComponent(modeliid) + '&value=' + encodeURIComponent(value);
+
+  // Realizar la petición GET al archivo PHP
+  fetch(url)
+    .then(response => {
+      // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
+      // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
+      
+      obtenerVariablesPHP();
+       getPutsModelver(modeliid);
+      
+ 
+    })
+    .catch(error => {
+      // Aquí puedes manejar los errores en caso de que la petición falle
+      console.log('Error en la petición:', error);
+    });
+}
+
+
+</script>
