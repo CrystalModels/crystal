@@ -123,15 +123,15 @@ function asignarPagina(button, pageid, profileid) {
       if(er1==="true"){
        
         var re="success";
-        mostrarNotificacion(res, re);
+        
       }
       if(er1==="false"){
         
         var re="error";
-        mostrarNotificacion(res, re);
+        
       }
 
-      
+      mostrarNotificacion(res, re);
      
 
       
