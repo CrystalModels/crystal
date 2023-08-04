@@ -92,8 +92,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
        
 </div>
 
-<div class="notification" id="notification1">
-        <p id="notificationText1"></p>
+<div class="notification" id="notification">
+        <p id="notificationText"></p>
     </div>
 
 <script>
@@ -113,7 +113,7 @@ function asignarRoom(button, roomID, profileid) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      obtenerVariablesPHP1();
+      obtenerVariablesPHP();
       
  
     })
@@ -142,39 +142,6 @@ function asignarRoom(button, roomID, profileid) {
 
 
 
-
-
-function obtenerVariablesPHP1() {
-  fetch('layout/getPHPVariables.php')
-    .then(response => response.json())
-    .then(data => {
-      // Aquí obtienes los nuevos valores de las variables PHP en el objeto "data"
-      // Puedes acceder a los valores como data.mensaje y data.error
-      // Por ejemplo:
-      var nuevoMensaje = data.mensaje;
-      var nuevoError = data.error;
-
-    
-
-      if(nuevoError==="true"){
-        
-        var re="success";
-        
-      }
-      if(nuevoError==="false"){
-      
-        var re="error";
-        
-      }
-
-      mostrarNotificacion(nuevoMensaje, re);
-     
-
-    })
-    .catch(error => {
-      console.error('Error al obtener las variables PHP:', error);
-    });
-}
 </script>
 
 
