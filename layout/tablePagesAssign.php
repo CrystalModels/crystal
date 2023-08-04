@@ -106,7 +106,7 @@ function asignarPagina(button, pageid, profileid) {
 
   // Construir la URL con los parámetros de la petición GET
   var url = 'controller/controllerAssignPage.php?pageId=' + encodeURIComponent(pageid) + '&profileId=' + encodeURIComponent(profileid);
-
+  obtenerVariablesPHP();
   // Realizar la petición GET al archivo PHP
   fetch(url)
     .then(response => {
@@ -114,19 +114,20 @@ function asignarPagina(button, pageid, profileid) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      obtenerVariablesPHP();
       
       
-      var res = sessionStorage.getItem(mensaje);
-      var er1=sessionStorage.getItem(error);
+      
+      
      
       if(er1==="true"){
-       
+        var res = sessionStorage.getItem(mensaje);
+      var er1=sessionStorage.getItem(error);
         var re="success";
         
       }
       if(er1==="false"){
-        
+        var res = sessionStorage.getItem(mensaje);
+      var er1=sessionStorage.getItem(error);
         var re="error";
         
       }
