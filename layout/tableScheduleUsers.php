@@ -233,8 +233,6 @@ function showAlertno(alertas) {
 
   
 </script>';
-$_SESSION['respuesta']="";
-$_SESSION['mensaje']="";
-$_SESSION['error']="";
+
 //echo $_SESSION['key'];
 ?>
