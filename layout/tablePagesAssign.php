@@ -130,8 +130,8 @@ function asignarPagina(button, pageid, profileid) {
       
       //getSch();
       
-      var res = sessionStorage.getItem(mensaje);
-      var er1=sessionStorage.getItem(error);
+      var res = mensaje;
+      var er1=err;
      
       if(er1==="true"){
        
