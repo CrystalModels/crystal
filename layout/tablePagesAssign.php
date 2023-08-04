@@ -119,10 +119,7 @@ sessionStorage.setItem("error", nuevoError);
       console.log('Nuevo mensaje:', nuevoMensaje);
       console.log('Nuevo error:', nuevoError);
 
-      return {
-    valor1: nuevoMensaje,
-    valor2: nuevoError,
-  };
+      
     })
     .catch(error => {
       console.error('Error al obtener las variables PHP:', error);
