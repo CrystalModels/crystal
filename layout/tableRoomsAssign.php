@@ -141,14 +141,14 @@ function mostrarNotificacion1(mensaje, tipo) {
     notificacion1.classList.remove('error'); // Remover clase de error (en caso de que esté presente)
 
     if (tipo === 'error') {
-        notificacion.classList.add('error');
+        notificacion1.classList.add('error');
     }
 
-    notificacion.style.display = 'block';
+    notificacion1.style.display = 'block';
 
     // Desaparecer la notificación después de 3 segundos
     setTimeout(() => {
-        notificacion.style.display = 'none';
+        notificacion1.style.display = 'none';
     }, 3000);
 }
 
