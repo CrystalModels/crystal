@@ -133,7 +133,7 @@ function asignarPagina(button, pageid, profileid) {
 
       mostrarNotificacion(res, re);
      
-
+console.log(res);
       
  
     })
@@ -190,7 +190,7 @@ function obtenerVariablesPHP() {
       // Por ejemplo:
       var nuevoMensaje = data.mensaje;
       var nuevoError = data.error;
-      
+
       sessionStorage.setItem("mensaje", nuevoMensaje);        
 sessionStorage.setItem("error", nuevoError);
       // Ahora puedes usar los nuevos valores en tu función o realizar cualquier otra acción
