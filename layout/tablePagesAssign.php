@@ -136,7 +136,7 @@ function asignarPagina(button, pageid, profileid) {
        
         var re="success";
       }
-      if(er1==="false"){
+      if(er1!="true"){
         
         var re="error";
       }
