@@ -109,7 +109,7 @@ function obtenerVariablesPHP() {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: none;
-    z-index: 1;
+    z-index: 9999;
 }
 .notification.error {
     background-color: #f44336;
