@@ -254,7 +254,7 @@ $_SESSION['mensaje']="";
 $_SESSION['error']="";
 //echo $_SESSION['key'];
 ?>
-
+<script>
 // Función para mostrar la notificación
 function mostrarNotificacion(mensaje, tipo) {
     const notificacion = document.getElementById('notification');
