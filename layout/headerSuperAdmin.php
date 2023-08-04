@@ -210,12 +210,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if(alerta=="true"){
 	const mensaje = sessionStorage.getItem("mensaje");
 	  showAlert(mensaje);
-    obtenerVariablesPHP();
+    
   }
   if(alerta=="false"){
 	const mensaje = sessionStorage.getItem("mensaje");
 	  showAlertno(mensaje);
-    obtenerVariablesPHP();
+    
   }
 
 		function showAlert(alertas) {
