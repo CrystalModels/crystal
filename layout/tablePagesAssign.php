@@ -197,7 +197,7 @@ function mostrarNotificacion(mensaje, tipo) {
 
 
 function obtenerVariablesPHP() {
-  fetch('getPHPVariables.php')
+  fetch('layout/getPHPVariables.php')
     .then(response => response.json())
     .then(data => {
       // Aquí obtienes los nuevos valores de las variables PHP en el objeto "data"
