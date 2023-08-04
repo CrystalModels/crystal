@@ -27,13 +27,14 @@
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
    
-      <th>Página</th>
-      <th>Url</th>
-      <th>Inicio</th>
-      <th>Final</th>
-      <th>Tiempo promedio</th>
+    <th>Corte</th>
+      <th>Id model</th>
+      <th>Monto inicial</th>
+      <th>Monto final</th>
+      <th>Descuento</th>
 
-      <th>Estado</th>
+      <th>%descuento</th>
+      <th>Tiempo promedio</th>
       
     </tr>
   </thead>
