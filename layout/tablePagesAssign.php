@@ -92,7 +92,9 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
           </table>
        
 </div>
-
+<div class="notification" id="notification">
+        <p id="notificationText"></p>
+    </div>
 
 
 <script>
