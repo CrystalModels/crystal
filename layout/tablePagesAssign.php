@@ -118,7 +118,7 @@ function asignarPagina(button, pageid, profileid) {
       var res='<?php $_SESSION['mensaje'];?>'
       sessionStorage.setItem('mensaje',res);
       var mensaje = sessionStorage.getItem("mensaje");
-      mostrarNotificacion(mensaje,'success');
+      mostrarNotificacion(res,'success');
       
  
     })
