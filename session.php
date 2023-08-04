@@ -60,4 +60,55 @@ function mostrarNotificacion(mensaje, tipo) {
 
 
 
+function obtenerVariablesPHP() {
+  fetch('layout/getPHPVariables.php')
+    .then(response => response.json())
+    .then(data => {
+      // Aquí obtienes los nuevos valores de las variables PHP en el objeto "data"
+      // Puedes acceder a los valores como data.mensaje y data.error
+      // Por ejemplo:
+      var nuevoMensaje = data.mensaje;
+      var nuevoError = data.error;
+
+    
+
+      if(nuevoError==="true"){
+        
+        var re="success";
+        
+      }
+      if(nuevoError==="false"){
+      
+        var re="error";
+        
+      }
+
+      mostrarNotificacion(nuevoMensaje, re);
+     
+
+    })
+    .catch(error => {
+      console.error('Error al obtener las variables PHP:', error);
+    });
+}
 </script>
+
+<style>
+		/* Estilos para la notificación */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+.notification.error {
+    background-color: #f44336;
+}
+
+	</style>
+  

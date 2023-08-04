@@ -132,25 +132,6 @@ function asignarRoom(button, roomID, profileid) {
 
 
 
-// Función para mostrar la notificación
-function mostrarNotificacion1(mensaje, tipo) {
-    const notificacion1 = document.getElementById('notification1');
-    const notificacionText1 = document.getElementById('notificationText1');
-
-    notificacionText1.textContent = mensaje;
-    notificacion1.classList.remove('error'); // Remover clase de error (en caso de que esté presente)
-
-    if (tipo === 'error') {
-        notificacion1.classList.add('error');
-    }
-
-    notificacion1.style.display = 'block';
-
-    // Desaparecer la notificación después de 3 segundos
-    setTimeout(() => {
-        notificacion1.style.display = 'none';
-    }, 3000);
-}
 
 
 
@@ -186,7 +167,7 @@ function obtenerVariablesPHP1() {
         
       }
 
-      mostrarNotificacion1(nuevoMensaje, re);
+      mostrarNotificacion(nuevoMensaje, re);
      
 
     })
@@ -199,24 +180,4 @@ function obtenerVariablesPHP1() {
 
 
 
-
-<style>
-		/* Estilos para la notificación */
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    display: none;
-}
-.notification.error {
-    background-color: #f44336;
-}
-
-	</style>
-  
 
