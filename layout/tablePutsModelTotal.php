@@ -87,7 +87,7 @@ var modelidnow = sessionStorage.getItem("currentModel");
       <td>${student.discount}</td>
       <td>${student.percent}</td>
       <td>${student.time}</td>
-      <td><button onclick="enviarCorreo(this,&quot;${student.modelId}&quot;,&quot;El corte ${student.cuttingId} fue cerrado con un valor inicial de ${student.start} descuentos de ${student.discount} ${student.percent} para un total de ${student.end} por recibir, un promedio de tiempo trabajado ${student.time}&quot;)" class="table-button">Enviar correo</button></td>
+      <td><button onclick="enviarCorreo(&quot;${student.modelId}&quot;,&quot;El corte ${student.cuttingId} fue cerrado con un valor inicial de ${student.start} descuentos de ${student.discount} ${student.percent} para un total de ${student.end} por recibir, un promedio de tiempo trabajado ${student.time}&quot;,&quot;prueba&quot;)" class="table-button">Enviar correo</button></td>
        
        
         

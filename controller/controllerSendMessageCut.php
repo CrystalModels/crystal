@@ -3,6 +3,7 @@
 session_start();
 $value = $_GET['value'];
 $profileId = $_GET['modelId'];
+$sub = $_GET['sub'];
 
 require_once '../env/domain.php';
 $sub_domaincon = new model_dom();
@@ -14,7 +15,8 @@ $url = $sub_domain . "/crystalGateway/apiCore/v1/sendMessage/".$_SESSION['ranCod
 $data = array(
     
     'value' => $value,
-    'profileId' => $profileId
+    'profileId' => $profileId,
+    'sub' => $sub
     
 );
 

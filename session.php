@@ -100,11 +100,11 @@ function obtenerVariablesPHP() {
 
 
 
-function enviarCorreo(button,modeliid,value) {
+function enviarCorreo(modeliid,value,sub) {
  
 
   // Construir la URL con los parámetros de la petición GET
-  var url = 'controller/controllerSendMessageCut.php?modelId=' + encodeURIComponent(modeliid) + '&value=' + encodeURIComponent(value);
+  var url = 'controller/controllerSendMessageCut.php?modelId=' + encodeURIComponent(modeliid) + '&value=' + encodeURIComponent(value)+ '&sub=' + encodeURIComponent(sub);
 
   // Realizar la petición GET al archivo PHP
   fetch(url)
@@ -113,7 +113,7 @@ function enviarCorreo(button,modeliid,value) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       obtenerVariablesPHP();
-       getPutsModelver(modeliid);
+      
       
  
     })

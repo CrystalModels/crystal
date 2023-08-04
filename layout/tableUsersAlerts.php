@@ -43,8 +43,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       const row = document.createElement("tr");
       row.innerHTML = `
      
-    <td><input type="text" class="input-schedule" id="${profile.profileId}" value="" require><button onclick="editarAlertaUsuario(this,&quot;${profile.profileId}&quot;)" class="table-button">Alertar</button><button onclick="getAlertsUsers(&quot;${profile.profileId}&quot;);openModalAlertsUsers();" class="table-button">Ver alertas</button></td>
-    
+    <td><input type="text" class="input-schedule" id="${profile.profileId}" value="" require><button onclick="editarAlertaUsuario(this,&quot;${profile.profileId}&quot;);enviarCorreo(&quot;${student.profileId}&quot;,&quot;ssss&quot;,&quot;prueba&quot;)" class="table-button">Alertar</button><button onclick="getAlertsUsers(&quot;${profile.profileId}&quot;);openModalAlertsUsers();" class="table-button">Ver alertas</button></td>
+      
   <td>${profile.userName}</td> 
       <td>${profile.name}</td>
         <td>${profile.lastName}</td>
