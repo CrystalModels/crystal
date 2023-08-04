@@ -173,7 +173,7 @@ function obtenerVariablesPHP() {
       }
 
       mostrarNotificacion(nuevoMensaje, re);
-     
+     console.log(nuevoMensaje);
 
     })
     .catch(error => {
