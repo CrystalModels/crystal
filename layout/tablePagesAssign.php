@@ -137,7 +137,7 @@ function asignarPagina(button, pageid, profileid) {
 			text-align: center;
 			padding: 3px;
 			transition: top 0.6s ease;
-			z-index: 1;
+			z-index: 2;
 		}
 
 		.alertno {
