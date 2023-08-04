@@ -98,6 +98,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 
 <script>
+
 function asignarPagina(button, pageid, profileid) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
@@ -108,15 +109,33 @@ function asignarPagina(button, pageid, profileid) {
 
   // Realizar la petición GET al archivo PHP
   fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      // Aquí obtienes los datos de la primera petición AJAX
-      obtenerVariablesPHP().then(data => {
-        var res = data.mensaje;
-        var er1 = data.error;
-        var re = (er1 === "true") ? "success" : "error";
-        mostrarNotificacion(res, re);
-      });
+    .then(response => {
+      // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
+      // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
+      
+      //getSch();
+      obtenerVariablesPHP();
+      
+      
+      var res = sessionStorage.getItem(mensaje);
+      var er1=sessionStorage.getItem(error);
+     
+      if(er1==="true"){
+       
+        var re="success";
+        
+      }
+      if(er1==="false"){
+        
+        var re="error";
+        
+      }
+
+      mostrarNotificacion(res, re);
+     
+
+      
+ 
     })
     .catch(error => {
       // Aquí puedes manejar los errores en caso de que la petición falle
@@ -171,6 +190,7 @@ function obtenerVariablesPHP() {
       // Por ejemplo:
       var nuevoMensaje = data.mensaje;
       var nuevoError = data.error;
+      
       sessionStorage.setItem("mensaje", nuevoMensaje);        
 sessionStorage.setItem("error", nuevoError);
       // Ahora puedes usar los nuevos valores en tu función o realizar cualquier otra acción
