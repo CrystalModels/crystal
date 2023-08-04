@@ -112,12 +112,8 @@ function editarAlerta(button, id,profileid) {
     .then(response => {
       // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
-      const profileid = sessionStorage.getItem("profileId");
-      getAlerts(profileid);
-      const mensaje = sessionStorage.getItem("mensaje");
-      showAlert(mensaje);
       
- 
+      obtenerVariablesPHP();
     })
     .catch(error => {
       // Aquí puedes manejar los errores en caso de que la petición falle
@@ -142,6 +138,70 @@ if(alertcounter>0){
 }
 
 
+
+
+// Función para mostrar la notificación
+function mostrarNotificacion(mensaje, tipo) {
+    const notificacion = document.getElementById('notification');
+    const notificacionText = document.getElementById('notificationText');
+
+    notificacionText.textContent = mensaje;
+    notificacion.classList.remove('error'); // Remover clase de error (en caso de que esté presente)
+
+    if (tipo === 'error') {
+        notificacion.classList.add('error');
+    }
+
+    notificacion.style.display = 'block';
+
+    // Desaparecer la notificación después de 3 segundos
+    setTimeout(() => {
+        notificacion.style.display = 'none';
+    }, 3000);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+function obtenerVariablesPHP() {
+  fetch('layout/getPHPVariables.php')
+    .then(response => response.json())
+    .then(data => {
+      // Aquí obtienes los nuevos valores de las variables PHP en el objeto "data"
+      // Puedes acceder a los valores como data.mensaje y data.error
+      // Por ejemplo:
+      var nuevoMensaje = data.mensaje;
+      var nuevoError = data.error;
+
+    
+
+      if(nuevoError==="true"){
+        
+        var re="success";
+        
+      }
+      if(nuevoError==="false"){
+      
+        var re="error";
+        
+      }
+
+      mostrarNotificacion(nuevoMensaje, re);
+     
+
+    })
+    .catch(error => {
+      console.error('Error al obtener las variables PHP:', error);
+    });
+}
 </script>
 
 
@@ -161,100 +221,26 @@ if(alertcounter>0){
        
 </div>
 
-
+<div class="notification" id="notification">
+        <p id="notificationText"></p>
+    </div>
 <style>
-		.alert {
-			position: fixed;
-			top: -100px;
-			width: 100%;
-			background-color: #2d572c;
-			color: white;
-			text-align: center;
-			padding: 3px;
-			transition: top 0.6s ease;
-			z-index: 1;
-		}
+		/* Estilos para la notificación */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+.notification.error {
+    background-color: #f44336;
+}
 
-		.alertno {
-			position: fixed;
-			top: -100px;
-			width: 100%;
-			background-color: #cb3234;
-			color: white;
-			text-align: center;
-			padding: 3px;
-			transition: top 0.6s ease;
-			z-index: 1;
-		}
 	</style>
-  <div id="alert" class="alert"></div>
-	<div id="alertno" class="alertno"></div>
   
 
-
-    
-<?php
-  
-  echo '<script>
-  const respuesta = "' . $_SESSION["respuesta"] . '";
-  sessionStorage.setItem("respuesta", respuesta);
-  const mensaje = "' . $_SESSION["mensaje"] . '";
-  sessionStorage.setItem("mensaje", mensaje);
-  const error = "' . $_SESSION["error"] . '";
-  sessionStorage.setItem("error", error);
-
-
-
-
-
-  const alerta = sessionStorage.getItem("respuesta");
-  if(alerta=="true"){
-	const mensaje = sessionStorage.getItem("mensaje");
-	  showAlert(mensaje);
-  }
-  if(alerta=="false"){
-	const mensaje = sessionStorage.getItem("mensaje");
-	  showAlertno(mensaje);
-  }
-
-		function showAlert(alertas) {
-    // Mostrar la alerta
-    var alert = document.getElementById("alert");
-    alert.innerHTML = alertas;
-    alert.style.top = "o";
-
-    // Ocultar la alerta después de 5 segundos
-    setTimeout(function(){
-        alert.style.top = "-100px";
-    }, 5000);
-	
-	//sessionStorage.removeItem("respuesta");
-	//sessionStorage.removeItem("mensaje");
-}
-
-function showAlertno(alertas) {
-    // Mostrar la alerta
-    var alertno = document.getElementById("alertno");
-    alertno.innerHTML = alertas;
-    alertno.style.top = "0";
-
-    // Ocultar la alerta después de 5 segundos
-    setTimeout(function(){
-        alertno.style.top = "-100px";
-    }, 5000);
-	
-
-}
-
-  
-</script>';
-$_SESSION['respuesta']="";
-$_SESSION['mensaje']="";
-$_SESSION['error']="";
-//echo $_SESSION['key'];
-?>
-
-
-<?php
-require_once 'alertsCounter.php';
-?>  

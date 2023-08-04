@@ -175,11 +175,7 @@ function obtenerVariablesPHP() {
       var nuevoMensaje = data.mensaje;
       var nuevoError = data.error;
 
-      sessionStorage.setItem("mensaje", nuevoMensaje);        
-sessionStorage.setItem("error", nuevoError);
-      // Ahora puedes usar los nuevos valores en tu función o realizar cualquier otra acción
-      console.log('Nuevo mensaje:', nuevoMensaje);
-      console.log('Nuevo error:', nuevoError);
+    
 
       if(nuevoError==="true"){
         
