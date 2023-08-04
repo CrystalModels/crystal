@@ -131,8 +131,7 @@ sessionStorage.setItem("error", nuevoError);
 
 
 
-
-async function asignarPagina(button, pageid, profileid) {
+function asignarPagina(button, pageid, profileid) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
   //var nombre = input.value;
@@ -146,37 +145,23 @@ async function asignarPagina(button, pageid, profileid) {
       // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
-      //getSch();
-      const { valor1, valor2 } = obtenerVariablesPHP();
-      
-      
-      
-      var res = sessionStorage.getItem(mensaje);
-      var er1=sessionStorage.getItem(error);
-      if(er1==="true"){
-        
-        var re="success";
-        
-      }
-      if(er1==="false"){
-      
-        var re="error";
-        
-      }
+      // Obtener los valores
+      obtenerVariablesPHP().then(data => {
+        var res = sessionStorage.getItem('mensaje');
+        var er1 = sessionStorage.getItem('error');
+        var re = er1 === "true" ? "success" : "error";
 
-      mostrarNotificacion(res, re);
-     
-      console.log(valor1); // Imprimirá 10
-  console.log(valor2); // Imprimirá 'Hola'
-      
- 
+        mostrarNotificacion(res, re);
+
+        console.log(data.valor1); // Imprimirá 10
+        console.log(data.valor2); // Imprimirá 'Hola'
+      });
     })
     .catch(error => {
       // Aquí puedes manejar los errores en caso de que la petición falle
       console.log('Error en la petición:', error);
     });
 }
-
 
 
 
