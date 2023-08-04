@@ -132,11 +132,11 @@ function asignarPagina(button, pageid, profileid) {
       var res = mensaje;
       var er1=err;
      
-      if(er1=="true"){
+      if(er1==="true"){
        
         mostrarNotificacion(res, 'success');
       }
-      if(er1=="false"){
+      if(er1==="false"){
         
         mostrarNotificacion(res, 'error');
       }
