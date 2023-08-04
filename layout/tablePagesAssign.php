@@ -99,35 +99,6 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 <script>
 
-
-
-
-
-function obtenerVariablesPHP() {
-  fetch('layout/getPHPVariables.php')
-    .then(response => response.json())
-    .then(data => {
-      // Aquí obtienes los nuevos valores de las variables PHP en el objeto "data"
-      // Puedes acceder a los valores como data.mensaje y data.error
-      // Por ejemplo:
-      var nuevoMensaje = data.mensaje;
-      var nuevoError = data.error;
-
-      sessionStorage.setItem("mensaje", nuevoMensaje);        
-sessionStorage.setItem("error", nuevoError);
-      // Ahora puedes usar los nuevos valores en tu función o realizar cualquier otra acción
-      console.log('Nuevo mensaje:', nuevoMensaje);
-      console.log('Nuevo error:', nuevoError);
-
-      
-    })
-    .catch(error => {
-      console.error('Error al obtener las variables PHP:', error);
-    });
-}
-
-
-
 function asignarPagina(button, pageid, profileid) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
@@ -142,23 +113,20 @@ function asignarPagina(button, pageid, profileid) {
       // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
-      // Obtener los valores
-      obtenerVariablesPHP().then(data => {
-        var res = sessionStorage.getItem('mensaje');
-        var er1 = sessionStorage.getItem('error');
-        var re = er1 === "true" ? "success" : "error";
-
-        mostrarNotificacion(res, re);
-
-        console.log(data.valor1); // Imprimirá 10
-        console.log(data.valor2); // Imprimirá 'Hola'
-      });
+      //getSch();
+      obtenerVariablesPHP();
+      
+      
+      
+      
+ 
     })
     .catch(error => {
       // Aquí puedes manejar los errores en caso de que la petición falle
       console.log('Error en la petición:', error);
     });
 }
+
 
 
 
@@ -196,6 +164,48 @@ function mostrarNotificacion(mensaje, tipo) {
 
 
 
+
+function obtenerVariablesPHP() {
+  fetch('layout/getPHPVariables.php')
+    .then(response => response.json())
+    .then(data => {
+      // Aquí obtienes los nuevos valores de las variables PHP en el objeto "data"
+      // Puedes acceder a los valores como data.mensaje y data.error
+      // Por ejemplo:
+      var nuevoMensaje = data.mensaje;
+      var nuevoError = data.error;
+
+      sessionStorage.setItem("mensaje", nuevoMensaje);        
+sessionStorage.setItem("error", nuevoError);
+      // Ahora puedes usar los nuevos valores en tu función o realizar cualquier otra acción
+      console.log('Nuevo mensaje:', nuevoMensaje);
+      console.log('Nuevo error:', nuevoError);
+
+      
+
+
+      
+      var res = sessionStorage.getItem(mensaje);
+      var er1=sessionStorage.getItem(error);
+      if(er1==="true"){
+        
+        var re="success";
+        
+      }
+      if(er1==="false"){
+      
+        var re="error";
+        
+      }
+
+      mostrarNotificacion(res, re);
+     
+console.log(res);
+    })
+    .catch(error => {
+      console.error('Error al obtener las variables PHP:', error);
+    });
+}
 
 </script>
 
