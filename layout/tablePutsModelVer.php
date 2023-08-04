@@ -13,6 +13,7 @@
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
         <th>Acciones</th>
+        <th>Página</th>
       <th>Corte</th>
       <th>Inicio</th>
       <th>Final</th>
@@ -63,6 +64,7 @@ var modeliid=modelid;
       
       <td><button onclick="ajusteRev1(this,&quot;${student.earnId}&quot;,&quot;rev&quot;,&quot;${student.modelId}&quot;)" class="table-button">Revisión</button>
       <button onclick="ajusteRev1(this,&quot;${student.earnId}&quot;,&quot;close&quot;,&quot;${student.modelId}&quot;)" class="table-button">Cerrar</button></td>
+      <td>${student.pageName}</td>
       <td><input type="text" class="input-schedule" id="${student.earnId}" value="${student.cuttingId}"> <button onclick="ajuste1(this,&quot;${student.earnId}&quot;,&quot;cuttingId&quot;,&quot;${student.modelId}&quot;)" class="table-button">Ajustar</button></td>
        
         <td>${student.startDate} ${student.startTime}</td>
