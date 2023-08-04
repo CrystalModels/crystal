@@ -48,7 +48,24 @@ if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas
     $_SESSION["respuesta"] = $response1;
     $_SESSION["mensaje"] = $message;
     $_SESSION["error"] = "true";
+echo '
 
+
+<script>
+// Crear una variable de JavaScript con el valor del mensaje de la sesión de PHP
+var mensaje = <?php echo json_encode($_SESSION["mensaje"]); ?>;
+</script>
+<script>
+// Crear una variable de JavaScript con el valor del mensaje de la sesión de PHP
+
+var err=<?php echo json_encode($_SESSION["error"]); ?>;
+</script>
+
+<script>    
+
+sessionStorage.setItem("mensaje", mensaje);        
+sessionStorage.setItem("error", err);
+</script>';
     
    // header ('Location: ../room.php?roomId='.$roomId);
 }
@@ -58,7 +75,24 @@ if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas 
     $_SESSION["mensaje"] = $message;
     $_SESSION["error"] = "false";
     
-  
+    echo '
+
+
+    <script>
+    // Crear una variable de JavaScript con el valor del mensaje de la sesión de PHP
+    var mensaje = <?php echo json_encode($_SESSION["mensaje"]); ?>;
+    </script>
+    <script>
+    // Crear una variable de JavaScript con el valor del mensaje de la sesión de PHP
+    
+    var err=<?php echo json_encode($_SESSION["error"]); ?>;
+    </script>
+    
+    <script>    
+    
+    sessionStorage.setItem("mensaje", mensaje);        
+    sessionStorage.setItem("error", err);
+    </script>';
   
   
     //header ('Location: ../room.php?roomId='.$roomId);

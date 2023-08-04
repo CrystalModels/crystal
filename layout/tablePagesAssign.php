@@ -106,6 +106,7 @@ $error = $_SESSION['error'];
 // Crear una variable de JavaScript con el valor del mensaje de la sesión de PHP
 var mensaje = <?php echo json_encode($mensaje); ?>;
 </script>
+
 <script>
 // Crear una variable de JavaScript con el valor del mensaje de la sesión de PHP
 
@@ -129,8 +130,8 @@ function asignarPagina(button, pageid, profileid) {
       
       //getSch();
       
-      var res = mensaje;
-      var er1=err;
+      var res = sessionStorage.getItem(mensaje);
+      var er1=sessionStorage.getItem(error);
      
       if(er1==="true"){
        
