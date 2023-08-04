@@ -33,6 +33,10 @@ if($_SESSION['rol']=="PHOTO"){
  
 ?>
 
+
+<div class="notification" id="notification">
+        <p id="notificationText"></p>
+    </div>
 <script>
 
 
