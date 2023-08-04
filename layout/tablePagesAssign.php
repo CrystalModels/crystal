@@ -24,7 +24,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	<script>
 		
   //const my_profyle = sessionStorage.getItem("profile");
-  //const subdominiopages = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllPages/'.$headerslink.'`;
+  const subdominiopagesas = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllPagesas/'.$headerslink.'`;
 
  // Función para obtener los datos del API
  async function getPagesAssign(profileid) {
@@ -32,7 +32,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
   sessionStorage.setItem("assignPageId", pid);
 
 	
-	fetch(subdominiopages)
+	fetch(subdominiopagesas)
    
   .then(response => response.json())
   .then(data => {
