@@ -132,7 +132,7 @@ sessionStorage.setItem("error", nuevoError);
 
 
 
-function asignarPagina(button, pageid, profileid) {
+async function asignarPagina(button, pageid, profileid) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
   //var nombre = input.value;
