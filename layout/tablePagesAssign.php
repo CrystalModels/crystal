@@ -99,6 +99,39 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 <script>
 
+
+
+
+
+function obtenerVariablesPHP() {
+  fetch('layout/getPHPVariables.php')
+    .then(response => response.json())
+    .then(data => {
+      // Aquí obtienes los nuevos valores de las variables PHP en el objeto "data"
+      // Puedes acceder a los valores como data.mensaje y data.error
+      // Por ejemplo:
+      var nuevoMensaje = data.mensaje;
+      var nuevoError = data.error;
+
+      sessionStorage.setItem("mensaje", nuevoMensaje);        
+sessionStorage.setItem("error", nuevoError);
+      // Ahora puedes usar los nuevos valores en tu función o realizar cualquier otra acción
+      console.log('Nuevo mensaje:', nuevoMensaje);
+      console.log('Nuevo error:', nuevoError);
+
+      return {
+    valor1: nuevoMensaje,
+    valor2: nuevoError,
+  };
+    })
+    .catch(error => {
+      console.error('Error al obtener las variables PHP:', error);
+    });
+}
+
+
+
+
 function asignarPagina(button, pageid, profileid) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
@@ -114,7 +147,7 @@ function asignarPagina(button, pageid, profileid) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      const { valor1, valor2 } =obtenerVariablesPHP();
+      const { valor1, valor2 } = obtenerVariablesPHP();
       
       
       
@@ -181,32 +214,6 @@ function mostrarNotificacion(mensaje, tipo) {
 
 
 
-
-function obtenerVariablesPHP() {
-  fetch('layout/getPHPVariables.php')
-    .then(response => response.json())
-    .then(data => {
-      // Aquí obtienes los nuevos valores de las variables PHP en el objeto "data"
-      // Puedes acceder a los valores como data.mensaje y data.error
-      // Por ejemplo:
-      var nuevoMensaje = data.mensaje;
-      var nuevoError = data.error;
-
-      sessionStorage.setItem("mensaje", nuevoMensaje);        
-sessionStorage.setItem("error", nuevoError);
-      // Ahora puedes usar los nuevos valores en tu función o realizar cualquier otra acción
-      console.log('Nuevo mensaje:', nuevoMensaje);
-      console.log('Nuevo error:', nuevoError);
-
-      return {
-    valor1: nuevoMensaje,
-    valor2: nuevoError,
-  };
-    })
-    .catch(error => {
-      console.error('Error al obtener las variables PHP:', error);
-    });
-}
 
 </script>
 
