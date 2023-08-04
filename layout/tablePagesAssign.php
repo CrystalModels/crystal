@@ -181,24 +181,18 @@ sessionStorage.setItem("error", nuevoError);
       console.log('Nuevo mensaje:', nuevoMensaje);
       console.log('Nuevo error:', nuevoError);
 
-      
-
-
-      
-      var res = sessionStorage.getItem(mensaje);
-      var er1=sessionStorage.getItem(error);
-      if(er1==="true"){
+      if(nuevoError==="true"){
         
         var re="success";
         
       }
-      if(er1==="false"){
+      if(nuevoError==="false"){
       
         var re="error";
         
       }
 
-      mostrarNotificacion(res, re);
+      mostrarNotificacion(nuevoMensaje, re);
      
 console.log(res);
     })
