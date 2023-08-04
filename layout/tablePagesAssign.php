@@ -106,7 +106,7 @@ function asignarPagina(button, pageid, profileid) {
 
   // Construir la URL con los parámetros de la petición GET
   var url = 'controller/controllerAssignPage.php?pageId=' + encodeURIComponent(pageid) + '&profileId=' + encodeURIComponent(profileid);
-  obtenerVariablesPHP();
+ 
   // Realizar la petición GET al archivo PHP
   fetch(url)
     .then(response => {
@@ -114,27 +114,27 @@ function asignarPagina(button, pageid, profileid) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
+      const { valor1, valor2 } =obtenerVariablesPHP();
       
       
       
-      
-     
-      if(er1==="true"){
-        var res = sessionStorage.getItem(mensaje);
+      var res = sessionStorage.getItem(mensaje);
       var er1=sessionStorage.getItem(error);
+      if(er1==="true"){
+        
         var re="success";
         
       }
       if(er1==="false"){
-        var res = sessionStorage.getItem(mensaje);
-      var er1=sessionStorage.getItem(error);
+      
         var re="error";
         
       }
 
       mostrarNotificacion(res, re);
      
-console.log(res);
+      console.log(valor1); // Imprimirá 10
+  console.log(valor2); // Imprimirá 'Hola'
       
  
     })
@@ -197,6 +197,11 @@ sessionStorage.setItem("error", nuevoError);
       // Ahora puedes usar los nuevos valores en tu función o realizar cualquier otra acción
       console.log('Nuevo mensaje:', nuevoMensaje);
       console.log('Nuevo error:', nuevoError);
+
+      return {
+    valor1: nuevoMensaje,
+    valor2: nuevoError,
+  };
     })
     .catch(error => {
       console.error('Error al obtener las variables PHP:', error);
