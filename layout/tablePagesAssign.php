@@ -99,7 +99,6 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     <?php
 // Tu código PHP para configurar la sesión y obtener el mensaje (asumiendo que se ha configurado la sesión previamente)
 $mensaje = $_SESSION['mensaje'];
-$_SESSION['mensaje']="";
 ?>
 
 <script>
