@@ -134,15 +134,15 @@ function asignarPagina(button, pageid, profileid) {
      
       if(er1==="true"){
        
-        mostrarNotificacion(res, 'success');
+        var re="success";
       }
       if(er1==="false"){
         
-        mostrarNotificacion(res, 'error');
+        var re="error";
       }
 
       sessionStorage.setItem('mensaje', res);
-     
+      mostrarNotificacion(res, re);
 
       sessionStorage.setItem('mensaje', '');
       
