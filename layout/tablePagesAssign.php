@@ -96,22 +96,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         <p id="notificationText"></p>
     </div>
 
-    <?php
-// Tu código PHP para configurar la sesión y obtener el mensaje (asumiendo que se ha configurado la sesión previamente)
-$mensaje = $_SESSION['mensaje'];
-$error = $_SESSION['error'];
-?>
 
-<script>
-// Crear una variable de JavaScript con el valor del mensaje de la sesión de PHP
-var mensaje = <?php echo json_encode($mensaje); ?>;
-</script>
-
-<script>
-// Crear una variable de JavaScript con el valor del mensaje de la sesión de PHP
-
-var err=<?php echo json_encode($error); ?>;
-</script>
 <script>
 
 function asignarPagina(button, pageid, profileid) {
@@ -138,14 +123,16 @@ function asignarPagina(button, pageid, profileid) {
       if(er1==="true"){
        
         var re="success";
+        mostrarNotificacion(res, re);
       }
       if(er1==="false"){
         
         var re="error";
+        mostrarNotificacion(res, re);
       }
 
       
-      mostrarNotificacion(res, re);
+     
 
       
  
