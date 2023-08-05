@@ -250,7 +250,7 @@ function descargarExceltlist() {
     const day = String(fecha.getDate()).padStart(2, '0');
     const fechaActual = `${year}-${month}-${day}`;
     a.href = url;
-    a.download = 'reporte_paginas_creadas_'+fechaActual+'.xls';
+    a.download = 'reporte_cortes_model_creadas_'+fechaActual+'.xls';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
