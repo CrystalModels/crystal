@@ -1,7 +1,7 @@
 
 
-<button onclick="descargarCSV()" class="table-button">Descargar CSV</button>
-<button onclick="descargarExcel()" class="table-button">Descargar Excel</button>
+<button onclick="descargarCSV()" class="table-button">Descargar resporte CSV</button>
+<button onclick="descargarExcel()" class="table-button">Descargar reporte Excel</button>
 
 <div class="table-container">
 
@@ -123,7 +123,7 @@ function descargarCSV() {
     const a = document.createElement('a');
 
     a.href = url;
-    a.download = 'tabla.csv';
+    a.download = 'reporte_paginas_creadas.csv';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -191,7 +191,7 @@ function descargarExcel() {
     const a = document.createElement('a');
 
     a.href = url;
-    a.download = 'tabla.xls';
+    a.download = 'reporte_paginas_creadas.xls';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
