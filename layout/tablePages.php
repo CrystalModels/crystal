@@ -2,7 +2,7 @@
 
 
 <div class="table-container">
-    
+<button onclick="descargarCSV()" class="table-button">Descargar CSV</button>
 <table id="pages-table" class="table">
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
@@ -90,7 +90,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 <div id="publicgroups-container"></div>
 
 
-<button onclick="descargarCSV()" class="table-button">Descargar CSV</button>
+
 
 
 <script>
