@@ -78,6 +78,9 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
  
 
 
+
+
+ 
 	</script>
 
 ';?>  
@@ -87,10 +90,78 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 <div id="publicgroups-container"></div>
 
 
+<button onclick="descargarCSV()">Descargar CSV</button>
+
+
+<script>
+function convertirTablaAFormatoCSV() {
+    const tabla = document.getElementById('miTabla');
+    const filas = tabla.getElementsByTagName('tr');
+    const contenidoCSV = [];
+
+    for (let i = 0; i < filas.length; i++) {
+        const celdas = filas[i].getElementsByTagName('td');
+        const filaCSV = [];
+
+        for (let j = 0; j < celdas.length; j++) {
+            filaCSV.push(celdas[j].innerText);
+        }
+
+        contenidoCSV.push(filaCSV.join(','));
+    }
+
+    return contenidoCSV.join('\n');
+}
+
+function descargarCSV() {
+    const contenidoCSV = convertirTablaAFormatoCSV();
+    const blob = new Blob([contenidoCSV], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+
+    a.href = url;
+    a.download = 'tabla.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+function convertirTablaAFormatoJSON() {
+    const tabla = document.getElementById('pages-table');
+    const filas = tabla.getElementsByTagName('tr');
+    const contenidoJSON = [];
+
+    for (let i = 1; i < filas.length; i++) {
+        const celdas = filas[i].getElementsByTagName('td');
+        const filaJSON = {};
+
+        for (let j = 0; j < celdas.length; j++) {
+            const columna = document.querySelector('th:nth-child(' + (j + 1) + ')').innerText;
+            filaJSON[columna] = celdas[j].innerText;
+        }
+
+        contenidoJSON.push(filaJSON);
+    }
+
+    return JSON.stringify(contenidoJSON, null, 2);
+}
+
+function descargarJSON() {
+    const contenidoJSON = convertirTablaAFormatoJSON();
+    const blob = new Blob([contenidoJSON], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+
+    a.href = url;
+    a.download = 'tabla.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
 
 
 
-
+</script>
 
 
 </tbody>
