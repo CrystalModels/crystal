@@ -1,6 +1,8 @@
 
 
 <button onclick="descargarCSV()" class="table-button">Descargar CSV</button>
+<button onclick="descargarExcel()">Descargar Excel</button>
+    <button onclick="descargarPDF()">Descargar PDF</button>
 <div class="table-container">
 
 <table id="pages-table" class="table">
@@ -89,7 +91,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 <div id="publicgroups-container"></div>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+   
 
 
 
@@ -160,6 +163,46 @@ function descargarJSON() {
 }
 
 
+
+
+function convertirTablaAFormatoExcel() {
+    const tabla = document.getElementById('pages-table');
+    const filas = tabla.getElementsByTagName('tr');
+    const contenidoExcel = [];
+
+    for (let i = 0; i < filas.length; i++) {
+        const celdas = filas[i].getElementsByTagName('td');
+        const filaExcel = [];
+
+        for (let j = 0; j < celdas.length; j++) {
+            filaExcel.push(celdas[j].innerText);
+        }
+
+        contenidoExcel.push(filaExcel.join('\t'));
+    }
+
+    return contenidoExcel.join('\n');
+}
+
+function descargarExcel() {
+    const contenidoExcel = convertirTablaAFormatoExcel();
+    const blob = new Blob(['\ufeff', contenidoExcel], { type: 'application/vnd.ms-excel' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+
+    a.href = url;
+    a.download = 'tabla.xls';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+function descargarPDF() {
+    const doc = new jsPDF();
+    const tabla = document.getElementById('pages-table');
+    doc.autoTable({ html: tabla });
+    doc.save('tabla.pdf');
+}
 
 </script>
 
