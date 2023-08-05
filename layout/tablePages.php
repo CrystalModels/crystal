@@ -2,7 +2,7 @@
 
 <button onclick="descargarCSV()" class="table-button">Descargar CSV</button>
 <button onclick="descargarExcel()">Descargar Excel</button>
-    <button onclick="descargarPDF()">Descargar PDF</button>
+
 <div class="table-container">
 
 <table id="pages-table" class="table">
@@ -195,13 +195,6 @@ function descargarExcel() {
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-}
-
-function descargarPDF() {
-    const doc = new jsPDF();
-    const tabla = document.getElementById('pages-table');
-    doc.autoTable({ html: tabla });
-    doc.save('tabla.pdf');
 }
 
 </script>
