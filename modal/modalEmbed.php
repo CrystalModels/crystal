@@ -6,7 +6,7 @@
             <span class="close" onclick="closeModalembed()"><h3>X</h3></span>
             <h2>Cambio de moneda actual</h2>
                
-            <iframe src="https://www.xe.com/currencyconverter/" width="100%" height="500px" frameborder="0"></iframe>
+            <iframe src="https://www.xlove.com/es/" width="100%" height="500px" frameborder="0"></iframe>
         </div>
     </div>
 
