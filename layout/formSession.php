@@ -32,7 +32,6 @@
         
 
     
-<iframe src="https://es.investing.com/currencies/" width="100%" height="500px" frameborder="0"></iframe>
 
   <div class="theme-toggle">
         <input type="checkbox" id="theme-toggle-checkbox">
