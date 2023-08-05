@@ -239,7 +239,7 @@ function convertirTablaAFormatoExceltlist() {
     return contenidoExcel.join('\n');
 }
 
-function descargarExceltlisttlist() {
+function descargarExceltlist() {
     const contenidoExcel = convertirTablaAFormatoExceltlist();
     const blob = new Blob(['\ufeff', contenidoExcel], { type: 'application/vnd.ms-excel' });
     const url = URL.createObjectURL(blob);
