@@ -35,8 +35,11 @@
             <ul class="submenu">
             <li class="navbar-item"><a href="#" onclick="openModalSchedule();getSch();">Mi Horario</a></li>
             <li class="navbar-item"><a href="#" onclick="openModalUsersSchedule();getUsersSuperAdminSc();">Horarios Generales</a></li>
-            <li class="navbar-item"><a href="#" onclick="openModalUsersAlerts();getUsersSuperAdminAlerts();">Alertas</a></li>
-             </ul>
+            <li class="navbar-item"><a href="#" onclick="openModalUsersAlerts();getUsersSuperAdminAlerts();">Alertas generales</a></li>
+             <li class="navbar-item"><a href="#" onclick="openModalembed();">Tasa de cambio</a></li>
+            <li class="navbar-item"><a href="#" onclick="openModalembedcal();">Calculadora</a></li>
+                
+          </ul>
         </li>
         <script>var profileif=sessionStorage.getItem("profileId") </script>
        

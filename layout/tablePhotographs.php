@@ -6,7 +6,7 @@
 <table id="photographs-table" class="table">
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
-    <th>Acciones</th>
+    
       <th>Usuario</th>
       <th>Nombres</th>
       <th>Apellido</th>
@@ -38,8 +38,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.photographs.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><a class="table-button" href="group.php?student_id=${student.profileId}&my_profile=${student.profileId}&owner_id=${student.profileId}">Abrir</a>
-      </td>
+      
   <td>${student.userName}</td> 
       <td>${student.name}</td>
         <td>${student.lastName}</td>

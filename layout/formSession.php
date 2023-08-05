@@ -32,7 +32,6 @@
         
 
     
-    
 
   <div class="theme-toggle">
         <input type="checkbox" id="theme-toggle-checkbox">

@@ -79,7 +79,9 @@
          <a href="#"><H4> ORGANIZADOR </H4></a>
          <ul class="submenu">
          <li class="navbar-item"><a href="#" onclick="openModalSchedule();getSch();">Mi Horario</a></li>
-        
+         <li class="navbar-item"><a href="#" onclick="openModalembed();">Tasa de cambio</a></li>
+            <li class="navbar-item"><a href="#" onclick="openModalembedcal();">Calculadora</a></li>
+             
        </ul>
      </li>
         
