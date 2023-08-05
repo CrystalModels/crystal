@@ -90,7 +90,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 <div id="publicgroups-container"></div>
 
 
-<button onclick="descargarCSV()">Descargar CSV</button>
+<button onclick="descargarCSV()" class="table-button">Descargar CSV</button>
 
 
 <script>
