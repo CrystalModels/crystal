@@ -1,7 +1,7 @@
 
 
 <button onclick="descargarCSV()" class="table-button">Descargar CSV</button>
-<button onclick="descargarExcel()">Descargar Excel</button>
+<button onclick="descargarExcel()" class="table-button">Descargar Excel</button>
 
 <div class="table-container">
 
