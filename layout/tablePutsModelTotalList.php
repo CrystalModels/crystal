@@ -164,7 +164,7 @@ function convertirTablaAFormatoCSVtlist() {
     return contenidoCSV.join('\n');
 }
 
-function descargarCSV() {
+function descargarCSVtlist() {
     const contenidoCSV = convertirTablaAFormatoCSVtlist();
     const blob = new Blob([contenidoCSV], { type: 'text/csv' });
     const url = URL.createObjectURL(blob);
