@@ -44,7 +44,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.rooms.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="asignarRoom(this,&quot;${student.roomId}&quot;,&quot;${pid}&quot;)" class="table-button">Asignar room</button></td>
+      <td><button onclick="asignarRoom(this,&quot;${student.roomId}&quot;,&quot;${pid}&quot;,&quot;${student.name}&quot;)" class="table-button">Asignar room</button></td>
     
   
       <td>${student.name}</td>
@@ -92,11 +92,13 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
        
 </div>
 
-
+<div class="notification" id="notification">
+        <p id="notificationText"></p>
+    </div>
 
 <script>
 
-function asignarRoom(button, roomID, profileid) {
+function asignarRoom(button, roomID, profileid,rname) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
   //var nombre = input.value;
@@ -111,9 +113,8 @@ function asignarRoom(button, roomID, profileid) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      const mensaje = sessionStorage.getItem("mensaje");
-      showAlert(mensaje);
-      
+      obtenerVariablesPHP();
+      enviarCorreo(profileid,'Room '+rname+' asignado.','Asignación de room.');
  
     })
     .catch(error => {
@@ -121,4 +122,29 @@ function asignarRoom(button, roomID, profileid) {
       console.log('Error en la petición:', error);
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
+
+
+
+
+

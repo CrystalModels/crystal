@@ -71,14 +71,6 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 
 
-
-
-
-
-
-
-
-
 </tbody>
           </table>
        
@@ -102,9 +94,8 @@ function asignarRoomModel(button, modelId, roomId) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      const mensaje = sessionStorage.getItem("mensaje");
-      showAlert(mensaje);
-      
+      obtenerVariablesPHP();
+
  
     })
     .catch(error => {
@@ -112,4 +103,11 @@ function asignarRoomModel(button, modelId, roomId) {
       console.log('Error en la petición:', error);
     });
 }
+
+
+
+
 </script>
+
+  
+

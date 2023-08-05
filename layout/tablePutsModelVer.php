@@ -145,9 +145,8 @@ function ajuste1(button, id, value,modeliid) {
       // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
-      //getSch();
-      const mensaje = sessionStorage.getItem("mensaje");
-      getPutsModelver(modeliid);
+      obtenerVariablesPHP();
+       getPutsModelver(modeliid);
       
  
     })
@@ -174,9 +173,8 @@ function ajusteRev1(button, id, value,modeliid) {
       // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
-      //getSch();
-      const mensaje = sessionStorage.getItem("mensaje");
-      getPutsModelver(modeliid);
+      obtenerVariablesPHP();
+        getPutsModelver(modeliid);
       
  
     })

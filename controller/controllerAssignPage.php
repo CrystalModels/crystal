@@ -47,7 +47,7 @@ $response1 = trim($response12); // Eliminar espacios en blanco alrededor de la r
 if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas antes de comparar
     $_SESSION["respuesta"] = $response1;
     $_SESSION["mensaje"] = $message;
-    $_SESSION["error"] = $response1;
+    $_SESSION["error"] = "true";
 
     
    // header ('Location: ../room.php?roomId='.$roomId);
@@ -56,9 +56,9 @@ if (strtolower($response1) === "true") { // Convertir la respuesta a minúsculas
 if (strtolower($response1) != "true") { // Convertir la respuesta a minúsculas antes de comparar
     $_SESSION["respuesta"] = $response1;
     $_SESSION["mensaje"] = $message;
-    $_SESSION["error"] = $response1;
+    $_SESSION["error"] = "false";
     
-  
+   
   
   
     //header ('Location: ../room.php?roomId='.$roomId);

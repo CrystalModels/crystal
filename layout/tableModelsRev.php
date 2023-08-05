@@ -110,9 +110,8 @@ function ajuste(button, id, value,modeliid) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      const mensaje = sessionStorage.getItem("mensaje");
       getPutsModel(modeliid);
-      
+      obtenerVariablesPHP();
  
     })
     .catch(error => {
@@ -139,9 +138,8 @@ function ajusteRev(button, id, value,modeliid) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      const mensaje = sessionStorage.getItem("mensaje");
-      getPutsModel(modeliid);
-      
+       getPutsModel(modeliid);
+      obtenerVariablesPHP();
  
     })
     .catch(error => {

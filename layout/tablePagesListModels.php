@@ -186,8 +186,7 @@ function desconectarTransmision(button, pageid, profileid,transid) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      const mensaje = sessionStorage.getItem("mensaje");
-      showAlert(mensaje);
+      obtenerVariablesPHP();
       getPagesAssignModels();
       
     })
@@ -215,8 +214,7 @@ function desconectarTransmisionModel(button, pageid, profileid,transid) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      const mensaje = sessionStorage.getItem("mensaje");
-      showAlert(mensaje);
+      obtenerVariablesPHP();
       getPagesAssignModels1();
       
     })

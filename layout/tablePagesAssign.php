@@ -24,7 +24,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	<script>
 		
   //const my_profyle = sessionStorage.getItem("profile");
-  //const subdominiopages = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllPages/'.$headerslink.'`;
+  const subdominiopagesas = `'.$sub_domain.'/crystalGateway/apiIntegrations/v1/getAllPagesas/'.$headerslink.'`;
 
  // Función para obtener los datos del API
  async function getPagesAssign(profileid) {
@@ -32,7 +32,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
   sessionStorage.setItem("assignPageId", pid);
 
 	
-	fetch(subdominiopages)
+	fetch(subdominiopagesas)
    
   .then(response => response.json())
   .then(data => {
@@ -42,7 +42,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.pages.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><button onclick="asignarPagina(this,&quot;${student.pageId}&quot;,&quot;${pid}&quot;)" class="table-button">Asignar página</button></td>
+      <td><button onclick="asignarPagina(this,&quot;${student.pageId}&quot;,&quot;${pid}&quot;,&quot;${student.name}&quot;)" class="table-button">Asignar página</button></td>
     
   
       <td>${student.name}</td>
@@ -92,19 +92,21 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
           </table>
        
 </div>
-
+<div class="notification" id="notification">
+        <p id="notificationText"></p>
+    </div>
 
 
 <script>
 
-function asignarPagina(button, pageid, profileid) {
+function asignarPagina(button, pageid, profileid,pname) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
   //var nombre = input.value;
 
   // Construir la URL con los parámetros de la petición GET
   var url = 'controller/controllerAssignPage.php?pageId=' + encodeURIComponent(pageid) + '&profileId=' + encodeURIComponent(profileid);
-
+ 
   // Realizar la petición GET al archivo PHP
   fetch(url)
     .then(response => {
@@ -112,8 +114,10 @@ function asignarPagina(button, pageid, profileid) {
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
       
       //getSch();
-      const mensaje = sessionStorage.getItem("mensaje");
-      showAlert(mensaje);
+      obtenerVariablesPHP();
+      
+      enviarCorreo(profileid,'Página '+pname+' asignada.','Asignación de página.');
+      
       
  
     })
@@ -122,4 +126,10 @@ function asignarPagina(button, pageid, profileid) {
       console.log('Error en la petición:', error);
     });
 }
+
+
+
+
+
+
 </script>

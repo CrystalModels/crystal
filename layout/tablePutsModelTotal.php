@@ -27,13 +27,15 @@
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
    
-      <th>Página</th>
-      <th>Url</th>
-      <th>Inicio</th>
-      <th>Final</th>
-      <th>Tiempo promedio</th>
+      <th>Corte</th>
+      <th>Id model</th>
+      <th>Monto inicial</th>
+      <th>Monto final</th>
+      <th>Descuento</th>
 
-      <th>Estado</th>
+      <th>%descuento</th>
+      <th>Tiempo promedio</th>
+      <th>Acciones</th>
       
     </tr>
   </thead>
@@ -85,7 +87,8 @@ var modelidnow = sessionStorage.getItem("currentModel");
       <td>${student.discount}</td>
       <td>${student.percent}</td>
       <td>${student.time}</td>
-        
+      <td><button onclick="enviarCorreo(&quot;${student.modelId}&quot;,&quot;El corte ${student.cuttingId} fue cerrado con un valor inicial de ${student.start} descuentos de ${student.discount} ${student.percent} para un total de ${student.end} por recibir, un promedio de tiempo trabajado ${student.time}&quot;,&quot;prueba&quot;)" class="table-button">Enviar correo</button></td>
+       
        
         
       `;
