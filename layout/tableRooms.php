@@ -1,6 +1,7 @@
 
 
-
+<button onclick="descargarCSVrooms()" class="table-button">Descargar resporte CSV</button>
+<button onclick="descargarExcelrooms()" class="table-button">Descargar reporte Excel</button>
 <div class="table-container">
     
 <table id="rooms-table" class="table">
@@ -133,4 +134,119 @@ echo '
           </table>
        
 </div>
+
+
+<script>
+function convertirTablaAFormatoCSVrooms() {
+    const tabla = document.getElementById('rooms-table');
+    const filas = tabla.getElementsByTagName('tr');
+    const contenidoCSV = [];
+
+    for (let i = 0; i < filas.length; i++) {
+        const celdas = filas[i].getElementsByTagName('td');
+        const filaCSV = [];
+
+        for (let j = 0; j < celdas.length; j++) {
+            filaCSV.push(celdas[j].innerText);
+        }
+
+        contenidoCSV.push(filaCSV.join(','));
+    }
+
+    return contenidoCSV.join('\n');
+}
+
+function descargarCSVrooms() {
+    const contenidoCSV = convertirTablaAFormatoCSVrooms();
+    const blob = new Blob([contenidoCSV], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+
+
+
+    const fecha = new Date();
+    const year = fecha.getFullYear();
+    const month = String(fecha.getMonth() + 1).padStart(2, '0'); // Sumamos 1 al mes ya que los meses en JavaScript van de 0 a 11
+    const day = String(fecha.getDate()).padStart(2, '0');
+    const fechaActual = `${year}-${month}-${day}`;
+    a.href = url;
+    a.download = 'reporte_rooms_creados_'+fechaActual+'.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+function convertirTablaAFormatoJSONrooms() {
+    const tabla = document.getElementById('rooms-table');
+    const filas = tabla.getElementsByTagName('tr');
+    const contenidoJSON = [];
+
+    for (let i = 1; i < filas.length; i++) {
+        const celdas = filas[i].getElementsByTagName('td');
+        const filaJSON = {};
+
+        for (let j = 0; j < celdas.length; j++) {
+            const columna = document.querySelector('th:nth-child(' + (j + 1) + ')').innerText;
+            filaJSON[columna] = celdas[j].innerText;
+        }
+
+        contenidoJSON.push(filaJSON);
+    }
+
+    return JSON.stringify(contenidoJSON, null, 2);
+}
+
+function descargarJSONrooms() {
+    const contenidoJSON = convertirTablaAFormatoJSONrooms();
+    const blob = new Blob([contenidoJSON], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+
+    a.href = url;
+    a.download = 'tabla.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+
+
+
+function convertirTablaAFormatoExcelrooms() {
+    const tabla = document.getElementById('rooms-table');
+    const filas = tabla.getElementsByTagName('tr');
+    const contenidoExcel = [];
+
+    for (let i = 0; i < filas.length; i++) {
+        const celdas = filas[i].getElementsByTagName('td');
+        const filaExcel = [];
+
+        for (let j = 0; j < celdas.length; j++) {
+            filaExcel.push(celdas[j].innerText);
+        }
+
+        contenidoExcel.push(filaExcel.join('\t'));
+    }
+
+    return contenidoExcel.join('\n');
+}
+
+function descargarExcelrooms() {
+    const contenidoExcel = convertirTablaAFormatoExcelrooms();
+    const blob = new Blob(['\ufeff', contenidoExcel], { type: 'application/vnd.ms-excel' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    const fecha = new Date();
+    const year = fecha.getFullYear();
+    const month = String(fecha.getMonth() + 1).padStart(2, '0'); // Sumamos 1 al mes ya que los meses en JavaScript van de 0 a 11
+    const day = String(fecha.getDate()).padStart(2, '0');
+    const fechaActual = `${year}-${month}-${day}`;
+    a.href = url;
+    a.download = 'reporte_rooms_creados_'+fechaActual+'.xls';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+</script>
 

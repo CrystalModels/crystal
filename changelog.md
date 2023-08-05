@@ -1,6 +1,8 @@
 # Changelog
 
-
+## [1.4.0-Beta] - 2023-08-03
+- sistema embebido tasa de cambio
+- sistema embebido calculadora
 ## [1.3.0-Beta] - 2023-08-03
 - implementación de calculos por transmisión
 - implementación de cortes
