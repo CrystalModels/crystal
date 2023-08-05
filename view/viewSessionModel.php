@@ -18,6 +18,8 @@ require_once 'modal/modalUsersAlerts.php';
 require_once 'modal/modalAlertsMessage.php';
 require_once 'modal/modalAlertsUsers.php';
 
+require_once 'modal/modalEmbed.php';
+require_once 'modal/modalEmbedCalc.php';
 
 require_once 'modal/modalRemind.php';
 require_once 'modal/modalPostRemind.php';
