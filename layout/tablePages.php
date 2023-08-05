@@ -122,8 +122,15 @@ function descargarCSV() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
 
+
+
+    const fecha = new Date();
+    const year = fecha.getFullYear();
+    const month = String(fecha.getMonth() + 1).padStart(2, '0'); // Sumamos 1 al mes ya que los meses en JavaScript van de 0 a 11
+    const day = String(fecha.getDate()).padStart(2, '0');
+    const fechaActual = `${year}-${month}-${day}`;
     a.href = url;
-    a.download = 'reporte_paginas_creadas.csv';
+    a.download = 'reporte_paginas_creadas_'+fechaActual+'.csv';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -189,9 +196,13 @@ function descargarExcel() {
     const blob = new Blob(['\ufeff', contenidoExcel], { type: 'application/vnd.ms-excel' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-
+    const fecha = new Date();
+    const year = fecha.getFullYear();
+    const month = String(fecha.getMonth() + 1).padStart(2, '0'); // Sumamos 1 al mes ya que los meses en JavaScript van de 0 a 11
+    const day = String(fecha.getDate()).padStart(2, '0');
+    const fechaActual = `${year}-${month}-${day}`;
     a.href = url;
-    a.download = 'reporte_paginas_creadas.xls';
+    a.download = 'reporte_paginas_creadas_'+fechaActual+'.xls';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
