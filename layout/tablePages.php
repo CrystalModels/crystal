@@ -95,7 +95,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 <script>
 function convertirTablaAFormatoCSV() {
-    const tabla = document.getElementById('miTabla');
+    const tabla = document.getElementById('pages-table');
     const filas = tabla.getElementsByTagName('tr');
     const contenidoCSV = [];
 
