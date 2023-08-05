@@ -1,8 +1,8 @@
 
 
-
-<div class="table-container">
 <button onclick="descargarCSV()" class="table-button">Descargar CSV</button>
+<div class="table-container">
+
 <table id="pages-table" class="table">
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
