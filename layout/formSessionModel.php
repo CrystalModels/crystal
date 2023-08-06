@@ -547,9 +547,9 @@ themeToggleCheckbox.addEventListener('change', () => {
     showOption('broom-toggle');
     showOption('meet-toggle');
     showOption('techissue-toggle');
-    logInfo('disconnected');
+    logInfo('disconected');
     
-    rechargePage('disconected');
+    rechargePage('disconnected');
    // modelStatus('isConnected','disconected');
   }
 });
