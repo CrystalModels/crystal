@@ -50,10 +50,10 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       const row = document.createElement("tr");
       row.innerHTML = `
       
-    
+      <td><button onclick="editarAlertad(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)" class="table-button">Responder alerta</button></td>
     <td>${alert.comments}</td>
     <td>${alert.alertType}</td>
-    <td><input type="text" class="input-schedule" id="${alert.alertId}" value="${alert.alertResponse}"> <button onclick="editarAlerta(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)" class="table-button">Responder alerta</button></td>
+    <td>${alert.alertResponse}</td>
    
 
       
@@ -99,10 +99,10 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 <script>
 
-function editarAlerta(button, id,profileid) {
+function editarAlertad(button, id,profileid) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;
-  var response = input.value;
+  var response = "del";
 
   // Construir la URL con los parámetros de la petición GET
   var url = 'controller/controllerEditMyAlert.php?alertId=' + encodeURIComponent(id) + '&response=' + encodeURIComponent(response)+ '&profileId=' + encodeURIComponent(profileid);
