@@ -525,8 +525,8 @@ themeToggleCheckbox.addEventListener('change', () => {
     sessionStorage.setItem('isConnected','connected');
     logInfo('conect');
    
-    rechargePage();
-    modelStatus('isConnected','connected');
+    rechargePage('connected');
+ //   modelStatus('isConnected','connected');
   } else {
     statusLabel.textContent = 'Desconectado';
     enableDisableOptions(false);
@@ -549,8 +549,8 @@ themeToggleCheckbox.addEventListener('change', () => {
     showOption('techissue-toggle');
     logInfo('disconect');
     
-    rechargePage();
-    modelStatus('isConnected','disconected');
+    rechargePage('disconected');
+   // modelStatus('isConnected','disconected');
   }
 });
 

@@ -55,8 +55,9 @@
     }
   });
 
-  function rechargePage() {
+  function rechargePage(value) {
     location.reload(true); 
+    modelStatus('isConnected',value);
   }
 </script>
 <style>
