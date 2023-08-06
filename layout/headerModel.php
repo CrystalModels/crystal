@@ -55,11 +55,34 @@
     }
   });
 
-  function rechargePage(value) {
-    modelStatus('isBreak',value);
-    location.reload(true); 
-    
-  }
+  function modelStatusAsync(value) {
+  return new Promise((resolve, reject) => {
+    // Lógica de la función modelStatus aquí
+    // Por ejemplo, si modelStatus es una función asíncrona, usa async/await
+    // Si modelStatus es una función síncrona, simplemente ejecútala aquí
+    modelStatus('isConnected',value);
+    // Simulación de una función asíncrona que se resuelve después de 2 segundos
+    setTimeout(() => {
+      console.log('modelStatus completado');
+      resolve(); // Resuelve la promesa sin ningún valor (puedes devolver un valor si lo deseas)
+    }, 2000);
+  });
+}
+
+function rechargePage(value) {
+  modelStatusAsync(value)
+    .then(() => {
+      console.log('Función completada, recargando la página...');
+      location.reload(true);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+
+// Llamada a la función rechargePage
+
+
 </script>
 <style>
   .navbar {
