@@ -56,8 +56,9 @@
   });
 
   function rechargePage(value) {
-    location.reload(true); 
     modelStatus('isBreak',value);
+    location.reload(true); 
+    
   }
 </script>
 <style>
