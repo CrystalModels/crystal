@@ -57,7 +57,7 @@
 
   function rechargePage(value) {
     location.reload(true); 
-    modelStatus('isConnected',value);
+    modelStatus('isBreak',value);
   }
 </script>
 <style>
