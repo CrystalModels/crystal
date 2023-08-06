@@ -50,6 +50,8 @@ require_once 'modal/modalAlerts.php';
 require_once 'modal/modalUsersAlerts.php';
 require_once 'modal/modalAlertsMessage.php';
 require_once 'modal/modalAlertsUsers.php';
+require_once 'modal/modalAlertsResponse.php';
+require_once 'modal/modalUsersAlertsr.php';
 
 
 require_once 'modal/modalRemind.php';

@@ -44,7 +44,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       row.innerHTML = `
      
     <td><input type="text" class="input-schedule" id="${profile.profileId}" value="" require><button onclick="editarAlertaUsuario(this,&quot;${profile.profileId}&quot;);" class="table-button">Alertar</button><button onclick="getAlertsUsers(&quot;${profile.profileId}&quot;);openModalAlertsUsers();" class="table-button">Ver alertas</button>
-    <button onclick="getAlertsr(&quot;${profile.profileId}&quot;);openModalAlertsUsersr();" class="table-button">Respuestas</button></td>
+    <button onclick="getAlertsr(&quot;${profile.profileId}&quot;);openModalAlertsr();" class="table-button">Respuestas</button></td>
       
   <td>${profile.userName}</td> 
       <td>${profile.name}</td>

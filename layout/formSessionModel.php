@@ -547,7 +547,7 @@ themeToggleCheckbox.addEventListener('change', () => {
     showOption('meet-toggle');
     showOption('techissue-toggle');
     logInfo('disconect');
-    modelStatus('isConnected','disconect');
+    modelStatus('isConnected','disconected');
     rechargePage();
   }
 });
@@ -765,8 +765,13 @@ function modelStatus(dbvalue,value) {
     .then(response => {
       // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
+<<<<<<< HEAD
       
       obtenerVariablesPHP();      
+=======
+      obtenerVariablesPHP();
+      
+>>>>>>> dev
  
     })
     .catch(error => {
