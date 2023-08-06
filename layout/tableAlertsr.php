@@ -112,7 +112,7 @@ function editarAlertad(button, id,profileid) {
     .then(response => {
       // Aquí puedes realizar alguna acción con la respuesta del servidor, si lo deseas
       // Por ejemplo, mostrar un mensaje de éxito o actualizar la información en la página
-      
+      getAlertsr(profileid);
       obtenerVariablesPHP();
     })
     .catch(error => {
