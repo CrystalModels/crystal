@@ -189,6 +189,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     
+  <div class="notification" id="notification">
+        <p id="notificationText"></p>
+    </div>
 <?php
   
   echo '<script>
