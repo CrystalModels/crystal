@@ -50,7 +50,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       const row = document.createElement("tr");
       row.innerHTML = `
       
-      <td><button onclick="editarAlertad(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)" class="table-button">Responder alerta</button></td>
+      <td><button onclick="editarAlertad(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)" class="table-button">Eliminar</button></td>
     <td>${alert.comments}</td>
     <td>${alert.alertType}</td>
     <td>${alert.alertResponse}</td>
@@ -119,22 +119,6 @@ function editarAlertad(button, id,profileid) {
       // Aquí puedes manejar los errores en caso de que la petición falle
       console.log('Error en la petición:', error);
     });
-}
-setInterval(miFuncion, 180000);
-
-function miFuncion() {
-  // Código de la función que se ejecutará cada 5 segundos
-  const profileid = sessionStorage.getItem("profileId");
-      getAlerts(profileid);
-  //getAlerts();
-  const alertcounter = sessionStorage.getItem("alertCounter");
-if(alertcounter>0){
-  openModalAlertsMessage();
-
-}else{
-
-}
-  //console.log('Se ejecutó la función');
 }
 
 
