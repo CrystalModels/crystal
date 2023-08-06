@@ -547,7 +547,7 @@ themeToggleCheckbox.addEventListener('change', () => {
     showOption('meet-toggle');
     showOption('techissue-toggle');
     logInfo('disconect');
-    modelStatus('isConnected','disconect');
+    modelStatus('isConnected','disconected');
     rechargePage();
   }
 });
