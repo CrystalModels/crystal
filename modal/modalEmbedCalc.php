@@ -6,7 +6,7 @@
             <span class="close" onclick="closeModalembedcal()"><h3>X</h3></span>
             <h2>Calculadora</h2>
                
-          <!--    <iframe src="https://www.desmos.com/scientific?lang=es" width="100%" height="500px" frameborder="0"></iframe>-->
+           <iframe src="https://www.desmos.com/scientific?lang=es" width="100%" height="500px" frameborder="0"></iframe>
         </div>
     </div>
 
