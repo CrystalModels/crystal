@@ -79,12 +79,10 @@ var modelidnow = sessionStorage.getItem("modelIdNow");
       const row = document.createElement("tr");
       row.innerHTML = `
      
-      <td>${student.pageName}</td>
-      <td>${student.urlPage}</td>
-      <td>${student.startDate} ${student.startTime}</td>
-      <td>${student.endDate} ${student.endTime}</td>
-      <td>${student.totalTime}</td>
-      <td>${student.isActive}</td>
+      <td>${student.type}</td>
+      <td>${student.dater} ${student.timer}</td>
+      <td>${student.createdAt}</td>
+      <td>${student.logId}</td>
         
        
         
