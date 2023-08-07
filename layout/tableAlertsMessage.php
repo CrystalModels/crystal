@@ -59,7 +59,25 @@
     
 <?php
   
-  echo '<script>
+  echo '
+  <script>reproducirSonido();</script>
+
+   
+  <script>
+
+
+
+
+ 
+	function reproducirSonido() {
+	  var audio = document.getElementById("audioPlayer");
+	  audio.play();
+	}
+  
+  
+  
+
+
   const respuesta = "' . $_SESSION["respuesta"] . '";
   sessionStorage.setItem("respuesta", respuesta);
   const mensaje = "' . $_SESSION["mensaje"] . '";

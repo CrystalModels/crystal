@@ -55,7 +55,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       row.innerHTML = `
       <td><h3>${schedule.sTime}</h3></td>
     
-    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.mon}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;mon&quot;),reproducirSonido();" class="table-button">Editar</button></td>
+    <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.mon}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;mon&quot;)" class="table-button">Editar</button></td>
     <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.tus}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;tus&quot;)" class="table-button">Editar</button></td>
     <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.wen}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;wen&quot;)" class="table-button">Editar</button></td>
     <td><input type="text" class="input-schedule" id="${schedule.schId}" value="${schedule.thu}"> <button onclick="editar(this,&quot;${schedule.schId}&quot;,&quot;thu&quot;)" class="table-button">Editar</button></td>
@@ -133,15 +133,6 @@ function editar(button, id, day) {
 
 
 
-
-
-
-<script>
-  function reproducirSonido() {
-    var audio = document.getElementById('audioPlayer');
-    audio.play();
-  }
-</script>
 
 
 
