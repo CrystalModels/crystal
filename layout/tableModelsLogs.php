@@ -54,8 +54,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     var fechaSeleccionada = document.getElementById("fechaInputlog").value;
     // Realizar las acciones deseadas con la fecha seleccionada
     getPagesAssignModelsHislogs(fechaSeleccionada);
-    
-var modelidnow = sessionStorage.getItem("modelIdNow");
+    var modelidnow = sessionStorage.getItem("currentModel");
    // getPagesAssignModelsHislogs(modelidnow,fechaSeleccionada);
     console.log(fechaSeleccionada);
     
