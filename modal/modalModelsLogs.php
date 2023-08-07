@@ -4,7 +4,7 @@
         <!-- Contenido del modal -->
         <div class="modal-content">
             <span class="close" onclick="closeModalModelslog()"><h3>X</h3></span>
-            <h2>Modelos</h2>
+            <h2>Logs</h2>
           
       <br>
             <?php require_once 'layout/tableModelsLogs.php' ?>
