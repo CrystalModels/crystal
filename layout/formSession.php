@@ -24,7 +24,15 @@
   </style>
 <style>
         /* Estilos para la imagen */
-       
+        h2 img {
+            max-width: 200px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Estilos para el efecto al pasar el mouse sobre la imagen */
+        h2 img:hover {
+            transform: rotate(360deg) scale(1.1);
+        }
 
 
         h2 img {
@@ -40,7 +48,13 @@
             transform: scale(1);
         }
     </style>
-
+<script>
+        // JavaScript para agregar la clase "appear" a la imagen después de cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            const image = document.querySelector('h2 img');
+            image.classList.add('appear');
+        });
+    </script>
 </head>
 <body>
 
