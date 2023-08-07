@@ -7,13 +7,14 @@
             <h1>¡Alerta!</h1>
             
       <br>
+      <p id="valorVariable"></p>
             <?php require_once 'layout/tableAlertsMessage.php' ?>
             <button onclick="closeModalAlertsMessage();">Cerrar</button>
         </div>
         
     </div>
 
-   
+    
 
     <script>
         // Obtener el valor de la variable almacenada en sessionStorage
