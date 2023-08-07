@@ -7,7 +7,7 @@
 <h2>verifique el módulo de notificaciones</h2>
 
 
-<p id="valorVariable"></p>
+<h2>Tienes <p id="valorVariable"></p> ALERTAS por responder</h2>
 <div id="publicgroups-container"></div>
 
 
