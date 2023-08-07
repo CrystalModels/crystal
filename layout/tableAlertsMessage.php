@@ -6,14 +6,7 @@
 
 <h2>verifique el módulo de notificaciones</h2>
 <audio id="audioPlayer" src="public/alerts.mp3" preload="auto"></audio>
-<script>reproducirSonido();</script>
 
-<script>
-  function reproducirSonido() {
-    var audio = document.getElementById('audioPlayer');
-    audio.play();
-  }
-</script>
 
 
 <div id="publicgroups-container"></div>
