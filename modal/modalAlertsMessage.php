@@ -13,7 +13,16 @@
         
     </div>
 
-   
+   <p id="valorVariable"></p>
+
+    <script>
+        // Obtener el valor de la variable almacenada en sessionStorage
+        const valor = sessionStorage.getItem('alertsCounter');
+
+        // Mostrar el valor en el documento HTML
+        const elementoValor = document.getElementById('valorVariable');
+        elementoValor.textContent = valor;
+    </script>
     <script>
         // JavaScript
         function openModalAlertsMessage() {
