@@ -74,7 +74,7 @@ echo '
         
                           <h5 align="center"><a href="#" onclick="openModalPagesModelNot();getPagesAssignModelsNot();" class="table-button">Sin transmitir</a><br></h5>
         
-                          <h5 align="center"><a href="#" onclick="openModalPagesModelHis();" class="table-button">Historial de transmisión</a><br></h5>
+                          <h5 align="center"><a href="#" onclick="openModalPagesModelHis();" class="table-button">Historial</a><br></h5>
         
                             
                           `;
