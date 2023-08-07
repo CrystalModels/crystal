@@ -17,6 +17,7 @@
         // JavaScript
         function openModalAlertsMessage() {
             document.getElementById("myModalAlertsMessage").style.display = "block";
+            reproducirSonido();
         }
 
         function closeModalAlertsMessage() {
@@ -33,8 +34,17 @@
             document.body.classList.remove("dark-mode");
         }
 
+        function reproducirSonido() {
+  var audio = document.getElementById('audioPlayer');
+  audio.play();
+}
 
       
     </script>
+      
+
+  
+
+
 </body>
 </html>

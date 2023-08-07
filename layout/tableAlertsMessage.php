@@ -59,22 +59,12 @@
     
 <?php
   
-  echo '
-  <script>reproducirSonido();</script>
-
-   
-  <script>
+  echo '<script>
 
 
 
 
- 
-	function reproducirSonido() {
-	  var audio = document.getElementById("audioPlayer");
-	  audio.play();
-	}
-  
-  
+
   
 
 
