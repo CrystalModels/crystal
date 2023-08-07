@@ -33,6 +33,20 @@
         h2 img:hover {
             transform: rotate(360deg) scale(1.1);
         }
+
+
+        h2 img {
+            max-width: 200px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        /* Estilos para el efecto de aparición sensual */
+        h2 img.appear {
+            opacity: 1;
+            transform: scale(1);
+        }
     </style>
 
 </head>
