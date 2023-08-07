@@ -39,6 +39,7 @@ require_once 'modal/modalModelsRev.php';
 require_once 'modal/modalPuttingModelVer.php';
 require_once 'modal/modalPuttingModelTotal.php';
 require_once 'modal/modalPuttingModelTotalList.php';
+require_once 'modal/modalModelsLogs.php';
 
 require_once 'modal/modalMySchedule.php';
 require_once 'modal/modalUsersSchedule.php';
