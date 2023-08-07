@@ -37,6 +37,10 @@ if($_SESSION['rol']=="PHOTO"){
 <div class="notification" id="notification">
         <p id="notificationText"></p>
     </div>
+
+    <audio id="audioPlayer3" src="public/error.mp3" preload="auto"></audio>
+
+    <audio id="audioPlayer4" src="public/success.mp3" preload="auto"></audio>
 <script>
 
 
@@ -63,7 +67,15 @@ function mostrarNotificacion(mensaje, tipo) {
 }
 
 
+function reproducirSonidoerr() {
+  var audio = document.getElementById('audioPlayer3');
+  audio.play();
+}
 
+function reproducirSonidoesucc() {
+  var audio = document.getElementById('audioPlayer4');
+  audio.play();
+}
 function obtenerVariablesPHP() {
   fetch('layout/getPHPVariables.php')
     .then(response => response.json())
@@ -79,11 +91,12 @@ function obtenerVariablesPHP() {
       if(nuevoError==="true"){
         
         var re="success";
-        
+        reproducirSonidoesucc();
       }
       if(nuevoError==="false"){
       
         var re="error";
+        reproducirSonidoerr();
         
       }
 

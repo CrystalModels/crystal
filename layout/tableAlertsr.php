@@ -50,7 +50,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       const row = document.createElement("tr");
       row.innerHTML = `
       
-      <td><button onclick="reproducirSonido1();editarAlertad(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)" class="table-button">Eliminar</button></td>
+      <td><button onclick="editarAlertad(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)" class="table-button">Eliminar</button></td>
     <td>${alert.comments}</td>
     <td>${alert.alertType}</td>
     <td>${alert.alertResponse}</td>
