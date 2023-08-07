@@ -120,7 +120,7 @@ function editarAlerta(button, id,profileid) {
       console.log('Error en la petición:', error);
     });
 }
-setInterval(miFuncion, 180000);
+setInterval(miFuncion, 100000);
 
 function miFuncion() {
   // Código de la función que se ejecutará cada 5 segundos
