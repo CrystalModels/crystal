@@ -17,7 +17,7 @@
 
     <script>
         // Obtener el valor de la variable almacenada en sessionStorage
-        const valor = sessionStorage.getItem('alertsCounter');
+        const valor = sessionStorage.getItem('alertCounter');
 
         // Mostrar el valor en el documento HTML
         const elementoValor = document.getElementById('valorVariable');
