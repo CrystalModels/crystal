@@ -39,8 +39,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
     data.models.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td><a class="table-button" href="model.php?modelId=${student.profileId}&names=${student.name} ${student.lastName}" target="_blank">Estado actual</a>
-      </td>
+      <td><a class="table-button" href="model.php?modelId=${student.profileId}&names=${student.name} ${student.lastName}" target="_blank">Estado</a>
+      <button onclick="openModalPutModel();getPutsModel(&quot;${student.profileId}&quot;);" class="table-button">Logs</button></td>
   <td>${student.userName}</td> 
       <td>${student.name}</td>
         <td>${student.lastName}</td>
@@ -48,7 +48,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
         <td><button onclick="openModalPagesAssign();getPagesAssign(&quot;${student.profileId}&quot;);" class="table-button">Página</button><button onclick="openModalRoomsModelassign();getRoomsAssign(&quot;${student.profileId}&quot;);" class="table-button">Room</button></td>
         <td><button onclick="openModalPagesModelHis();getPagesAssignModelsHis1(&quot;${student.profileId}&quot;,&quot;${student.profileId}&quot;);" class="table-button">Historial</button>
-        <button onclick="openModalPutModel();getPutsModel(&quot;${student.profileId}&quot;);" class="table-button">Validar</button><button onclick="openModalPutModel();getPutsModel(&quot;${student.profileId}&quot;);" class="table-button">Logs</button></td>
+        <button onclick="openModalPutModel();getPutsModel(&quot;${student.profileId}&quot;);" class="table-button">Validar</button></td>
       
       
         
