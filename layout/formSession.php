@@ -22,7 +22,18 @@
 }
 
   </style>
+<style>
+        /* Estilos para la imagen */
+        h2 img {
+            max-width: 200px;
+            transition: transform 0.3s ease;
+        }
 
+        /* Estilos para el efecto al pasar el mouse sobre la imagen */
+        h2 img:hover {
+            transform: rotate(360deg) scale(1.1);
+        }
+    </style>
 
 </head>
 <body>
