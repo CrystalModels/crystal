@@ -7,7 +7,7 @@
             <h1>¡Alerta!</h1>
             
       <br>
-      <p id="valorVariable"></p>
+      <h2>Tienes <p id="valorVariable"></p> ALERTAS por responder</h2>
             <?php require_once 'layout/tableAlertsMessage.php' ?>
             <button onclick="closeModalAlertsMessage();">Cerrar</button>
         </div>
