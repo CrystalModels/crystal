@@ -11,7 +11,7 @@
 <body>
   <h2>Seleccionar fecha</h2>
 
-  <h2><input type="date" id="fechaInput" class="table-button"></h2>
+  <h2><input type="date" id="fechaInputlog" class="table-button"></h2>
 <br>
 <br>
 <h2><a href="#" onclick="openModalPagesModelHislogs();" class="table-button">Ver historial</a></h2>
@@ -51,7 +51,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 	<script>
 		
   function openModalPagesModelHislogs() {
-    var fechaSeleccionada = document.getElementById("fechaInput").value;
+    var fechaSeleccionada = document.getElementById("fechaInputlog").value;
     // Realizar las acciones deseadas con la fecha seleccionada
     getPagesAssignModelsHislogs(fechaSeleccionada);
     
@@ -122,7 +122,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 		
  
   function openModalPagesModelHislogs() {
-    var fechaSeleccionada = document.getElementById("fechaInput").value;
+    var fechaSeleccionada = document.getElementById("fechaInputlog").value;
     // Realizar las acciones deseadas con la fecha seleccionada
     //getPagesAssignModelsHis(fechaSeleccionada);
     
@@ -149,13 +149,10 @@ var modelidnow = sessionStorage.getItem("modelIdNow");
     data.logs.forEach(student => {
       const row = document.createElement("tr");
       row.innerHTML = `
-     
-      <td>${student.pageName}</td>
-      <td>${student.urlPage}</td>
-      <td>${student.startDate} ${student.startTime}</td>
-      <td>${student.endDate} ${student.endTime}</td>
-      <td>${student.totalTime}</td>
-      <td>${student.isActive}</td>
+      <td>${student.type}</td>
+      <td>${student.dater} ${student.timer}</td>
+      <td>${student.createdAt}</td>
+      <td>${student.logId}</td>
         
        
         
