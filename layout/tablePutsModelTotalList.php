@@ -19,6 +19,7 @@
 <br>
 <br>
 <h2><a href="#" onclick="openModalPutModelTotal11();" class="table-button">Ver total</a></h2>
+<h2><a href="#" onclick="openModalModelslog();" class="table-button">Ver logs</a></h2>
 <button onclick="descargarCSVtlist()" class="table-button">Descargar resporte CSV</button>
 <button onclick="descargarExceltlist()" class="table-button">Descargar reporte Excel</button>
 

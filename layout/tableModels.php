@@ -40,7 +40,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       const row = document.createElement("tr");
       row.innerHTML = `
       <td><a class="table-button" href="model.php?modelId=${student.profileId}&names=${student.name} ${student.lastName}" target="_blank">Estado</a>
-      <button onclick="openModalModelslog();getPutsModel(&quot;${student.profileId}&quot;);" class="table-button">Logs</button></td>
+     </td>
   <td>${student.userName}</td> 
       <td>${student.name}</td>
         <td>${student.lastName}</td>
