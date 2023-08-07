@@ -50,7 +50,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
       const row = document.createElement("tr");
       row.innerHTML = `
       
-      <td><button onclick="editarAlertad(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)" class="table-button">Eliminar</button></td>
+      <td><button onclick="reproducirSonido1();editarAlertad(this,&quot;${alert.alertId}&quot;,&quot;${alert.profileId}&quot;)" class="table-button">Eliminar</button></td>
     <td>${alert.comments}</td>
     <td>${alert.alertType}</td>
     <td>${alert.alertResponse}</td>
@@ -94,11 +94,15 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 
 
 
+<audio id="audioPlayer1" src="public/delete.mp3" preload="auto"></audio>
 
 
 
 <script>
-
+  function reproducirSonido1() {
+  var audio = document.getElementById('audioPlayer1');
+  audio.play();
+}
 function editarAlertad(button, id,profileid) {
   // Obtener el valor del campo de texto correspondiente al botón
   var input = button.previousElementSibling;

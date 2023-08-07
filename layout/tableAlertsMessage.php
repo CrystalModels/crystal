@@ -5,7 +5,6 @@
     
 
 <h2>verifique el módulo de notificaciones</h2>
-<audio id="audioPlayer" src="public/alerts.mp3" preload="auto"></audio>
 
 
 
