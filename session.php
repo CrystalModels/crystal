@@ -37,7 +37,7 @@ if($_SESSION['rol']=="PHOTO"){
 <div class="notification" id="notification">
         <p id="notificationText"></p>
     </div>
-
+    <audio id="audioPlayer" src="public/alerts.mp3" preload="auto"></audio>
     <audio id="audioPlayer3" src="public/error.mp3" preload="auto"></audio>
 
     <audio id="audioPlayer4" src="public/success.mp3" preload="auto"></audio>
