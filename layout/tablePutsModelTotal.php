@@ -88,11 +88,7 @@ var modelidnow = sessionStorage.getItem("currentModel");
       <td>${student.percent}</td>
       <td>${student.time}</td>
       <td><button onclick="enviarCorreo(&quot;${student.modelId}&quot;,&quot;El corte ID ${student.cuttingId} fue cerrado con un valor inicial de $ ${student.start}, un total de descuentos $ ${student.discount} (${student.percent}%), para un total de $ ${student.end} por recibir, un promedio de tiempo trabajado ${student.time}&quot;,&quot;Cierre de corte&quot;)" class="table-button">Enviar correo</button></td>
-<<<<<<< HEAD
         
-=======
-       
->>>>>>> dev
        
         
       `;
