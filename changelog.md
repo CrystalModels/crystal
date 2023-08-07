@@ -1,5 +1,8 @@
 # Changelog
 
+
+## [1.0.0-pr] - 2023-08-03
+- sistema base
 ## [1.4.0-Beta] - 2023-08-03
 - sistema embebido tasa de cambio
 - sistema embebido calculadora
