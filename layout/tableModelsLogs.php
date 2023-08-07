@@ -129,6 +129,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
 var modelidnow = sessionStorage.getItem("currentModel");
     getPagesAssignModelsHislogs(modelidnow,fechaSeleccionada);
     console.log(fechaSeleccionada);
+    console.log(modelidnow);
     
   }
  
