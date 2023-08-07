@@ -13,7 +13,7 @@
         
     </div>
 
-   <p id="valorVariable"></p>
+   
 
     <script>
         // Obtener el valor de la variable almacenada en sessionStorage

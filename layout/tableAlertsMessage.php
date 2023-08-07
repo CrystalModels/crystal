@@ -7,7 +7,7 @@
 <h2>verifique el módulo de notificaciones</h2>
 
 
-
+<p id="valorVariable"></p>
 <div id="publicgroups-container"></div>
 
 
