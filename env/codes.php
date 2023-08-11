@@ -26,7 +26,7 @@ function domcode() {
     }
     if($option==4){//ptoducción
 
-        $code="c66e63ca-fa63-42c8-95e7-eab4db5d41d8";
+        $code="1fd72372-c8a5-4eac-8f6d-58564c80fa15";
         return $code;
     }
    //$sub_domain="https://dev-lugmacore.lugma.tech"; // o dirección IP del servidor de la base de datos remota

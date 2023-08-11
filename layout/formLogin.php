@@ -13,7 +13,7 @@ $response = file_get_contents($sub_domain.'/crystalGateway/apiCore/v1/getSecretK
    $_SESSION['key']= trim($response);
    $_SESSION['sessionStatus']="0";
    
-//echo $response;
+echo $response;
 ?>
 
 
