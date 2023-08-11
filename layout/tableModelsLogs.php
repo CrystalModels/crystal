@@ -23,11 +23,10 @@
   <thead style="position: sticky; top: 0; background-color: #fff;">
     <tr>
    
-      <th>Página</th>
-      <th>Url</th>
-      <th>Inicio</th>
-      <th>Final</th>
-      <th>Tiempo promedio</th>
+      <th>Estado</th>
+      <th>Fecha</th>
+      <th>Fecha servidor</th>
+      <th>Id log</th>
 
       <th>Estado</th>
       
