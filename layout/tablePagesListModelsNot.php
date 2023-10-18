@@ -125,7 +125,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
        
         <td>${student.pageUserName}</td>
         <td>${student.pageKey}</td>
-        <td><a href="../../${student.pageLink}">Acceso directo</a></td>
+        <td><a href="${student.pageLink}" target="_blank">Acceso directo</a></td>
 
         
        
