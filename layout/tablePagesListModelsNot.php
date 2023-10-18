@@ -11,6 +11,9 @@
       <th>Url</th>
 
       <th>Estado</th>
+      <th>Usuario de página</th>
+      <th>LLave de página</th>
+
       
     </tr>
   </thead>
