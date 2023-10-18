@@ -55,7 +55,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         <td>${student.isActive}</td>
         <td><input type="text" id="pageuname" name="pageuname" placeholder="Ingresa nombre de usuario" value="${student.pageUserName}"><button onclick="editarCredenciales(this,&quot;${student.pageId}&quot;,&quot;${student.modelId}&quot;,&quot;${student.transId}&quot;,&quot;pName&quot;);" class="table-button">Editar</button></td>
         <td><input type="text" id="pageKey" name="pagekey" placeholder="Ingresa contraseña" value="${student.pageKey}"><button onclick="editarCredenciales(this,&quot;${student.pageId}&quot;,&quot;${student.modelId}&quot;,&quot;${student.transId}&quot;,&quot;pKey&quot;);" class="table-button">Editar</button></td>
-        <td><input type="text" id="pageKey" name="pagekey" placeholder="Ingresa contraseña" value="${student.pageLink}"><button onclick="editarCredenciales(this,&quot;${student.pageId}&quot;,&quot;${student.modelId}&quot;,&quot;${student.transId}&quot;,&quot;pLink&quot;);" class="table-button">Editar</button><a href="../../${student.pageLink}">Acceso directo</a></td>
+        <td><input type="text" id="pageKey" name="pagekey" placeholder="Ingresa contraseña" value="${student.pageLink}"><button onclick="editarCredenciales(this,&quot;${student.pageId}&quot;,&quot;${student.modelId}&quot;,&quot;${student.transId}&quot;,&quot;pLink&quot;);" class="table-button">Editar</button><a href="../../${student.pageLink}" target="_blank">Acceso directo</a></td>
        
 
         
