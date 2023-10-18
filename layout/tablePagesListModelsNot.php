@@ -51,7 +51,7 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
   
       <td>${student.pageName}</td>
         <td>${student.urlPage}</td>
-        <td>${student.pageKey}</td>
+        <td>${student.isActive}</td>
         <td>${student.pageUserName}</td>
         <td>${student.pageKey}</td>
        
@@ -120,6 +120,8 @@ $headerslink=$_SESSION['ranCode']." ".$_SESSION['key'];
         <td>${student.urlPage}</td>
         <td>${student.isActive}</td>
        
+        <td>${student.pageUserName}</td>
+        <td>${student.pageKey}</td>
 
         
        
