@@ -244,6 +244,7 @@ function editarCredenciales(button, pageid, profileid,transid,param) {
       //getSch();
       obtenerVariablesPHP();
       getPagesAssignModelsNot();
+      console.log(nombre+" "+transid);
       
     })
     .catch(error => {
